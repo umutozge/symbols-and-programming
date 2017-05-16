@@ -1,0 +1,26 @@
+module CC where
+
+import qualified Data.Map as Map
+import qualified Data.Maybe as Maybe
+
+
+data Denomination = H | Q | D | N | P deriving (Ord,Eq,Show)
+
+values = Map.fromList([(H,50),(Q,25),(D,10),(N,5),(P,1)])
+
+type Amount = Integer
+
+
+
+countChanges :: Amount -> [Denomination] -> Integer
+countChanges 0 denoms = 1 
+countChanges amount denoms 
+	| amount == 0 = 1
+	| amount < 0 = 0
+	| otherwise = _countChanges amount denoms denoms
+
+_countChanges :: Amount -> [Denomination] -> [Denomination] -> Integer
+_countChanges _ [] _ = 0
+_countChanges amount (d:ds) dds = countChanges newAmount dds + _countChanges amount ds dds
+    where
+        newAmount =  amount - (Maybe.fromJust $ Map.lookup d values)
