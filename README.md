@@ -4,7 +4,7 @@ An introductory text on basics of symbolic computation
 
 ### Contents
 
-Testing for $\alpha \cup \beta$
+Testing for $$\alpha \cup \beta$$
 
 
 ### License
