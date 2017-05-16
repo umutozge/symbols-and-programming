@@ -11,7 +11,7 @@ an iterative one.
 There are two ways to devise a recursive solution. 
 
 1. Think over one type of denomination, say $$d$$. In any change of the amount
-   $$a$$, there will be $$n$$ number of $$d$$s for $$0 \leq n \leq floor(a/n)$$, this
+   $$a$$, there will be $$n$$ number of $$d$$s for $$ 0 \leq n \leq \lfloor a/n \rfloor$$, this
    exhausts the possiblities. So pick one of the denominations -- no matter
    which,
 
