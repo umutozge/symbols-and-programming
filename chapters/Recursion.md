@@ -4,26 +4,28 @@
 
 ### Counting changes
 
-Example from SICP:40. Compute the number of different ways a given amount of
-money can be changed. Thinking a recursive procedure is considered easier than
+Example from SICP:40. Compute the number of ways to change a given amount of
+money using a set of denominations. Thinking a recursive procedure is considered easier than
 an iterative one.
 
 There are two ways to devise a recursive solution. 
 
 1. The reasoning in SICP is as follows:   
-	* order the denominations; the order is not important, only have them
-	  ordered -- let's say `[H,Q,D,N,P]` (we follow American names for
-	  denominations). For any denomination `X` let `val(X)` denote the value of
-	  the denominations, in terms of the lowest, namely penny (1 cent).
-	* given an amount `a` and denominations `[d1...], the total number of (types of) changes is 
-		* changes of `a` without using `d1`, namely changing `a` with [...]  plus
-		* changes of `a-val(d1)` with `[d1...]` . 
+	* order the denominations (henceforth denom(s)); the order is not important, only have them
+	  ordered -- let's say `[H,Q,D,N,P]` (we use American names for
+	  denoms). For any denom `X` let `val(X)` denote the value of
+	  the denom.
+	 	* given an amount `a` and denoms `[d_0,...,d_n]`, the total number of ways of changing is 
+			* changes of `a` without using `d_0`, namely changing `a` with
+		  	`[d_1,...,d_n]]`,  plus
+			* changes of `a - val(d_0)` with `[d_0,...,d_n]`. 
 	* this will result in a recursive process decrementing the amount and the
 	  denomination types.
 	* base cases of the recursion are:   
 		* `0` amount, a successful change of the original amount;
 		* `< 0` amount, an unsuccesful change attempt;
 		* empty denomination list, again an unsuccessful change attempt.
+	* trace the code by hand for  `20` and `[D,N,P]` 
 
 
 2. The SICP solution is not the only way to devise a recursive code. Think over
