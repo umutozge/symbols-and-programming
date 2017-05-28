@@ -35,4 +35,3 @@ There are two ways to devise a recursive solution.
    which,
 
 * [haskell](code/haskell/count-changes.hs)
-
