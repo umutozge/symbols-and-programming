@@ -1,8 +1,5 @@
 #lang racket
 
-(require racket/trace)
-
-
 (define (count-changes amount denoms)
   (cond ((or (< amount 0) (null? denoms)) 0)
         ((= amount 0) 1)
@@ -10,7 +7,4 @@
   )
 )
 
-
 (count-changes 100 '(50 25 10 5 1))
-
-(trace count-changes)
