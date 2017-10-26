@@ -1,0 +1,5 @@
+(defun count-change (amount denoms)
+	(cond ((zerop amount) 1)
+		  ((or (< amount 0) (null denoms)) 0)
+		  (t (+ (count-change amount (rest denoms)) (count-change (- amount (first denoms)) denoms))))
+  )

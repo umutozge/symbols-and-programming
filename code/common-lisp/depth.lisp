@@ -1,0 +1,8 @@
+(defun depth (s)
+  (cond ((null s) 1)
+		((atom s) 0)
+		(t (max (+ (depth (first s)) 1)
+				(depth (rest s))
+				))
+		)
+  )
