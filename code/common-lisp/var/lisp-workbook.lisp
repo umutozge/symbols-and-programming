@@ -79,6 +79,27 @@
 ;;======================================================
 ;; QUESTION:
 ;;
+;; Implement (choose n k) - number of distinct ways to select k items out of n
+;; Req: do not use factorial function on n, using it on k is fine.
+;;
+;; SOLUTION:
+;;
+
+(defun choose (n k)
+  (/
+	(let ((result 1))
+	  (dotimes (counter k result)
+		(setf result (* result (- n counter)))
+		)
+	  )
+	(* (factorial k))
+	)
+  )
+
+;;
+;;======================================================
+;; QUESTION:
+;;
 ;; Reverse a list recursively.
 ;;
 ;; SOLUTION:
@@ -113,6 +134,18 @@
       (nth-item (- n 1) (rest list))
       )
   )
+
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;; Test if a list is a palindrome - do not use reverse
+;;
+;; SOLUTION:
+;;
+
+
 
 ;;
 ;;======================================================
