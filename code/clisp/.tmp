@@ -1,0 +1,32 @@
+(defun affix (item seq &key (prefix nil) (store nil))
+  (if (endp seq)
+	(cons (append prefix (list item)) store)
+	(affix 
+	  item 
+	  (rest seq) 
+	  :prefix (append prefix (list (car seq)))
+	  :store (cons (append prefix (list item) seq) store)
+	  )
+	)
+  )
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;; Given a list of symbols, return a list of its permutations
+;;
+;; SOLUTION:
+;; 
+
+;;; inefficient
+(defun permute (seq)
+  (if (= (length seq) 1)
+	(list seq)
+	(let ((result nil))
+	  (dolist (i (permute (rest seq)) result)
+		(setf result (append result (affix (first seq) i)))
+		)
+	  )
+	)
+  )

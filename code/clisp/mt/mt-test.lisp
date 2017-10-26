@@ -1,0 +1,5 @@
+(with-open-file (model-stream "model.lisp" :direction :input)
+  (dotimes (k 4)
+	(print (read model-stream nil))
+	)
+  )

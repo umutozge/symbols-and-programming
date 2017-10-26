@@ -1,0 +1,18 @@
+(defun factorial (n)
+  (let ((result 1))
+	(dotimes (counter n result)
+	  (setf result (* result (+ counter 1)))
+	  )
+	)
+  )
+
+(defun choose (n k)
+  (/
+	(let ((result 1))
+	  (dotimes (counter k result)
+		(setf result (* result (- n counter)))
+		)
+	  )
+	(* (factorial k))
+	)
+  )

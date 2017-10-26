@@ -1,0 +1,138 @@
+;;
+;; A Common Lisp Workbook
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;; Given two forms, count the number of times the first occurs in the second at any level
+;;
+;; SOLUTION:
+;;
+
+(defun count-occurs (x y)
+  (cond ((equalp x y) 1)
+	((atom y) 0)
+	((endp y) 0)
+	((+
+	  (count-occurs x (car y))
+	  (count-occurs x (cdr y))))
+	)
+  )
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;; Recursively compute the factorial of a given number
+;;
+;; SOLUTION:
+;;
+
+(defun factorial (n)
+  (if (= n 0)
+      1
+      (* n (factorial (- n 1)) )
+      )
+  )
+
+; a tail recursive version
+
+(defun factorial (n &optional (store 1))
+  (if (= n 0)
+      store
+      (factorial (- n 1) (* n store))
+      )
+  )
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;; Iteratively compute the factorial of a number.
+;;
+;; SOLUTION:
+;;
+
+;; with dotimes
+
+(defun factorial (n)
+  (let ((result 1))
+    (dotimes (i n result)
+      (setf result (* result (+ i 1)))
+    )
+  )
+  )
+
+;; with do
+
+(defun factorial (n)
+  (do* ((result 1 (* result i))
+	(i 1 (+ i 1)))
+       ((> i n) result)
+    )
+  )
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
+
+;;
+;;======================================================
+;; QUESTION:
+;;
+;;
+;;
+;; SOLUTION:
+;;
