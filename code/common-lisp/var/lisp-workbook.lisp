@@ -17,9 +17,7 @@
 	((endp y) 0)
 	((+
 	  (count-occurs x (car y))
-	  (count-occurs x (cdr y))))
-	)
-  )
+	  (count-occurs x (cdr y))))))
 
 ;;
 ;;======================================================
@@ -33,18 +31,14 @@
 (defun factorial (n)
   (if (= n 0)
       1
-      (* n (factorial (- n 1)) )
-      )
-  )
+      (* n (factorial (- n 1)))))
 
 ; a tail recursive version
 
 (defun factorial (n &optional (store 1))
   (if (= n 0)
       store
-      (factorial (- n 1) (* n store))
-      )
-  )
+      (factorial (- n 1) (* n store))))
 
 ;;
 ;;======================================================
@@ -60,20 +54,14 @@
 (defun factorial (n)
   (let ((result 1))
     (dotimes (i n result)
-      (setf result (* result (+ i 1)))
-    )
-  )
-  )
+      (setf result (* result (+ i 1))))))
 
 ;;; with do
 
 (defun factorial (n)
   (do* ((result 1 (* result i))
 	(i 1 (+ i 1)))
-       ((> i n) result)
-    )
-  )
-
+       ((> i n) result)))
 
 ;;
 ;;======================================================
@@ -92,9 +80,7 @@
 		(setf result (* result (- n counter)))
 		)
 	  )
-	(* (factorial k))
-	)
-  )
+	(* (factorial k))))
 
 ;;
 ;;======================================================
@@ -131,9 +117,7 @@
 (defun nth-item (n list)
   (if (= n 1)
       (first list)
-      (nth-item (- n 1) (rest list))
-      )
-  )
+      (nth-item (- n 1) (rest list))))
 
 
 ;;
@@ -159,9 +143,7 @@
 (defun filter (item list)
   (cond ((endp list) nil)
 	((eql item (car list)) (filter item (cdr list)))
-	(t (cons (car list) (filter item (cdr list))))
-	)
-  )
+	(t (cons (car list) (filter item (cdr list))))))
 
 ;;
 ;;======================================================
@@ -180,11 +162,7 @@
 			    (filter item (cdr list))))
 	(t (cons
 	     (filter item (car list))
-	     (filter item (cdr list)))
-	    )
-	 )
-  )
-
+	     (filter item (cdr list)))))) 
 
 ;;
 ;;======================================================
@@ -203,10 +181,7 @@
 	  item 
 	  (rest seq) 
 	  :prefix (append prefix (list (car seq)))
-	  :store (cons (append prefix (list item) seq) store)
-	  )
-	)
-  )
+	  :store (cons (append prefix (list item) seq) store))))
 
 ;;
 ;;======================================================
@@ -223,11 +198,7 @@
 	(list seq)
 	(let ((result nil))
 	  (dolist (i (permute (rest seq)) result)
-		(setf result (append result (affix (first seq) i)))
-		)
-	  )
-	)
-  )
+		(setf result (append result (affix (first seq) i)))))))
 
 
 ;;; more efficient due to tail recursion 
@@ -245,16 +216,26 @@
 					 (dolist (i store result)
 					   (dolist (j seq)
 						 (unless (member j i)
-						   (setf result (cons (cons j i) result)
-								 )
-						   )
-						 )
-					   )
-					 )
-			)
-		  )
-		)
-  )
+						   (setf result (cons (cons j i) result))))))))))
+
+
+;; iterative with lists, way more efficient than the previous too, but more cryptic
+(defun permute (seq &optional (store (list (cons nil seq))))
+  (dotimes (k (length seq))
+	(dolist (i store)
+	  ;;first surgically alter the current element
+	  (setf (car i) (cons (car (cdr i)) (car i) ))
+	  (setf (cdr i) (cdr (cdr i)))
+	  ;;create and add variations to the store 
+	  (dotimes (j (length (cdr i)))
+		(setf store (cons 
+					  (cons (cons (elt (cdr i) j) (cdr (car i))) (cons (car (car i)) (remove (elt (cdr i) j) (cdr i))))
+					  store)))))
+  store)
+
+
+;; iterative with vectors
+
 
 ;;
 ;;======================================================
@@ -273,20 +254,25 @@
 	(move-disk source target)
 n	(progn (tower-of-hanoi (- n 1) source hedge target)
 	       (move-disk source target)
-	       (tower-of-hanoi (- n 1) hedge target source)
-	       )
-      )
-    )
-  )
+	       (tower-of-hanoi (- n 1) hedge target source))))) 
 
 ;;
 ;;======================================================
 ;; QUESTION:
 ;;
-;;
+;; Define a maker of Fibonacci number generator; for an instance of this generator, every time it is called it should return the next number in the sequence
 ;;
 ;; SOLUTION:
 ;;
+
+(defun make-fibonacci-generator ()
+  (let ((previous 1)              ; a little trick to have it start from 0 and go on smoothly
+		(current 0))
+	(function (lambda ()
+				(prog1 current
+				  (let ((temp current))
+					(setf current (+ current previous))
+					(setf previous temp)))))))
 
 ;;
 ;;======================================================
