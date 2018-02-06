@@ -29,6 +29,10 @@ Conductors: [Umut Özge](https://umutozge.github.io) and [Fırat Öter](mailto:f
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
 * Readings (assigned weekly).
+* Books:   
+	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.   
+	Winston, P. H. and Horn, B. K. P. (1984). LISP, 2nd Edition. Addison-Wesley, Reading, MA.  
+	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.   
 
 ### Requirements
 
@@ -39,6 +43,7 @@ Conductors: [Umut Özge](https://umutozge.github.io) and [Fırat Öter](mailto:f
 ### Attendance
 
 * 3 misses OK; each further miss downgrades a letter (BB -> CB).
+* Please be on time.
 
 ### License
 The textual content of this course is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), and the accompanying source code is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
