@@ -11,8 +11,8 @@ Conductors: [Umut Özge](https://umutozge.github.io) and [Fırat Öter](mailto:f
 :---|:---|:---|:---|:---|:--- 
 1   | Feb 14 | Introducing the course
 2   | Feb 21 | Cognition, computation, computers, programs | Section 1 | [Assignment 1](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/crane-chapter3.pdf) |
-3   | Feb 28 | Conses and lists
-4   | Mar 7  | Symbols, evaluation, REPL, pre-fix notation
+3   | Feb 28 | Symbols, evaluation, REPL, pre-fix notation
+4   | Mar 7  | Conses and lists
 5   | Mar 14 | Functions I, conditional control
 6   | Mar 21 | Functions II, Recursion I
 7   | Mar 28 | Recursion II
