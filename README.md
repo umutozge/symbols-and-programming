@@ -3,9 +3,7 @@ COGS 502 - Symbols and Programming - Informatics Institute, METU
 
 Wednesday, 8:40-11:30, S01, Informatics Institute
 
-Instructor: [Umut Özge](https://umutozge.github.io) 
-Assistant: [Fırat Öter](mailto:foter@metu.edu.tr) 
-
+Conductors: [Umut Özge](https://umutozge.github.io) and [Fırat Öter](mailto:foter@metu.edu.tr) (TA)
 
 ### Weekly Schedule (tentative)
 
@@ -35,8 +33,8 @@ Assistant: [Fırat Öter](mailto:foter@metu.edu.tr)
 ### Requirements
 
 * Weekly assignments (30%): not graded, submit on time for full credit, late subs (up to a week) get half-credit.
-* Mid-term exam (30%)
-* Final exam (40%)
+* Mid-term exam (Apr 11, 30%)
+* Final exam (May 30, 40%)
 
 ### Attendance
 
