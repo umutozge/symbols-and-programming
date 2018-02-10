@@ -1,5 +1,0 @@
-(defmacro compose (f g)
-  (let ((sym (gensym)))
-	`(function (lambda (,sym) (funcall ,f (funcall ,g ,sym)) ))
-	)
-  )
