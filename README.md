@@ -15,7 +15,7 @@ Office hours: by appointment
 |Week| Date   | Topic | Notes | Assignment | Reading
 :---|:---|:---|:---|:---|:--- 
 1   | Feb 14 | Introducing the course
-2   | Feb 21 | Cognition, computation, computers, programs | | [A01](../assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/crane-ch-03.pdf), [Touretzky (1990), Ch. 1](readings/touretzky-ch-01.pdf) |
+2   | Feb 21 | Cognition, computation, computers, programs | | [A01](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/crane-ch-03.pdf), [Touretzky (1990), Ch. 1](readings/touretzky-ch-01.pdf) |
 3   | Feb 28 | Symbols, evaluation, REPL, pre-fix notation
 4   | Mar 7  | Conses and lists
 5   | Mar 14 | Functions I, conditional control
