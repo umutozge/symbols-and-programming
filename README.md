@@ -32,7 +32,7 @@ Office hours: by appointment
 
 ### Materials
 
-* [Lecture notes]() (updated weekly).
+* [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
 * Readings (assigned weekly).
 * Books:   
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.   
