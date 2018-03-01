@@ -15,9 +15,9 @@ Office hours: by appointment
 |Week| Date   | Topic | Notes | Assignment | Reading
 :---|:---|:---|:---|:---|:--- 
 1   | Feb 14 | Introducing the course
-2   | Feb 21 | Cognition, computation, computers, programs | Sec. 1 | [A01](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/crane-ch-03.pdf), [Touretzky (1990), Ch. 1](readings/touretzky-ch-01.pdf) |
-3   | Feb 28 | Conses and lists | |[A02](assignments/cogs502-assignment-02.pdf) |[Touretzky (1990), pp. 31-52](readings/touretzky-31-52.pdf) |
-4   | Mar 7  | Symbols, evaluation, REPL, pre-fix notation
+2   | Feb 21 | Cognition, computation, computers, programs | Sec. 1 | [A01](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/10_crane-ch-3.pdf), [Touretzky (1990), Ch. 1](readings/13_touretzky-ch-1.pdf) |
+3   | Feb 28 | Conses and lists | Sec. 2 |[A02](assignments/cogs502-assignment-02.pdf) |[Touretzky (1990), pp. 31-52](readings/16_touretzky-31-52.pdf) |
+4   | Mar 7  | Symbols, evaluation, REPL, pre-fix notation | [A03](assignments/cogs502-assignment-03.pdf) |[Touretzky (1990), pp. 52-69](readings/19_touretzky-pp-52-69.pdf), [Touretzky (1990), pp. 77-83](readings/22_touretzky-pp-77-83.pdf) | |
 5   | Mar 14 | Functions I, conditional control
 6   | Mar 21 | Functions II, Recursion I
 7   | Mar 28 | Recursion II
