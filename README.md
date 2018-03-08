@@ -4,7 +4,7 @@ COGS 502 - Symbols and Programming - Informatics Institute, METU
 Wednesday, 9:00-11:30, S01, Informatics Institute
 
 [Umut Özge](https://umutozge.github.io)   
-Office hours: Wednesday, 12:00-14:00
+Office hours: Wednesday, 12:00-14:00, Room B208
 
 [Fırat Öter](mailto:foter@metu.edu.tr) (TA)  
 Office hours: by appointment  
@@ -17,8 +17,8 @@ Office hours: by appointment
 1   | Feb 14 | Introducing the course
 2   | Feb 21 | Cognition, computation, computers, programs | Sec. 1 | [A01](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/10_crane-ch-3.pdf), [Touretzky (1990), Ch. 1](readings/13_touretzky-ch-1.pdf) |
 3   | Feb 28 | Conses and lists | Sec. 2 |[A02](assignments/cogs502-assignment-02.pdf) |[Touretzky (1990), pp. 31-52](readings/16_touretzky-31-52.pdf) |
-4   | Mar 7  | Symbols, evaluation, REPL | Sec 3-5  |[A03](assignments/cogs502-assignment-03.pdf) |[Touretzky (1990), pp. 52-69](readings/19_touretzky-pp-52-69.pdf), [Touretzky (1990), pp. 77-83](readings/22_touretzky-pp-77-83.pdf) | |
-5   | Mar 14 | Functions I, conditional control
+4   | Mar 7  | Symbols, evaluation, REPL | Sec 3-5  |[A03](assignments/cogs502-assignment-03.pdf) |[Touretzky (1990), pp. 52-69](readings/19_touretzky-pp-52-69.pdf), [Touretzky (1990), pp. 77-83](readings/22_touretzky-pp-77-83.pdf) | 
+5   | Mar 14 | Functions I, conditional control | | [A04](assignments/cogs502-assignment-03.pdf | [Touretzky (1990), Ch. 4](readings/25_touretzky-ch-4.pdf) 
 6   | Mar 21 | Functions II, Recursion I
 7   | Mar 28 | Recursion II
 8   | Apr 4  | Iteration I
