@@ -18,12 +18,12 @@ Office hours: by appointment
 2   | Feb 21 | Cognition, computation, computers, programs | Sec. 1 | [A01](assignments/cogs502-assignment-01.pdf) | [Crane (2003), Ch. 3](readings/10_crane-ch-3.pdf), [Touretzky (1990), Ch. 1](readings/13_touretzky-ch-1.pdf) |
 3   | Feb 28 | Conses and lists | Sec. 2 |[A02](assignments/cogs502-assignment-02.pdf) |[Touretzky (1990), pp. 31-52](readings/16_touretzky-31-52.pdf) |
 4   | Mar 7  | Symbols, evaluation, REPL | Sec 3-5  |[A03](assignments/cogs502-assignment-03.pdf) |[Touretzky (1990), pp. 52-69](readings/19_touretzky-pp-52-69.pdf), [Touretzky (1990), pp. 77-83](readings/22_touretzky-pp-77-83.pdf) | 
-5   | Mar 14 | Functions I, conditional control | | [A04](assignments/cogs502-assignment-04.pdf) | [Touretzky (1990), Ch. 4](readings/25_touretzky-ch-4.pdf) 
-6   | Mar 21 | Functions II, Recursion I
-7   | Mar 28 | Recursion II
-8   | Apr 4  | Iteration I
+5   | Mar 14 | Functions, conditionals | | [A04](assignments/cogs502-assignment-04.pdf) | [Touretzky (1990), Ch. 4](readings/25_touretzky-ch-4.pdf) 
+6   | Mar 21 | Functions, conditionals (cont.) | | [A05](assignments/cogs502-assignment-05.pdf) | [Touretzky (1990), Ch. 6](readings/28_touretzky-ch-6-parts.pdf)
+7   | Mar 28 | Recursion I  
+8   | Apr 4  | Recursion II
 9   | Apr 11 | Mid-term exam
-10  | Apr 18 | Iteration II
+10  | Apr 18 | Iteration 
 11  | Apr 25 | Lambda I
 12  | May 2  | Lambda II
 13  | May 9  | Case study: Propositional Logic
