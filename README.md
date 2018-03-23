@@ -19,7 +19,7 @@ Office hours: by appointment
 3   | Feb 28 | Conses and lists | Sec. 2 |[A02](assignments/cogs502-assignment-02.pdf) |[Touretzky (1990), pp. 31-52](readings/16_touretzky-31-52.pdf) |
 4   | Mar 7  | Symbols, evaluation, REPL | Sec 3-5  |[A03](assignments/cogs502-assignment-03.pdf) |[Touretzky (1990), pp. 52-69](readings/19_touretzky-pp-52-69.pdf), [Touretzky (1990), pp. 77-83](readings/22_touretzky-pp-77-83.pdf) | 
 5   | Mar 14 | Functions, conditionals | Sec. 6 | [A04](assignments/cogs502-assignment-04.pdf) | [Touretzky (1990), Ch. 4](readings/25_touretzky-ch-4.pdf) 
-6   | Mar 21 | Conditionals (cont.), recursion | | [A05](assignments/cogs502-assignment-05.pdf) | [Touretzky (1990), Ch. 6](readings/28_touretzky-ch-6-parts.pdf)
+6   | Mar 21 | Conditionals (cont.), recursion | Sec. 6-7 | [A05](assignments/cogs502-assignment-05.pdf) | [Touretzky (1990), Ch. 6](readings/28_touretzky-ch-6-parts.pdf)
 7   | Mar 28 | Recursion (cont.) | | [A06](assignments/cogs502-assignment-06.pdf) |  [Touretzky (1990), pp. 231-244](readings/31_touretzky-pp-231-244.pdf)
 8   | Apr 4  | Applicative programming 
 9   | Apr 11 | Mid-term exam
