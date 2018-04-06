@@ -22,7 +22,7 @@ Office hours: by appointment
 6   | Mar 21 | Conditionals (cont.), recursion | Sec. 6-7 | [A05](assignments/cogs502-assignment-05.pdf) | [Touretzky (1990), Ch. 6](readings/28_touretzky-ch-6-parts.pdf)
 7   | Mar 28 | Recursion (cont.) |Sec. 7| [A06](assignments/cogs502-assignment-06.pdf) |  [Touretzky (1990), pp. 231-244](readings/31_touretzky-pp-231-244.pdf)
 8   | Apr 4  | Recursion (cont.) | | [A07](assignments/cogs502-assignment-07.pdf) |  [Touretzky (1990), pp. 244-271](readings/34_touretzky-pp-244-271.pdf)
-9   | Apr 11 | Mid-term exam
+9   | Apr 11 | Mid-term exam | | [A08](assignments/cogs502-assignment-08.pdf)|
 10  | Apr 18 | Applicative programming 
 11  | Apr 25 | Lambda I
 12  | May 2  | Lambda II
