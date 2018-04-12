@@ -3,8 +3,13 @@
 		((= counter n) (cons 'x (blank-n n (cdr lst) 1)))
 		(t (cons (car lst) (blank-n n (cdr lst) (+ counter 1))))))
 
+(defun c-find (x lst &optional (backup 0) (guess 0))
+  "Find the position of the last occurrence of x in lst"
+  (cond ((endp lst) guess)
+		((equal x (car lst)) (c-find x (cdr lst) (+ 1 backup) (+ 1 backup)))
+		(t (c-find x (cdr lst) (+ 1 backup) guess))))
 
-; naive method
+; a naive method
 (defun nsub-list (x y)
   (cond 
 	; admit failure if y gets shorter than x
@@ -25,7 +30,8 @@
 
 
 
-; One way is to keep a flag telling 
+; a naive method
+; keep a flag telling 
 ; whether you have already started matching lists
 (defun sub-list (x y &optional (in-match nil))
   (cond 
