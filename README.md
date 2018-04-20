@@ -23,9 +23,9 @@ Office hours: by appointment
 7   | Mar 28 | Recursion (cont.) |Sec. 7| [A06](assignments/cogs502-assignment-06.pdf) |  [Touretzky (1990), pp. 231-244](readings/31_touretzky-pp-231-244.pdf)
 8   | Apr 4  | Recursion (cont.) | | [A07](assignments/cogs502-assignment-07.pdf) |  [Touretzky (1990), pp. 244-271](readings/34_touretzky-pp-244-271.pdf)
 9   | Apr 11 | Mid-term exam | | [A08](assignments/cogs502-assignment-08.pdf)|
-10  | Apr 18 | Applicative programming 
-11  | Apr 25 | Lambda I
-12  | May 2  | Lambda II
+10  | Apr 18 | Applicative programming |
+11  | Apr 25 | Applicative programming (cont.) | | [A09](assignments/cogs502-assignment-09.pdf)| [Touretzky (1990), Ch. 7](readings/37_touretzky-ch-7.pdf)
+12  | May 2  | Lambda 
 13  | May 9  | Iteration 
 14  | May 16 | I/O, user interaction
 
