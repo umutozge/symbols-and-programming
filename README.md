@@ -25,9 +25,9 @@ Office hours: by appointment
 9   | Apr 11 | Mid-term exam | | [A08](assignments/cogs502-assignment-08.pdf)|
 10  | Apr 18 | Applicative programming |
 11  | Apr 25 | Applicative programming (cont.) | | [A09](assignments/cogs502-assignment-09.pdf)| [Touretzky (1990), Ch. 7](readings/37_touretzky-ch-7.pdf)
-12  | May 2  | Lambda 
-13  | May 9  | Iteration 
-14  | May 16 | I/O, user interaction
+12  | May 2  | Lambda | | [A09](assignments/cogs502-assignment-10.pdf)
+13  | May 9  | I/O, user interaction  
+14  | May 16 | I/O, user interaction (cont.)
 
 
 ### Materials
