@@ -55,7 +55,8 @@
 		((atom (car lst)) (cons (car lst) (flatten (cdr lst))))
 		(t (append (flatten (car lst)) (flatten (cdr lst))))))
 
-;;; Question 6
+
+;;; Question 5
 
 (defun maxx (lst &optional guess)
   "find the largest number in a list of numbers"
@@ -66,7 +67,7 @@
 			(maxx (cdr lst) (car lst))
 			(maxx (cdr lst) guess)))))
 
-;;; Question 7
+;;; Question 6
 
 (defun second-large (lst &optional first second)
   "find the second largest number in a list of numbers"
@@ -76,4 +77,16 @@
 												   (second-large (cdr lst) (car lst) first)
 												   (second-large (cdr lst) first (car lst))))
 		(t (second-large (cdr lst) first second))))
+
+;;; Question 7
+;; there are many ways to solve this problem; we will start by not caring about efficiency.
+
+;; recursively find the maximum of the list and remove it while counting the removals.
+
+(defun nthlarge (n lst)
+  (cond ((endp lst) nil)
+		((= n 1) (maxx lst))
+		(t (nthlarge 
+			 (- n 1)
+			 (remove (maxx lst) lst)))))
 
