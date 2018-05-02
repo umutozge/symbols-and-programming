@@ -46,11 +46,31 @@
   (- (length (collatz-generate n)) 1))
 
 
-(defun ranger (&key (start -1) (end 9) (step 1) (acc nil))
+(defun ranger (&key (start 0) (end 9) (step 1) (acc nil))
   (cond ((>= start end) (cons start acc))
 		(t (ranger :acc (cons end acc)
 				   :start start
 				   :end (- end step)
 				   :step step))))
 
-;;; end of file
+(defun maxx (lst &optional (max nil))
+  (cond ((endp lst) max)
+		((null max) (maxx (cdr lst) (car lst)))
+		(t (maxx (cdr lst) (if (> (car lst) max)
+							 (car lst)
+							 max)))))
+
+(defun maxx (lst &key 
+				 (max nil)
+				 (hook #'(lambda (x) x)))
+  (cond ((endp lst) max)
+		((null max) (maxx (cdr lst) :max (car lst) :hook hook))
+		(t (maxx 
+			 (cdr lst)
+			 :max (if (> (funcall hook (car lst)) 
+						 (funcall hook max))
+					(car lst)
+					max)
+			 :hook hook))))
+
+;;; EOF
