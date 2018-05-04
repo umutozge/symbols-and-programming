@@ -26,7 +26,7 @@ Office hours: by appointment
 10  | Apr 18 | Applicative programming |
 11  | Apr 25 | Applicative programming (cont.) | | [A09](assignments/cogs502-assignment-09.pdf)| [Touretzky (1990), Ch. 7](readings/37_touretzky-ch-7.pdf)
 12  | May 2  | Lambda | | [A10](assignments/cogs502-assignment-10.pdf)
-13  | May 9  | I/O, user interaction  
+13  | May 9  | I/O, user interaction  | | [A11](assignments/cogs502-assignment-11.pdf)
 14  | May 16 | I/O, user interaction (cont.)
 
 
