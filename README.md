@@ -23,11 +23,12 @@ Office hours: by appointment
 7   | Mar 28 | Recursion (cont.) |Sec. 7| [A06](assignments/cogs502-assignment-06.pdf) |  [Touretzky (1990), pp. 231-244](readings/31_touretzky-pp-231-244.pdf)
 8   | Apr 4  | Recursion (cont.) | | [A07](assignments/cogs502-assignment-07.pdf) |  [Touretzky (1990), pp. 244-271](readings/34_touretzky-pp-244-271.pdf)
 9   | Apr 11 | Mid-term exam | | [A08](assignments/cogs502-assignment-08.pdf)|
-10  | Apr 18 | Applicative programming |
-11  | Apr 25 | Applicative programming (cont.) | | [A09](assignments/cogs502-assignment-09.pdf)| [Touretzky (1990), Ch. 7](readings/37_touretzky-ch-7.pdf)
-12  | May 2  | Lambda | | [A10](assignments/cogs502-assignment-10.pdf)
-13  | May 9  | I/O, user interaction  | | [A11](assignments/cogs502-assignment-11.pdf)
-14  | May 16 | I/O, user interaction (cont.)
+10  | Apr 18 | Applicative programming |Sec. 8 |
+11  | Apr 25 | Applicative programming (cont.) | Sec. 9| [A09](assignments/cogs502-assignment-09.pdf)| [Touretzky (1990), Ch. 7](readings/37_touretzky-ch-7.pdf)
+12  | May 2  | Lambda | Sec. 9| [A10](assignments/cogs502-assignment-10.pdf)
+13  | May 9  | I/O, user interaction  |Sec. 11 | [A11](assignments/cogs502-assignment-11.pdf)
+14  | May 16 | I/O, user interaction (cont.) |Sec. 11| [A12](assignments/cogs502-assignment-12.pdf)
+15  | May 30 | Final exam | 
 
 
 ### Materials
