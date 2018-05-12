@@ -2,15 +2,15 @@
 
 (defun ranger (&key (start -1) (end 9) (step 1) (acc nil))
   (cond ((>= start end) (cons start acc))
-		(t (ranger :acc (cons end acc)
-				   :start start
-				   :end (- end step)
-				   :step step))))
+        (t (ranger :acc (cons end acc)
+                   :start start
+                   :end (- end step)
+                   :step step))))
 
 (defun factorial (n &optional (acc 1))
   (if (zerop n)
-	acc
-	(factorial (- n 1) (* n acc))))
+    acc
+    (factorial (- n 1) (* n acc))))
 
 ;;; Question 1
 
@@ -28,16 +28,16 @@
 ;with length
 (defun split (lst &optional first-half )
   (if (>= (length first-half) (length lst))
-	(list first-half lst)
-	(split (cdr lst) (append first-half (list (car lst))))))
+    (list first-half lst)
+    (split (cdr lst) (append first-half (list (car lst))))))
 
 ;;; Question 3
 
 ;without length
 (defun split (lst &optional first-half (track lst))  
   (if (endp track)
-	(list first-half lst)
-	(split (cdr lst) (append first-half (list (car lst))) (cddr track))))
+    (list first-half lst)
+    (split (cdr lst) (append first-half (list (car lst))) (cddr track))))
 
 
 ;;; Question 4
@@ -45,10 +45,10 @@
 (defun replace-if (&key test seq item)
   "replaces the elements in the seq that pass the test with item"
   (mapcar #'(lambda (x)
-			  (if (funcall test x)
-				item
-				x))
-		  seq))
+              (if (funcall test x)
+                item
+                x))
+          seq))
 
 ;;; Question 5
 
@@ -76,12 +76,12 @@
 
 (defun zipp (lst &optional (func #'zip))
   (if (endp (cdr lst))
-	(car lst)
-	(zipp 
-	  (cons 
-		(funcall func (car lst) (cadr lst))
-		(cddr lst))
-	  #'distribute)))
+    (car lst)
+    (zipp 
+      (cons 
+        (funcall func (car lst) (cadr lst))
+        (cddr lst))
+      #'distribute)))
 
 
-;;; end of file
+;;; EOF 

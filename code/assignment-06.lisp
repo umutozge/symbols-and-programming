@@ -32,3 +32,4 @@
   (if (endp lst)
     counter
     (count-length (cdr lst) (+ counter 1))))
+;;; EOF

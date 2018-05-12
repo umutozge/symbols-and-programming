@@ -5,11 +5,11 @@
 
 (defun collatz-generate (n)
   (if (= n 1) 
-	'(1)
-	(let ((new-value (if (evenp n)
-					   (/ n 2)
-					   (+ (* n 3) 1))))
-	  (cons n (collatz-generate new-value)))))
+    '(1)
+    (let ((new-value (if (evenp n)
+                       (/ n 2)
+                       (+ (* n 3) 1))))
+      (cons n (collatz-generate new-value)))))
 
 (defun collatz-length (n)
   (- (length (collatz-generate n)) 1))
@@ -22,25 +22,25 @@
 
 (defun ranger (&key (start 0) (end 9) (step 1) (acc 'untouched))
   (cond ((>= start end) (cons start acc))
-		; we detect the initial call to adjust the end value
-		((equal acc 'untouched) (ranger :start start 
-										:end (if (zerop (rem (- end start) step))
-											   end
-											   (- end (rem (- end start) step)))
-										:step step
-										:acc nil)) 
-		(t (ranger :acc (cons end acc)
-				   :start start
-				   :end (- end step)
-				   :step step))))
+        ; we detect the initial call to adjust the end value
+        ((equal acc 'untouched) (ranger :start start 
+                                        :end (if (zerop (rem (- end start) step))
+                                               end
+                                               (- end (rem (- end start) step)))
+                                        :step step
+                                        :acc nil)) 
+        (t (ranger :acc (cons end acc)
+                   :start start
+                   :end (- end step)
+                   :step step))))
 
 ;; we are ready to define a function that generates a table of collatz lengths paired
 ;; with integers in a given range.
 
 (defun collatz-length-table (&key (start 1) (end 100))
   (mapcar #'(lambda (x)
-			  (cons x (collatz-length x)))
-		  (ranger :start start :end end)))
+              (cons x (collatz-length x)))
+          (ranger :start start :end end)))
 
 ;; Now the task is to collect all the number with the same 
 ;; collatz length into lists. It would be good to have the
@@ -72,20 +72,20 @@
 ;; argument will be the pair coming from the assoc list
 
 (defun divide-list (key lst &key 
-							  matches ; collect here the matching pairs
-							  remains ; collect here the non-matching pairs
-							  (test #'(lambda (x y)
-												 (equal x (car y)))))
+                              matches ; collect here the matching pairs
+                              remains ; collect here the non-matching pairs
+                              (test #'(lambda (x y)
+                                                 (equal x (car y)))))
   (cond ((endp lst) (cons matches (list remains))) ; return a two element list, first elm is matches, second is remains
-		(t (if (funcall test key (car lst))
-			 (divide-list key (cdr lst)
-								:matches (cons (car lst) matches)
-								:remains remains
-								:test test)
-			 (divide-list key (cdr lst)
-								:matches matches
-								:remains (cons (car lst) remains)
-								:test test)))))
+        (t (if (funcall test key (car lst))
+             (divide-list key (cdr lst)
+                                :matches (cons (car lst) matches)
+                                :remains remains
+                                :test test)
+             (divide-list key (cdr lst)
+                                :matches matches
+                                :remains (cons (car lst) remains)
+                                :test test)))))
 
 ;;; the rest is left as an exercise
 

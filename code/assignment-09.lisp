@@ -1,4 +1,3 @@
-
 ;;; Question 1
 
 (defun random-n1 (n)
@@ -90,3 +89,4 @@
              (- n 1)
              (remove (maxx lst) lst)))))
 
+;;; EOF

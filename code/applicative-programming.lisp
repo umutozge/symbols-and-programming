@@ -12,35 +12,35 @@
 
 (defun letter (grade)
   (cond ((> grade 89) 'AA)
-		((> grade 84) 'BA)
-		((> grade 79) 'BB)
-		((> grade 74) 'CB)
-		((> grade 69) 'CC)
-		((> grade 64) 'DC)
-		((> grade 59) 'DD)
-		((> grade 54) 'FD)
-		(t 'FF)))
+        ((> grade 84) 'BA)
+        ((> grade 79) 'BB)
+        ((> grade 74) 'CB)
+        ((> grade 69) 'CC)
+        ((> grade 64) 'DC)
+        ((> grade 59) 'DD)
+        ((> grade 54) 'FD)
+        (t 'FF)))
 
 (defun append-letter (grade)
   (list grade (letter grade)))
 
 (defun class-mean (grades-list)
   (float (/
-		   (reduce #'+ (remove-if #'zerop grades-list))
-		   (length (remove-if #'zerop grades-list)))))
+           (reduce #'+ (remove-if #'zerop grades-list))
+           (length (remove-if #'zerop grades-list)))))
 
 (defun class-mean (grades-list)
   (let ((real-grades (remove-if #'zerop grades-list))) 
-	(float (/ (reduce #'+ real-grades) (length real-grades)))))
+    (float (/ (reduce #'+ real-grades) (length real-grades)))))
 
 
 (defun collatz-generate (n)
   (if (= n 1) 
-	'(1)
-	(let ((new-value (if (evenp n)
-					   (/ n 2)
-					   (+ (* n 3) 1))))
-	  (cons n (collatz-generate new-value)))))
+    '(1)
+    (let ((new-value (if (evenp n)
+                       (/ n 2)
+                       (+ (* n 3) 1))))
+      (cons n (collatz-generate new-value)))))
 
 (defun collatz-length (n)
   (- (length (collatz-generate n)) 1))
@@ -48,29 +48,29 @@
 
 (defun ranger (&key (start 0) (end 9) (step 1) (acc nil))
   (cond ((>= start end) (cons start acc))
-		(t (ranger :acc (cons end acc)
-				   :start start
-				   :end (- end step)
-				   :step step))))
+        (t (ranger :acc (cons end acc)
+                   :start start
+                   :end (- end step)
+                   :step step))))
 
 (defun maxx (lst &optional (max nil))
   (cond ((endp lst) max)
-		((null max) (maxx (cdr lst) (car lst)))
-		(t (maxx (cdr lst) (if (> (car lst) max)
-							 (car lst)
-							 max)))))
+        ((null max) (maxx (cdr lst) (car lst)))
+        (t (maxx (cdr lst) (if (> (car lst) max)
+                             (car lst)
+                             max)))))
 
 (defun maxx (lst &key 
-				 (max nil)
-				 (hook #'(lambda (x) x)))
+                 (max nil)
+                 (hook #'(lambda (x) x)))
   (cond ((endp lst) max)
-		((null max) (maxx (cdr lst) :max (car lst) :hook hook))
-		(t (maxx 
-			 (cdr lst)
-			 :max (if (> (funcall hook (car lst)) 
-						 (funcall hook max))
-					(car lst)
-					max)
-			 :hook hook))))
+        ((null max) (maxx (cdr lst) :max (car lst) :hook hook))
+        (t (maxx 
+             (cdr lst)
+             :max (if (> (funcall hook (car lst)) 
+                         (funcall hook max))
+                    (car lst)
+                    max)
+             :hook hook))))
 
 ;;; EOF
