@@ -42,7 +42,7 @@
               (cons x (collatz-length x)))
           (ranger :start start :end end)))
 
-;; Now the task is to collect all the number with the same 
+;; Now the task is to collect all the numbers with the same 
 ;; collatz length into lists. It would be good to have the
 ;; collatz length as part of the structure as well, so that
 ;; we can inspect which collatz-length is shared by which 
@@ -65,8 +65,8 @@
 ;; (ii) what happens to the original assoc list after these pairs are removed.
 ;; We will write a function that separates the pairs we are interested in
 ;; from the pairs that should remain after we take out those pairs.
-;; For our present purposes we will need to check for cdr's of the pairs 
-;; something similar to what rassoc does. Let us parametrize to where to look
+;; For our present purposes we will need to check for cdr's of the pairs,
+;; something similar to what rassoc does. Let us parametrize where to look
 ;; in searching for the pairs, we will call it test -- it requires a two place
 ;; function, first argument will be the key we are searching, and the second 
 ;; argument will be the pair coming from the assoc list
@@ -87,7 +87,25 @@
                                 :remains (cons (car lst) remains)
                                 :test test)))))
 
-;;; the rest is left as an exercise
+;;; once we fetch all the matching pairs, we need a function to
+;;; obtain a list starting with the collatz length and followed
+;;; by all the integers with that collatz length. Let's call this
+;;; function ORGANIZE
 
+(defun organize (alist)
+	(cons 
+	  (cdar alist)
+	  (mapcar #'car alist)))
+
+;;; Finally we can collect all our solutions in a single function
+;;; It takes a collatz length table as input
+
+(defun compute-equivalence (coll-table &optional acc)
+	(if (equal coll-table  nil)
+	  acc
+	  (let ((division (divide-list (cdar coll-table) coll-table :test #'(lambda (x y) (equal x (cdr y))))))
+		(compute-equivalence 
+		  (cadr division)
+		  (cons (organize (car division)) acc)))))
 
 ;;; EOF
