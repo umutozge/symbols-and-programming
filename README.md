@@ -28,7 +28,7 @@ Office hours: by appointment
 12  | May 2  | Lambda | Sec. 9| [A10](assignments/cogs502-assignment-10.pdf)
 13  | May 9  | I/O, user interaction  |Sec. 11 | [A11](assignments/cogs502-assignment-11.pdf)
 14  | May 16 | I/O, user interaction (cont.) |Sec. 11| [A12](assignments/cogs502-assignment-12.pdf)
-15  | May 30 | Final exam | 
+15  | May 30 | Final exam | | [A13](assignments/cogs502-assignment-13.pdf) 
 
 
 ### Materials
