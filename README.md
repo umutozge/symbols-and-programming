@@ -13,35 +13,38 @@ Office hours: by appointment
 
 |Week| Date   | Topic | Notes | Assignment | Reading
 :---|:---|:---|:---|:---|:--- 
-1   | Oct 4 | Prefix notation, moving to Linux | 
-2   | Oct 11 | First steps; REPL |  | <!--- [A01](assignments/cogs502-assignment-01.pdf)-->| 
+1   | Oct 4  | Prefix notation, moving to Linux | 
+2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf)| 
 3   | Oct 18 | Lists, lists and lists |  | <!---[A02](assignments/cogs502-assignment-02.pdf)--> | 
 4   | Oct 25 | Functions; conditionals |  |<!---[A03](assignments/cogs502-assignment-03.pdf)--> | 
-5   | Nov 1  | More on symbols and evaluation |  | <!---[A04](assignments/cogs502-assignment-04.pdf)--> | 
-6   | Nov 8  | Mid-term | | <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
+5   | Nov 1  | Symbols and evaluation |  | <!---[A04](assignments/cogs502-assignment-04.pdf)--> | 
+6   | Nov 8  | **Mid-term** | | <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
 7   | Nov 15 | Recursion I | | <!---[A06](assignments/cogs502-assignment-06.pdf)--> | 
 8   | Nov 22 | Recursion II | | <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
 9   | Nov 29 | Iteration | | <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
 10  | Dec 6  | Lambda | | <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
 11  | Dec 13 | Applicative programming | | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
-12  | Dec 20 | Mid-term | | <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
-13  | Dec 27 | Sorting  | | <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
-14  | Jan 3  | Search | | <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
+12  | Dec 20 | **Mid-term** | | <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
+13  | Dec 27 | Handling data  | | <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
+14  | Jan 3  | Intro to algorithmics | | <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
 
 
 ### Resources 
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
 * Readings (assigned weekly).
-* Books: 
-	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ. 
-	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA. 
-	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA. 
+* Books:  
+	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
+	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
+	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA.  
 * Last term's full [content](var/symbols-and-programming-2018-Spring.zip); **Disclaimer:** expect significant changes in the content.
 
 ### Requirements
 
-* Weekly assignments (30%): not graded; attempt all questions and submit by Tue night to get full credit -- **no late submissions**.
+* Weekly assignments (30%): 
+	- not graded; 
+	- attempt all questions and submit by Tue night to get full credit;
+	- **no partial credit for late submissions**.
 * Mid-term exam I (Nov 8, 20%)
 * Mid-term exam II (Dec 20, 20%)
 * Final exam (Jan 10, 30%)
