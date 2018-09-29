@@ -15,7 +15,7 @@ Office hours: by appointment
 :---|:---|:---|:---|:---|:--- 
 1   | Oct 4 | Introducing the course, prefix notation, Moving to Linux
 2   | Oct 11 | First steps in Common Lisp |  | [A01](assignments/cogs502-assignment-01.pdf) |
-3   | Oct 18 | Conses and lists |  |-<!--- [A02](assignments/cogs502-assignment-02.pdf) | -->
+3   | Oct 18 | Conses and lists |  | <!-- [A02](assignments/cogs502-assignment-02.pdf) | -->
 4   | Oct 25  | Symbols, evaluation, REPL |  |[A03](assignments/cogs502-assignment-03.pdf) |
 5   | Nov 1 | Functions, conditionals |  | [A04](assignments/cogs502-assignment-04.pdf) | 
 6   | Nov 8 | Conditionals (cont.), recursion | Sec. 6-7 | [A05](assignments/cogs502-assignment-05.pdf) |
