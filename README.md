@@ -28,7 +28,6 @@ Office hours: by appointment
 13  | Dec 27 | Handling data  | | <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
 14  | Jan 3  | Intro to algorithmics | | <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
 
-
 ### Resources 
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
@@ -38,6 +37,10 @@ Office hours: by appointment
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
 	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA.  
 * Last term's full [content](var/symbols-and-programming-2018-Spring.zip); **Disclaimer:** expect significant changes in the content.
+
+### Communication
+
+* I'll assume you regularly check the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) of the course.
 
 ### Requirements
 
