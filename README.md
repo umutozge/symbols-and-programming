@@ -3,11 +3,11 @@ Informatics Institute, METU
 
 Thursday, 9:40-12:30, Informatics Lab, Informatics Institute
 
-[Umut Özge](https://umutozge.github.io)   
-Office hours: by appointment, Room B208
+[Umut Özge](https://umutozge.github.io)  
+Room B208
 
-[Fırat Öter](mailto:foter@metu.edu.tr) (TA)  
-Office hours: by appointment  
+[Tunç Güven Kaya](mailto:tuncgk@gmail.com) (TA)  
+Room B105
 
 ### Weekly Schedule
 
@@ -18,15 +18,15 @@ Office hours: by appointment
 3   | Oct 18 | Lists, lists and lists |  | <!---[A02](assignments/cogs502-assignment-02.pdf)--> | 
 4   | Oct 25 | Functions; conditionals |  |<!---[A03](assignments/cogs502-assignment-03.pdf)--> | 
 5   | Nov 1  | Symbols and evaluation |  | <!---[A04](assignments/cogs502-assignment-04.pdf)--> | 
-6   | Nov 8  | **Mid-term** | | <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
-7   | Nov 15 | Recursion I | | <!---[A06](assignments/cogs502-assignment-06.pdf)--> | 
-8   | Nov 22 | Recursion II | | <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
-9   | Nov 29 | Iteration | | <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
-10  | Dec 6  | Lambda | | <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
+6   | Nov 8  | **Mid-term** | |            <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
+7   | Nov 15 | Recursion I | |             <!---[A06](assignments/cogs502-assignment-06.pdf)--> | 
+8   | Nov 22 | Recursion II | |            <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
+9   | Nov 29 | Iteration | |               <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
+10  | Dec 6  | Lambda | |                  <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
 11  | Dec 13 | Applicative programming | | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
-12  | Dec 20 | **Mid-term** | | <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
-13  | Dec 27 | Handling data  | | <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
-14  | Jan 3  | Intro to algorithmics | | <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
+12  | Dec 20 | **Mid-term** | |            <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
+13  | Dec 27 | Handling data  | |          <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
+14  | Jan 3  | Intro to algorithmics | |   <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
 
 ### Resources 
 
@@ -40,7 +40,7 @@ Office hours: by appointment
 
 ### Communication
 
-* I'll assume you regularly check the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) of the course.
+* We'll assume you regularly check the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) of the course.
 
 ### Requirements
 
