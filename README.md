@@ -1,4 +1,4 @@
-# COGS 502 - Symbols and Programming -- Fall 2018
+# COGS 502 - Symbols and Programming - Fall 2018
 Informatics Institute, METU
 
 Thursday, 9:40-12:30, Informatics Lab, Informatics Institute
