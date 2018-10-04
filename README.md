@@ -14,7 +14,7 @@ Room B105
 |Week| Date   | Topic | Notes | Assignment | Reading
 :---|:---|:---|:---|:---|:--- 
 1   | Oct 4  | Prefix notation, moving to Linux | 
-2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf)| 
+2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
 3   | Oct 18 | Lists, lists and lists |  | <!---[A02](assignments/cogs502-assignment-02.pdf)--> | 
 4   | Oct 25 | Functions; conditionals |  |<!---[A03](assignments/cogs502-assignment-03.pdf)--> | 
 5   | Nov 1  | Symbols and evaluation |  | <!---[A04](assignments/cogs502-assignment-04.pdf)--> | 
