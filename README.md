@@ -17,7 +17,7 @@ Room B105
 2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
 3   | Oct 18 | Lists, lists and lists | Sec. 2-5 for review | [A02](assignments/cogs502-assignment-02.pdf) | Graham (1996), Sec. 2.5-7 | 
 4   | Oct 25 | Simple recursion; iteration |  | [A03](assignments/cogs502-assignment-03.pdf)  | Graham (1996), Sec. 3.1-3 for review |
-5   | Nov 1  | Symbols and evaluation |  | <!---[A04](assignments/cogs502-assignment-04.pdf)--> |
+5   | Nov 1  | Symbols and evaluation | Sec. 5, 6  | [A04](assignments/cogs502-assignment-04.pdf)|
 6   | Nov 8  | **Mid-term** | |            <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
 7   | Nov 15 | Recursion I | |             <!---[A06](assignments/cogs502-assignment-06.pdf)--> | 
 8   | Nov 22 | Recursion II | |            <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
