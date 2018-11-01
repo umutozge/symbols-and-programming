@@ -16,12 +16,12 @@ Room B105
 1   | Oct 4  | Prefix notation, moving to Linux | 
 2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
 3   | Oct 18 | Lists, lists and lists | Sec. 2-5 for review | [A02](assignments/cogs502-assignment-02.pdf) | Graham (1996), Sec. 2.5-7 | 
-4   | Oct 25 | Simple recursion; iteration |  | [A03](assignments/cogs502-assignment-03.pdf)  | Graham (1996), Sec. 3.1-3 for review |
-5   | Nov 1  | Symbols and evaluation | Sec. 5, 6  | [A04](assignments/cogs502-assignment-04.pdf)|
-6   | Nov 8  | **Mid-term** | |            <!---[A05](assignments/cogs502-assignment-05.pdf)--> | 
+4   | Oct 25 | Iteration I|  | [A03](assignments/cogs502-assignment-03.pdf)  | Graham (1996), Sec. 3.1-3 for review |
+5   | Nov 1  | Iteration II| Sec. 5, 6  | [A04](assignments/cogs502-assignment-04.pdf)|
+6   | Nov 8  | **Mid-term** | |    [A05](assignments/cogs502-assignment-05.pdf)| 
 7   | Nov 15 | Recursion I | |             <!---[A06](assignments/cogs502-assignment-06.pdf)--> | 
 8   | Nov 22 | Recursion II | |            <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
-9   | Nov 29 | Iteration | |               <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
+9   | Nov 29 | More on symbols | |               <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
 10  | Dec 6  | Lambda | |                  <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
 11  | Dec 13 | Applicative programming | | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
 12  | Dec 20 | **Mid-term** | |            <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
