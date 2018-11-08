@@ -1,7 +1,14 @@
 ;;
 ;; COGS 502 - Symbols and Programming - Fall 2018
 ;;
-;; Sample solutions to Assignment 04
+;; Sample solutions to Assignment 05
+;;
+
+;; (PUSH X Y) is equivalent to 
+;; (SETF Y (CONS X Y))
+;; 
+;; (INCF X) is equivalent to
+;; (SETF X (+ 1 X))
 ;;
 
 ;; Q1
