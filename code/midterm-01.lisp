@@ -32,10 +32,9 @@
 ;; Q5
 
 (defun rotate-left (lst)
-  (let ((elm (car lst))
-        (take nil)
+  (let ((take nil)
         (store nil))
-    (dolist (x lst (append store (list elm)))
+    (dolist (x lst (append store (list (car lst))))
       (if take 
-        (setf store (append store (list x))))
-      (setf take t))))
+        (setf store (append store (list x)))
+        (setf take t)))))
