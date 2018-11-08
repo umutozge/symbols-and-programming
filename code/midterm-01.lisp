@@ -38,3 +38,13 @@
       (if take 
         (setf store (append store (list x)))
         (setf take t)))))
+
+; for fully correct behavior:
+
+(defun rotate-left2 (lst)
+  (let ((take nil)
+        (store nil))
+    (dolist (x lst (if lst (append store (list (car lst)))))
+      (if take 
+        (setf store (append store (list x)))
+        (setf take t)))))
