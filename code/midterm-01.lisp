@@ -22,10 +22,10 @@
       (setf counter (+ counter 1)))))
 
 (defun nthcdrr2 (n lst)
-  (let ((counter 1)
+  (let ((counter 0)
         (result lst))
     (dolist (x lst result)
-      (if (<= counter n)
+      (if (< counter n)
         (setf result (cdr result)))
       (setf counter (+ counter 1)))))
 
