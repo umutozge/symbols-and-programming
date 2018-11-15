@@ -11,22 +11,22 @@ Room B105
 
 ### Weekly Schedule
 
-|Week| Date   | Topic | Notes | Assignment | Reading
+|Week| Date   | Topic |  Assignment | Reading
 :---|:---|:---|:---|:---|:--- 
 1   | Oct 4  | Prefix notation, moving to Linux | 
-2   | Oct 11 | First steps; REPL |  | [A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
-3   | Oct 18 | Lists, lists and lists | Sec. 2-5 for review | [A02](assignments/cogs502-assignment-02.pdf) | Graham (1996), Sec. 2.5-7 | 
-4   | Oct 25 | Iteration I|  | [A03](assignments/cogs502-assignment-03.pdf)  | Graham (1996), Sec. 3.1-3 for review |
-5   | Nov 1  | Iteration II| Sec. 5, 6  | [A04](assignments/cogs502-assignment-04.pdf)|
-6   | Nov 8  | **Mid-term** | |    [A05](assignments/cogs502-assignment-05.pdf)| 
-7   | Nov 15 | Iteration III | |   [A06](assignments/cogs502-assignment-06.pdf)| 
-8   | Nov 22 | Recursion I | |         <!---[A07](assignments/cogs502-assignment-07.pdf)--> | 
-9   | Nov 29 | Recursion II | |               <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
-10  | Dec 6  | Recursion III, Lambda | |                  <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
-11  | Dec 13 | Applicative programming | | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
-12  | Dec 20 | **Mid-term** | |            <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
-13  | Dec 27 | Handling data  | |          <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
-14  | Jan 3  | Intro to algorithmics | |   <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
+2   | Oct 11 | First steps; REPL |[A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
+3   | Oct 18 | Lists, lists and lists |[A02](assignments/cogs502-assignment-02.pdf) | Graham (1996), Sec. 2.5-7; Notes sec. 2-5| 
+4   | Oct 25 | Iteration I| [A03](assignments/cogs502-assignment-03.pdf)  | Graham (1996), sec. 3.1-3|
+5   | Nov 1  | Iteration II| [A04](assignments/cogs502-assignment-04.pdf)| Notes sec. 5, 6| 
+6   | Nov 8  | **Mid-term** |    [A05](assignments/cogs502-assignment-05.pdf)| 
+7   | Nov 15 | Iteration III |   [A06](assignments/cogs502-assignment-06.pdf)| 
+8   | Nov 22 | Recursion I |     [A07](assignments/cogs502-assignment-07.pdf) | Notes sec. 6, | 
+9   | Nov 29 | Recursion II |               <!---[A08](assignments/cogs502-assignment-08.pdf)--> | 
+10  | Dec 6  | Recursion III, Lambda |                  <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
+11  | Dec 13 | Applicative programming | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
+12  | Dec 20 | **Mid-term** |            <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
+13  | Dec 27 | Handling data  |          <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
+14  | Jan 3  | Intro to algorithmics |   <!---[A13](assignments/cogs502-assignment-13.pdf)--> | 
 
 ### Resources 
 
