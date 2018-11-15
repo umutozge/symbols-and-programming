@@ -12,12 +12,9 @@
 
 ; b. (cond (x (cond (y (cond (z z))))))
 
-; c. (OR X Y Z)
-
-; c. (defmacro mor (x y z)
-;      `(cond (,x ,x)
-;             (,y ,y)
-;             (,z ,z)))
+; c. (cond (x x)
+;          (y y)
+;          (zz)))
 
 ;; Q2
 
