@@ -12,7 +12,7 @@ Room B105
 ### Weekly Schedule
 
 |Week| Date   | Topic |  Assignment | Reading
-:---|:---|:---|:---|:---|:--- 
+:---|:---|:---|:---|:--- 
 1   | Oct 4  | Prefix notation, moving to Linux | 
 2   | Oct 11 | First steps; REPL |[A01](assignments/cogs502-assignment-01.pdf) | Graham (1996), Sec. 1.1, Sec. 2.1-6| 
 3   | Oct 18 | Lists, lists and lists |[A02](assignments/cogs502-assignment-02.pdf) | Graham (1996), Sec. 2.5-7; Notes sec. 2-5| 
