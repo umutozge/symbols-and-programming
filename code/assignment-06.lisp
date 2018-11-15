@@ -66,7 +66,10 @@
                                  (push elm end)))
               (t (push elm end)))))))
 
-; Here is a way to do it with DO; don't worry if you don't understand it now, even if you know how DO works, the code is very cryptic. 
+; Here is a way to do it with DO; don't worry if you don't understand it now.
+; Even if you know how DO works, the code is very cryptic, if you don't know what it is  
+; trying to do beforehand. Try not to write such cryptic programs; and if you do, comment them
+; properly.
 
 (defun split-two3 (lst)
   (do ((x lst (cdr x))
@@ -78,5 +81,3 @@
        (list (reverse y) x)
        (let ((half (/ (car x) 2)))
          (list (reverse (cons half y)) (cons half (cdr x))))))))
-
-    
