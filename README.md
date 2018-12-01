@@ -22,7 +22,7 @@ Room B105
 7   | Nov 15 | Iteration III |  [A06](assignments/cogs502-assignment-06.pdf)| 
 8   | Nov 22 | Recursion I |   [A07](assignments/cogs502-assignment-07.pdf) | Notes sec. 6, | 
 9   | Nov 29 | Recursion II |  [A08](assignments/cogs502-assignment-08.pdf) | 
-10  | Dec 6  | Recursion III, Lambda |                  <!---[A09](assignments/cogs502-assignment-09.pdf)--> | 
+10  | Dec 6  | Recursion III, Lambda |  [A09](assignments/cogs502-assignment-09.pdf) | 
 11  | Dec 13 | Applicative programming | <!---[A10](assignments/cogs502-assignment-10.pdf)--> | 
 12  | Dec 20 | **Mid-term** |            <!---[A11](assignments/cogs502-assignment-11.pdf)--> | 
 13  | Dec 27 | Handling data  |          <!---[A12](assignments/cogs502-assignment-12.pdf)--> | 
