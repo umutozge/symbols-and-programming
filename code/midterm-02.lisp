@@ -6,16 +6,6 @@
 ;; Q1
 
 
-;; (a)
-
-(defun count-atoms (lst)
-  (cond ((null lst) 0) ;; note that endp wouldn't work here
-		((atom lst) 1)
-		(t (+ (count-atoms (car lst))
-			  (count-atoms (cdr lst))))))
-
-;; (b)
-
 (defun count-atoms (lst &optional (counter 0))
   (cond ((null lst) counter) ;; note that endp wouldn't work here
 		((atom lst) (+ counter 1))
