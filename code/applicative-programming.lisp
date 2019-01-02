@@ -37,10 +37,9 @@
 (defun collatz-generate (n)
   (if (= n 1) 
     '(1)
-    (let ((new-value (if (evenp n)
-                       (/ n 2)
-                       (+ (* n 3) 1))))
-      (cons n (collatz-generate new-value)))))
+    (cons n (collatz-generate (if (evenp n)
+                                (/ n 2)
+                                (+ (* n 3) 1))))))
 
 (defun collatz-length (n)
   (- (length (collatz-generate n)) 1))
@@ -72,5 +71,3 @@
                     (car lst)
                     max)
              :hook hook))))
-
-;;; EOF

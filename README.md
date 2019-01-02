@@ -50,7 +50,7 @@ Room B105
 	- **no partial credit for late submissions**.
 * Mid-term exam I (Nov 8, 20%)
 * Mid-term exam II (Dec 20, 20%)
-* Final exam (Jan 10, 30%)
+* Final exam (Jan 17, 30%)
 
 ### Attendance policy
 
