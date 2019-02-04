@@ -10,6 +10,7 @@ Office hours: Friday, 12:00-15:00, Room B208
 Room B105
 
 
+**Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
 
 
