@@ -19,7 +19,7 @@ Room B105
 :---|:---|:---|:---|:--- 
 1   | Feb 18  | Prefix notation, moving to Linux | 
 2   | Feb 25 | First steps; REPL | | <!-- Graham (1996), Sec. 1.1, Sec. 2.1-6 --> | 
-3   | Mar 4 | Making decisions | Ex 1.1-4 | Notes Sec. 1 | 
+3   | Mar 4 | Making decisions | Ex 1.1-2 | Notes Sec. 1 | 
 4   | Mar 11 | Iteration I| <!-- [A03](assignments/cogs502-assignment-03.pdf)-->  | <!-- Graham (1996), sec. 3.1-3--> |
 5   | Mar 18  | Iteration II|<!-- [A04](assignments/cogs502-assignment-04.pdf) --> |<!-- Notes sec. 5, 6--> | 
 6   | Mar 25  | Mid-term I  | <!-- [A05](assignments/cogs502-assignment-05.pdf) --> |
