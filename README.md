@@ -20,10 +20,10 @@ Room B105
 1   | Feb 18  | Prefix notation, moving to Linux | 
 2   | Feb 25 | First steps; REPL | | <!-- Graham (1996), Sec. 1.1, Sec. 2.1-6 --> | 
 3   | Mar 4 | Making decisions | Ex 1.1-2 | Notes Sec. 1 | 
-4   | Mar 11 | Iteration I| <!-- [A03](assignments/cogs502-assignment-03.pdf)-->  | <!-- Graham (1996), sec. 3.1-3--> |
-5   | Mar 18  | Iteration II|<!-- [A04](assignments/cogs502-assignment-04.pdf) --> |<!-- Notes sec. 5, 6--> | 
+4   | Mar 11 | Repetition |Ex 1.1-5, 2.1-3  | Notes Sec. 2 |
+5   | Mar 18  | Repetition (cont.); lists  | | | 
 6   | Mar 25  | Mid-term I  | <!-- [A05](assignments/cogs502-assignment-05.pdf) --> |
-7   | Apr 1 | Iteration III | <!-- [A06](assignments/cogs502-assignment-06.pdf) --> |
+7   | Apr 1 | Lists (cont.) | <!-- [A06](assignments/cogs502-assignment-06.pdf) --> |
 8   | Apr 8 | Recursion I |  <!-- [A07](assignments/cogs502-assignment-07.pdf) --> | <!-- Notes sec. 6, --> |
 9   | Apr 15 | Recursion II | <!-- [A08](assignments/cogs502-assignment-08.pdf) --> |
 10  | Apr 22  | Higher order functions | <!-- [A09](assignments/cogs502-assignment-09.pdf)  --> |
