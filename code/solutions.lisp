@@ -30,6 +30,28 @@
   (+ (sqr (max x y z))
      (sqr (seclarge x y z))))
 
+;;
+;; Question
+;; 
+;; Rewrite (AND X Y Z W) by using COND (Touretzky 1990).
+;;
+
+; (cond (X (cond (Y (cond (Z (cond (W))))))))
+
+;;
+;; Question
+;; 
+;; Write COND statements equivalent to:
+;; (NOT U), (OR X Y Z) (Winston and Horn 1984).
+;;
+
+; (NOT U): 
+; (cond (U nil)
+;       (t))
+
+; (OR X Y Z):
+; (cond (X) (Y) (Z)) 
+;
 
 ;; Question
 ;; 
