@@ -35,6 +35,7 @@ Room B105
 ### Resources 
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
+* [Sample solutions](code/solutions.lisp) to homework problems (updated weekly)
 * Readings (assigned weekly).
 * Reference books:  
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
