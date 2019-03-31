@@ -51,7 +51,7 @@
 
 ; (OR X Y Z):
 ; (cond (X) (Y) (Z)) 
-;
+
 
 ;; Question
 ;; 
@@ -160,3 +160,109 @@
   (if (= x y)
     (+ sum y)
     (sumr (+ x 1) y (+ x sum))))
+
+;; 
+;; Question
+;; 
+;; Define a procedure that gives the Fibonacci number of given integer.
+;; 
+
+; no accumulator
+
+(defun fib (n)
+  "assumes n is a non-negative integer"
+  (if (< n 2)
+    n
+    (+ (fib (- n 1)) (fib (- n 2)))))
+
+; with accumulator
+
+; version 1
+; where n itself is used as a counter
+(defun fibo (n &optional (oneback 1) (twoback 0))
+  "assumes n is a non-negative integer"
+  (cond ((zerop n) twoback)
+        ((= 1 n) oneback)
+        (t (fibo (- n 1) (+ oneback twoback) oneback))))
+
+; version 2
+; where a counter different from n is used
+
+(defun fiboc (n &optional (oneback 1) (twoback 0) (counter 2))
+  "assumes n is a non-negative integer"
+  (cond ((< n 2) n)
+        ((= counter n) (+ oneback twoback))
+        (t (fiboc n (+ oneback twoback) oneback (+ counter 1)))))
+
+;;
+;; Question
+;;
+;; Square roots by Newton's method
+;;
+
+(defun square (x) (* x x))
+
+(defun update-guess (x guess)
+  (/ (+ (/ x guess) guess) 2))
+
+(defun close-enough? (x y)
+  (< (abs (- x y)) 0.000001))
+
+(defun sqroot (x &optional (guess 1.0))
+  (if (close-enough? x (square guess))
+    guess
+    (sqroot x (update-guess x guess))))
+
+;;
+;; Question
+;;
+;; Ackermann-Peter function
+;;
+
+(defun ap (m n)
+  (cond ((zerop m) (+ n 1))
+        ((zerop n) (ap (- m 1) 1))
+        (t (ap (- m 1) (ap m (- n 1))))))
+
+;;
+;; Question
+;; 
+;; Define a two operand procedure that raises its first operand to the power of
+;; the second. You are allowed to use multiplication and subtraction. Define
+;; two versions, with and without an accumulator. You can check the behavior of
+;; your procedure by comparing it with \Verb+LISP+'s \Verb+EXPT+, which does
+;; the same thing. 
+;; 
+
+; no accu
+
+(defun power (x y)
+  (if (zerop y)
+    1
+    (* x (power x (- y 1)))))
+
+
+; with accu
+
+(defun powerr (x y &optional (pro 1))
+  (if (zerop y)
+    pro
+    (powerr x (- y 1) (* x pro))))
+
+
+
+
+
+;;
+;; Question
+;;
+;; Compute the average of two integers m and n (where m < n)  
+;; using only addition and subtraction.
+;;
+
+(defun aver (m n)
+  (if (= m n)
+    m
+    (aver (+ m 0.5) (- n 0.5))))
+
+
