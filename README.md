@@ -23,8 +23,8 @@ Room B105
 4   | Mar 11 | Repetition |Ex 1.3-5, 2.1-3  | Notes Sec. 2 |
 5   | Mar 18  | Repetition (cont.); lists  | Ex 2.3-7 3.1-4 | Notes Sec. 3| 
 6   | Mar 25  | Mid-term I  | Ex 3.5-7 |
-7   | Apr 1 | Lists (cont.) | <!-- [A06](assignments/cogs502-assignment-06.pdf) --> |
-8   | Apr 8 | Lists (cont.) |  <!-- [A07](assignments/cogs502-assignment-07.pdf) --> | <!-- Notes sec. 6, --> |
+7   | Apr 1 | Lists (cont.) |  |
+8   | Apr 8 | Lists (cont.) | Ex 4.1-8 | Notes Sec. 4 |
 9   | Apr 15 | Iteration constructs  | <!-- [A08](assignments/cogs502-assignment-08.pdf) --> |
 10  | Apr 22  | Higher order functions | <!-- [A09](assignments/cogs502-assignment-09.pdf)  --> |
 11  | Apr 29 | Search|<!-- [A10](assignments/cogs502-assignment-10.pdf)  --> |
