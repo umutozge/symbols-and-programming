@@ -396,3 +396,163 @@
     (if (atom (cdr lst))
       t
       (dotted (cdr lst)))))
+
+
+;;
+;; Question
+;; 
+;; Define a recursive procedure D-HOW-MANY? that counts all not only top-level
+;; occurrences of an item in a list.
+;; For instance (D-HOW-MANY? 'A '((A B) (C (A X)) A)) should return 3.
+;;
+
+; with accumulator
+
+(defun d-how-many? (x lst &optional (counter 0))
+  (cond ((endp lst) counter)
+        ((equal x (car lst)) (d-how-many? x (cdr lst) (1+ counter)))
+        ((listp (car lst)) (d-how-many? x (cdr lst) (d-how-many? x (car lst) counter)))
+        (t (d-how-many? x (cdr lst) counter))))
+
+; w/o accumulator
+
+(defun d-how-many? (x lst)
+  (cond ((endp lst) 0)
+        ((equal x (car lst)) (+
+                               1
+                               (d-how-many? x (cdr lst))))
+        ((listp (car lst)) (+
+                             (d-how-many? x (car lst))
+                             (d-how-many? x (cdr lst))))
+        (t (d-how-many? x (cdr lst)))))
+
+;;
+;; Question
+;; 
+;; Deep-reverse a list. 
+;; For instance (reverse0 '(a (b c (x d)) k)) should give (K ((D X) C B) A)
+;;
+
+(defun reverse0 (lst &optional acc)
+  (cond ((null lst) acc) 
+        ((atom lst) lst)
+        (t (reverse0
+             (cdr lst)
+             (cons (reverse0 (car lst)) acc)))))
+
+
+;;
+;; Question
+;; 
+;; Define a three argument procedure REMOVE-NTH, which removes every nth
+;; occurrence of an item from a list.
+;;
+
+(defun remove-nth (item n lst &optional (counter 0))
+  (cond ((endp lst) nil)
+        ((equal (car lst) item)
+         (if (= counter (- n 1))
+           (remove-nth item n (cdr lst) 0)
+           (cons item (remove-nth item n (cdr lst) (+ counter 1)))))
+        (t (cons (car lst) (remove-nth item n (cdr lst) counter)))))
+
+
+;;
+;; Question
+;;
+;; Define a procedure that takes a list of integers and an integer n, and
+;; returns the nth largest integer in the list.
+;;
+
+; there are many ways to solve this problem; we will start by not caring about efficiency.
+
+; recursively find the maximum of the list and remove it while counting the removals.
+
+(defun nthlarge (n lst)
+  (cond ((endp lst) nil)
+        ((= n 1) (maxx lst))
+        (t (nthlarge 
+             (- n 1)
+             (remove (maxx lst) lst)))))
+
+; now a bare-hands solution:
+
+(defun bubble (x lst)
+  "inserts x in a position in lst such that everything to the left of x is smaller than it"
+  (if (endp lst)
+    (list x)
+    (if (>= x (car lst))
+      (cons (car lst)
+            (bubble x (cdr lst)))
+      (cons x lst))))
+
+(defun nth-large (n lst &optional store)
+  (cond 
+    ((endp lst) (if (= (length store) n)
+                  (car store)))
+    (t (nth-large
+         n
+         (cdr lst)
+         (if (< (length store) n)
+           (bubble (car lst) store)
+           (cdr (bubble (car lst) store)))))))
+
+
+;;
+;; Question
+;; 
+;; Define a procedure UNIQ that takes a list and removes all the repeated
+;; elements in the list keeping only the last occurrence. For instance:
+;; (uniq '(a b r a c a d a b r a)) should give (C D B R A).
+;; Don’t use REMOVE (built-in or in-house), you may use MEMBER.
+;;
+
+(defun uniq (lst)
+  (if lst
+    (let ((current (car lst)))
+      (if (member current (cdr lst))
+        (uniq (cdr lst))
+        (cons current (uniq (cdr lst)))))))
+
+
+;;
+;; Question
+;; 
+;; Define a procedure UNIQ that takes a list and removes all the repeated
+;; elements in the list keeping only the first occurrence. For instance:
+;; (uniq '(a b r a c a d a b r a)) should give (A B R C D).
+;; Don’t use REMOVE (built-in or in-house), you may use MEMBER.
+;;
+
+(defun uniq (lst &optional acc)
+  (if lst 
+    (let ((current (car lst)))
+      (if (member current acc)
+        (uniq (cdr lst) acc)
+        (uniq (cdr lst) (append acc (list current)))))
+    acc))
+
+
+;;
+;; Question
+;;
+;; Define a procedure REMLAST which removes the last occurrence of an item from
+;; a list. Do not use MEMBER or REVERSE.
+;;
+
+
+(defun remlast (x lst &optional guess backup)
+  (cond ((endp lst) guess)
+        ((equal x (car lst))
+         (remlast
+           x
+           (cdr lst)
+           backup
+           (append backup (list x))))
+        (t (remlast
+             x
+             (cdr lst)
+             (append guess (list (car lst)))
+             (append backup (list (car lst)))))))
+
+

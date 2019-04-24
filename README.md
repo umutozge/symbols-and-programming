@@ -25,12 +25,12 @@ Room B105
 6   | Mar 25  | Mid-term I  | Ex 3.5-7 |
 7   | Apr 1 | Lists (cont.) |  |
 8   | Apr 8 | Lists (cont.) | Ex 4.1-8 | Notes Sec. 4 |
-9   | Apr 15 |  Higher order procedures | Ex 4.9-16 | |
-10  | Apr 22  |Iteration constructs | <!-- [A09](assignments/cogs502-assignment-09.pdf)  --> |
-11  | Apr 29 | Search|<!-- [A10](assignments/cogs502-assignment-10.pdf)  --> |
+9   | Apr 15 | Lists (cont.)  | Ex 4.9-16 | |
+10  | Apr 22  | Higher order procedures | |
+11  | Apr 29 | Higher order procedures (cont.)|Ex. 4.17-20 6.1-6 | Notes Sec. 5-6 |
 12  | May 6 | Mid-term II |<!-- [A11](assignments/cogs502-assignment-11.pdf) --> |
-13  | May 13 | Search (cont.); sorting |<!--    [A12](assignments/cogs502-assignment-12.pdf)  --> |
-14  | May 20  | Sorting |<!--   [A13](assignments/cogs502-assignment-13.pdf)  --> |
+13  | May 13 | I/O and data processing |<!--    [A12](assignments/cogs502-assignment-12.pdf)  --> |
+14  | May 20  | Iterative constructs  |<!--   [A13](assignments/cogs502-assignment-13.pdf)  --> |
 
 ### Resources 
 
