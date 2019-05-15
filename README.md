@@ -29,8 +29,8 @@ Room B105
 10  | Apr 22  | Higher order procedures | |
 11  | Apr 29 | Higher order procedures (cont.)|Ex. 4.17-20 6.1-6 | Notes Sec. 5-6 |
 12  | May 6 | Mid-term II |<!-- [A11](assignments/cogs502-assignment-11.pdf) --> |
-13  | May 13 | I/O and data processing |<!--    [A12](assignments/cogs502-assignment-12.pdf)  --> |
-14  | May 20  | Iterative constructs  |<!--   [A13](assignments/cogs502-assignment-13.pdf)  --> |
+13  | May 13 | Iterative constructs |<!--    [A12](assignments/cogs502-assignment-12.pdf)  --> |
+14  | May 20  |  I/O and data processing |<!--   [A13](assignments/cogs502-assignment-13.pdf)  --> |
 
 ### Resources 
 
