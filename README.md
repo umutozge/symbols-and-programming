@@ -48,7 +48,7 @@ Room B105
 
 * Regularly check this page for assignments, readings, notes, etc.
 * `odtuclass` will be used only for announcing grades.
-* Follow and use the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-532-theoretical-linguistics) course related announcements, questions, comments etc. 
+* Follow and use the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) course related announcements, questions, comments etc. 
 
 ### Requirements
 
