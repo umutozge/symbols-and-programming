@@ -1,4 +1,4 @@
-# COGS 502 - Symbols and Programming - Spring 2019
+# COGS 502 - Symbols and Programming - Fall 2019
 Informatics Institute, METU
 
 Monday, 9:40-12:30, S03, Informatics Institute
@@ -18,7 +18,7 @@ Room B105
 |Week| Date   | Topic |  Assignment | Reading
 :---|:---|:---|:---|:--- 
 1   | Feb 18  | Prefix notation, moving to Linux | 
-2   | Feb 25 | First steps; REPL | | <!-- Graham (1996), Sec. 1.1, Sec. 2.1-6 --> | 
+2   | Feb 25 | First steps; REPL | | Graham (1996), Sec. 1.1, Sec. 2.1-6 | 
 3   | Mar 4 | Making decisions | Ex 1.1-2 | Notes Sec. 1 | 
 4   | Mar 11 | Repetition |Ex 1.3-5, 2.1-3  | Notes Sec. 2 |
 5   | Mar 18  | Repetition (cont.); lists  | Ex 2.3-7 3.1-4 | Notes Sec. 3| 
@@ -28,9 +28,9 @@ Room B105
 9   | Apr 15 | Lists (cont.)  | Ex 4.9-16 | |
 10  | Apr 22  | Higher order procedures | |
 11  | Apr 29 | Higher order procedures (cont.)|Ex. 4.17-20 6.1-6 | Notes Sec. 5-6 |
-12  | May 6 | Mid-term II |<!-- [A11](assignments/cogs502-assignment-11.pdf) --> |
-13  | May 13 | Iterative constructs |<!--    [A12](assignments/cogs502-assignment-12.pdf)  --> |
-14  | May 20  |  I/O and data processing |<!--   [A13](assignments/cogs502-assignment-13.pdf)  --> |
+12  | May 6 | Mid-term II | [A11](assignments/cogs502-assignment-11.pdf)  |
+13  | May 13 | Iterative constructs | [A12](assignments/cogs502-assignment-12.pdf)  |
+14  | May 20  |  I/O and data processing |[A13](assignments/cogs502-assignment-13.pdf)  |
 
 ### Resources 
 
@@ -56,15 +56,13 @@ Room B105
 	- not graded; 
 	- submit by the deadline and get full credit for all the **attempted** questions;
 	- no credit for late submissions.
-* Mid-term exam I (Mar 25, 20%)
-* Mid-term exam II (May 6, 20%)
-* Final exam (May 24, 30%)
+* Mid-term exam I (date TBA, 20%)
+* Mid-term exam II (date TBA, 20%)
+* Final exam (date TBA, 30%)
 
 ### Attendance policy
 
 * Not required.
-* If you are not a regular attender (i.e., > 3 misses), please do not seek any extra-class support from me.
-* When you come, please be on time and be prepared for the class.
 
 ### Special assistance
 
