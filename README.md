@@ -4,7 +4,7 @@ Informatics Institute, METU
 Monday, 9:40-12:30, S03, Informatics Institute
 
 [Umut Özge](https://umutozge.github.io)  
-Office hours: Friday, 12:00-15:00, Room B208
+Office hours: by appointment, Room B208
 
 [Tunç Güven Kaya](mailto:tuncgk@gmail.com) (TA)  
 Room B105
