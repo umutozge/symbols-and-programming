@@ -1,7 +1,7 @@
 # COGS 502 - Symbols and Programming - Spring 2019
 Informatics Institute, METU
 
-Monday, 9:40-12:30, S03, Informatics Institute
+Monday, 14:40-17:30, S02, Informatics Institute
 
 [Umut Özge](https://umutozge.github.io)  
 Office hours: by appointment, Room B208
@@ -17,20 +17,20 @@ Room B105
 
 |Week| Date   | Topic |  Assignment | Reading
 :---|:---|:---|:---|:--- 
-1   | Feb 18  | Prefix notation, moving to Linux | 
-2   | Feb 25 | First steps; REPL | | Graham (1996), Sec. 1.1, Sec. 2.1-6 | 
-3   | Mar 4 | Making decisions | Ex 1.1-2 | Notes Sec. 1 | 
-4   | Mar 11 | Repetition |Ex 1.3-5, 2.1-3  | Notes Sec. 2 |
-5   | Mar 18  | Repetition (cont.); lists  | Ex 2.3-7 3.1-4 | Notes Sec. 3| 
-6   | Mar 25  | Mid-term I  | Ex 3.5-7 |
-7   | Apr 1 | Lists (cont.) |  |
-8   | Apr 8 | Lists (cont.) | Ex 4.1-8 | Notes Sec. 4 |
-9   | Apr 15 | Lists (cont.)  | Ex 4.9-16 | |
-10  | Apr 22  | Higher order procedures | |
-11  | Apr 29 | Higher order procedures (cont.)|Ex. 4.17-20 6.1-6 | Notes Sec. 5-6 |
-12  | May 6 | Mid-term II | [A11](assignments/cogs502-assignment-11.pdf)  |
-13  | May 13 | Iterative constructs | [A12](assignments/cogs502-assignment-12.pdf)  |
-14  | May 20  |  I/O and data processing |[A13](assignments/cogs502-assignment-13.pdf)  |
+1   | Sep 24  | Prefix notation, moving to Linux | 
+2   | Oct 1 |  | |  | 
+3   | Oct 8 |  || | 
+4   | Oct 15 | | | |
+5   | Oct 22  | | || 
+6   | Oct 29  |   | |
+7   | Nov 5 |  |  |
+8   | Nov 12 |  | |  |
+9   | Nov 19 |  | | |
+10  | Nov 26  |  | |
+11  | Dec 3 | | | |
+12  | May 10 | | |
+13  | May 17 | |   |
+14  | May 24  |  | |
 
 ### Resources 
 
@@ -41,7 +41,7 @@ Room B105
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
 	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA.  
-* Last term's full [content](var/symbols-and-programming-2018-Fall.zip); **Disclaimer:** expect significant changes in the content.
+* Last term's full [content](var/symbols-and-programming-2019-Spring.zip); **Disclaimer:** expect significant changes in the content.
 
 
 ### Communication
