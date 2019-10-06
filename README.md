@@ -18,8 +18,8 @@ Room B105
 |Week| Date   | Topic |  Assignment | Reading
 :---|:---|:---|:---|:--- 
 1   | Sep 24  | Prefix notation, moving to Linux | 
-2   | Oct 1 |  | |  | 
-3   | Oct 8 |  || | 
+2   | Oct 1 | Basics of evaluation | |  | 
+3   | Oct 8 |  |Exx. of Sec. 1 | Sec. 2 | 
 4   | Oct 15 | | | |
 5   | Oct 22  | | || 
 6   | Oct 29  |   | |
