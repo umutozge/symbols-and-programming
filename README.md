@@ -19,18 +19,18 @@ Room B105
 :---|:---|:---|:---|:--- 
 1   | Sep 24  | Prefix notation, moving to Linux | 
 2   | Oct 1 | Basics of evaluation | |  | 
-3   | Oct 8 |  |Exx. of Sec. 1 | Sec. 2 | 
-4   | Oct 15 | | | |
-5   | Oct 22  | | || 
-6   | Oct 29  |   | |
+3   | Oct 8 | Making decisions | Exx. of Sec. 1 | Sec. 2 | 
+4   | Oct 15 | Repeating things | Exx. 2.1-8  | Sec. 3|
+5   | Oct 22  | | | | 
+6   | Oct 29  | No class  | |
 7   | Nov 5 |  |  |
-8   | Nov 12 |  | |  |
+8   | Nov 12 | Mid-term 1  | |  |
 9   | Nov 19 |  | | |
 10  | Nov 26  |  | |
 11  | Dec 3 | | | |
-12  | May 10 | | |
-13  | May 17 | |   |
-14  | May 24  |  | |
+12  | Dec 10 | Mid-term 2 | |
+13  | Dec 17 | |   |
+14  | Dec 24  |  | |
 
 ### Resources 
 
