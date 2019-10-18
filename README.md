@@ -21,7 +21,7 @@ Room B105
 2   | Oct 1 | Basics of evaluation | |  | 
 3   | Oct 8 | Making decisions | Exx. of Sec. 1 | Sec. 2 | 
 4   | Oct 15 | Repeating things | Exx. 2.1-8  | Sec. 3|
-5   | Oct 22  | | | | 
+5   | Oct 22  | Conses and Lists  |Exx. 2.9-11, 3.1-4 | Sec 4 | 
 6   | Oct 29  | No class  | |
 7   | Nov 5 |  |  |
 8   | Nov 12 | Mid-term 1  | |  |
