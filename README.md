@@ -24,7 +24,7 @@ Room B105
 5   | Oct 22  | Conses and Lists  |Exx. 2.9-11, 3.1-4 | Sec 4 | 
 6   | Oct 29  | No class  | Exx. 3.4-8, 4.1-2|
 7   | Nov 5 |   Lists continued ||
-8   | Nov 12 | Mid-term 1  | |  |
+8   | Nov 12 | Mid-term 1  | Exx. 4.3-11 |  |
 9   | Nov 19 |  | | |
 10  | Nov 26  |  | |
 11  | Dec 3 | | | |
