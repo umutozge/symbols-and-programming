@@ -244,6 +244,48 @@
   (cons (car lst1) (append lst2 (cdr lst1))))
 
 
+;; 
+;; Question 
+;;
+;; Define a procedure that gives the last element of a list or gives NIL if the
+;; list is empty. Name your procedure LASTT in order not to clash
+;; with LISP’s built-in LAST.
+;; 
+
+; first define a procedure SINGLETONP that checks whether its argument is a
+; single-element list or not. 
+
+(defun singletonp (xs)
+  (and (consp xs) (null (cdr xs))))
+
+; now use SINGLETONP to define LASTT
+
+(defun lastt (xs)
+  (cond ((endp xs) nil)
+        ((singletonp xs) (car xs))
+        (t (lastt (cdr xs)))))
+
+;; 
+;; Question
+;; 
+;; Define a procedure that checks whether a given list of symbols is a palindrome.  Use CAR and your solution LASTT 
+;; 
+
+;; for this question you need to be able remove the first and last element of a list. There are many ways to do this.
+;; here is one:
+
+(defun strip (xs)
+  (reverse (cdr (reverse (cdr xs)))))
+
+(defun palind (xs)
+  (cond ((or (endp xs) (singletonp xs)) t)
+        (t (if (equal (car xs) (lastt xs))
+             (palind (strip xs))
+             nil))))
+
+
+
+
 ;;
 ;; Question
 ;;
