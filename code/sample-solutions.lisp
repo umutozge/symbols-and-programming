@@ -232,4 +232,125 @@
     (sqroot x (update-guess x guess))))
 
 
+;;
+;; Question
+;;
+;; Define a procedure AFTER-FIRST that takes two lists and inserts all the
+;; elements in the second list after the first element of the first list. Given
+;; (A D E) and (B C), it should return (A B C D E).
+;;
+
+(defun after-first (lst1 lst2)
+  (cons (car lst1) (append lst2 (cdr lst1))))
+
+
+;;
+;; Question
+;;
+;; Define your own version of \Verb+NTH+.
+;;
+
+(defun mynth (n lst)
+  "When this returns NIL, there is no way to tell whether the index got out of range or NIL was an element."
+  (if (zerop n)
+    (car lst)
+    (mynth (- n 1) (cdr lst))))
+
+
+;;
+;; Question
+;;
+;; Define a function MULTI-MEMBER that checks if its first argument occurs more
+;; than once in the second.
+;;
+
+; with MEMBER
+
+(defun multi-member (x lst)
+  "Checks if its first argument occurs more than once in the second"
+  (cond ((endp lst) nil)
+        ((equal x (car lst)) (member x (cdr lst)))
+        (t (multi-member x (cdr lst))))) 
+
+; without MEMBER
+
+(defun multi-member (x lst &optional seen-before?)
+  "Checks if its first argument occurs more than once in the second"
+  (cond ((endp lst) nil)
+        ((equal x (car lst)) (if seen-before?
+                               t
+                               (multi-member x (cdr lst) t)))
+        (t (multi-member x (cdr lst) seen-before?))))
+
+
+;;
+;; Question
+;;
+;; Define your own procedure APPEND2 that appends two list arguments into a
+;; third list. You are not allowed to use APPEND, LIST and REVERSE -- use just
+;; CONS.
+;;
+
+(defun app (lstA lstB)
+  (if lstA
+    (cons (car lstA) (app (cdr lstA) lstB))
+    lstB))
+
+;;
+;; Question
+;; 
+;; Define a procedure HOW-MANY? that counts the top-level occurrences of an item in a list.
+;;
+
+; no accumulator
+
+(defun how-many? (item lst)
+  (cond ((endp lst) 0)
+		((equal item (car lst)) (+ 1 (how-many? item (cdr lst))))
+		(t (how-many? item (cdr lst)))))
+
+; with accumulator
+
+(defun how-many? (item lst &optional (counter 0))
+  (if lst 
+    (how-many?
+      item
+      (cdr lst)
+      (+ counter 
+         (if (equal (car lst) item) 1 0)))
+    counter))
+
+;;
+;; Question
+;; 
+;; The built-in REVERSE reverses a list. Define your own version of reverse.
+;;
+
+; no accumulator
+
+(defun revers (lst)
+  (if lst
+    (append (revers (cdr lst)) (list (car lst)))))
+
+; with accumulator
+
+(defun revers (lst &optional acc)
+  (if lst
+    (revers (cdr lst) (cons (car lst) acc))
+    acc))
+
+
+;;
+;; Question
+;; 
+;; Define a predicate that tells whether its argument is a dotted list or not.
+;;
+
+(defun dotted (lst)
+  (if (consp lst)
+    (if (atom (cdr lst))
+      t
+      (dotted (cdr lst)))))
+
+
 

@@ -1,7 +1,7 @@
 # COGS 502 - Symbols and Programming - Fall 2019
 Informatics Institute, METU
 
-Monday, 14:40-17:30, S02, Informatics Institute
+Tuesday, 14:40-17:30, S02, Informatics Institute
 
 [Umut Özge](https://umutozge.github.io)  
 Office hours: by appointment, Room B208
@@ -25,7 +25,7 @@ Room B105
 6   | Oct 29  | No class  | Exx. 3.4-8, 4.1-2|
 7   | Nov 5 |   Lists continued ||
 8   | Nov 12 | Mid-term 1  | Exx. 4.3-11 |  |
-9   | Nov 19 |  | | |
+9   | Nov 19 | Higher-order procedures |Exx. 4.12-20 | |
 10  | Nov 26  |  | |
 11  | Dec 3 | | | |
 12  | Dec 10 | Mid-term 2 | |
