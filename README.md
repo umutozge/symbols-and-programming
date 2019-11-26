@@ -26,11 +26,11 @@ Room B105
 7   | Nov 5 |   Lists continued ||
 8   | Nov 12 | Mid-term 1  | Exx. 4.3-11 |  |
 9   | Nov 19 | Higher-order procedures |Exx. 4.12-20 | |
-10  | Nov 26  |  | |
-11  | Dec 3 | | | |
+10  | Nov 26  | Higher-order procedures cont.  | |
+11  | Dec 3 | Applicative Programming |Exx. 6.1-6 | |
 12  | Dec 10 | Mid-term 2 | |
-13  | Dec 17 | |   |
-14  | Dec 24  |  | |
+13  | Dec 17 | User interaction |   |
+14  | Dec 24  | Iterative constructs  | |
 
 ### Resources 
 
@@ -56,9 +56,9 @@ Room B105
 	- not graded; 
 	- submit by the deadline and get full credit for all the **attempted** questions;
 	- no credit for late submissions.
-* Mid-term exam I (date TBA, 20%)
-* Mid-term exam II (date TBA, 20%)
-* Final exam (date TBA, 30%)
+* Mid-term exam I (20%)
+* Mid-term exam II (20%)
+* Final exam (Jan 7, 14:40 @S02, 30%)
 
 ### Attendance policy
 
