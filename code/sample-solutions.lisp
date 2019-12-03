@@ -553,3 +553,234 @@
              (append backup (list (car lst)))))))
 
 
+;;
+;; Question
+;;
+;; Recursively count non-nil elements in a list.
+;;
+
+(defun count-atoms (lst &optional (counter 0))
+  (cond ((null lst) counter) ;; note that endp wouldn't work here
+        ((atom lst) (+ counter 1))
+        (t (count-atoms
+              (cdr lst) (count-atoms (car lst) counter)))))
+
+;;
+;; Question
+;;
+;; Bring to front 
+;;
+
+(defun bring-to-front (item lst &optional store)
+  (cond ((endp lst) store)
+        ((equal item (car lst)) 
+         (bring-to-front item (cdr lst) (cons item store)))
+        (t
+          (bring-to-front item (cdr lst) (append store (list (car lst)))))))
+
+;;
+;; Question
+;;
+;; Group repetitions in a list. E.g. (1 2 2 3 4 4) should yield ((1) (2 2) (3) (4 4)).  
+;;
+
+(defun group (lst &optional ministore store)
+  (if (endp lst)
+    (if ministore
+      (append store (list ministore))
+      store)
+    (if ministore
+      (if (equal (car lst) (car ministore))
+        (group (cdr lst) (cons (car lst) ministore) store)
+        (group (cdr lst) (list (car lst)) (append store (list ministore))))
+      (group (cdr lst) (list (car lst)) store))))
+
+;;
+;; Question
+;;
+;; Define a recursive  procedure SUBSTITUTE with 3 arguments,
+;; say old new exp such that every occurrence of
+;; old at the top-level of exp is replaced by new. By
+;; 'top-level' we mean the function should not check embedded levels in
+;; lists. E.g. (substitute 'x 'k '(x (x y) z)) should return (k
+;; (x y) z)
+
+;;
+;; Then modify SUBSTITUTE to D-SUBS (for 'deep substitute'), so that it does
+;; the replacement for all occurrences of old, no matter how
+;; deeply embedded.
+
+; here is the code for deep subs, shallow subs should be obvious looking at this
+(defun subs (new old expr)
+  "Substitutes new with old in expr"
+  (cond ((and (listp expr) (endp expr)) nil)
+        ((atom expr) (if (equal old expr)
+                              new
+                              expr
+                              ))
+        (t (cons (subs new old (car expr)) (subs new old (cdr expr))))))
+
+; subs using store
+
+(defun subs (new old expr &optional store)
+  (cond ((and (listp expr) (endp expr)) store)
+		((atom (car expr)) (subs new old (cdr expr)
+								 (append store
+										 (if (equal old (car expr))
+										   (list new)
+										   (list (car expr))))))
+		(t (subs new old (cdr expr)
+				 (append store (list (subs new old (car expr))))))))
+
+
+;;
+;; Question
+;;
+;; Write LAMBDA expressions that
+
+;; (i) returns the greatest of two integers.
+
+(lambda (m n) (if (> m n) m n))
+
+;; (ii) given two integers,  returns T if one or the other divides the other without remainder.
+
+(lambda (m n) (or (zerop (rem m n)) (zerop (rem n m))))
+
+;; (iii) given a list of integers, returns the mean.
+
+(lambda (xs) (/ (apply #'+ xs) (length lst)))
+
+;; (iv) given a list of integers, returns the sum of their factorials -- use your factorial solution.
+
+(defun factorial (n &optional (product 1))
+  (if (<= n 0)
+    product
+    (factorial (- n 1) (* product n))))
+
+(lambda (xs) (apply #'+ (mapcar #'factorial xs)))
+
+
+;;
+;; Question
+;;
+;; Define a procedure PAIR-PROD using MAPCAR and LAMBDA, which takes a list of
+;; two element lists of integers and returns a list of products of these pairs.
+;; E.g.  an input like ((7 8) (1 13) (4 1)) should yield (56 13 4)
+;;
+
+(defun pair-prod (xs)
+  (mapcar
+    #'(lambda (x) (* (car x) (cadr x)))
+    xs))
+
+
+
+;;
+;; Question
+;;
+;; Define your own REMOVE-IF.
+;;
+
+(defun rif (test xs &optional store)
+  (if xs
+    (if (funcall test (car xs))
+      (rif
+        test
+        (cdr xs)
+        store)
+      (rif
+        test
+        (cdr xs)
+        (cons (car xs) store)))
+    (reverse store)))
+
+
+
+;;
+;; Question
+;;
+;; Define a procedure \Verb+APPLIER+ that takes a procedure PROC, an input
+;; INPUT and a count CNT and gives the result of applying PROC to INPUT CNT
+;; times. For instance, (APPLIER #'CDR '(1 2 3) 2) should give (3)
+;;
+
+(defun applier (proc input cnt)
+  (if (zerop cnt)
+    input
+    (applier
+      proc
+      (funcall proc input)
+      (- cnt 1))))
+
+
+;;
+;; Question
+;;
+;; Define a procedure REPLACE-IF, which takes three arguments: a list LST, an
+;; item ITEM and a function TEST, and replaces every element of LST that passes
+;; the TEST with ITEM. You may find using keyword arguments useful (see the
+;; lecture notes). Make use of MAPCAR, LAMBDA and FUNCALL in your solution.   
+;;
+
+;; shorter solution with MAPCAR and LAMBDA (what the question wants)
+
+(defun replace-if (lst item test)
+  (mapcar
+    #'(lambda (x) (if (funcall test x) item x)) 
+    lst))
+
+;; longer solution
+
+(defun replace-if (lst item test &optional store)
+  (if lst
+    (if (funcall test (car lst))
+      (replace-if
+        (cdr lst)
+        item
+        test
+        (cons item store))
+      (replace-if
+        (cdr lst)
+        item
+        test
+        (cons (car lst) store)))
+    (reverse store)))
+
+
+
+
+;;
+;; Question
+;;
+;;
+;; MAPCAR can work on any number of lists; you only need to be careful to
+;; provide a function with the correct number of arguments. For instance
+;;
+;; (mapcar #'(lambda (x y) (+ x y)) '(1 2 3) '(4 5 6)) gives (5 7 9). Don't
+;; worry if lists are not of equal length, MAPCAR goes as far as the shortest
+;; list.
+;;
+;; Define procedures that use MAPCAR and LAMBDA and
+;;
+;; (i) zip two lists together -- (zip '(a b) '(1 2)) should give
+;; ((A 1) (B 2))
+;;
+
+(defun zipper (lst1 lst2)
+  (mapcar
+    #'(lambda (x y) (list x y))
+    lst1
+    lst2))
+
+
+;; (ii) take three lists: first two will be lists of integers, and the third is
+;; a list of functions. Apply the corresponding function to corresponding
+;; arguments.
+
+(defun foo (lst1 lst2 procs)
+  (mapcar
+    #'(lambda (x y z) (funcall z x y))
+    lst1
+    lst2
+    procs))
+
