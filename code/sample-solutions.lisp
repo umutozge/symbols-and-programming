@@ -784,3 +784,176 @@
     lst2
     procs))
 
+
+;; 
+;; Question 
+;;
+;; Define a procedure NCONT that takes an element X, a list
+;; LST and an integer N; and inserts the element to the end of
+;; the list. Your procedure should make sure that the returned list is never
+;; longer than N. Do NOT use LENGTH, you may use REVERSE
+;;
+
+
+(defun firstn (lst n &optional store)
+  (if (or (endp lst) (zerop n))
+    (reverse store)
+    (firstn (cdr lst) (- n 1) (cons (car lst) store))))
+
+(defun ncont (x lst n)
+  (append (reverse (firstn (reverse lst) (- n 1))) (list x)))
+
+;;
+;; Question
+;;
+;; Define a procedure RNTH that takes a list and an integer and returns
+;; the nth element from the back. E.g.\ (rnth '(1 2 3 4) 2) should
+;; return 3. Do NOT use NTH, LENGTH, REVERSE; you
+;; can use NCONT of the previous question.
+;;
+
+; long way 
+(defun rnth (lst n &optional store)
+  (if (endp lst)
+    (car store)
+    (rnth (cdr lst) n (ncont (car lst) store n))))
+
+; short way
+
+(defun rnth2 (lst n)
+  (car (ncont 'x lst (+ n 1))))
+
+
+;;
+;; Question
+;;
+;; Define a procedure APPEND2 that appends two lists. 
+;;
+;; Use iterative constructs 
+;;
+
+(defun append2 (lstA lstB)
+  (dolist (x (reverse lstA) lstB) 
+    (push x lstB)))
+
+;;
+;; Question
+;;
+;; Define an iterative procedure UNIQ that takes a list and removes all the
+;; repeated elements in the list keeping only the first occurrence. This is the
+;; expected behavior:
+;;
+;; * (uniq '(a b r a c a d a b r a))
+;; (A B R C D)
+;;
+;; Use iterative constructs 
+;;
+
+(defun uniq (lst)
+  (let ((seen nil))
+	(dolist (x lst (reverse seen))
+	  (if (not (member x seen))
+		(push x seen)))))
+
+
+;;
+;; Question
+;;
+;; The mean of $n$ numbers is computed by dividing their sum by $n$. A running
+;; mean is a mean that gets updated as we encounter more numbers. Observe the
+;; following input-output sequences:
+;;
+;; * (run-mean '(3 5 7 9))
+;; (3 4 5 6)
+
+;; The first element 3 is the mean of the list (3), the second element 4 is the
+;; mean of (3 5), and so on. Implement RUN-MEAN by using DOTIMES and NTH.
+;;
+;; Use iterative constructs 
+;;
+
+(defun run-mean (lst)
+  (let ((store nil)
+		(sum 0))
+	(dotimes (i (length lst) (reverse store))
+	  (incf sum (nth i lst))  ; equivalent to (setf sum (+ sum (nth i lst))) 
+	  (push (/ sum (+ i 1)) store))))
+
+;; as (incf sum (nth i lst)), besides updating sum, also returns the new updated value of sum, you can define the same function as:
+
+(defun run-mean2 (lst)
+  (let ((store nil)
+		(sum 0))
+	(dotimes (i (length lst) (reverse store))
+	  (push (/ (incf sum (nth i lst)) (+ i 1)) store))))
+
+;;
+;; Question
+;;
+;; Define a procedure SEARCH-POS that takes a list as search item, another list
+;; as a search list and returns the list of positions that the search item is
+;; found in the search list. As usual, positioning starts with 0. Use DOTIMES.
+;; A sample interaction:
+;;
+;; * (search-pos '(a b) '(a b c d a b a b))
+;; (6 4 0) 
+;; 
+;; * (search-pos '(a a) '(a a a a b a b))
+;; (2 1 0)
+;;
+;; Use iterative constructs 
+;;
+
+(defun search-pos (search-item search-list)
+  "return the list of positions search-item (a list) matches in search-list"
+  (let ((win (make-list(length search-item)))
+		(store nil))
+	(dotimes (i (length search-list) store)
+	  (setf win (append
+				  (cdr win)
+				  (list (nth i search-list))))
+	  (if (equal win search-item)
+		(push (- (+ i 1) (length win)) store)))))
+
+;;
+;; Question
+;;
+;; Define a procedure that reverses the elements in a list including its
+;; sublists as well.
+;; 
+
+(defun reverse0 (lst)
+  (let ((result nil))
+	(dolist (x lst result)
+	  (push (if (listp x) (reverse0 x) x) result))))
+
+;;
+;; Question
+;;
+;; See the PAIRLISTS in lecture notes. Define a procedure that "pairs" an
+;; arbitrary number of lists. Here is a sample interaction:
+;;
+;; * (pairlists '((a b) (= =) (1 2) (+ -) (3 9)))
+;; ((A = 1 + 3) (B = 2 - 9))
+;;
+;; Use iterative constructs 
+;;
+
+(defun pairlists (list-of-lists)
+  "pairs(!) the lists given in the list-of-lists; assumes they are of equal length -- keeps the original order"
+  (let ((len (length (car list-of-lists)))
+		(store nil))
+	(dotimes (i len (reverse store))
+	  (push 
+		(reverse
+		  (let ((ministore nil))
+			(dolist (j list-of-lists ministore)
+			  (push (nth i j) ministore))))
+		store))))
+
+;; An alternative would be to make the outer iteration over list-of-lists
+;; that solution requires a use of setf that we haven't seen so far; namely setf'ing 
+;; not a variable but a postion in a list, e.g.\ a car or an nth expression.
+
+
+
