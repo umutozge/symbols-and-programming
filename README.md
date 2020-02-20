@@ -18,16 +18,16 @@ Room B105
 |Week| Date   | Topic |  Assignment | Reading
 :---|:---|:---|:---|:--- 
 1   | Feb 4  | Prefix notation, moving to Linux | 
-2   | Feb 11 | Basics of evaluation | |  | 
-3   | Feb 18 | Making decisions | Exx. of Sec. 1 | Sec. 2 | 
-4   | Feb 25 | Repeating things | Exx. 2.1-8  | Sec. 3|
-5   | Mar 3  | Conses and Lists  |Exx. 2.9-11, 3.1-4 | Sec 4 | 
-6   | Mar 10 | No class  | Exx. 3.4-8, 4.1-2|
+2   | Feb 11 | No class| |  | 
+3   | Feb 18 | Basics of evaluation  | | | 
+4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1,2|
+5   | Mar 3  | Repeating things ||| 
+6   | Mar 10 | Conses and Lists ||
 7   | Mar 17 |   Lists continued ||
-8   | Mar 24 | Mid-term 1  | Exx. 4.3-11 |  |
-9   | Mar 31 | Higher-order procedures |Exx. 4.12-20 | |
+8   | Mar 24 | Mid-term 1  |  |  |
+9   | Mar 31 | Higher-order procedures | | |
 10  | Apr 7  | Higher-order procedures cont.  | |
-11  | Apr 14 | Applicative Programming |Exx. 6.1-6 | |
+11  | Apr 14 | Applicative Programming | | |
 12  | Apr 21 | Mid-term 2 | |
 13  | Apr 28 | User interaction |   |
 14  | May 5  | Iterative constructs  | |
