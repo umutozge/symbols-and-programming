@@ -20,8 +20,8 @@ Room B105
 1   | Feb 4  | Prefix notation, moving to Linux | 
 2   | Feb 11 | No class| |  | 
 3   | Feb 18 | Basics of evaluation  | | | 
-4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1,2|
-5   | Mar 3  | Repeating things | Exx. 2.1-5 | | 
+4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1, 2|
+5   | Mar 3  | Repeating things | Exx. 2.1-5 | Sec. 2, 3| 
 6   | Mar 10 | Conses and Lists ||
 7   | Mar 17 |   Lists continued ||
 8   | Mar 24 | Mid-term 1  |  |  |
