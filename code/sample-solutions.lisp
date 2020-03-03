@@ -71,6 +71,24 @@
 ; (cond (X) (Y) (Z)) 
 
 
+;;
+;; Question
+;; 
+;; Solve the changer-cond task in the lecture notes by using only AND, OR and NOT
+
+
+(defun changer (n)
+  (and
+    (numberp n)
+    (or 
+      (and (integerp n) (or
+                          (and (evenp n) (/ n 2))
+                          (and (zerop (rem n 3)) (+ (* 3 n) 1))
+                          n))
+      (changer (round n)))))
+
+
+
 ;; Question
 ;; 
 ;; The following definition is meant to mimic the behavior of IF using
@@ -231,6 +249,69 @@
     guess
     (sqroot x (update-guess x guess))))
 
+;;
+;; Question
+;;
+;; Ackermann-Peter function
+;;
+
+(defun ap (m n)
+  (cond ((zerop m) (+ n 1))
+        ((zerop n) (ap (- m 1) 1))
+        (t (ap (- m 1) (ap m (- n 1))))))
+
+;;
+;; Question
+;; 
+;; Define a two operand procedure that raises its first operand to the power of
+;; the second. You are allowed to use multiplication and subtraction. Define
+;; two versions, with and without an accumulator. You can check the behavior of
+;; your procedure by comparing it with \Verb+LISP+'s \Verb+EXPT+, which does
+;; the same thing. 
+;; 
+
+; no accu
+
+(defun power (x y)
+  (if (zerop y)
+    1
+    (* x (power x (- y 1)))))
+
+
+; with accu
+
+(defun powerr (x y &optional (pro 1))
+  (if (zerop y)
+    pro
+    (powerr x (- y 1) (* x pro))))
+
+;;
+;; Question
+;;
+;; Compute the average of two integers m and n (where m < n)  
+;; using only addition and subtraction.
+;;
+
+(defun aver (m n)
+  (if (= m n)
+    m
+    (aver (+ m 0.5) (- n 0.5))))
+
+;;
+;; Question
+;;
+;; Compute the sum of a list of numbers; with and without an accumulator
+;;
+
+(defun summer (lst)
+  (if (endp lst)
+    0
+    (+ (car lst) (summer (cdr lst)))))
+
+(defun summer (lst &optional (sum 0))
+  (if (endp lst)
+    sum
+    (summer (cdr lst) (+ sum (car lst)))))
 
 ;;
 ;; Question
