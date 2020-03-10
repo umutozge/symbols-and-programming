@@ -22,8 +22,8 @@ Room B105
 3   | Feb 18 | Basics of evaluation  | | | 
 4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1, 2|
 5   | Mar 3  | Repeating things | Exx. 2.1-5 | Sec. 2, 3| 
-6   | Mar 10 | Conses and Lists | Exx. 2.6-11, 3.1-3| Sec. 3, 4|
-7   | Mar 17 |   Lists continued ||
+6   | Mar 10 | Conses and Lists | Exx. 2.6-11, 3.1-3| Sec. 3, 4.1|
+7   | Mar 17 |   Lists continued | Exx. 3.4-8, 4.1-3| Sec. 4|
 8   | Mar 24 | Mid-term 1  |  |  |
 9   | Mar 31 | Higher-order procedures | | |
 10  | Apr 7  | Higher-order procedures cont.  | |
@@ -42,7 +42,6 @@ Room B105
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
 	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA.  
 * Last term's full [content](var/symbols-and-programming-2019-Fall.zip); **Disclaimer:** expect significant changes in the content.
-
 
 ### Communication
 
