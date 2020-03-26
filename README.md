@@ -23,9 +23,9 @@ Room B105
 4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1, 2|
 5   | Mar 3  | Repeating things | Exx. 2.1-5 | Sec. 2, 3| 
 6   | Mar 10 | Conses and Lists | Exx. 2.6-11, 3.1-3| Sec. 3, 4.1|
-7   | Mar 17 |   Lists continued | Exx. 3.4-8, 4.1-3| Sec. 4|
-8   | Mar 24 | Mid-term 1  |  |  |
-9   | Mar 31 | Higher-order procedures | | |
+7   | Mar 17 | -  | | |
+8   | Mar 24 | -  |  |  |
+9   | Mar 31 | Lists continued |Exx. 3.4-8, 4.1-3 |Sec. 4 |
 10  | Apr 7  | Higher-order procedures cont.  | |
 11  | Apr 14 | Applicative Programming | | |
 12  | Apr 21 | Mid-term 2 | |
