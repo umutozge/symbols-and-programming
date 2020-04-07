@@ -26,15 +26,22 @@ Room B105
 7   | Mar 17 | -  | | |
 8   | Mar 24 | -  |  |  |
 9   | Mar 31 | Lists continued |Exx. 3.4-8, 4.1-3 |Sec. 4 |
-10  | Apr 7  | Higher-order procedures cont.  | |
-11  | Apr 14 | Applicative Programming | | |
+10  | Apr 7  | Procedures on lists  |Exx. 4.4-10 |
+11  | Apr 14 | Procedures on lists cont. |Exx. 4.11-20 | |
 12  | Apr 21 | Mid-term 2 | |
-13  | Apr 28 | User interaction |   |
-14  | May 5  | Iterative constructs  | |
+13  | Apr 28 |  |   |
+14  | May 5  |   | |
+15  | May 12  |  | |
+16  | May 19  |  | |
+17  | May 26  |  | |
+18  | Jun 2  |  | |
 
 ### Resources 
 
+
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
+* [Videos](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/).
+* [Question-Answer Sheet](notes/question-answer-sheet.md).
 * [Sample solutions](code/sample-solutions.lisp) to homework problems
 * Readings (assigned weekly).
 * Reference books:  
