@@ -15,7 +15,7 @@ Last updated: Tue Apr 7 12:17:34 +03 2020
 1. What is the cons tree of `(((a (b (x) d))))`? How do the cons tree of `((A B) (C D))` and  `((A B) C D)` differ?  
 <br/>Download the program [draw-tree.lisp](../var/draw-tree.lisp) and load it; give your list as an argument to `DRAW-TREE` procedure. Note that a branch to `NIL` is designated by `/`.<br/><br/>
 1. Why and when should one prefer a recursive procedure with an accumulator to the one without an accumulator?   
-<br/>Please see the video [here](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/42_efficiency-accumlators.m4v)<br/><br/>
+<br/>Please see the video [here](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/42_efficiency-accumulators.m4v)<br/><br/>
 1. Can one do object oriented programming in `Common Lisp`?  
 <br/>Yes. Have a look at `CLOS` (Common Lisp Object System).<br/><br/>
 1. What is symbolic computation?  
