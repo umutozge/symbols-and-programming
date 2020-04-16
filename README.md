@@ -3,6 +3,8 @@ Informatics Institute, METU
 
 Tuesday, 14:40-17:30, S03, Informatics Institute
 
+[link adi](https://google.com)
+
 [Umut Özge](https://umutozge.github.io)  
 Office hours: by appointment, Room B208
 
@@ -28,7 +30,7 @@ Room B105
 9   | Mar 31 | Lists continued |Exx. 3.4-8, 4.1-3 |Sec. 4 |
 10  | Apr 7  | Procedures on lists  |Exx. 4.4-10 |
 11  | Apr 14 | Procedures on lists cont. |Exx. 4.11-20 | |
-12  | Apr 21 | Mid-term 2 | |
+12  | Apr 21 | Mid-term 1 | Exx. 4.21-25|
 13  | Apr 28 |  |   |
 14  | May 5  |   | |
 15  | May 12  |  | |

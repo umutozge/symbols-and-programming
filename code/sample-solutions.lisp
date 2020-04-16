@@ -200,7 +200,7 @@
 ;; 
 ;; Question
 ;; 
-;; Define a procedure that gives the Fibonacci number of given integer.
+;; Define a procedure that gives the Fibonacci number of a given integer.
 ;; 
 
 ; no accumulator
@@ -297,7 +297,105 @@
     m
     (aver (+ m 0.5) (- n 0.5))))
 
+
 ;;
+;; Question
+;;
+;; Define a procedure that takes a list and an object, and returns a list where the object is added to the end of the list.
+;;
+
+(defun foo (lst x)
+  (append lst (list x)))
+
+;; or
+
+(defun foo (lst x)
+  (reverse (cons x (reverse lst))))
+
+;;
+;; Question
+;;
+;; Using CAR and CDR, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
+;;
+
+(defun myfourth (lst)
+  (car (cdr (cdr (cdr lst)))))
+
+;;
+;; Question
+;;
+;; Using CAR and CDR, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
+;;
+
+;; Define a procedure named \Verb+insert-2nd+, which takes a list and an object,
+;; and gives back a list where the element is inserted after the first element
+;; of the given list. Assume that the input list will have at least one element.
+;;
+
+(defun insert-2nd (x lst)
+  (cons (car lst) (cons x (cdr lst))))
+
+;; this gives (NIL X) if the lst argument is NIL; if you want (X) for such a case:
+
+(defun insert-2nd (x lst)
+  (if (endp lst)
+    (list x)
+    (cons (car lst) (cons x (cdr lst))))) 
+
+
+;;
+;; Question
+;;
+;; Define a procedure named replace-2nd, which is like
+;; insert-2nd, but replaces the element at the 2nd position.
+;; Assume that the input list will always have at least two elements.
+;;
+
+(defun replace-2nd (x lst)
+  (cons (car lst) (cons x (cdr (cdr lst)))))
+
+;;
+;; Question
+;;
+;; Define a procedure \Verb+SWAP+, that takes a two element list and switches
+;; the order of the elements.
+;;
+
+(defun swap (lst)
+  (cons (car (cdr lst)) (cons (car lst) nil)))
+  )
+
+
+
+;;
+;; Question
+;;
+;; Define a procedure WRAP-2 that  takes a two element list, and wraps each element inside a list. 
+
+
+;;  using LIST, CAR and CADR
+
+(defun wrap-2 (lst)
+  (list (list (car lst)) (list (cadr lst))))
+
+;;using CONS, CAR and CADR
+
+(defun wrap-2 (lst)
+  (cons (cons (car lst) nil) (cons (cons (cadr lst) nil) nil)))
+
+;;
+;; Question
+;;
+;; Define a procedure AFTER-FIRST that takes two lists and inserts all the
+;; elements in the second list after the first element of the first list. Given
+;; (A D E) and (B C), it should return (A B C D E).
+;;
+
+(defun after-first (lst1 lst2)
+  (cons (car lst1) (append lst2 (cdr lst1))))
+
+
+
 ;; Question
 ;;
 ;; Compute the sum of a list of numbers; with and without an accumulator
@@ -312,18 +410,6 @@
   (if (endp lst)
     sum
     (summer (cdr lst) (+ sum (car lst)))))
-
-;;
-;; Question
-;;
-;; Define a procedure AFTER-FIRST that takes two lists and inserts all the
-;; elements in the second list after the first element of the first list. Given
-;; (A D E) and (B C), it should return (A B C D E).
-;;
-
-(defun after-first (lst1 lst2)
-  (cons (car lst1) (append lst2 (cdr lst1))))
-
 
 ;; 
 ;; Question 
@@ -363,9 +449,6 @@
         (t (if (equal (car xs) (lastt xs))
              (palind (strip xs))
              nil))))
-
-
-
 
 ;;
 ;; Question
@@ -537,6 +620,51 @@
 
 ;;
 ;; Question
+;; 
+;; Return the largest number in a list.
+;;
+
+;; without acc
+
+(defun max1 (lst)
+  (cond ((endp lst) nil)
+        ((null (cdr lst)) (car lst))
+        (t (let ((maxrest (max1 (cdr lst))))
+             (if (> (car lst) maxrest)
+               (car lst)
+               maxrest)))))
+
+;; you can shorten the above code by using LISP's built-in MAX: 
+
+(defun max12 (lst)
+  (cond ((endp lst) nil)
+        ((null (cdr lst)) (car lst))
+        (t (max (car lst) (max12 (cdr lst))))))
+
+
+;; with acc
+
+(defun max2 (lst &optional acc)
+  (cond ((endp lst) acc)
+        ((null acc) (max2 (cdr lst) (car lst)))
+        (t (max2
+             (cdr lst)
+             (max (car lst) acc)))))
+
+;; you can get rid off the (null acc) clause by defining two procedures: 
+
+(defun max4 (lst)
+  (if lst
+    (max3 (cdr lst) (car lst))
+    nil))
+
+(defun max3 (lst &optional acc)
+  (cond ((endp lst) acc)
+        (t (max3 (cdr lst) (max acc (car lst))))))
+
+
+;;
+;; Question
 ;;
 ;; Define a procedure that takes a list of integers and an integer n, and
 ;; returns the nth largest integer in the list.
@@ -545,6 +673,10 @@
 ; there are many ways to solve this problem; we will start by not caring about efficiency.
 
 ; recursively find the maximum of the list and remove it while counting the removals.
+
+
+(defun maxx (lst)
+  (max2 lst)) ; max2 defined above, replace it with your choice of max function working on lists
 
 (defun nthlarge (n lst)
   (cond ((endp lst) nil)
@@ -580,23 +712,6 @@
 ;; Question
 ;; 
 ;; Define a procedure UNIQ that takes a list and removes all the repeated
-;; elements in the list keeping only the last occurrence. For instance:
-;; (uniq '(a b r a c a d a b r a)) should give (C D B R A).
-;; Don’t use REMOVE (built-in or in-house), you may use MEMBER.
-;;
-
-(defun uniq (lst)
-  (if lst
-    (let ((current (car lst)))
-      (if (member current (cdr lst))
-        (uniq (cdr lst))
-        (cons current (uniq (cdr lst)))))))
-
-
-;;
-;; Question
-;; 
-;; Define a procedure UNIQ that takes a list and removes all the repeated
 ;; elements in the list keeping only the first occurrence. For instance:
 ;; (uniq '(a b r a c a d a b r a)) should give (A B R C D).
 ;; Don’t use REMOVE (built-in or in-house), you may use MEMBER.
@@ -609,6 +724,23 @@
         (uniq (cdr lst) acc)
         (uniq (cdr lst) (append acc (list current)))))
     acc))
+
+
+;;
+;; Question
+;; 
+;; Define a procedure UNIQ that takes a list and removes all the repeated
+;; elements in the list keeping only the last occurrence. For instance:
+;; (uniq '(a b r a c a d a b r a)) should give (C D B R A).
+;; Don’t use REMOVE (built-in or in-house), you may use MEMBER.
+;;
+
+(defun uniq (lst)
+  (if lst
+    (let ((current (car lst)))
+      (if (member current (cdr lst))
+        (uniq (cdr lst))
+        (cons current (uniq (cdr lst)))))))
 
 
 ;;
