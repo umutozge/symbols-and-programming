@@ -3,8 +3,6 @@ Informatics Institute, METU
 
 Tuesday, 14:40-17:30, S03, Informatics Institute
 
-[link adi](https://google.com)
-
 [Umut Özge](https://umutozge.github.io)  
 Office hours: by appointment, Room B208
 
