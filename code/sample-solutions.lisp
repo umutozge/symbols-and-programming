@@ -703,7 +703,7 @@
     (t (nth-large
          n
          (cdr lst)
-         (if (< (length store) n)
+             (if (< (length store) n)
            (bubble (car lst) store)
            (cdr (bubble (car lst) store)))))))
 
