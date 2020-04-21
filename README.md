@@ -28,7 +28,7 @@ Room B105
 9   | Mar 31 | Lists continued |Exx. 3.4-8, 4.1-3 |Sec. 4 |
 10  | Apr 7  | Procedures on lists  |Exx. 4.4-10 |
 11  | Apr 14 | Procedures on lists cont. |Exx. 4.11-20 | |
-12  | Apr 21 | Mid-term 1 | Exx. 4.21-25|
+12  | Apr 21 | [Mid-term 1](assignments/cogs502-midterm-01-20S.pdf) | Exx. 4.21-25|
 13  | Apr 28 |  |   |
 14  | May 5  |   | |
 15  | May 12  |  | |
