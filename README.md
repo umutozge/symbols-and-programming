@@ -29,9 +29,9 @@ Room B105
 10  | Apr 7  | Procedures on lists  |Exx. 4.4-10 |
 11  | Apr 14 | Procedures on lists cont. |Exx. 4.11-20 | |
 12  | Apr 21 | [Mid-term 1](assignments/cogs502-midterm-01-20S.pdf) | Exx. 4.21-25|
-13  | Apr 28 | Higher order procdecudures | Exx. 6.1-6  | Sec. 5, 6|
-14  | May 5  |   | |
-15  | May 12 |  | |
+13  | Apr 28 | Higher order procdecudures | | Sec. 5, 6|
+14  | May 5  | Applicative programming  | Exx. 6.1-6 |
+15  | May 12 | Applicative prog. cont. | Exx. 7.1-6| Sec. 7| 
 16  | May 19 |  | |
 17  | May 26 |  | |
 18  | Jun 2  |  | |
@@ -39,7 +39,7 @@ Room B105
 ### Resources 
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
-* [Videos](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/).
+* [Videos](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
 * [Sample solutions](code/sample-solutions.lisp) to homework problems
 * Readings (assigned weekly).
