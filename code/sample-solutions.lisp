@@ -363,9 +363,11 @@
 
 (defun swap (lst)
   (cons (car (cdr lst)) (cons (car lst) nil)))
-  )
 
+; or
 
+(defun swap2 (lst)
+  (append (cdr lst) (list (car lst))))
 
 ;;
 ;; Question
@@ -844,6 +846,132 @@
 										   (list (car expr))))))
 		(t (subs new old (cdr expr)
 				 (append store (list (subs new old (car expr))))))))
+
+
+
+;;
+;; Question
+;;
+;; Define a procedure VALS that takes a list of one argument procedures and an
+;; argument, and returns the values obtained by applying the procedures to the
+;; argument in the given order. 
+;;
+
+; procedures for testing
+
+(defun f (x) (expt x 2))
+(defun g (x) (expt x 3))
+(defun h (x) (log x))
+
+(defun vals (funcs n)
+  "collect the values obtained by applying each func in funcs to n"
+  (if funcs
+    (cons (funcall (car funcs) n) (vals (cdr funcs) n))))
+
+;;
+;; Question
+;;
+;; Define a procedure \Verb+PAIRVALS+ that takes a list of one argument
+;; procedures and an argument, and returns the list of dotted pairs where each
+;; procedure is paired with the value obtained by applying it to the argument. 
+;;
+
+(defun pairvals (funcs n)
+  "pair the funcs with the value (funcall func n) as a dotted pair"
+  (if funcs
+    (cons (cons (car funcs)
+                (funcall (car funcs) n))
+          (pairvals (cdr funcs) n))))
+;;
+;; Question
+;;
+;; Define a procedure that takes a list of predicate symbols (e.g.
+;; CONSP, NUMBERP etc.) and an object, and returns the list of
+;; predicates that the object satisfies.
+;;
+
+; without mapcar
+
+(defun sati (list-of-preds obj)
+  (if list-of-preds
+    (if (funcall (car list-of-preds) obj)
+       (cons (car list-of-preds) (sati (cdr list-of-preds) obj))
+       (sati (cdr list-of-preds) obj))))
+
+; with mapcar
+
+(defun sati2 (list-of-preds obj)
+  (remove-if #'null
+             (mapcar
+               #'(lambda (x) (and (funcall x obj) x))
+               list-of-preds)))
+
+;;
+;; Question
+;;
+;; Define a procedure that takes a list of predicate symbols (e.g.\
+;; CONSP, NUMBERP etc.) and a list of objects, collects and
+;; returns all the objects that answer yes to at least one predicate in the
+;; predicate list.
+;;
+
+; without mapcar 
+
+(defun sat-one (preds obj)
+  "check if at least one pred in preds is satisfied by obj"
+  (if preds
+    (or (funcall (car preds) obj)
+        (sat-one (cdr preds) obj))))
+
+(defun mati (preds lst)
+  (if lst 
+    (if (sat-one preds (car lst))
+      (cons (car lst) (mati preds (cdr lst)))
+      (mati preds (cdr lst)))))
+
+; with mapcar
+
+(defun mati2 (preds lst)
+  (remove-if #'null
+             (mapcar
+               #'(lambda (x) (and (sat-one preds x) x))
+               lst))) 
+
+;;
+;; Question
+;;
+;; Define a procedure that takes a list of one argument numerical procedures
+;; (define your own and/or use the built-ins you know for testing) and a number, and
+;; returns the name of the procedure that yields the maximum value when applied
+;; to the number argument.
+;;
+
+; many ways to solve this, here is one strategy 
+; pair funcs with their values obtained by applying them to n
+
+(defun pairvals (funcs n)
+  "pair the funcs with the value (funcall func n) as a dotted pair"
+  (if funcs
+    (cons (cons (car funcs)
+                (funcall (car funcs) n))
+          (pairvals (cdr funcs) n))))
+
+; now define a procedure that returns the maximum in a list of pairs; the
+; comparison will be on the basis of cdr's
+
+(defun maxpair (lst)
+  "get the maximum pair (dotted pairs of the form (A . B)) in a list of pairs compared according to the cdr of each element"
+  (if lst
+    (let ((maxrest (maxpair (cdr lst))))
+     (if (> (cdar lst) (or (cdr maxrest) (- (cdar lst) 1))); the OR clause avoids the error of comparing NIL with a number
+       (car lst)
+       maxrest))))
+
+; now the main procedure 
+(defun kati (funcs n)
+  (car 
+    (maxpair
+      (pairvals funcs n))))
 
 
 ;;
