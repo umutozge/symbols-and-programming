@@ -1019,6 +1019,44 @@
 ;;
 ;; Question
 ;;
+;;  Define a procedure that takes two lists as input and returns the list of
+;;  their pairwise averages. Use only MAPCAR, LAMBDA and arithmetic operations
+;;  in your definition.
+;;
+
+(defun p-avg (lstA lstB)
+  "computes the pairwise average of lstA and lstB"
+  (mapcar
+    #'(lambda (x y) (float (/ (+ x y) 2)))
+    lstA
+    lstB))
+
+;;
+;; Question
+;;
+;; Define LENGTH using MAPCAR, LAMBDA, + and APPLY.
+;;
+
+(defun mlength (lst)
+  (apply
+    #'+
+    (mapcar
+      #'(lambda (x) 1)
+      lst)))
+
+;; This gets "The variable X is defined but never used." warning. If you don't like this, you can define your lambda as: 
+
+;; (lambda (x) (declare (ignore x)) 1) 
+;; or
+;; (lambda (x) (and x 1))
+;;
+;; In any case, this warning is totally harmless.
+;;
+
+
+;;
+;; Question
+;;
 ;; Define your own REMOVE-IF.
 ;;
 
@@ -1035,7 +1073,57 @@
         (cons (car xs) store)))
     (reverse store)))
 
+;; another alternative is to use MAPCAN, which is similar to MAPCAR except that
+;; it appends the results it gets for each element, rather than putting them
+;; into a list. Therefore MAPCAN's procedure should output a list. Don't worry
 
+(defun rif2 (test xs)
+  (mapcan
+    #'(lambda (x)
+        (if (not (funcall test x)) (list x)))
+    xs))
+
+
+;;
+;; Question
+;;
+;; Define a procedure that takes an integer n and gives a list of n random
+;; single digit numbers. Use the built-in RANDOM, MAKE-LIST, MAPCAR and LAMBDA
+;; in your solution. Check the definition of the builtins you are not
+;; familiar with from reference books on the website or on the web.
+;;
+
+(defun n-rand (n)
+  "return a list of n single digit random numbers"
+  (mapcar
+    #'(lambda (x) (random x))
+    (make-list n :initial-element 10)))
+
+;;
+;; Question
+;;
+;; Define a procedure that takes two lists: a list N of numbers and a list P of
+;; symbols with function bindings, i.e. symbols used to define some single
+;; argument mathematical procedure with DEFUN. Your procedure should return a
+;; list with the same size as N, whose elements are lists consisting of values
+;; obtained by applying all the procedures in P to the corresponding element in
+;; N. For example, if you provide your procedure with a list of symbols naming
+;; square, absolute value and float functions, e.g. (sqr abs float), and the
+;; list (1 -2 3), it should return: ((1 1 1.0) (4 2 -2.0) (9 3 3.0)) You are
+;; NOT allowed to use any procedure (built-in or user-defined) other than #',
+;; DEFUN, MAPCAR, LAMBDA and FUNCALL.
+;;
+
+(defun sqr (x) (* x x)) ; for testing
+
+(defun foo (nlist flist)
+  (mapcar
+    #'(lambda (x)
+        (mapcar
+          #'(lambda (y)
+              (funcall y x))
+          flist))
+    nlist))
 
 ;;
 ;; Question
@@ -1087,9 +1175,6 @@
         (cons (car lst) store)))
     (reverse store)))
 
-
-
-
 ;;
 ;; Question
 ;;
@@ -1125,6 +1210,89 @@
     lst2
     procs))
 
+;; 
+;; Question 
+;;
+;; Find the numbers in a given range that have the same Collatz length using
+;; applicative programming techniques.
+;;
+
+;; first the procedures for computing Colaltz length
+
+(defun collatz-sequence (n)
+  (labels ((col-next (n)
+                     (if (<= n 1)
+                       1
+                       (if (evenp n)
+                         (/ n 2)
+                         (+ (* 3 n) 1))))
+           (col-seq (lst)
+                    (if (= (car lst) 1)
+                      (reverse lst)
+                      (col-seq (cons (col-next (car lst))
+                                     lst)))))
+    (col-seq (list n))))
+
+(defun collatz-length (n)
+  (- (length (collatz-sequence n)) 1))
+
+;; now you need some sort of table that stores the numbers according to their
+;; Collatz length. For this, let cl_1, cl_2,...,cl_i denote specific Collatz
+;; lengths, and n_i_1, n_i_2,...,n_i_j denote specific numbers that have
+;; Collatz length i. Then one way to represent a table would be to have a list
+;; with the following structure:
+;;
+;; ((cl_1 n_1_1 n_1_2 n_1_3 ...) (cl_2 n_2_1 n_2_2 n_2_3 ...) .  .  .)
+;; 
+;; in other words a list whose elements are lists whose first element is a
+;; Collatz length and the rest of its elements are numbers with that Collatz
+;; length
+
+;; you need a procedure to update the information in this table.
+
+;; Given a pair (collatz_length number):
+;;  -- add (collatz_length number) to the table, if there is no entry with the given collatz_length.
+;;  -- append (number) to the list starting with collatz_length
+;;
+;; this is best done with hash tables (or assoc lists), but here we will do it wihtout these.
+;;
+
+(defun add-pair (pair table)
+  (if table
+    (if (= (car pair) (caar table))
+      (cons
+        (append (car table) (cdr pair))
+        (cdr table))
+      (cons
+        (car table)
+        (add-pair pair (cdr table))))
+    (list pair)))
+
+;; you need a sequence procedure
+
+(defun seq (start end &optional acc)
+  "give the integer sequence from start to end inclusive of both ends"
+  (if (< end start)
+    acc
+    (seq
+      start
+      (- end 1)
+      (cons end acc))))
+
+
+;; now the final procedure
+
+(defun collect-equal-cl (start end)
+  (labels ((pair-cl (n)
+                    "pair n with its collatz length in the form (cl-of-n n)"
+                    (list (collatz-length n) n))
+           (collect (lst table)
+                    (if (endp lst)
+                      table
+                      (collect
+                        (cdr lst)
+                        (add-pair (pair-cl (car lst)) table)))))
+    (collect (seq start end) nil)))
 
 ;; 
 ;; Question 
@@ -1295,6 +1463,3 @@
 ;; An alternative would be to make the outer iteration over list-of-lists
 ;; that solution requires a use of setf that we haven't seen so far; namely setf'ing 
 ;; not a variable but a postion in a list, e.g.\ a car or an nth expression.
-
-
-
