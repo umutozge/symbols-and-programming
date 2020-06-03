@@ -21,7 +21,7 @@
 
 \pagestyle{fancy}
 \lhead{METU Cognitive Science}
-\chead{COGS 502 - Symbols and Prog.}
+\chead{COGS 502 - Symbols and Programming}
 \rhead{Updated \it \today}
 \lfoot{Umut \"Ozge -- \href{mailto:umozge@metu.edu.tr}{\nolinkurl{umozge@metu.edu.tr}}}
 \cfoot{}
@@ -178,12 +178,12 @@ Let us leave \Verb+SBCL+ by typing \Verb+(exit)+ or pressing \Verb+Ctrl-D+; and 
 
 \begin{ucodeframe}
 \begin{Verbatim}
-(let ((<variable_1> <value_1>)
-      (<variable_2> <value_2>)
+(let ((<variable_1> <expr_1>)
+      (<variable_2> <expr_2>)
 	  .  
 	  .
 	  .
-      (<variable_n> <value_n>))
+      (<variable_n> <expr_n>))
       <body>
      )
 \end{Verbatim}
@@ -543,6 +543,24 @@ Define a procedure that takes three numbers and returns \Verb+T+ if all the thre
 
 
 \begin{uexercise}
+Write a function \Verb+HOWCOMPUTE+ taking 3 numbers, telling the basic arithmetic operation that is used to compute the third number from the first two -- it should say so if it cannot find it. Your response can be one of \Verb+ADDED+, \Verb+MULTIPLIED+, \Verb+DIVIDED+, \Verb+SUBTRACTED+, \Verb+DONT-KNOW+.\footnote{Touretzky 1990, ex.\ 4.13}. Use \Verb+COND+ in your answer.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a function that takes two arguments and returns the greater of the two.\footnote{Graham (1996), p.\ 29, ex.\ 4.} Use the predicate \Verb+>=+ for comparison and return a symbol that indicates error, in case any of the arguments is not a number.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a function that takes three arguments and returns the greatest of the three.  Use the predicate \Verb+>=+ for comparison and return a symbol that indicates error, in case any of the arguments is not a number.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 \label{seclarge}
 Define a procedure that takes three numbers and gives back the second largest of them. Use only \Verb+IF+ and comparison predicates like \Verb+<+, \Verb+<=+, etc.
 
@@ -809,14 +827,14 @@ Write a program that computes the square root of a given number by this method. 
 \begin{uenum}
 \item Three building blocks: \uterm{symbols}, \uterm{numbers}, \uterm{addresses} of memory locations called \uterm{cells}.
 	\begin{uenumi}
-	\item Numbers include, but are not limited to, integers $\{\ldots-3,-2,-1,0,1,2,3\ldots\}$.
-	\item Symbols include, but are not limited to, combinations of numbers, alphabetical characters and the `-', which are not numbers.  
-	\item An address is a binary number (typically 32bit) that points to a cell, where symbols and numbers are stored.
+	\item Numbers include, but are not limited to, integers $\{\ldots-3,-2,-1,0,1,2,3\ldots\}$ and floats.
+	\item Symbols include, but are not limited to, combinations of numbers, alphabetical characters, some special symbols like `?' and `-'. Symbols can include numbers, but the resulting expression should not be a number itself. 
+	\item An address is a binary number (typically 32bit) that points to a cell, where symbols, numbers, lists, procedures and other objects are stored.
 	\end{uenumi}
-\item A fourth type of entity is a \uterm{cons}, a concatenation of two addresses, which is stored in a cell. 
+\item Another type of entity is a \uterm{cons}, a concatenation of two addresses, which is stored in a cell.
 	\begin{uenumi}
-	\item Therefore, an address, by virtue of uniquely identifying a cell, can point to a symbol, a number, or a cons.\footnote{\ldots or a procedure.}
-	\item Or, equivalently, cells host symbols, numbers and conses.
+	\item Therefore, an address, by virtue of uniquely identifying a cell, can point to a symbol, a number, a produre or a cons.
+	\item Or, equivalently, cells host symbols, numbers, procedures and conses.
 	\item The two parts forming a cons are called \Verb+CAR+ and \Verb+CDR+, respectively.
 	\item A cons is used to pair two objects residing in the cells pointed to by the \Verb+CAR+ and the \Verb+CDR+ of the cons:\footnote{Think of it as an ordered pair in set theory.}
 	$$
@@ -837,8 +855,8 @@ Write a program that computes the square root of a given number by this method. 
 will return a cons of 2 and 3. Witness that 
 
 \begin{lispcode}
-(defvar k  (cons 2 3))
-(consp k)
+(let ((k (cons 2 3)))
+    (consp k))
 \end{lispcode}
 
 will return \Verb+T+.
@@ -846,8 +864,8 @@ will return \Verb+T+.
 You can reach the components of a cons by the built-ins \Verb+CAR+ and \Verb+CDR+:\footnote{Note that instead of giving full top-level interaction, we designate the return value by \Verb+==>+, which is not part of \Verb+LISP+.}
 
 \begin{lispcode}
-(car k) ==> 2 
-(cdr k) ==> 3
+(let ((k (cons 2 3))) (car k)) ==> 2 
+(let ((k (cons 2 3))) (cdr k)) ==> 2 
 \end{lispcode}
 
 \end{uenum}
@@ -973,6 +991,31 @@ Finally, the built-in \Verb+NTH+ takes a non-negative integer and a list, and gi
 
 \begin{uexercise}
 
+Construct the lists formed by the below expressions, using only \Verb+CONS+, elements, and \Verb+NIL+ -- do not forget the quotes where needed.
+
+\item \Verb+(list 'a 'b 'c)+ 
+\item \Verb+(list 'a 'b NIL)+ 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Construct the lists below by using only \Verb+CONS+, elements, and \Verb+NIL+ -- do not forget the quotes where needed.
+
+\item \Verb+(a b x d)+
+
+\item \Verb+(a (b (x d)))+
+
+\item \Verb+(a (b (d) x))+
+
+\item \Verb+(((a (b (x) d))))+
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
 Give the sequences of car's and cdr's needed to get \Verb+x+ in the following expressions; for convenience name the list under discussion as \Verb+lst+ -- the first one is answered to clarify the question:
 \begin{itemize}
 \item \Verb+(a x b d)+
@@ -991,9 +1034,75 @@ Give the sequences of car's and cdr's needed to get \Verb+x+ in the following ex
 \qed
 \end{uexercise}
 
+\begin{uexercise}
+Given the list \Verb+((A B) (C D) (E F))+,\footnote{Touretzky, ex. 2.15.} 
+
+\begin{enumerate}
+\item Write what you would get from it by applying the following in order,\footnote{Do not directly check on the computer, first attempt it on paper.}
+	\begin{enumerate}
+	\item \Verb+CAR+
+	\item \Verb+CDR CDR+
+	\item \Verb+CAR CDR +
+	\item \Verb+CDR CAR +
+	\item \Verb+CDR CDR CAR +
+	\item \Verb+CDR CAR CDR CDR +
+	\end{enumerate}
+
+\item Which sequences of \Verb+CAR+s and \Verb+CDR+s would get you \Verb+A+, \Verb+B+ and \Verb+F+?
+\end{enumerate}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Write down what the following expressions evaluate to; work them out before trying on the computer. Some expressions might cause an error; just mark them as an error, no need to specify the error itself.
+
+\begin{enumerate}
+\item \Verb=(cons 2)=
+\item \Verb=(cons 2 NIL)=
+\item \Verb=(cons 3 '(2))=
+\item \Verb=(cons 3 (2))=
+\item \Verb=(cons NIL NIL)=
+\item \Verb=(cons (1 2) NIL)=
+\item \Verb=(cons '(1 2) NIL)=
+\item \Verb=(cons (A B) NIL)=
+\item \Verb=(cons ('A 'B) NIL)=
+\item \Verb=(cons '(A B) NIL)=
+\item \Verb=(cons '(A B) '(C D))=
+\item \Verb=(list 1 4)=
+\item \Verb=(list 1 '4)=
+\item \Verb=(list '1 4)=
+\item \Verb=(list 'A B)=
+\item \Verb=(list 'A 4)=
+\item \Verb=(list 'A 'B)=
+\item \Verb=('list 1 4)=
+\item \Verb=(+ 3 '4)=
+\item \Verb=('+ 1 4)=
+\item \Verb=(list 3 'times '(- 5 2) 'is 9)=
+\item \Verb=(list 3 'times (- 5 2) 'is '9)=
+\end{enumerate}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Write down what the following expressions evaluate to; work them out before trying on the computer.
+
+\begin{enumerate}
+\item \Verb=(if (listp '(list 1 2)) 'ok 'not-really)=
+\item \Verb+(if (null (nil)) 'vice 'versa)+
+\item \Verb=(and (listp (if (> 2 4) (- 2 4) (+ 2 4)))=\\
+\Verb=(if (> 2 4) (- 2 4) (+ 2 4)))=
+\item \Verb=(or (listp (if (> 2 4) (- 2 4) (+ 2 4)))=\\
+\Verb=(if (> 2 4) (- 2 4) (+ 2 4)))=
+\item \Verb=(or (and (or 'or) 'and) 'or)= 
+\end{enumerate}
+
+\qed
+\end{uexercise}
+
 \noindent\hrulefill
-
-
 
 \subsection{Procedures on lists}
 
@@ -1043,12 +1152,176 @@ and now with an accumulator:
 \noindent\hrulefill
 
 \begin{uexercise}
+Define a procedure that takes a list and an object, and returns a list where the object is added to the end of the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Using \Verb+CAR+ and \Verb+CDR+, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure named \Verb+INSERT-2ND+, which takes a list and an object, and gives back a list where the element is inserted after the first element of the given list. Assume that the input list will have at least one element. Here is a sample interaction:
+
+\begin{lispcode}
+* (insert-2nd 'b '(a c))
+
+(A B C)
+* (insert-2nd '(b k) '(a c))
+
+(A (B K) C)
+* 
+\end{lispcode}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure named \Verb+REPLACE-2ND+, which is like \Verb+INSERT-2ND+, but \emph{replaces} the element at the 2nd position. Assume that the input list will always have at least two elements.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Define a procedure \Verb+SWAP+, that takes a two element list and switches the order of the elements. You are allowed to use only \Verb+CAR+, \Verb+CDR+, \Verb+CONS+ and \Verb+NIL+ as built-ins.
+\qed
+\end{uexercise}
+
+
+\begin{uexercise}
+Define a procedure \Verb+AFTER-FIRST+ that takes two lists and inserts all the elements in the second list after the first element of the first list. Given \Verb+(A D E)+ and \Verb+(B C)+, it should return \Verb+(A B C D E)+.
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The procedure \Verb+WRAP-2+ takes a two element list, and wraps each element inside a list: 
+
+\begin{lispcode}
+* (wrap-2 '(a (b)))
+
+((A) ((B)))
+* (wrap-2 '(a b))
+
+((A) (B))
+* (wrap-2 (wrap-2 '(a b)))
+
+(((A)) ((B)))
+* (wrap-2 (wrap-2 (wrap-2 '(a b))))
+
+((((A))) (((B))))
+* 
+\end{lispcode}
+
+Write two versions of \Verb+WRAP-2+:
+
+\begin{enumerate}
+\item one using \Verb+LIST+, \Verb+CAR+ and \Verb+CADR+
+\item the other using \Verb+CONS+, \Verb+CAR+ and \Verb+CADR+
+\end{enumerate}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a function \Verb+dewrap-2+ that takes a two element list and removes the outer parentheses of the lists, \emph{if there are any}. You are free to use \Verb+LIST+ or \Verb+CONS+ in constructing your resulting lists.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\Verb+APPEND+ may be used to concatenate zero or more lists together; try and see how it works. Write a function \Verb+AFTER-FIRST+ that takes two lists and inserts all the elements in the second list after the first element of the first list. Given \Verb+'(A D E)+ and \Verb+'(B C)+, it should return \Verb+(A B C D E)+.
+ 
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The built-in \Verb+MEMBER+ takes and object and a list and checks whether the  object appears in the list or not; discover how it works. Using \Verb+MEMBER+, define  a function \Verb+MY-MEMBER+ that behaves as follows: 
+
+{\small
+\begin{Verbatim}
+* (my-member 'b '(a b c))
+
+(B IS A MEMBER OF (A B C))
+* (my-member 'z '(a b c))
+
+(Z IS NOT A MEMBER OF (A B C))
+* 
+\end{Verbatim}
+}
+
+\qed
+\end{uexercise}
+
+
+\begin{uexercise}
+A given set $A$ is a {\bf subset} of another set $B$ if and only if all the members of $A$ are also a member of $B$. Two sets are {\bf equivalent}, if and only if they are subsets of each other. For this problem you will represent sets via lists.
+
+\begin{enumerate}
+\item Define a procedure \Verb+SUBSETP+ that takes two list arguments and decides whether the first is a subset of the second.
+\item Define a procedure \Verb+EQUIP+ that takes two list arguments and decides whether the two are equivalent.
+\item Define a procedure \Verb+IDENP+ that takes two list arguments and decides whether the two have the same elements in the same order -- do not directly compare the lists with \Verb+EQUALP+, you are required to do a element by element comparison.
+\end{enumerate}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Assume you have data that pairs employees' last names with their monthly salaries. Define a procedure that takes as input employee dat and (ii) a threshold salary (an integer), and returns in a list the last names of all the employees that earn above the threshold salary. Define two versions, one with, and one without an accumulator.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\label{order}
+Using \Verb+MEMBER+  and \Verb+LENGTH+, write a function \Verb+ORDER+ which gives the order of an item in a list. You can do this by combining \Verb+LENGTH+ and \Verb+MEMBER+ in a certain way. It should behave as follows:
+
+{\small
+\begin{Verbatim}
+* (order 'a '(a b c))
+
+1
+* (order 'c '(a b c))
+
+3
+* (order 'z '(a b c))
+
+NIL
+\end{Verbatim}
+}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 Define a procedure that computes the sum of a list of numbers; with and without an accumulator.
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+AFTER-FIRST+ that takes two lists and inserts all the elements in the second list after the first element of the first list. Given \Verb+(A D E)+ and \Verb+(B C)+, it should return \Verb+(A B C D E)+.
+Define a procedure \Verb+LISTPRO+ that returns the product of all the numbers in a list; allow for non-numbers in the list, ignore them when you come across during your iteration. Write a version with and a version without an accumulator.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that returns the largest number in a list of numbers.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+SPLIT+ that takes an integer $n$ and a list, and returns a list of two lists such that the first has the first $n$ elements of the input list, and the second has the rest of the elements of the input list. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+SPLIT-TWO+ that splits a list of numbers into two equal length lists. If the original list has an odd length, there will be a middle element. Split this middle element between the two halves; half of it goes to the end of the first list, half of it goes to the beginning of the second list.
+
 \qed
 \end{uexercise}
 
@@ -1058,6 +1331,82 @@ Define a procedure that gives the last element of a list or gives NIL if the lis
 \qed
 \end{uexercise}
 
+\begin{uexercise}
+Define a procedure \Verb+NESTEDP+ that takes a list and returns \Verb+T+ if at least one of its elements is a list, and returns \Verb+NIL+ otherwise.\footnote{Graham 1996, p.\ 30 ex.\ 7.}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+REMOVE2+ that takes an element and a list; and returns a list where all the occurrences of the element are removed from the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+REMOVE3+  that takes an element and a list; and returns a list where all the occurrences of the element that are preceded by the symbol \Verb+X+ are removed from the list. You need to store the element seen in the previous iteration in a variable; therefore you can check whether it is \Verb+X+. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+TYPES+ that takes a list and prints out the type of the elements encountered. It's enough that it can tell between number, list and symbol; so use \Verb+NUMBERP+, \Verb+LISTP+ and \Verb+SYMBOLP+. In case you cannot match to any of these, print \Verb+UNKNOWN-TYPE+.  Put a string in your list for testing, it answers \Verb+NIL+ to all these predicates. Use \Verb+DOLIST+ and \Verb+COND+ in your solution. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The mean of $n$ numbers is computed by dividing their sum by $n$. A running mean is a mean that gets updated as we encounter more numbers. Observe the following input-output sequences:
+
+\begin{Verbatim}
+* (run-mean '(3 5 7 9))
+(3 4 5 6)
+\end{Verbatim}
+
+The first element 3 is the mean of the list \Verb+(3)+, the second element 4 is the mean of \Verb+(3 5)+, and so on. Implement \Verb+RUN-MEAN+ by using \Verb+DOTIMES+ and \Verb+NTH+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an arbitrary number of lists. Here is a sample interaction:
+
+{\small
+\begin{Verbatim}
+* (pairlists '((a b) (= =) (1 2) (+ -) (3 9)))
+((A = 1 + 3) (B = 2 - 9))
+\end{Verbatim}
+}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+SEARCH-POS+ that takes a list as search item, another list as a search list and returns the list of positions that the search item is found in the search list. As usual, positioning starts with 0. Use \Verb+DOTIMES+. A sample interaction:
+
+{\small
+\begin{Verbatim}
+* (search-pos '(a b) '(a b c d a b a b))
+(6 4 0)
+* (search-pos '(a a) '(a a a a b a b))
+(2 1 0)
+\end{Verbatim}
+}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+LAST2+ that takes a list and returns the last element of the list. Of course, don't use \Verb+LAST+. One way could be to keep a counter as we did in class, so that you can compare this to the length of the list to recognize whether you are close enough to the end of the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define an iterative procedure \Verb+CHOP-LAST+, which removes the final element of the given list -- its like \Verb+CDR+ from the back. You are NOT allowed to make\\ \Verb+(REVERSE (CDR (REVERSE LST)))+. Nothing to be done for an empty list, just return it as it is; but a single element list gets ``nilled''.
+
+\qed
+\end{uexercise}
 
 \begin{uexercise}
 Define a procedure that checks whether a given list of symbols is a palindrome. Use \Verb+CAR+ and your solution to Ex.\ \ref{exlast}.
@@ -1102,7 +1451,7 @@ Define a predicate that tells whether its argument is a dotted list or not.
 \end{uexercise}
 
 \begin{uexercise}
-Define a recursive procedure \Verb+D-HOW-MANY?+ that counts all – not only top-level – occurrences of an item in a list. For instance \Verb+(D-HOW-MANY? 'A '((A B) (C (A X)) A))+ should return 3. 
+Define a recursive procedure \Verb+D-HOW-MANY?+ that counts all – not only top-level – occurrences of an item in a list.\\ For instance \Verb+(D-HOW-MANY? 'A '((A B) (C (A X)) A))+ should return 3. 
 \qed
 \end{uexercise}
 
@@ -1164,6 +1513,12 @@ Define a procedure \Verb+REMOVEX+  that takes an element and a list; and returns
 \end{uexercise}
 
 \begin{uexercise}
+Define a function \Verb+ROTATE-LEFT+ that takes a list and moves the first element to the end of the list. For instance, \Verb+(ROTATE-LEFT '(1 2 3))+ should give \Verb+(2 3 1)+, \Verb+(ROTATE-LEFT '(1 2))+ should give \Verb+(2 1)+, etc. Apart from \Verb+DEFUN+, you are allowed to use \Verb+LET+, \Verb+LIST+, \Verb+APPEND+, \Verb+CAR+, \Verb+DOLIST+, \Verb+SETF+ and \Verb+IF+. No other function is available for use.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 
 Define a recursive function \Verb+FLATTEN+, which takes a possibly nested list and returns a version where all nesting is eliminated. E.g.\ \Verb+((1 (2) 3) 4 (((5) 6) 7))+ should be returned as \Verb+(1 2 3 4 5 6 7)+. 
 \qed
@@ -1172,6 +1527,15 @@ Define a recursive function \Verb+FLATTEN+, which takes a possibly nested list a
 \begin{uexercise}
 
 Define a recursive  procedure \Verb+SUBSTITUTE+, with 3 arguments, say \Verb+old+ \Verb+new+ \Verb+exp+ such that every occurrence of \Verb+old+ at the top-level of \Verb+exp+ is replaced by \Verb+new+. By ``top-level'' we mean the function should not check embedded levels in lists. E.g.\ \Verb+(substitute 'x 'k '(x (x y) z))+ should return \Verb+(k (x y) z)+.
+
+\qed
+\end{uexercise}
+
+
+\begin{uexercise}
+Define a procedure \Verb+SHUFFLE+ that takes a list and returns a random permutation of the list. A random permutation of a list is one of all the possible orderings of the elements of the list. You can follow any strategy you like -- recursive or iterative.
+You might find two built-ins especially useful: \Verb+RANDOM+ takes an integer and gives a random number from 0 to one less than the given integer; \Verb+NTH+ takes an integer and a list, returning the element at the position of the given integer -- remember that positions are counted starting from 0.
+
 \qed
 \end{uexercise}
 
@@ -1188,8 +1552,8 @@ Define a recursive procedure that counts the non-nil atoms  in a list. For insta
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+BRING-TO-FRONT+ (or \Verb+BFT+ for short), that takes an item and a list and returns a version where all the occurrences of the item in the given list are brought to the front of the list. For instance, 
-\Verb+(bring-to-front 'a '(a b r a c a d a b r a))+ would return \Verb+(A A A A A B R C D B R)+; and \Verb+(bring-to-front 'b '(a b r a c a d a b r a))+ would return \Verb+(B B A R A C A D A R A)+. You are NOT allowed to count the occurrences of the item in the given list or use \Verb+REMOVE+.
+Define a procedure \Verb+BRING-TO-FRONT+ (or \Verb+BFT+ for short), that takes an item and a list and returns a version where all the occurrences of the item in the given list are brought to the front of the list.\\ For instance, 
+\Verb+(bring-to-front 'a '(a b r a c a d a b r a))+ would return\\ \Verb+(A A A A A B R C D B R)+;\\ and \Verb+(bring-to-front 'b '(a b r a c a d a b r a))+ would return \\ \Verb+(B B A R A C A D A R A)+.\\ You are NOT allowed to count the occurrences of the item in the given list or use \Verb+REMOVE+.
 \qed
 \end{uexercise}
 
@@ -1198,6 +1562,46 @@ Define a procedure that groups the elements in a list putting consecutive occurr
 \qed
 \end{uexercise}
 
+\begin{uexercise}
+
+Define a recursive procedure that splits a list into two ``halves''. If the length is odd, let one of the halves be one item longer than the other. You can use length, if you like.
+For instance, \Verb+(split '(a b c d e f g h i j k l))+ should give \Verb+((A B C D E F) (G H I J K L))+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a version of the previous procedure without using \Verb+LENGTH+ -- here we go again!
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a recursive procedure \Verb+SUMMARIZE+, that takes a list and returns a list of pairs whose car is an element in the list and cadr is the number of times the element occurs in the list; \Verb+(summarize '(a b r a c a d a b r a))+ should give \Verb+((a 5) (b 2) (r 2) (c 1) (d 1))+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Implement bubble sort.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+PERMUTE+ that gives the permutation of a sequence -- all the sequences with the same elements in different orders. Assume all the elements in the sequence will be distinct.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes a list and turns it into a binary search tree. A binary search tree is a binary tree such that for each node in the tree, all the items in its left sub-tree is less than or equal to the item on that node, and all the items on its right sub-tree are greater than the item on that node. To makes things a little easier you may assume that every node has exactly two sub-trees, which are possibly \Verb+NIL+. You can represent trees in \Verb+LISP+ as lists of three elements; where the first element is the parent node, the second element is the left child and the third element is the right child.
+
+\qed
+\end{uexercise}
+
+\noindent\hrulefill
+\newpage
 
 \section{More on symbols}
 
@@ -1225,6 +1629,24 @@ Package Binding\\ \hline
 \item \Verb+DEFUN+ establishes the function binding of a symbol.
 \item A symbol gets evaluated to its value binding, unless it appears as the first element of an unquoted list, in which case it gets evaluated to its function-binding.
 \item If you want to access the function binding of a symbol elsewhere, you need to prefix the symbol with \Verb+#'+. More on these rules below.
+\item Study the following interaction:
+
+\begin{ucodeframe}
+\begin{Verbatim}
+* (defvar k 8)
+K
+* (defun k (x) (* x x))
+K
+* (symbol-name 'k)
+"K"
+* (symbol-value 'k)
+8
+* (symbol-function 'k)
+#<FUNCTION K>
+* (k k)
+64
+\end{Verbatim}
+\end{ucodeframe}
 
 % \item Second argument of \Verb+SETF+ can make use of the first:
 % 
@@ -1298,7 +1720,8 @@ Package Binding\\ \hline
 (defun mapp (func lst) ;; WRONG!
   (if (endp lst)
 	nil
-	(cons (func (car lst)) (mapp func (cdr lst)))))
+	(cons (func (car lst))
+	      (mapp func (cdr lst)))))
 \end{lispcode}
 
 \item The problem with the above definition is that it expects \Verb+LISP+ to bind the function provided by the parameter \Verb+func+ to the \Verb+func+ that occurs in the function definition. \Verb+LISP+ is designed \emph{not} to do this;\footnote{A dialect of \Verb+LISP+, called \Verb+Scheme+, does this.} when you call this function, say with \Verb+(mapp factorial '(1 2 3 4))+, or \Verb+(mapp 'factorial '(1 2 3 4))+, the \Verb+func+ in the definition will not get replaced by the parameter you provided for the argument named \Verb+func+. Such replacements are done only with non-initial elements of lists -- even not for all such elements, see \ref{stillwrong} below. 
@@ -1381,7 +1804,8 @@ we get \Verb+(1 2 6 24)+.
 (defun mapp (func lst) ; STILL WRONG!
   (if (endp lst)
 	nil
-	(cons (funcall (function func) (car lst)) (mapp func (cdr lst)))))
+	(cons (funcall (function func) (car lst))
+	      (mapp func (cdr lst)))))
 \end{lispcode}
 }
 but again \Verb+FUNCTION+ -- \Verb+QUOTE+ is no different -- prevents the argument 
@@ -1393,7 +1817,8 @@ The correct code is:
 (defun mapp (func lst)
   (if (endp lst)
 	nil
-	(cons (funcall func (car lst)) (mapp func (cdr lst)))))
+	(cons (funcall func (car lst))
+	      (mapp func (cdr lst)))))
 \end{lispcode}
 and you can call the function in two ways, both are fine:
 
@@ -1404,40 +1829,116 @@ and you can call the function in two ways, both are fine:
 \end{Verbatim}
 \end{ucodeframe}
 
+\item {\bf \Verb+APPLY+.} Another higher order procedure similar to \Verb+FUNCALL+ is \Verb+APPLY+. The only difference is that \Verb+APPLY+ takes the arguments in a list, rather than one by one.\footnote{Actually, \Verb+APPLY+ requires only the final argument to be a list, e.g.\ \Verb=(APPLY #'+ 1 2 '(3 5))= would return \Verb+11+ as expected.}
+
+
+\begin{lispcode}
+* (apply #'+ '(1 2 3 5))
+11
+\end{lispcode}
 \end{uenumi}
+\end{uenum}
 
-%\item The list is the basic data structure in \Verb+LISP+ and in many other programming languages. Once you have your data in the form of a list, then you can do various transformations and/or checks on your data. 
+\noindent\hrulefill
 
-\item {\bf \Verb+MAPCAR+.} \Verb+LISP+ has a built-in called \Verb+MAPCAR+ that does what our \Verb+MAPP+ does and a little more (see Ex.\ \ref{multi-mapcar}).
-\item {\bf Global variables.} In most applications, data is read from a file, entered by the user, or provided by a stream over a network. We will come to these topics, but for now, we will assume that data is stored in a \cttr{global} variable in our program. One way to declare and assign a global variable is \Verb+DEFPARAMETER+. For instance, let us assume we have a set of grades:
+\noindent For the exercises in this section you may find it helpful to define some simple procedures that you may use to test your solutions. Example procedures that will be used in describing the tasks are:
+
+\begin{lispcode}
+(defun f (x) (expt x 2))
+(defun g (x) (expt x 3))
+(defun h (x) (log x))
+\end{lispcode}
+
+
+\begin{uexercise}
+Define a procedure \Verb+VALS+ that takes a list of one argument procedures and an argument, and returns the values obtained by applying the procedures to the argument in the given order. 
+
+\begin{ucodeframe}
+\begin{Verbatim}
+* (vals '(evenp log zerop) 8)
+(T 2.0794415 NIL)
+\end{Verbatim}
+\end{ucodeframe}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+PAIRVALS+ that takes a list of one argument procedures and an argument, and returns the list of dotted pairs where each procedure is paired with the value obtained by applying it to the argument. 
+
+\begin{ucodeframe}
+\begin{Verbatim}
+* (pairvals '(f g h) 8)
+((F . 64) (G . 512) (H . 2.0794415))
+\end{Verbatim}
+\end{ucodeframe}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+MAXPAIR+ that takes a list of dotted pairs and returns the maximum pair where the comparison is done on the basis of the second components of pairs. 
+
+\begin{ucodeframe}
+\begin{Verbatim}
+* (maxpair '((A . 2) (B . 8) (C . 4)))
+(B . 8)
+\end{Verbatim}
+\end{ucodeframe}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes a list of predicate symbols (e.g.\ \Verb+CONSP+, \Verb+NUMBERP+ etc.) and an object, and returns the list of predicates that the object satisfies. Here is a sample interaction:
+
+\begin{ucodeframe}
+\begin{Verbatim}
+(foo '(consp listp numberp) '(a)) ==> (CONSP LISTP)
+\end{Verbatim}
+\end{ucodeframe}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes a list of predicate symbols (e.g.\ \Verb+CONSP+, \Verb+NUMBERP+ etc.) and a list of objects, collects and returns all the objects that answer yes to at least one predicate in the predicate list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes a list of one argument numerical procedures (define your own and/or use the built-ins you know) and a number, and returns the name of the procedure that yields the maximum value when applied to the number argument.
+
+\qed
+\end{uexercise}
+
+\noindent\hrulefill
+
+\newpage
+
+\section{Applicative programming}
+
+\begin{uenum}
+
+\item {\bf Global variables.} In most applications, data is read from a file, entered by the user, or provided by a stream over a network. We will come to these topics, but for now, we will assume that data is stored in a \cttr{global} variable in our program. One way to declare and assign a global variable is \Verb+DEFPARAMETER+. For instance, let us assume we have a set of student number and grade pairs:\footnote{Student numbers and grades are randomly generated.}
 
 \begin{lispcode}
 (defparameter *grades* 
-	'(86 98 79 45 0 75 96 83 91 90 0 70 85 82 91 47 0 70))
+  '((e842222 86) (e850421 98) (e790059 79) (e170139 45)
+    (e917272 0)  (e989199 75) (e877076 96) (e511096 83)
+    (e386463 91) (e337777 90) (e861067 54) (e801835 70)
+    (e493198 85) (e352336 82) (e243952 91) (e595538 47)
+    (e304901 0)  (e548145 70)))
 \end{lispcode}
 
-\begin{uenumii}
+\begin{uenumi}
 \item What makes a global variable global is that you can access the variable from within any function definition you have in the same file. 
 \item The asterisk characters \Verb+*+ around the word ``grades'' have no special meaning for \Verb+LISP+. It is a convention among \Verb+LISP+ programmers to name global variables as such; thereby you can recognize that a variable is global only by looking at its name.
-\end{uenumii}
+\end{uenumi}
 
-\item Having all the grades stored in a list, let us define a simple procedure that computes their sum. What about this one?  
 
-\begin{lispcode}
-(defun total (lst) ; WRONG
-  (+ lst))
-\end{lispcode}
-
-Evaluating \Verb+(total *grades*)+ would give an error. The reason this is unsuccessful is that the \Verb=+= operator works on numbers, but we provide a list as an argument. Using \Verb+FUNCALL+ would not help as well. The construct to use in such situations is \Verb+APPLY+. It is like \Verb+FUNCALL+ with the only difference that the arguments are provided in a list.\footnote{Actually, the rule for \Verb+APPLY+ is more flexible than this, only the last argument to it needs to be a list, but we will ignore this possibility for now.} 
-
-\begin{lispcode}
-(defun total (lst)
-  (apply #'+ lst))
-\end{lispcode}
-
-Now, evaluating \Verb+(total *grades*)+ should give you the number 1188. 
-
-\item There is no limit to the complexity of the procedures you can use with \Verb+MAPCAR+. Let us first define a procedure that gives the letter grade corresponding to the numerical value. You can easily do this by \Verb+COND+: 
+\item Let us first define a procedure that gives the letter grade corresponding to the numerical value. You can easily do this by \Verb+COND+: 
 
 \begin{lispcode}
 (defun letter (grade)
@@ -1452,183 +1953,149 @@ Now, evaluating \Verb+(total *grades*)+ should give you the number 1188.
         (t 'FF)))
 \end{lispcode}
 
-Now, doing,
+Now, we will pair each student with his/her letter grade instead of the his/her numerical grade. First, a procedure that does this for a single student 
 
 \begin{lispcode}
-(mapcar #'letter *grades*)
-\end{lispcode}
-would give,
-
-\begin{lispcode}
-(BA AA CB FF FF CB AA BB AA AA FF CC BA BB AA FF FF CC)
+(defun insert-letter (grade-entry)
+  (let ((letter (letter-grade (cadr grade-entry)))
+        (student (car grade-entry)))
+    (cons student (list letter))))
 \end{lispcode}
 
-Or, you can define a function \Verb+APPEND-LETTER+,
+Test this for a single student. Now we can perform this operation on the entire list of grades by a recursive procedure like this:
 
 \begin{lispcode}
-(defun append-letter (grade)
-  (list grade (letter grade)))
-\end{lispcode}
-which pairs each numerical grade with the letter grade, and doing,
-
-\begin{lispcode}
-(mapcar #'append-letter *grades*)
-\end{lispcode}
-would yield,
-
-\begin{lispcode}
-((86 BA) (98 AA) (79 CB) (45 FF) (0 FF) (75 CB) 
- (96 AA) (83 BB) (91 AA) (90 AA) (0 FF) (70 CC)
- (85 BA) (82 BB) (91 AA) (47 FF) (0 FF) (70 CC))
+(defun list-letter-grades (grades-list)
+  (if grades-list
+    (cons
+      (insert-letter (car grades-list))
+      (list-letter-grades (cdr grades-list)))))
 \end{lispcode}
 
-\item {\bf \Verb+LAMBDA+.} In \Verb+LISP+ you can define anonymous procedures with \Verb+LAMBDA+. An anonymous procedure is useful in cases where you need to define a procedure locally without giving it a name. The procedure \Verb+APPEND-LETTER+ could be defined by \Verb+LAMBDA+ as follows:
+\item {\bf \Verb+MAPCAR+.} \Verb+LISP+ has a built-in called \Verb+MAPCAR+ that does what our \Verb+MAPP+ does and a little more (see Ex.\ \ref{multi-mapcar}). 
+
+\Verb+MAPCAR+ provides a much shorter way to perform the letter insertion:
 
 \begin{lispcode}
-(lambda (grade)
-  (list grade (letter grade)))
+(mapcar #'insert-letter *grades*)
+\end{lispcode}
+giving the same output as the recursive code above, namely:
+
+\begin{lispcode}
+((e842222 BA) (e850421 AA) (e790059 CB) (e170139 FF)
+ (e917272 FF) (e989199 CB) (e877076 AA) (e511096 BB)
+ (e386463 AA) (e337777 AA) (e861067 FF) (e801835 CC)
+ (e493198 BA) (e352336 BB) (e243952 AA) (e595538 FF)
+ (e304901 FF) (e548145 CC))
 \end{lispcode}
 
-The entire \Verb+LAMBDA+ expression can be thought as the name of the procedure. Therefore, you could obtain the letter-grade mapping by doing:
+\item {\bf \Verb+LAMBDA+.} You can define anonymous (= without a name) procedures with \Verb+LAMBDA+. An anonymous procedure is useful in cases where you need to define a procedure locally without giving it a name. Assume you want to map a list of numbers to their cubes. Without \Verb+LAMBDA+ you need to first define a procedure,
 
 \begin{lispcode}
-(mapcar #'(lambda (grade) (list grade (letter grade))) *grades*)
+(defun cube (x)
+  (expt x 3))
 \end{lispcode}
 
-Usually \Verb+LAMBDA+ procedures are written with short parameter names, like in the following,
+and then,
 
 \begin{lispcode}
-(mapcar #'(lambda (x) (list x (letter x))) *grades*)
+(mapcar #'cube '(1 2 3 4 5))
+\end{lispcode}
+
+to get the cubes.
+
+You can also define the cube procedure without giving it a name like,
+
+\begin{lispcode}
+(lambda (x) (expt x 3))
+\end{lispcode}
+
+You can just take this as equivalent to the name \Verb+CUBE+, the name and the procedure definition are one and the same thing. Therefore you can cube a number by,
+
+\begin{lispcode}
+((lambda (x) (expt x 3)) 8)
+\end{lispcode}
+
+or you can use this in \Verb+MAPCAR+ just like you did with \Verb+CUBE+:
+
+\begin{lispcode}
+(mapcar #'(lambda (x) (expt x 3)) '(1 2 3 4 5))
 \end{lispcode}
 
 \begin{uenumi}
-\item As a \Verb+LAMBDA+ expression is a name of a procedure, you can use it in a procedure call. This is very useful in testing your \Verb+LAMBDA+ procedures at the top-level. For instance try the following at the top-level:
+\item As another example, you can quickly pair students with \Verb+PASSED+ or \Verb+FAILED+: 
 
-\begin{Verbatim}
-((lambda (x) (* x x)) 8)
-\end{Verbatim}
+\begin{lispcode}
+(mapcar
+  #'(lambda (x)
+      (cons (car x)
+            (list (if (>= (cadr x) 60) 'passed 'failed))))
+  *grades*)
+\end{lispcode}
 
 \end{uenumi}
 
-\item {\bf \Verb+REDUCE+.} Remember that we had to use \Verb+APPLY+ to get the sum of a list of numbers. Another way to do this is to use \Verb+REDUCE+. This is somewhat similar to \Verb+MAPCAR+. It takes a function with two arguments and a list; then it reduces the entire list to a single value, by applying the function first to the first two elements, then to the result of this application and the third element, then the result of this application and the fourth element, and so on until it reaches the end of the list. For instance, the following function calls will give you the sum and the mean of the grades, respectively.
+\item {\bf \Verb+REDUCE+.} Another widely used applicative programming construct is \Verb+REDUCE+. It takes a function with two arguments and a list; then it reduces the entire list to a single value, by applying the function first to the first two elements, then to the result of this application and the third element, then the result of this application and the fourth element, and so on until it reaches the end of the list. For instance, the following function calls will give you the sum and the mean of the grades, respectively. For instance you can sum a list of numbers by,
+
+\begin{lispcode}
+(reduce #'+ '(1 2 3 4 5))
+\end{lispcode}
+
+Likewise we can compute the sum of all the grades in our grade list. Doing
 
 \begin{lispcode}
 (reduce #'+ *grades*)
-(/ (reduce #'+ *grades*) (length *grades*))
 \end{lispcode}
 
-\item Usually we would not want to include the 0 grades in computing the mean, especially if we know that these are coming from people who did not participate in the exam or the course. A useful pair of list filtering functions are \Verb+REMOVE-IF+ and \Verb+REMOVE-IF-NOT+. To filter out zero grades, just do:  
+will not work however; we need to add the \Verb+CADR+s of the elements in \Verb+*grades*+. We can do this by first mapping the grades list to numerical grades by \Verb+MAPCAR+ and run \Verb+REDUCE+ on the result of this mapping:
 
 \begin{lispcode}
-(remove-if #'zerop *grades*)
+(reduce #'+ (mapcar #'cadr *grades*))
 \end{lispcode}
 
-\item If we want to have a function that computes the mean of the grades, with first filtering the zero values, we might have the following:
+Of course, the same sum can be obtained by
+
+\begin{lispcode}
+(apply #'+ (mapcar #'cadr *grades*))
+\end{lispcode}
+
+Here is another use of \Verb+REDUCE+, this time working with \Verb+LAMBDA+, guess what it is doing:
+
+\begin{lispcode}
+(reduce
+     #'(lambda (x y) (if (> x y) x y))
+	 (mapcar #'cadr *grades*))
+\end{lispcode}
+
+\item {\bf \Verb+REMOVE-IF+.} Assume we want to compute the mean of our grades. Usually we would not want to include the 0 grades in computing the mean, especially if we know that these are coming from people who did not participate in the exam. A useful pair of list filtering functions are \Verb+REMOVE-IF+ and \Verb+REMOVE-IF-NOT+. To filter out zero grades, just do:  
+
+\begin{lispcode}
+(remove-if #'zerop (mapcar #'cadr *grades*))
+\end{lispcode}
+
+If we want to have a function that computes the mean of the grades, with first filtering the zero values, we might have the following:
 
 \begin{lispcode}
 (defun class-mean (grades-list)
   (float (/
-		   (reduce #'+ (remove-if #'zerop grades-list))
+		   (reduce #'+ (remove-if #'zerop grades-list)) 
 		   (length (remove-if #'zerop grades-list)))))
 \end{lispcode}
 
-\item The code is inefficient as we compute the very same thing twice. We can improve this with \Verb+LET+:
+The code is inefficient as we compute the very same thing twice. We can improve this with \Verb+LET+:
 
 \begin{lispcode}
 (defun class-mean (grades-list)
   (let ((real-grades (remove-if #'zerop grades-list))) 
-	(float (/ (reduce #'+ real-grades) (length real-grades)))))
+	(float (/
+			(reduce #'+ real-grades) 
+			(length real-grades)))))
 \end{lispcode}
 
-\item Remember that \Verb+LET+ has the following syntax:
+In our running example, you will need to call this procedure with\\ \Verb+(mapcar #'cadr *grades*)+ as the argument.
 
+\item {\bf Example: Collatz sequence.} A Collatz sequence is obtained by starting with an integer $n$; if $n$ is odd, add $3n + 1$ to the sequence, if $n$ is even add $n/2$ to the sequence. If you obtain 1 stop, otherwise go on as before with the lastly added integer. The Collatz Conjecture states that no matter which integer you start the sequence, you are guaranteed to reach 1 and stop after a finite number of iterations. Let us write a function that computes the Collatz sequence for a given integer.
 
-% 
-% There is a very useful construct to store values that are to be used more than once. The construct is \Verb+LET+ and here is its syntax:
-
-\begin{ucodeframe}
-\begin{Verbatim}
-(let ((<variable_1> <value_1>)
-      (<variable_2> <value_2>)
-	  .  
-	  .
-	  .
-      (<variable_n> <value_n>))
-      <body>
-     )
-\end{Verbatim}
-\end{ucodeframe}
-where \Verb+<body>+ is just an ordinary function body.
-
-\end{uenum}
-
-
-\noindent \hrulefill
-
-\begin{uexercise}
-Write \Verb+LAMBDA+ expressions\footnote{If needed, consult Graham on how \Verb+LAMBDA+ works.} that
-
-\begin{itemize}
-\item returns the greatest of two integers.
-\item given two integers,  returns \Verb+T+ if one or the other divides the other without remainder.
-\item given a list of integers, returns the mean.
-\item given a list of integers, returns the sum of their factorials -- use your factorial solution.
-\end{itemize}
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
- Define a procedure \Verb+PAIR-PROD+ using \Verb+MAPCAR+ and \Verb+LAMBDA+, which takes a list of two element lists of integers and returns a list of products of these pairs. E.g.\  an input like \Verb+((7 8) (1 13) (4 1))+ should yield \Verb+(56 13 4)+.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define your own \Verb+REMOVE-IF+.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-
-Define a procedure \Verb+APPLIER+ that takes a procedure \Verb+proc+, an input \Verb+input+ and a count \Verb+cnt+; and gives the result of applying \Verb+proc+ to \Verb+input+ \Verb+cnt+ times. For instance, \Verb+(APPLIER #'CDR '(1 2 3) 2)+ should give \Verb+(3)+
-\qed
-\end{uexercise}
-
-
-\begin{uexercise}
-
-Write a function \Verb+REPLACE-IF+, which takes three arguments: a list \Verb+LST+, an item \Verb+ITEM+ and a function \Verb+TEST+, and replaces every element of \Verb+LST+ that passes the \Verb+TEST+ with \Verb+ITEM+. You may find using keyword arguments useful (see the lecture notes). Make use of \Verb+MAPCAR+, \Verb+LAMBDA+ and \Verb+FUNCALL+ in your solution.   
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-\label{multi-mapcar}
-
-\Verb+MAPCAR+ can work on any number of lists; you only need to be careful to provide a function with the correct number of arguments. For instance
-
-\begin{lispcode}
-(mapcar #'(lambda (x y) (+ x y)) '(1 2 3) '(4 5 6))
-\end{lispcode}
-gives \Verb+(5 7 9)+. Don't worry if lists are not of equal length, \Verb+MAPCAR+ goes as far as the shortest list.
-
-Define procedures that use \Verb+MAPCAR+ and \Verb+LAMBDA+ and
-
-\begin{itemize}
-\item zip two lists together -- \Verb+(zip '(a b) '(1 2))+ should give \Verb+((A 1) (B 2))+. 
-\item take three lists: first two will be lists of integers, and the third is a list of functions. Apply the corresponding function to corresponding arguments.
-\end{itemize}
-
-\qed
-\end{uexercise}
-
-\noindent \hrulefill
-
-\newpage
-
-\section{Applicative programming}
-
-\begin{uenum}
-\item Example: A Collatz sequence is obtained by starting with an integer $n$; if $n$ is odd, add $3n + 1$ to the sequence, if $n$ is even add $n/2$ to the sequence. If you obtain 1 stop, otherwise go on as before with the lastly added integer. The Collatz Conjecture states that no matter which integer you start the sequence, you are guaranteed to reach 1 and stop after a finite number of iterations. Let us write a function that computes the Collatz sequence for a given integer.
 
 \begin{lispcode}
 (defun collatz-generate (n)
@@ -1638,6 +2105,8 @@ Define procedures that use \Verb+MAPCAR+ and \Verb+LAMBDA+ and
 								(/ n 2)
 								(+ (* n 3) 1))))))
 \end{lispcode}
+
+\begin{uenumi}
 
 \item Let us define Collatz (sequence) length of an integer to be the number of steps needed to reach 1 from that integer. This is one less than the length of Collatz sequence. So,
 
@@ -1685,7 +2154,8 @@ this range function generates a range including its start and end points. Keywor
 \item Now we can check the maximum Collatz length in a range of one million:
 
 \begin{lispcode}
-(maxx (mapcar #'collatz-length (ranger :start 1 :end 1000000))) 
+(maxx (mapcar #'collatz-length
+              (ranger :start 1 :end 1000000))) 
 \end{lispcode}
 
 \item We can observe how the maximum Collatz length changes with the size of the range. Here is how to do it with \Verb+LAMBDA+: 
@@ -1730,7 +2200,9 @@ Now we can have
 				 (max nil)
 				 (hook #'(lambda (x) x)))
   (cond ((endp lst) max)
-		((null max) (maxx (cdr lst) :max (car lst) :hook hook))
+		((null max) (maxx (cdr lst)
+		                  :max (car lst)
+						  :hook hook))
 		(t (maxx 
 			 (cdr lst)
 			 :max (if (> (funcall hook (car lst)) 
@@ -1748,15 +2220,115 @@ Now we can have
 			  (ranger :start 1 :end 1000)) :hook #'cadr)
 \end{lispcode}
 
-
+\end{uenumi}
 \end{uenum}
 
+\noindent \hrulefill
+
+\begin{uexercise}
+Write \Verb+LAMBDA+ expressions\footnote{If needed, consult Graham on how \Verb+LAMBDA+ works.} that
+
+\begin{itemize}
+\item returns the greatest of two integers.
+\item given two integers,  returns \Verb+T+ if one or the other divides the other without remainder.
+\item given a list of integers, returns the mean.
+\item given a list of integers, returns the sum of their factorials -- use your factorial solution.
+\end{itemize}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+ Define a procedure \Verb+PAIR-PROD+ using \Verb+MAPCAR+ and \Verb+LAMBDA+, which takes a list of two element lists of integers and returns a list of products of these pairs. E.g.\  an input like \Verb+((7 8) (1 13) (4 1))+ should yield \Verb+(56 13 4)+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes two lists as input and returns the list of their pairwise averages. Use only \Verb+MAPCAR+, \Verb+LAMBDA+ and arithmetic operations in your definition.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define your own \Verb+REMOVE-IF+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define \Verb+LENGTH+ using \Verb+MAPCAR+, \Verb+LAMBDA+, \Verb=+= and \Verb+APPLY+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\label{random-n} Define a procedure that takes an integer \Verb+n+ and gives a list of \Verb+n+ random single digit numbers. Use the built-in \Verb+RANDOM+, \Verb+MAKE-LIST+, \Verb+MAPCAR+ and \Verb+LAMBDA+ in your solution. Check the definition of the builtins you are not familiar with from reference books on the website or on the web.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes two lists: a list \Verb+N+ of numbers and a list \Verb+P+ of symbols with function bindings, i.e.\ symbols used to define some single argument mathematical procedure with \Verb+DEFUN+. Your procedure should return a list with the same size as \Verb+N+, whose elements are lists consisting of values obtained by applying all the procedures in \Verb+P+ to the corresponding element in \Verb+N+. For example, if you provide your procedure with a list of symbols naming square, absolute value and float functions, e.g.\ \Verb+(sqr abs float)+, and the list \Verb+(1 -2 3)+, it should return: \Verb+((1 1 1.0) (4 2 -2.0) (9 3 3.0))+ You are NOT allowed to use any procedure (built-in or user-defined) other than \Verb+#'+, \Verb+DEFUN+, \Verb+MAPCAR+, \Verb+LAMBDA+ and \Verb+FUNCALL+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Define a procedure \Verb+APPLIER+ that takes a procedure \Verb+proc+, an input \Verb+input+ and a count \Verb+cnt+; and gives the result of applying \Verb+proc+ to \Verb+input+ \Verb+cnt+ times. For instance, \Verb+(APPLIER #'CDR '(1 2 3) 2)+ should give \Verb+(3)+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Write a function \Verb+REPLACE-IF+, which takes three arguments: a list \Verb+LST+, an item \Verb+ITEM+ and a function \Verb+TEST+, and replaces every element of \Verb+LST+ that passes the \Verb+TEST+ with \Verb+ITEM+. You may find using keyword arguments useful (see the lecture notes). Make use of \Verb+MAPCAR+, \Verb+LAMBDA+ and \Verb+FUNCALL+ in your solution.   
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\label{multi-mapcar}
+
+\Verb+MAPCAR+ can work on any number of lists; you only need to be careful to provide a function with the correct number of arguments. For instance
+
+\begin{lispcode}
+(mapcar #'(lambda (x y) (+ x y)) '(1 2 3) '(4 5 6))
+\end{lispcode}
+gives \Verb+(5 7 9)+. Don't worry if lists are not of equal length, \Verb+MAPCAR+ goes as far as the shortest list.
+
+Define procedures that use \Verb+MAPCAR+ and \Verb+LAMBDA+ and
+
+\begin{itemize}
+\item zip two lists together -- \Verb+(zip '(a b) '(1 2))+ should give \Verb+((A 1) (B 2))+. 
+\item take three lists: first two will be lists of integers, and the third is a list of functions. Apply the corresponding function to corresponding arguments.
+\end{itemize}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The way to toss a fair coin in \Verb+LISP+ is to do \Verb+(random 2)+, which would evaluate to \Verb+0+ or \Verb+1+ with a fifty-fifty chance.
+
+Study the following procedure and indicate what the parameters \Verb+n+, \Verb+f+, \Verb+c+ and \Verb+s+ stand for. In other words, describe what this procedure computes.
+
+\begin{lispcode}
+(defun h (n f &optional (c 0) (s 0))
+  (if (= c n)
+    s
+    (h n f (+ c (if (= (random 2) f) 1 0)) (+ s 1))))
+\end{lispcode}
+
+\qed
+\end{uexercise}
 
 \begin{uexercise}
 
 Find the numbers in a given range that have the same Collatz length using the techniques of this section.
 \qed
 \end{uexercise}
+
+\noindent \hrulefill
+\newpage
 
 % \section{Association lists}
 % 
@@ -1836,7 +2408,6 @@ Find the numbers in a given range that have the same Collatz length using the te
 % \end{uenum}
 % %\end{comment}%end
 
-\newpage
 
 \section{Iteration}
 
@@ -2123,11 +2694,18 @@ Notice how we broke down \Verb+PUSH+ to increase readiblity of the code.  A samp
 
 \end{uenum}
 
+\noindent\hrulefill
 
 \noindent In the exercises of this section you need to use iterative constructs as much as you can.
 
 \begin{uexercise}
 Define a procedure \Verb+APPEND2+ that appends two lists. 
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define an iterative procedure \Verb+CHOP-LAST+, which removes the final element of the given list -- its like \Verb+CDR+ from the back. You are NOT allowed to make\\ \Verb+(REVERSE (CDR (REVERSE LST)))+. Nothing to be done for an empty list, just return it as it is; but a single element list gets ``nilled''.
+
 \qed
 \end{uexercise}
 
@@ -2178,6 +2756,12 @@ Define a procedure that reverses the elements in a list including its sublists a
 \end{uexercise}
 
 \begin{uexercise}
+Write a procedure \Verb+LAST-NTH+ that returns the $n$th element from the end of a given list. Do NOT use \Verb+NTH+ or \Verb+ELT+; use \Verb+DOLIST+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 
 See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an arbitrary number of lists. Here is a sample interaction:
 {\small
@@ -2190,6 +2774,7 @@ See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an 
 \qed
 \end{uexercise}
 
+\noindent\hrulefill
 
 \newpage
 
@@ -2405,6 +2990,7 @@ The first is a place holder that will be replaced by the value obtained by evalu
 
 \item After that, you will create a pathname and send it to the following function:
 
+{\small
 \begin{lispcode}
 (defun file-to-lists (path)
   (labels ((text-to-list (text)
@@ -2424,7 +3010,7 @@ The first is a place holder that will be replaced by the value obtained by evalu
 					  :direction :input)
 	  (read-lines input-stream))))
 \end{lispcode}
-
+}
 \end{uenum}
 
 \newpage

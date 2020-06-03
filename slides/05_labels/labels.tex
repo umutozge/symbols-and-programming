@@ -1,0 +1,87 @@
+\documentclass[ignorenonframetext,10pt,aspectratio=169]{beamer}
+
+\usepackage{umut}
+\usepackage{umuttr}
+\usepackage[utf8]{inputenc}
+\usepackage{uling}
+\usepackage{uprog,usynsem}
+\usepackage{fancyvrb}
+\usepackage{natbib,unatbib}
+\usepackage{linguex}
+         \renewcommand{\refdash}{}
+\usepackage{ubeamer}
+\usepackage{verbatim}
+\usepackage{graphicx}
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{er,positioning}
+
+\title{LABELS}
+\author{\  \\ \vspace{20pt} Umut \"Ozge\\  }
+
+\date{COGS 502: Symbols and Programming \\ METU, Informatics}
+
+\begin{document}
+
+\begin{frame}\frametitle{}
+\thispagestyle{empty}
+\maketitle
+\end{frame}
+
+\begin{frame}[fragile,t,plain]{}
+
+\begin{ucodeframe}
+\begin{Verbatim}
+(let ((<variable_1> <expr_1>)
+      (<variable_2> <expr_2>)
+	  .  
+	  .
+	  .
+      (<variable_n> <expr_n>))
+      <body>
+     )
+\end{Verbatim}
+\end{ucodeframe}
+
+\end{frame}
+
+\begin{frame}[fragile,t,plain]{}
+
+\begin{ucodeframe}
+\begin{Verbatim}
+(labels ((<proc_name_1> <params_list_1>
+                        <proc_body_1)
+         (<proc_name_2> <params_list_2>
+                        <proc_body_2) 
+          .
+          .
+          .
+         (<proc_name_n> <params_list_n>
+                        <proc_body_n))
+      <body>
+     )
+\end{Verbatim}
+\end{ucodeframe}
+
+\end{frame}
+\begin{frame}[t,plain]{}
+
+
+\end{frame}
+
+\begin{frame}[t,plain]{}
+
+
+\end{frame}
+
+\begin{frame}[t,plain]{}
+
+
+\end{frame}
+
+\begin{frame}[t,plain]{}
+
+
+\end{frame}
+
+\end{document}

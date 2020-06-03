@@ -1463,3 +1463,26 @@
 ;; An alternative would be to make the outer iteration over list-of-lists
 ;; that solution requires a use of setf that we haven't seen so far; namely setf'ing 
 ;; not a variable but a postion in a list, e.g.\ a car or an nth expression.
+
+;;
+;; Question
+;;
+;; Define a procedure \Verb+MOST+ takes a list and a procedure argument, and
+;; returns the element in the list that gives the highest score when provided
+;; as an argument to the given procedure.   
+;;
+
+(defun most (list &key (proc #'identity))
+  (reduce
+    #'(lambda (x y)
+        (if (>= (cadr x) (cadr y))
+            x
+            y))
+        (mapcar
+            #'(lambda (x)
+                (list x (funcall proc x)))
+            list)))
+
+
+
+
