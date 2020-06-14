@@ -31,7 +31,6 @@
 ;; 
 ;; Define a procedure that takes three numbers and gives back the sum of the squares of the larger two. 
 ;; 
-
 (defun sqr (x) (* x x))
 
 (defun sql2 (x y z) 
@@ -1484,5 +1483,19 @@
             list)))
 
 
+;;
+;; Question
+;; 
+;; The built-in FIND-IF returns the first element in its second argument that
+;; returns T for its first argument:
+;;
+;; * (find-if #'(lambda (x) (> x 3)) '(1 3 9 0 4)) 9 Define your own version of
+;; FIND-IF, which returns the index together with the element. Remember
+;; that indexing starts with 0. For instance your procedure should return (2 9)
+;; for the above invocation, where 2 is the index of 9.
 
-
+(defun findif (proc list &optional (index 0))
+  (if list
+      (if (funcall proc (car list))
+          (list index (car list))
+          (findif proc (cdr list) (+ index 1)))))
