@@ -1,40 +1,65 @@
 # COGS 502 - Symbols and Programming - Spring 2020
 Informatics Institute, METU
 
-Tuesday, 14:40-17:30, S03, Informatics Institute
+Tuesday, 14:40-17:30
 
 [Umut Özge](https://umutozge.github.io)  
-Office hours: by appointment, Room B208
 
 [Tunç Güven Kaya](mailto:tuncgk@gmail.com) (TA)  
-Room B105
 
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
 
-### Weekly Schedule
+### Online content (please download if your browser can't open the video)
 
-|Week| Date   | Topic |  Assignment | Reading
-:---|:---|:---|:---|:--- 
-1   | Feb 4  | Prefix notation, moving to Linux | 
-2   | Feb 11 | No class| |  | 
-3   | Feb 18 | Basics of evaluation  | | | 
-4   | Feb 25 | Making decisions | Exx. 1.1-5  | Sec. 1, 2|
-5   | Mar 3  | Repeating things | Exx. 2.1-5 | Sec. 2, 3| 
-6   | Mar 10 | Conses and Lists | Exx. 2.6-11, 3.1-3| Sec. 3, 4.1|
-7   | Mar 17 | -  | | |
-8   | Mar 24 | -  |  |  |
-9   | Mar 31 | Lists continued |Exx. 3.4-8, 4.1-3 |Sec. 4 |
-10  | Apr 7  | Procedures on lists  |Exx. 4.4-10 |
-11  | Apr 14 | Procedures on lists cont. |Exx. 4.11-20 | |
-12  | Apr 21 | [Mid-term 1](assignments/cogs502-midterm-01-20S.pdf) | Exx. 4.21-25|
-13  | Apr 28 | Higher order procdecudures | | Sec. 5, 6|
-14  | May 5  | Applicative programming  | Exx. 6.1-6 |
-15  | May 12 | Applicative prog. cont. | Exx. 7.1-6| Sec. 7| 
-16  | May 19 |  | |
-17  | May 26 |  | |
-18  | Jun 2  |  | |
+|ID| Topic |
+:---|:--- |
+15|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/15_conses-and-lists.m4v)
+20|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/20_quoting.m4v)
+25|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/25_car-cdr.m4v)
+30|[List append](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_list-append.m4v)
+32|[Procedures on lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_procedures-on-lists.m4v)
+40|[Efficiency cons append](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/40_efficiency-cons-append.m4v)
+42|[Efficiency accumulators](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/42_efficiency-accumulators.m4v)
+44|[Example max no acc](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/44_example-max-no-acc.mp4)
+46|[Example max with acc](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/46_example-max-with-acc.mp4)
+48|[Example uniq keep last](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/48_example-uniq-keep-last.mp4)
+50|[Example uniq keep first](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/50_example-uniq-keep-first.mp4)
+52|[More on symbols](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/52_more-on-symbols.mp4)
+54|[Higher order procedures 1](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/54_higher-order-procedures-1.mp4)
+56|[Higher order procedures 2](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/56_higher-order-procedures-2.mp4)
+58|[Global versus local variables](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/58_global-versus-local-variables.mp4)
+60|[Applicative programming mapcar](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/60_applicative-programming-mapcar.mp4)
+62|[Applicative programming lambda](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/62_applicative-programming-lambda.mp4)
+64|[Applicative programming reduce](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/64_applicative-programming-reduce.mp4)
+66|[Applicative programming make list](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/66_applicative-programming-make-list.mp4)
+68|[Applicative programming example](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/68_applicative-programming-example.mp4)
+70|[Labels](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/70_labels.mp4)
+72|[Keyword arguments](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/72_keyword-arguments.mp4)
+74|[Input as accumulator](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/74_input-as-accumulator.mp4)
+76|[Iteration by dolist](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/76_iteration-by-dolist.mp4)
+78|[Iteration by dotimes](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/78_iteration-by-dotimes.mp4)
+
+###   Weekly Schedule (Fall 2020)
+      
+|Week| Date   | Topic |  Assignment | Reading |
+:--- |:---|:---|:---|:---
+1    | |  |
+2   |  |  | | |    
+3   |  | | | |  
+4   | | |  | | 
+5   || |  | |
+6   | | |  | | 
+7   | | | | |
+8   | | | | |
+9   | | | |  |
+10  | || | |
+11  | || | |
+12  | || | |
+13  | | | |
+14  | || |
+
 
 ### Resources 
 
@@ -63,7 +88,7 @@ Room B105
 	- no credit for late submissions.
 * Mid-term exam I (20%)
 * Mid-term exam II (20%)
-* Final exam (May 12, 14:40 @S03, 30%)
+* Final exam (30%)
 
 ### Attendance policy
 
