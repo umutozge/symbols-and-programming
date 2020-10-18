@@ -1,4 +1,4 @@
-# COGS 502 - Symbols and Programming - Spring 2020
+# COGS 502 - Symbols and Programming - Fall 2020
 Informatics Institute, METU
 
 Tuesday, 14:40-17:30
