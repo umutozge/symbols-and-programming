@@ -15,6 +15,8 @@ Tuesday, 14:40-17:30
 
 |ID| Topic |
 :---|:--- |
+02|[Basics](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/02_basics.mp4)
+04|[computer-structure](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/04_computer-structure.mp4)
 15|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/15_conses-and-lists.m4v)
 20|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/20_quoting.m4v)
 25|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/25_car-cdr.m4v)
@@ -43,10 +45,10 @@ Tuesday, 14:40-17:30
 
 ###   Weekly Schedule (Fall 2020)
       
-|Week| Date   | Topic |  Assignment | Reading |
-:--- |:---|:---|:---|:---
+|Week| Date   | Content | Meeting | Assignment | Reading |
+:--- |:---|:---|:---|:---|:---
 1    | |  |
-2   |  |  | | |    
+2   | Oct 20 | 02, 04 | [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | |    
 3   |  | | | |  
 4   | | |  | | 
 5   || |  | |
@@ -59,6 +61,10 @@ Tuesday, 14:40-17:30
 12  | || | |
 13  | | | |
 14  | || |
+
+
+ 
+
 
 
 ### Resources 
