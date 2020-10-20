@@ -17,6 +17,8 @@ Tuesday, 14:40-17:30
 :---|:--- |
 02|[Basics](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/02_basics.mp4)
 04|[Computer structure](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/04_computer-structure.mp4)
+05|[Forms and application](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/05_forms-and-application.mp4)
+06|[Evaluation](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/06_evaluation.mp4)
 15|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/15_conses-and-lists.m4v)
 20|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/20_quoting.m4v)
 25|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/25_car-cdr.m4v)
@@ -48,7 +50,7 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:---|:---|:---|:---|:---
 1    | |  |
-2   | Oct 20 | 02, 04 | [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 14   
+2   | Oct 20 | 02, 04, 05, 06| [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 15   
 3   |  | | | |  
 4   | | |  | | 
 5   || |  | |
