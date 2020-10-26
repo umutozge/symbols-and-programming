@@ -19,11 +19,13 @@ Tuesday, 14:40-17:30
 04|[Computer structure](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/04_computer-structure.mp4)
 05|[Forms and application](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/05_forms-and-application.mp4)
 06|[Evaluation](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/06_evaluation.mp4)
-15|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/15_conses-and-lists.m4v)
-20|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/20_quoting.m4v)
-25|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/25_car-cdr.m4v)
-30|[List append](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_list-append.m4v)
-32|[Procedures on lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_procedures-on-lists.m4v)
+07|[Environment](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/07_environment.mp4)
+08|[Side-effects versus values](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/08_side-effects-vs-values.mp4)
+30|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_conses-and-lists.m4v)
+32|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_quoting.m4v)
+34|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/34_car-cdr.m4v)
+36|[List append](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/36_list-append.m4v)
+38|[Procedures on lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/38_procedures-on-lists.m4v)
 40|[Efficiency cons append](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/40_efficiency-cons-append.m4v)
 42|[Efficiency accumulators](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/42_efficiency-accumulators.m4v)
 44|[Example max no acc](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/44_example-max-no-acc.mp4)
@@ -51,7 +53,7 @@ Tuesday, 14:40-17:30
 :--- |:---|:---|:---|:---|:---
 1    | |  |
 2   | Oct 20 | 02, 04, 05, 06| [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 15   
-3   |  | | | |  
+3   | Oct 27 | 07, 08 |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) | Sec. 1|  
 4   | | |  | | 
 5   || |  | |
 6   | | |  | | 
@@ -63,7 +65,6 @@ Tuesday, 14:40-17:30
 12  | || | |
 13  | | | |
 14  | || |
-
 
  
 
