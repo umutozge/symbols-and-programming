@@ -21,6 +21,7 @@ Tuesday, 14:40-17:30
 06|[Evaluation](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/06_evaluation.mp4)
 07|[Environment](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/07_environment.mp4)
 08|[Side-effects versus values](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/08_side-effects-vs-values.mp4)
+09|[Procedure abstraction](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/09_procedure-abstraction.mp4)
 30|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_conses-and-lists.m4v)
 32|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_quoting.m4v)
 34|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/34_car-cdr.m4v)
@@ -36,16 +37,16 @@ Tuesday, 14:40-17:30
 54|[Higher order procedures 1](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/54_higher-order-procedures-1.mp4)
 56|[Higher order procedures 2](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/56_higher-order-procedures-2.mp4)
 58|[Global versus local variables](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/58_global-versus-local-variables.mp4)
-60|[Applicative programming mapcar](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/60_applicative-programming-mapcar.mp4)
-62|[Applicative programming lambda](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/62_applicative-programming-lambda.mp4)
-64|[Applicative programming reduce](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/64_applicative-programming-reduce.mp4)
-66|[Applicative programming make list](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/66_applicative-programming-make-list.mp4)
+60|[Applicative programming `mapcar`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/60_applicative-programming-mapcar.mp4)
+62|[Applicative programming `lambda`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/62_applicative-programming-lambda.mp4)
+64|[Applicative programming `reduce`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/64_applicative-programming-reduce.mp4)
+66|[Applicative programming `make-list`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/66_applicative-programming-make-list.mp4)
 68|[Applicative programming example](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/68_applicative-programming-example.mp4)
 70|[Labels](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/70_labels.mp4)
 72|[Keyword arguments](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/72_keyword-arguments.mp4)
 74|[Input as accumulator](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/74_input-as-accumulator.mp4)
-76|[Iteration by dolist](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/76_iteration-by-dolist.mp4)
-78|[Iteration by dotimes](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/78_iteration-by-dotimes.mp4)
+76|[Iteration by `dolist`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/76_iteration-by-dolist.mp4)
+78|[Iteration by `dotimes`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/78_iteration-by-dotimes.mp4)
 
 ###   Weekly Schedule (Fall 2020)
       
@@ -53,7 +54,7 @@ Tuesday, 14:40-17:30
 :--- |:---|:---|:---|:---|:---
 1    | |  |
 2   | Oct 20 | 02, 04, 05, 06| [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 15   
-3   | Oct 27 | 07, 08 |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) | | Sec. 1|  
+3   | Oct 27 | 07, 08, 09 |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) | | Sec. 1|  
 4   | | |  | | 
 5   || |  | |
 6   | | |  | | 
