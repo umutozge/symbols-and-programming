@@ -57,7 +57,7 @@ Tuesday, 14:40-17:30
 1    | |  |
 2   | Oct 20 | 02, 04, 05, 06| [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 15   
 3   | Oct 27 | 07, 08, 09 |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) | | Sec. 1|  
-4   | Nov 3 | 12, 13 | [15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5  | Sec. 2 | 
+/bin/bash: :git: command not found
 5   || |  | |
 6   | | |  | | 
 7   | | | | |
