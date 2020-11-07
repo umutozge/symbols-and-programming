@@ -61,12 +61,7 @@ Tuesday, 14:40-17:30
 2   | Oct 20 | 02, 04, 05, 06|[15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) |              | Sec. 1 upto item 15   
 3   | Oct 27 | 07, 08, 09    |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
 4   | Nov 3 | 12, 13, 14     |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
-5   | Nov 10| 10, 11         |[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 3|
-
-
-
-
-
+5   | Nov 10| 10, 11, more coming..  |[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 3|
 6   | | |  | | 
 7   | | | | |
 8   | | | | |
