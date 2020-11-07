@@ -22,6 +22,8 @@ Tuesday, 14:40-17:30
 07|[Environment](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/07_environment.mp4)
 08|[Side-effects versus values](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/08_side-effects-vs-values.mp4)
 09|[Procedure abstraction](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/09_procedure-abstraction.mp4)
+10|[Local environment manipulation by `let`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/10_let.mp4)
+11|[`defun` by `let`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/11_defun-by-let.mp4)
 12|[Making decisions 1](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/12_making-decisions-1.mp4)
 13|[Making decisions 2](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/13_making-decisions-2.mp4)
 14|[Making decisions 3 (`cond`)](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/14_making-decisions-3.mp4)
@@ -56,10 +58,15 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:---|:---|:---|:---|:---
 1    | |  |
-2   | Oct 20 | 02, 04, 05, 06| [15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) | | Sec. 1 upto item 15   
-3   | Oct 27 | 07, 08, 09|[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) | | Sec. 1|  
-4   | Nov 3 | 12, 13, 14| [15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5  | Sec. 2 | 
-5   || |  | |
+2   | Oct 20 | 02, 04, 05, 06|[15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) |              | Sec. 1 upto item 15   
+3   | Oct 27 | 07, 08, 09    |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
+4   | Nov 3 | 12, 13, 14     |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
+5   | Nov 10| 10, 11         |[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 3|
+
+
+
+
+
 6   | | |  | | 
 7   | | | | |
 8   | | | | |
