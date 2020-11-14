@@ -30,6 +30,8 @@ Tuesday, 14:40-17:30
 15|[Making decisions 4: `and`, `or`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/15_making-decisions-4.mp4)
 17|[Symbolic return values](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/17_symbolic-return-values.mp4)
 18|[Commenting your code](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/18_commenting.mp4)
+20|[Repetition 1](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/20_repetition-1.mp4)
+22|[Repetition 2](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/22_repetition-2.mp4)
 30|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_conses-and-lists.m4v)
 32|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_quoting.m4v)
 34|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/34_car-cdr.m4v)
@@ -61,11 +63,11 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:---|:---|:---|:---|:---
 1    | |  |
-2   | Oct 20 | 02, 04, 05, 06|[15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) |              | Sec. 1 upto item 15   
-3   | Oct 27 | 07, 08, 09    |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
-4   | Nov 3 | 12, 13, 14     |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
-5   | Nov 10| 10, 11, 15, 17, 18  |[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 2|
-6   | | |  | | 
+2   | Oct 20 | 02, 04, 05, 06  |[15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) |              | Sec. 1 upto item 15   
+3   | Oct 27 | 07, 08, 09       |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
+4   | Nov 3 | 12, 13, 14        |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
+5   | Nov 10| 10, 11, 15, 17, 18|[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 2|
+6   | Nov 17| 20, 22, more coming|[15:30](https://zoom.us/j/91213469891?pwd=UWxNZXlYRzlzR0VYdzNQSnp3QS93UT09) |remaining exx. in Sec 2 | Sec. 3|
 7   | | | | |
 8   | | | | |
 9   | | | |  |
