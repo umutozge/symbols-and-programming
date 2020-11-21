@@ -34,6 +34,8 @@ Tuesday, 14:40-17:30
 22|[Repetition 2](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/22_repetition-2.mp4)
 23|[Repetition 3](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/23_repetition-3.mp4)
 24|[Repetition 4: Understanding recursion](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/24_repetition-4.mp4)
+26|[Tail recursion](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/26_tail-recursion.mp4)
+28|[Optional parameters](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/28_optional-parameters.mp4)
 30|[Conses and lists](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/30_conses-and-lists.m4v)
 32|[Quoting](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/32_quoting.m4v)
 34|[Car cdr](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/34_car-cdr.m4v)
@@ -70,7 +72,7 @@ Tuesday, 14:40-17:30
 4   | Nov 3 | 12, 13, 14        |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
 5   | Nov 10| 10, 11, 15, 17, 18|[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 2|
 6   | Nov 17| 20, 22, 23, 24|[15:30](https://zoom.us/j/91213469891?pwd=UWxNZXlYRzlzR0VYdzNQSnp3QS93UT09) |remaining exx. in Sec 2 | Sec. 3|
-7   | | | | |
+7   | Nov 24| 26, 28|[15:30](https://zoom.us/j/92754497549?pwd=OGNQaEhVaXdWUjZXdk9EK1A3Z000UT0)| 3.1-4 | Sec. 3|
 8   | | | | |
 9   | | | |  |
 10  | || | |
