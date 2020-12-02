@@ -71,10 +71,10 @@ Tuesday, 14:40-17:30
 3   | Oct 27 | 07, 08, 09       |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
 4   | Nov 3 | 12, 13, 14        |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
 5   | Nov 10| 10, 11, 15, 17, 18|[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 2|
-6   | Nov 17| 20, 22, 23, 24|[15:30](https://zoom.us/j/91213469891?pwd=UWxNZXlYRzlzR0VYdzNQSnp3QS93UT09) |remaining exx. in Sec 2 | Sec. 3|
+6   | Nov 17| 20, 22, 23, 24|[15:30](https://zoom.us/j/91213469891?pwd=UWxNZXlYRzlzR0VYdzNQSnp3QS93UT09) |remaining exx. in Sec. 2 | Sec. 3|
 7   | Nov 24| 26, 28|[15:30](https://zoom.us/j/92754497549?pwd=OGNQaEhVaXdWUjZXdk9EK1A3Z000UT0)| 3.1-4 | Sec. 3|
-8   | | | | |
-9   | | | |  |
+8   | Dec 1|  | | |
+9   | Dec 8| 30, 32, 34, 36 |[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | remaining exx. in Sec. 3 | Sec. 4|
 10  | || | |
 11  | || | |
 12  | || | |
