@@ -26,6 +26,7 @@
         z
         y))))
 
+
 ;;
 ;; Question 
 ;; 
@@ -36,6 +37,31 @@
 (defun sql2 (x y z) 
   (+ (sqr (max x y z))
      (sqr (seclarge x y z))))
+
+
+;;
+;; Question 
+;; 
+;; Define a procedure that takes an integer -- you do not need to check for this, simply assume that the input will always be an integer.
+;; 
+;; - return it as it is, if it is divisible by both 3 and 5;
+;; - multiply the number with 5 and return the result, if the number is divisible by 3 but not 5; 
+;; - multiply the number with 3 and return the result, if the number is divisible by 5 but not 3; 
+;; - return \Verb+NIL+ if the number is divisible neither by 3 nor 5.
+;;
+
+(defun div-by-p (n m)
+  (zerop (rem n m)))
+
+
+(defun foo (n)
+  (or (and
+        (div-by-p n 3)
+        (div-by-p n 5)
+        n)
+      (and (div-by-p n 3) (* 5 n))
+      (and (div-by-p n 5) (* 3 n))))
+
 
 ;;
 ;; Question 
@@ -172,6 +198,31 @@
     (if (evenp n)
       (coll (print (/ n 2)))
       (coll (print (+ (* 3 n) 1))))))
+
+
+;; 
+;; Question
+;; 
+;; Define a procedure \Verb+TOSS+ that takes a non-negative integer $n$, tosses a coin $n$ number of times, printing the result (0 or 1) on the screen in each toss. 
+;;
+
+(defun toss (n)
+  (if (zerop n)
+      t
+      (and (print (random 2)) (toss (- n 1)))))
+
+
+;; 
+;; Question
+;; 
+;; Define a recursive procedure that computes the sum of the squares of the first $n$ non-negative integers. 
+;;
+
+(defun sos (n)
+  (if (zerop n)
+      0
+      (+ (* n n) (sos (- n 1)))))
+
 
 ;; 
 ;; Question
@@ -1499,3 +1550,107 @@
       (if (funcall proc (car list))
           (list index (car list))
           (findif proc (cdr list) (+ index 1)))))
+
+
+;;
+;; Question
+;;
+;; Define a procedure SHUFFLE that takes a list and returns a random
+;; permutation of the list. A random permutation of a list is one of all the
+;; possible orderings of the elements of the list. You can follow any strategy
+;; you like – recursive or iterative. You might find two built-ins especially
+;; useful: RANDOM takes an integer and gives a random number from 0 to one less
+;; than the given integer; NTH takes an integer and a list, returning the
+;; element at the position of the given integer – remember that positions are
+;; counted starting from 0.; 
+;;
+
+;; one solution will be to randomly remove an item from a list and add it to an accumulator
+
+(defun rem-pos (lst pos)
+  "return the version of lst with the item at pos removed"
+  (cond ((endp lst) nil)
+        ((zerop pos) (cdr lst))
+        (t (cons
+             (car lst)
+             (rem-pos
+               (cdr lst)
+               (- pos 1))))))
+
+(defun shuffle (lst &optional acc)
+  (if (endp lst)
+      acc
+      (let ((pos (random (length lst))))
+        (shuffle (rem-pos lst pos) (cons (nth pos lst) acc)))))
+
+
+
+;;
+;; Quesstion
+;;
+;; You can represent a table in lisp by making each row a list and collecting all the rows in a list. E.g. a table like,
+;;
+;; 9 4 8
+;; 2 5 6
+;; 7 3 1
+;;
+;; gets represented as:
+;;
+;; ((9 4 8) (2 5 6) (7 3 1))
+;;
+
+;; Define a procedure FOO that takes a table and a procedure, and returns a two
+;; element list. The first element of the returned list will be the number of
+;; the column which yields the highest value when the argument procedure is
+;; applied, the second element of the returned list will be the result obtained
+;; for this column. For instance, when the procedure is called with the above
+;; table and a procedure that gives the average of a list of numbers, the
+;; output should be (1 6), where 1 is the number of the column with the highest
+;; average and 6 is the average of that column. Note that column counting
+;; starts with 1.
+
+;; first we need a procedure that collects the columns of a table into a list
+
+(defun get-columns (table)
+  (let ((columns nil))
+    (dotimes (i (length (car table)) (reverse columns))
+      (push (let ((acc nil))
+              (dolist (row table (reverse acc))
+                (push 
+                  (nth i row)
+                  acc )))
+            columns))))
+
+;; then a procedure that computes the values obtained by applying an argument procedure to lists
+
+(defun bar (proc lst)
+  (mapcar
+    #'(lambda (x) (apply proc x))
+    lst))
+
+;; then a procedure that indexes a list starting from 1
+
+(defun index (lst &optional (index 1))
+  (if lst
+      (cons (list index (car lst))
+            (index (cdr lst) (+ index 1)))))
+
+;; now a max procedure that runs on indexed lists retruning the list of index and value 
+
+(defun indexed-max (indexed-lst)
+  (reduce
+    #'(lambda (x y) (if (> (cadr x) (cadr y)) x y))
+    indexed-lst))
+
+;; now the solution
+
+(defun foo (table proc)
+  (indexed-max
+    (print (index 
+      (bar
+        proc 
+        (get-columns table))))))
+
+
+
+
