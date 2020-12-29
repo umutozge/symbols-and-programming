@@ -466,9 +466,29 @@
 ;; 
 ;; Question 
 ;;
+;; Define a procedure \Verb+SPLIT-TWO+ that splits a list of numbers into two
+;; equal length lists. If the original list has an odd length, there will be a
+;; middle element. Split this middle element between the two halves; half of it
+;; goes to the end of the first list, half of it goes to the beginning of the
+;; second list.
+;;
+
+(defun split-two (lst &optional store)
+  (cond ((= (length store) (length lst)) (list (reverse store) lst))
+        ((= (length store) (- (length lst) 1)) (let ((num (/ (car lst) 2)))
+                                                     (list
+                                                       (reverse (cons num store))
+                                                       (cons num (cdr lst)))))
+        (t (split-two (cdr lst) (cons (car lst) store)))))
+
+
+
+;;
+;; Question 
+;;
 ;; Define a procedure that gives the last element of a list or gives NIL if the
-;; list is empty. Name your procedure LASTT in order not to clash
-;; with LISP’s built-in LAST.
+;; list is empty. Name your procedure LASTT in order not to clash with LISP’s
+;; built-in LAST.
 ;; 
 
 ; first define a procedure SINGLETONP that checks whether its argument is a
@@ -606,7 +626,7 @@
 
 (defun dotted (lst)
   (if (consp lst)
-    (if (atom (cdr lst))
+    (if (not (listp (cdr lst)))
       t
       (dotted (cdr lst)))))
 
