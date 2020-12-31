@@ -77,8 +77,8 @@ Tuesday, 14:40-17:30
 9   | Dec 8| 30, 32, 34, 36 |[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | remaining exx. in Sec. 3 | Sec. 4|
 10  | Dec 15| 38, 40, 42, 44, 46|[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | 4.1-6| Sec. 4|
 11  | Dec 22| 48, 50| [15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | 4.7-16 | Sec. 4|
-12  | || | |
-13  | | | |
+12  | Dec 29| 52| [15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| 10 exx. from set 4| |
+13  | Jan 5|54, 56, 58 | Exx. 6.1-6 | Sec. 6 |
 14  | || |
 
  
