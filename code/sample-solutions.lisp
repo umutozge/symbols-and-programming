@@ -447,7 +447,119 @@
   (cons (car lst1) (append lst2 (cdr lst1))))
 
 
+;;
+;; Question
+;;
+;; The built-in MEMBER takes and object and a list and checks whether the object ap-
+;; pears in the list or not; discover how it works. Using MEMBER, define a function
+;; MY-MEMBER that behaves as follows:
+;; 
+;; * (my-member 'b '(a b c))
+;; (B IS A MEMBER OF (A B C))
+;; * (my-member 'z '(a b c))
+;; (Z IS NOT A MEMBER OF (A B C))
+;; *
 
+; version 1
+
+(defun my-member (x lst)
+  (if (member x lst)
+      (list x 'is 'a 'member 'of lst)
+      (list x 'is 'not 'a 'member 'of lst)))
+
+; version 2
+
+(defun my-member (x lst)
+  (append (list x 'is) (if (member x lst) '(a) '(not a)) (list 'member 'of lst)))
+
+
+;;
+;; Question
+;;
+;; A given set A is a subset of another set B if and only if all the members of
+;; A are also a member of B. Two sets are equivalent, if and only if they are
+;; subsets of eachother. For this problem you will represent sets via lists.
+;;
+;; 1. Define a procedure SUBSETP that takes two list arguments and
+;; decides whether the first is a subset of the second.
+;; 
+;; 2. Define a procedure EQUIP that takes two list arguments and decides
+;; whether the two are equivalent.
+;; 
+;; 3. Define a procedure IDENP that takes two list arguments and decides
+;; whether the two have the same elements in the same order – do not directly
+;; compare the lists with EQUALP, you are required to do a element by element
+;; comparison.
+;; 
+
+(defun subsetpp (lstA lstB)
+  (if (endp lstA)
+      t
+      (if (member (car lstA) lstB)
+          (subsetpp (cdr lstA) lstB))))
+
+(defun equip (lstA lstB)
+  (and (subsetpp lstA lstB) (subsetpp lstB lstA)))
+
+(defun idenp (lstA lstB)
+  (if (and (endp lstA) (endp lstB))
+      t
+      (if (equal (car lstA) (car lstB))
+          (idenp (cdr lstA) (cdr lstB)))))
+
+;;
+;; Question
+;;
+;;  Assume you have data that pairs employees’ last names with their monthly salaries.
+;;  Define a procedure that takes as input employee data and a threshold salary (an
+;;  integer), and returns in a list the last names of all the employees that earn above the
+;;  threshold salary. Define two versions, one with, and one without an accumulator.
+;; 
+
+
+; Example input data: '((smith 3000) (jones 4200) (wills 2400))
+
+; no accu
+
+(defun salary (emp-list thresh)
+  (if emp-list 
+      (if (> (cadr (car emp-list)) thresh)
+          (cons (caar emp-list) (salary (cdr emp-list) thresh))
+          (salary (cdr emp-list) thresh))))
+
+; accu
+
+(defun salary (emp-list thresh &optional store)
+  (if (endp emp-list)
+      store
+      (salary
+        (cdr emp-list)
+        thresh
+        (append store (if (> (cadar emp-list) thresh)
+                          (list (caar emp-list)))))))
+
+;;
+;; Question
+;;
+;;  Using MEMBER and LENGTH, write a function ORDER which gives the order of an item
+;;  in a list. You can do this by combining LENGTH and MEMBER in a certain way. It
+;;  should behave as follows:
+;;  * (order 'a '(a b c))
+;;  1
+;;  * (order 'c '(a b c))
+;;  3
+;;  * (order 'z '(a b c))
+;;  NIL
+;; 
+
+(defun order (x lst)
+  (let ((mem (member x lst)))
+    (if mem 
+        (+ 1
+           (- (length lst) (length mem))))))
+
+
+;;
 ;; Question
 ;;
 ;; Compute the sum of a list of numbers; with and without an accumulator
@@ -462,6 +574,29 @@
   (if (endp lst)
     sum
     (summer (cdr lst) (+ sum (car lst)))))
+
+
+;;
+;; Question
+;;
+;;  Define a procedure LISTPRO that returns the product of all the numbers in a list;
+;;  allow for non-numbers in the list, ignore them when you come across during your
+;;  iteration. Write a version with and a version without an accumulator.
+;; 
+
+; no accu
+
+(defun listpro (lst &optional (first-call? t))
+  "GLITCH: gives 1 for lists that consist of only non-numbers"
+  (cond ((endp lst) (if first-call? nil 1))
+        (t (* (let ((x (car lst))) (if (numberp x) x 1)) (listpro (cdr lst) nil)))))
+
+; with accu
+
+(defun listpro (lst &optional (acc 1) (first-call? t))
+  "GLITCH: gives 1 for lists that consist of only non-numbers"
+  (cond ((endp lst) (if first-call? nil acc))
+        (t (listpro (cdr lst) (* (let ((x (car lst))) (if (numberp x) x 1)) acc) nil))))
 
 ;; 
 ;; Question 
@@ -504,14 +639,137 @@
         ((singletonp xs) (car xs))
         (t (lastt (cdr xs)))))
 
+;;
+;; Question 
+;;
+;;  Define a procedure NESTEDP that takes a list and returns T if at least one of
+;;  its elements is a list, and returns NIL otherwise.
+;; 
+
+(defun nestedp (lst)
+  (if (endp lst)
+      nil
+      (if (listp (car lst))
+          t
+          (nestedp (cdr lst)))))
+
+;;
+;; Question 
+;;
+;;  Define a procedure REMOVE2 that takes an element and a list; and returns a
+;;  list where all the occurrences of the element are removed from the list.
+;; 
+
+(defun remove2 (x lst)
+  (cond ((endp lst) nil)
+        ((equal (car lst) x) (remove2 x (cdr lst)))
+        (t (cons (car lst) (remove2 x (cdr lst))))))
+
+;;
+;; Question 
+;;
+;;  Define a procedure REMOVE3 that takes an element and a list; and returns a
+;;  list where all the occurrences of the element that are preceded by the symbol X
+;;  are removed from the list. You need to store the element seen in the previous
+;;  iterationin a variable; therefore you can check whether it is X.
+;; 
+
+(defun remove3 (x lst &optional prev)
+  (cond ((endp lst) nil)
+        ((and (equal (car lst) x) (equal prev 'x)) (remove3 x (cdr lst) x))
+        (t (cons (car lst) (remove3 x (cdr lst) (car lst))))))
+
+;;
+;; Question 
+;;
+;;  Define a procedure TYPES that takes a list and prints out the type of the elements
+;;  encountered. It’s enough that it can tell between number, list and symbol; so use
+;;  NUMBERP, LISTP and SYMBOLP. In case you cannot match to any of these, print
+;;  UNKNOWN-TYPE. Put a string in your list for testing, it answers NIL to all these
+;;  predicates.
+;;
+
+(defun type? (obj)
+  (cond ((listp obj) 'list)
+        ((numberp obj) 'number)
+        ((symbolp obj) 'symbol)
+        (t 'unknown)))
+
+
+(defun types (lst)
+  (if (endp lst)
+      'DONE
+      (and (print (type? (car lst))) (types (cdr lst)))))
+
+;; 
+;; Question
+;; 
+;;  Define a procedure SEARCH-POS that takes a list as search item, another list as a
+;;  search list and returns the list of positions that the search item is found in the search
+;;  list. Positioning starts with 0. A sample interaction:
+;;
+;;  * (search-pos '(a b) '(a b c d a b a b))
+;;  (6 4 0)
+;;
+;;  * (search-pos '(a a) '(a a a a b a b))
+;;  (2 1 0)
+;; 
+
+(defun search-s (x lst &optional store (pos 0))
+  (if (endp lst)
+      (reverse store)
+      (search-pos
+        x
+        (cdr lst)
+        (if (equal (car lst) x)
+            (cons pos store)
+            store)
+        (+ pos 1))))
+
+;; 
+;; Question
+;; 
+;;  Define a procedure LAST2 that takes a list and returns the last element of the list.
+;;  Of course, don’t use LAST. One way could be to keep a counter,
+;;  so that you can compare this to the length of the list to recognize whether you are
+;;  close enough to the end of the list.
+;;
+
+(defun last2-aux (lst len)
+  (if (= 1 len)
+      (car lst)
+      (last2-aux (cdr lst) (- len 1))))
+
+(defun last2 (lst)
+  "when returns NIL, it is ambiguous between an empty input and an input with NIL as the last element"
+  (if lst 
+   (last2-aux lst (length lst))))
+
+;; 
+;; Question
+;; 
+;;  Define a procedure CHOP-LAST, which removes the final element of the
+;;  given list – its like CDR from the back. You are NOT allowed to make
+;;  (REVERSE (CDR (REVERSE LST))). Nothing to be done for an empty list, just
+;;  return it as it is; but a single element list gets “nilled”.
+;; 
+
+(defun singletonp (lst)
+  (and (listp lst) (= (length lst) 1)))
+
+(defun chop-last (lst)
+  (if (or (singletonp lst) (endp lst))
+        nil
+        (cons (car lst) (chop-last (cdr lst)))))
+
 ;; 
 ;; Question
 ;; 
 ;; Define a procedure that checks whether a given list of symbols is a palindrome.  Use CAR and your solution LASTT 
 ;; 
 
-;; for this question you need to be able remove the first and last element of a list. There are many ways to do this.
-;; here is one:
+; for this question you need to be able remove the first and last element of a list. There are many ways to do this.
+; here is one:
 
 (defun strip (xs)
   (reverse (cdr (reverse (cdr xs)))))
@@ -525,7 +783,7 @@
 ;;
 ;; Question
 ;;
-;; Define your own version of \Verb+NTH+.
+;; Define your own version of NTH.
 ;;
 
 (defun mynth (n lst)
