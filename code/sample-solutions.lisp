@@ -598,6 +598,24 @@
   (cond ((endp lst) (if first-call? nil acc))
         (t (listpro (cdr lst) (* (let ((x (car lst))) (if (numberp x) x 1)) acc) nil))))
 
+
+;;
+;; Question
+;;
+;; Define a recursive member procedure that checks whether a given item is
+;; found in the given list. The item is not required to be a top-most element.
+;;
+
+(defun rec-mem (item lst)
+  (cond ((endp lst) nil)
+        ((equal (car lst) item) t)
+        (t (if (consp (car lst))
+               (or (rec-mem item (car lst))
+                   (rec-mem item (cdr lst)))
+               (rec-mem item (cdr lst))))))
+
+
+
 ;; 
 ;; Question 
 ;;
@@ -726,6 +744,45 @@
             store)
         (+ pos 1))))
 
+
+
+;; 
+;; Question
+;;
+;; A chain in a sequence of numbers is such that each number in the chain is
+;; either equal to or greater than the one before it. For instance, 2 5 9 12 17
+;; 21 is a chain, but not 2 5 9 17 12 21, because the 17 12 sub-sequence breaks
+;; the chain. Define a recursive procedure that finds and returns the longest
+;; chain in a sequence of numbers. 
+;;
+
+(defun longer (seqA seqB)
+  "return the longer of the two sequences, return the first if they are of equal length"
+  (if (>= (length seqA) (length seqB))
+      seqA
+      seqB))
+
+
+(defun longest-chain (seq &optional prev chain backup)
+  (cond ((endp seq) (if (null backup)
+                        (reverse chain)
+                        (reverse (longer backup chain))))
+        ((null prev) (longest-chain
+                       (cdr seq)
+                       (car seq)
+                       (list (car seq))
+                       backup))
+        ((>= (car seq) prev) (longest-chain
+                              (cdr seq)
+                              (car seq)
+                              (cons (car seq) chain)
+                              backup))
+        (t (longest-chain
+             (cdr seq)
+             (car seq)
+             (list (car seq))
+             (longer backup chain)))))
+  
 ;; 
 ;; Question
 ;; 
