@@ -1,4 +1,4 @@
-# COGS 502 - Symbols and Programming - Fall 2020
+# COGS 502 - Symbols and Programming
 Informatics Institute, METU
 
 Tuesday, 14:40-17:30
@@ -9,7 +9,6 @@ Tuesday, 14:40-17:30
 
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
-
 
 ### Online content (please download if your browser can't open the video)
 
@@ -65,34 +64,19 @@ Tuesday, 14:40-17:30
 ###   Weekly Schedule (Fall 2020)
       
 |Week| Date   | Content | Meeting | Assignment | Reading |
-:--- |:---|:---|:---|:---|:---
-1    | |  |
-2   | Oct 20 | 02, 04, 05, 06  |[15:30](https://zoom.us/j/93999489693?pwd=UThpSnBodUtJUEkvdEk2VFFncFRFUT09) |              | Sec. 1 upto item 15   
-3   | Oct 27 | 07, 08, 09       |[15:30](https://zoom.us/j/98290011793?pwd=UGNqYjNMZGo3L3lZT0JXVGZtRHdTQT09) |              | Sec. 1|  
-4   | Nov 3 | 12, 13, 14        |[15:30](https://zoom.us/j/97025050652?pwd=RWFNVUlWSmgwOW95R0NvUHlDS2IwQT09) | 1.1-5        | Sec. 2 | 
-5   | Nov 10| 10, 11, 15, 17, 18|[15:30](https://zoom.us/j/92825336790?pwd=SEFhbFlpZHlzWXNtY2tFMHNRZXFtdz09) | 2.1-3, 2.6-7 | Sec. 2|
-6   | Nov 17| 20, 22, 23, 24|[15:30](https://zoom.us/j/91213469891?pwd=UWxNZXlYRzlzR0VYdzNQSnp3QS93UT09) |remaining exx. in Sec. 2 | Sec. 3|
-7   | Nov 24| 26, 28|[15:30](https://zoom.us/j/92754497549?pwd=OGNQaEhVaXdWUjZXdk9EK1A3Z000UT0)| 3.1-4 | Sec. 3|
-8   | Dec 1|  | | |
-9   | Dec 8| 30, 32, 34, 36 |[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | remaining exx. in Sec. 3 | Sec. 4|
-10  | Dec 15| 38, 40, 42, 44, 46|[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | 4.1-6| Sec. 4|
-11  | Dec 22| 48, 50| [15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | 4.7-16 | Sec. 4|
-12  | Dec 29| 52| [15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| 10 exx. from set 4| |
-13  | Jan 5|54, 56, 58|[15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx. 6.1-6 | Sec. 6 |
-14  | Jan 19|60-68 | [15:30](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx. 7.1-10 | Sec. 7 |
-
- 
-
+:--- |:-------|:--------|:--------|:-----------|:--------|
+1    | Mar 16 |First meeting |         |            |         |
+2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec.1 upto item 21 |
 
 
 
 ### Resources 
 
+* Weekly Q/A meetings ([Zoom link](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09), Meeting ID:985 1078 8990, Passcode:104553)
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
 * [Videos](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
 * [Sample solutions](code/sample-solutions.lisp) to homework problems
-* Readings (assigned weekly).
 * Reference books:  
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
@@ -111,9 +95,8 @@ Tuesday, 14:40-17:30
 	- not graded; 
 	- submit by the deadline and get full credit for all the **attempted** questions;
 	- no credit for late submissions.
-* Mid-term exam I (20%)
-* Mid-term exam II (20%)
-* Final exam (30%)
+* Graded assignments (40%) 
+* Oral final exam (30%)
 
 ### Attendance policy
 
