@@ -10,6 +10,15 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
+###   Weekly Schedule (Fall 2020)
+      
+|Week| Date   | Content | Meeting | Assignment | Reading |
+:--- |:-------|:--------|:--------|:-----------|:--------|
+1    | Mar 16 |First meeting |         |            |         |
+2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec.1 upto item 21 |
+
+
+
 ### Online content (please download if your browser can't open the video)
 
 |ID| Topic |
@@ -60,14 +69,6 @@ Tuesday, 14:40-17:30
 74|[Input as accumulator](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/74_input-as-accumulator.mp4)
 76|[Iteration by `dolist`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/76_iteration-by-dolist.mp4)
 78|[Iteration by `dotimes`](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/78_iteration-by-dotimes.mp4)
-
-###   Weekly Schedule (Fall 2020)
-      
-|Week| Date   | Content | Meeting | Assignment | Reading |
-:--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Mar 16 |First meeting |         |            |         |
-2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec.1 upto item 21 |
-
 
 
 ### Resources 
