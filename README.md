@@ -10,7 +10,7 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###   Weekly Schedule (Fall 2020)
+###   Weekly Schedule (Spring 2021)
       
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
