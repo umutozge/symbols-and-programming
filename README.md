@@ -15,7 +15,8 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
 1    | Mar 16 |First meeting |         |            |         |
-2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec.1 upto item 21 |
+2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec. 1 upto item 21 |
+3    | Mar 30 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
 
 
 
@@ -98,7 +99,7 @@ Tuesday, 14:40-17:30
 	- no credit for late submissions.
 * Graded assignments (40%) 
 * Oral final exam (30%)
-
+* [Assignment Submission Portal](http://lfcs.ii.metu.edu.tr/experiments/subs502.html)
 ### Attendance policy
 
 * Not required.
