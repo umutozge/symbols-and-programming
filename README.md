@@ -17,7 +17,7 @@ Tuesday, 14:40-17:30
 1    | Mar 16 |First meeting |         |            |         |
 2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec. 1 upto item 21 |
 3    | Mar 30 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
-3    | Apr 6 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
+4    | Apr 6 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
 
 
 
