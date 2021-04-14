@@ -19,6 +19,7 @@ Tuesday, 14:40-17:30
 3    | Mar 30 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
 4    | Apr 6 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
 5    | Apr 13 | | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.1-5 | Sec. 3 |
+5    | Apr 20 |24-30 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.6-10, [GA01](assignments/cogs502-GA01-2021-01.pdf) | Sec. 4 |
 
 
 ### Online content (please download if your browser can't open the video)
