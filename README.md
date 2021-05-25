@@ -25,6 +25,7 @@ Tuesday, 14:40-17:30
 9    | May 11 | Spring break | | | | 
 10   | May 18 |48-50 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36, [GA02](assignments/cogs502-GA02-2021-01.pdf) | Sec. 4 |
 11   | May 25 | 52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
+12   | Jun 1 | 58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 [GA03](assignments/cogs502-GA03-2021-01.pdf) | Sec. 7 |
 
 
 ### Online content (please download if your browser can't open the video)
