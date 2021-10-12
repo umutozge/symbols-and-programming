@@ -99,20 +99,22 @@ Tuesday, 14:40-17:30
 * Regularly check this page for assignments, readings, notes, etc.
 * `odtuclass` will be used **only** for announcing grades.
 * Follow and use the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) course related announcements, questions, comments etc. 
+* [Assignment Submission Portal](http://lfcs.ii.metu.edu.tr/experiments/subs502.html)
 
 ### Requirements
 
 * Weekly assignments (30%): 
 	- not graded; 
-	- submit by the deadline and get full credit for all the **attempted** questions;
-* Graded assignments (70%)
-* [Assignment Submission Portal](http://lfcs.ii.metu.edu.tr/experiments/subs502.html)
+	- submit by the deadline and get full credit for all the **attempted** questions.
+* Graded assignments (40%): 
+    - you may work in pairs, you cannot pair with the same person more than once.
+* Final exam (30%, in class)
+
+
+### Attendance and late submission policies
+
+* Attendance is not required.
 * No credit for late submissions, except in case of a medical issue (attach your medical report).
-
-
-### Attendance policy
-
-* Not required.
 
 
 ### Special assistance
