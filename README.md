@@ -10,24 +10,24 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###   Weekly Schedule (Spring 2021)
+###   Weekly Schedule (Fall 2021)
       
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Mar 16 |First meeting |         |            |         |
-2    | Mar 23 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec. 1 upto item 21 |
-3    | Mar 30 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
-4    | Apr 6 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
-5    | Apr 13 | | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.1-5 | Sec. 3 |
-6    | Apr 20 |24-30 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.6-10, [GA01](assignments/cogs502-GA01-2021-01.pdf) | Sec. 4 |
-7    | Apr 27 |32-38 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.1-13 | Sec. 4 |
-8    | May 4 |40-46 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.14-24	 | Sec. 4 |
-9    | May 11 | Spring break | | | | 
-10   | May 18 |48-50 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36, [GA02](assignments/cogs502-GA02-2021-01.pdf) | Sec. 4 |
-11   | May 25 | 52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
-12   | Jun 1 | 58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 [GA03](assignments/cogs502-GA03-2021-01.pdf) | Sec. 7 |
-13   | Jun 8 | 64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 [GA04](assignments/cogs502-GA04-2021-01.pdf)| Sec. 7 |
-14   | Jun 15 | 70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
+1    | Oct 19 |First meeting |         |            |         |
+2    | Oct 26 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec. 1 upto item 21 |
+3    | Nov 2 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
+4    | Nov 9 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
+5    | Nov 16 | | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.1-5 | Sec. 3 |
+6    | Nov 23 |24-30 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.6-10, [GA01](assignments/cogs502-GA01-2021-01.pdf) | Sec. 4 |
+7    | Nov 30 |32-38 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.1-13 | Sec. 4 |
+8    | Dec 7 |40-46 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.14-24	 | Sec. 4 |
+9    | Dec 14 | Spring break | | | | 
+10   | Dec 21 |48-50 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36, [GA02](assignments/cogs502-GA02-2021-01.pdf) | Sec. 4 |
+11   | Dec 28 | 52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
+12   | Jan 4 | 58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 [GA03](assignments/cogs502-GA03-2021-01.pdf) | Sec. 7 |
+13   | Jan 11 | 64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 [GA04](assignments/cogs502-GA04-2021-01.pdf)| Sec. 7 |
+14   | Jan 18 | 70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
 
 
 ### Online content (please download if your browser can't open the video)
@@ -93,12 +93,11 @@ Tuesday, 14:40-17:30
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
 	Winston, P. H. and Horn, B. K. P. (1984). LISP, 3rd Edition. Addison-Wesley, Reading, MA.  
-* Last term's full [content](var/symbols-and-programming-2019-Fall.zip); **Disclaimer:** expect significant changes in the content.
 
 ### Communication
 
 * Regularly check this page for assignments, readings, notes, etc.
-* `odtuclass` will be used only for announcing grades.
+* `odtuclass` will be used **only** for announcing grades.
 * Follow and use the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) course related announcements, questions, comments etc. 
 
 ### Requirements
@@ -106,13 +105,15 @@ Tuesday, 14:40-17:30
 * Weekly assignments (30%): 
 	- not graded; 
 	- submit by the deadline and get full credit for all the **attempted** questions;
-	- no credit for late submissions.
-* Graded assignments (40%) 
-* Oral final exam (30%)
+* Graded assignments (70%)
 * [Assignment Submission Portal](http://lfcs.ii.metu.edu.tr/experiments/subs502.html)
+* No credit for late submissions, except in case of a medical issue (attach your medical report).
+
+
 ### Attendance policy
 
 * Not required.
+
 
 ### Special assistance
 
