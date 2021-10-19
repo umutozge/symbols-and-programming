@@ -15,14 +15,14 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
 1    | Oct 19 |First meeting |         |            |         |
-2    | Oct 26 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Infrastructure | Sec. 1 upto item 21 |
+2    | Oct 26 |02-08   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | `emacs` with `SLIME`| Sec. 1 upto item 21 |
 3    | Nov 2 |09-15   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 1.1-5 | Sec. 1, 2 |
 4    | Nov 9 |17-24   | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 2.1-14 | Sec. 3 |
-5    | Nov 16 | | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.1-5 | Sec. 3 |
+5    | Nov 16 |TBA | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.1-5 | Sec. 3 |
 6    | Nov 23 |24-30 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 3.6-10 | Sec. 4 |
 7    | Nov 30 |32-38 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.1-13 | Sec. 4 |
 8    | Dec 7 |40-46 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.14-24	 | Sec. 4 |
-9    | Dec 14 | Spring break | | | | 
+9    | Dec 14 | TBA | | | | 
 10   | Dec 21 |48-50 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36, [GA02](assignments/cogs502-GA02-2021-01.pdf) | Sec. 4 |
 11   | Dec 28 | 52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
 12   | Jan 4 | 58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
@@ -106,9 +106,9 @@ Tuesday, 14:40-17:30
 * Weekly assignments (30%): 
 	- not graded; 
 	- submit by the deadline and get full credit for all the **attempted** questions.
-* Graded assignments (40%): 
+* Graded assignments (50%): 
     - you may work in pairs, you cannot pair with the same person more than once.
-* Final exam (30%, in class)
+* Final exam (20%, in class)
 
 
 ### Attendance and late submission policies
