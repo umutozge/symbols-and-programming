@@ -5,7 +5,7 @@ Tuesday, 14:40-17:30
 
 [Umut Özge](https://umutozge.github.io)  
 
-[Tunç Güven Kaya](mailto:tuncgk@gmail.com) (TA)  
+[Alaz Aydın](mailto:alazaydin@gmail.com) (TA)  
 
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
