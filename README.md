@@ -15,19 +15,19 @@ Tuesday, 14:40-17:30
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
 1    | Oct 19 |First meeting |         |            |         |
-2    | Oct 26 |02-08 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Nov 2 |09-15  | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)  | Exx 1.1-5 | Sec. 1, 2 |
-4    | Nov 9 |17-24  | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)  | Exx 2.1-14 | Sec. 3 |
-5    | Nov 16|24-28  | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)   | Exx 3.1-5  | Sec. 4 |
-6    | Nov 23| TBA | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)     | Exx 3.6-10 | |
-7    | Nov 30|30-36 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)   | Exx 4.1-13 | Sec. 4 |
-8    | Dec 7 |38-46 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)    | Exx 4.14-24	 | Sec. 4 |
-9    | Dec 14| TBA | | | | 
-10   | Dec 21|48-50 | [14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36, [GA02](assignments/cogs502-GA02-2021-01.pdf) | Sec. 4 |
-11   | Dec 28| 52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
-12   | Jan 4 | 58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
-13   | Jan 11| 64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
-14   | Jan 18| 70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
+2    | Oct 26 |02-08 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Nov 2 |09-15  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)  | Exx 1.1-5 | Sec. 1, 2 |
+4    | Nov 9 |17-24  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)  | Exx 2.1-14 | Sec. 3 |
+5    | Nov 16|24-28  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)   | Exx 3.1-5  | Sec. 4 |
+6    | Nov 23| --    |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)     | Exx 3.6-12 | |
+7    | Nov 30|30-36  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)   | Exx 4.1-13 | Sec. 4 |
+8    | Dec 7 |38-46  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)    | Exx 4.14-24	 | Sec. 4 |
+9    | Dec 14|48-50  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
+10   | Dec 21|52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
+11   | Dec 28|58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
+12   | Jan 4 |64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
+13   | Jan 11|70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
+14   | Jan 18|   	 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | | |
 
 
 ### Online content (please download if your browser can't open the video)
