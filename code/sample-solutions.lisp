@@ -212,6 +212,12 @@
       (and (print (random 2)) (toss (- n 1)))))
 
 
+
+
+
+
+
+
 ;; 
 ;; Question
 ;; 
@@ -336,6 +342,19 @@
     (powerr x (- y 1) (* x pro))))
 
 ;;
+;; Question
+;; 
+;;
+;; Define a recursive procedure that returns the sum of a geometric progression
+;; with $n$ terms and the initial term $a$ and the common ratio $r$.
+;;
+
+(defun geo (a r n &optional (product 1) (sum 0))
+  (if (zerop n)
+      (* a sum)
+      (geo a r (- n 1) (* product r) (+ sum product))))
+
+
 ;; Question
 ;;
 ;; Compute the average of two integers m and n (where m < n)  
@@ -719,32 +738,6 @@
       'DONE
       (and (print (type? (car lst))) (types (cdr lst)))))
 
-;; 
-;; Question
-;; 
-;;  Define a procedure SEARCH-POS that takes a list as search item, another list as a
-;;  search list and returns the list of positions that the search item is found in the search
-;;  list. Positioning starts with 0. A sample interaction:
-;;
-;;  * (search-pos '(a b) '(a b c d a b a b))
-;;  (6 4 0)
-;;
-;;  * (search-pos '(a a) '(a a a a b a b))
-;;  (2 1 0)
-;; 
-
-(defun search-s (x lst &optional store (pos 0))
-  (if (endp lst)
-      (reverse store)
-      (search-pos
-        x
-        (cdr lst)
-        (if (equal (car lst) x)
-            (cons pos store)
-            store)
-        (+ pos 1))))
-
-
 
 ;; 
 ;; Question
@@ -761,7 +754,6 @@
   (if (>= (length seqA) (length seqB))
       seqA
       seqB))
-
 
 (defun longest-chain (seq &optional prev chain backup)
   (cond ((endp seq) (if (null backup)
@@ -1800,7 +1792,7 @@
 
 (defun search-pos (search-item search-list)
   "return the list of positions search-item (a list) matches in search-list"
-  (let ((win (make-list(length search-item)))
+  (let ((win (make-list (length search-item)))
 		(store nil))
 	(dotimes (i (length search-list) store)
 	  (setf win (append
@@ -1921,7 +1913,7 @@
 
 
 ;;
-;; Quesstion
+;; Question
 ;;
 ;; You can represent a table in lisp by making each row a list and collecting all the rows in a list. E.g. a table like,
 ;;
@@ -1986,6 +1978,102 @@
         proc 
         (get-columns table))))))
 
+;;
+;; Question
+;;
+;; Define a procedure \Verb+MATCHES+ that takes two lists, a pattern and a
+;; text, and returns the count of the occurrences of the pattern in the text.
+;; You need to be careful about overlapping matches. For instance, \Verb+(A C
+;; A)+ has 3 occurrences in \Verb+(A C A C A T G C A C A T G C)+.
+
+(defun singletonp (lst)
+  (and (consp lst) (null (cdr lst))))
+
+(defun slide-window (item window &optional (store (list item)))
+  "inserts item to the front of the window removing the last element"
+  (if window
+      (if (singletonp window)
+          (reverse store)
+          (cons (car window) store))))
+
+(defun matches ()
+  (labels ((singletonp (lst)
+             (and (consp lst) (null (cdr lst))))
+           (slide-window (item window &optional (store (list item)))
+             "inserts item to the front of the window removing the last element"
+             (if window
+                 (if (singletonp window)
+                     (reverse store)
+                     (cons (car window) store)))))) 
+  (slide-window 'a (b c d)))
+
+;;
+;; Question
+;;
+;; Define a procedure named \Verb+SUMSEQ+ that takes a sequence in the above
+;; format (E.g.\ \Verb+((1 1) (2 4) (3 8) (4 16))+) of any length and a
+;; function, and returns the sum of the terms where the index and the term are
+;; related by the provided function. For instance if your procedure takes the
+;; example sequence and a function that checks whether its second argument is
+;; the square of the index. The above example will yield 21 as result, as in
+;; the first, second and the fourth terms the term is the square of its index.
+;; Solve the problem using \Verb+REMOVE-IF+ and \Verb+REDUCE+.
+
+(defun summ (seq proc)
+  (cadr
+    (reduce #'(lambda (x y)
+              (list nil (+ (cadr x) (cadr y))))
+          (remove-if #'(lambda (x)
+                 (let ((index (car x)) (term (cadr x)))(not (= (funcall proc index) term))))
+                     seq))))
+
+;;
+;; Question
+;;
+;; A growing difference sequence is a recursive sequence where each non-initial
+;; term in the sequence is greater than the one before it by a difference that
+;; steadily grows with the terms. For instance 1, 4, 8, 13, 26... is such a
+;; sequence where the second term is obtained by adding 3 to the first, third
+;; term is obtained by adding 4 to the second, fourth term is obtained by
+;; adding 5 to the third, and so on. In tabular form:
+;; 
+;; index term difference 
+;; 1       1      3 
+;; 2       4      4 
+;; 3       8      5  
+;; 4      13      6 
+;; 5      19      7 
+;; 6      26      8 
+;; 7      34      9 
+;;
+;; Our sequences will always start with 1. How the difference starts and grows
+;; may change from sequence to sequence. For instance the difference in the
+;; following sequence starts with 2 and grows as the square of the previous
+;; difference.
+
+;; index  term  difference 
+;; 1        1        2 
+;; 2        3        4 
+;; 3        7        16  
+;; 4        23      256 
+;; 5        279     65536 
+
+;; Define a procedure \Verb+GDS+ that generates a growing difference sequence
+;; where the length of the sequence, the initial value of the difference and
+;; how difference grows will be given as parameters. An example output for the
+;; first 7 terms in the first example above would be \Verb+((1 1) (2 4) (3 8)
+;; (4 13) (5 19) (6 26) (7 34))+.
+
+(defun gds (len diff next &optional (counter 1) (term 1) store)
+  (if (zerop len)
+      (reverse store)
+      (gds
+        (- len 1)
+        (funcall next diff)
+        next
+        (+ counter 1)
+        (+ term diff)
+        (cons (list counter term) store))))
 
 
 
