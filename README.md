@@ -21,7 +21,7 @@ Tuesday, 14:40-17:30
 5    | Nov 16|24-28  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.1-5  | Sec. 4 |
 6    | Nov 23| --    |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.6-12 | |
 7    | Nov 30|30-36  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.1-13 | Sec. 4 |
-8    | Dec 7 |38-46  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.14-24 [GA01](assignmets/cogs502-GA01-2021-2.pdf)	 | Sec. 4 |
+8    | Dec 7 |38-46  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.14-24 [GA01](assignments/cogs502-GA01-2021-2.pdf)	 | Sec. 4 | 
 9    | Dec 14|48-50  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
 10   | Dec 21|52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
 11   | Dec 28|58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
