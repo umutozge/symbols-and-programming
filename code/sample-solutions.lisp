@@ -4,6 +4,8 @@
 ;;
 ;; Umut Ozge
 ;; https://github.com/umutozge/symbols-and-programming 
+;;
+;; with contributions from Alaz Aydın and Tunç Güven Kaya
 
 ;; Sample solutions for programming exercises
 
@@ -1338,6 +1340,17 @@
 
 (defun maxpair (lst)
   "get the maximum pair (dotted pairs of the form (A . B)) in a list of pairs compared according to the cdr of each element"
+  (if lst
+      (let ((maxrest (if (null (cdr lst))
+                         (car lst)
+                         (maxpair (cdr lst)))))
+        (if (> (cdar lst) (cdr maxrest))
+            (car lst)
+            maxrest))))
+
+;; a farily roundabout alternative definition would use OR instead of checking for (null (cdr lst))
+
+(defun maxpair (lst)
   (if lst
     (let ((maxrest (maxpair (cdr lst))))
      (if (> (cdar lst) (or (cdr maxrest) (- (cdar lst) 1))); the OR clause avoids the error of comparing NIL with a number
