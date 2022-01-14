@@ -27,7 +27,7 @@ Tuesday, 14:40-17:30
 11   | Dec 28|58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
 12   | Jan 4 |64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
 13   | Jan 11|70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
-14   | Jan 18|76-78	 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) |TBA | Sec. 8 |
+14   | Jan 18|76-78	 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) |Exx. 8.1-9 [GA02](assignments/cogs502-GA02-2021-2.pdf), ***due on Sun 23th*** | Sec. 8 |
 
 
 ### Online content (please download if your browser can't open the video)
