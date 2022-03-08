@@ -11,23 +11,24 @@ Tuesday, 14:40-17:30
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
 ###  Tentative Weekly Schedule (Fall 2021)
-      
+
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Oct 19 |First meeting |         |            |         |
-2    | Oct 26 |02-08 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Nov 2 |09-15  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 1.1-5 | Sec. 1, 2 |
-4    | Nov 9 |17-24  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 2.1-14 | Sec. 3 |
-5    | Nov 16|24-28  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.1-5  | Sec. 4 |
-6    | Nov 23| --    |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.6-12 | |
-7    | Nov 30|30-36  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.1-13 | Sec. 4 |
-8    | Dec 7 |38-46  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.14-24 [GA01](assignments/cogs502-GA01-2021-2.pdf)	 | Sec. 4 | 
-9    | Dec 14|48-50  |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
-10   | Dec 21|52-56 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
-11   | Dec 28|58-62 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
-12   | Jan 4 |64-68 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
-13   | Jan 11|70-74 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
-14   | Jan 18|76-78	 |[14:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) |Exx. 8.1-9 [GA02](assignments/cogs502-GA02-2021-2.pdf), ***due on Sun 23th*** | Sec. 8 |
+1    | Mar 8 |First meetng |         |            |         |
+2    | Mar 15 |02-08 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Mar 22 |09-15  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 1.1-5 | Sec. 1, 2 |
+4    | Mar 29 |17-24  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 2.1-14 | Sec. 3 |
+5    | Apr 5|24-28  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.1-5  | Sec. 4 |
+6    | Apr 12| --    |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.6-12 | |
+7    | Apr 19|30-36  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.1-13 | Sec. 4 |
+8    | Apr 26 |38-46  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.14-24 [GA01](assignments/cogs502-GA01-2021-2.pdf)	 | Sec. 4 | 
+9    | May 4|48-50  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
+10   | May 11|52-56 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
+11   | May 18|58-62 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
+12   | May 25|64-68 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
+13   | Jun 8|70-74 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
+14   | Jun 15|76-78	 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) |Exx. 8.1-9 [GA02](assignments/cogs502-GA02-2021-2.pdf), ***due on Sun 23th*** | Sec. 8 |
+
 
 
 ### Online content (please download if your browser can't open the video)
@@ -103,12 +104,12 @@ Tuesday, 14:40-17:30
 
 ### Requirements
 
-* Weekly assignments (30%): 
-	- not graded; 
+* Weekly assignments (20%):
+	- not graded;
 	- submit by the deadline and get full credit for all the **attempted** questions.
-* Graded assignments (50%): 
-    - you may work in pairs, you cannot pair with the same person more than once.
-* Final exam (20%, in class)
+* Graded assignments (20%) 
+* Midterm exam (30%, in class)
+* Final exam (30%, in class)
 
 
 ### Attendance and late submission policies
