@@ -10,24 +10,25 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###  Tentative Weekly Schedule (Fall 2021)
+###  Tentative Weekly Schedule (Spring 2022)
+
 
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
 1    | Mar 8 |First meetng |         |            |         |
-2    | Mar 15 |02-08 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Mar 22 |09-15  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 1.1-5 | Sec. 1, 2 |
-4    | Mar 29 |17-24  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 2.1-14 | Sec. 3 |
-5    | Apr 5|24-28  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.1-5  | Sec. 4 |
-6    | Apr 12| --    |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 3.6-12 | |
-7    | Apr 19|30-36  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.1-13 | Sec. 4 |
-8    | Apr 26 |38-46  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.14-24 [GA01](assignments/cogs502-GA01-2021-2.pdf)	 | Sec. 4 | 
-9    | May 4|48-50  |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09)| Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
-10   | May 11|52-56 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx  4.44-49  | Sec. 5, 6 |
-11   | May 18|58-62 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 6.1-6 | Sec. 7 |
-12   | May 25|64-68 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.1-7 | Sec. 7 |
-13   | Jun 8|70-74 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) | Exx 7.8-14 | Sec. 7 |
-14   | Jun 15|76-78	 |[9:40](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09) |Exx. 8.1-9 [GA02](assignments/cogs502-GA02-2021-2.pdf), ***due on Sun 23th*** | Sec. 8 |
+2    | Mar 15 |02-08 |[9:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Mar 22 |09-15  |[9:40]()| Exx 1.1-5, 2.1-5| Sec. 1, 2 |
+4    | Mar 29 |17-24  |[9:40]()| Exx 2.6-14 | Sec. 3 |
+5    | Apr 5|24-28  |[9:40]()| Exx 3.1-5  | Sec. 4 |
+6    | Apr 12| --    |[9:40]()| Exx 3.6-12 | |
+7    | Apr 19|30-36  |[9:40]()| Exx 4.1-13 | Sec. 4 |
+8    | Apr 26 |38-46  |[9:40]()| Exx 4.14-24 [GA01](assignments/cogs502-GA01-2021-2.pdf)	 | Sec. 4 | 
+9    | May 3|48-50  |[9:40]()| Exx 4.26, 27, 29, 30, 31, 32, 36 | Sec. 4 |
+10   | May 10|52-56 |[9:40]() | Exx  4.44-49  | Sec. 5, 6 |
+11   | May 17|58-62 |[9:40]() | Exx 6.1-6 | Sec. 7 |
+12   | May 24|64-68 |[9:40]() | Exx 7.1-7 | Sec. 7 |
+13   | May 31|70-74 |[9:40]() | Exx 7.8-14 | Sec. 7 |
+14   | Jun 7|76-78	 |[9:40]() |Exx. 8.1-9 [GA02](assignments/cogs502-GA02-2021-2.pdf), ***due on Sun 23th*** | Sec. 8 |
 
 
 
@@ -85,9 +86,8 @@ Tuesday, 14:40-17:30
 
 ### Resources 
 
-* Weekly Q/A meetings ([Zoom link](https://zoom.us/j/98510788990?pwd=eCtBTHdrSVh2c1MybkxzZi91ZGsvUT09), Meeting ID:985 1078 8990, Passcode:104553)
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
-* [Videos](http://lfcs.ii.metu.edu.tr/var/vid/cogs502/)
+* [Videos](http://lfcs.ii.metu.edu.tr/cr/cogs502/vid/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
 * [Sample solutions](code/sample-solutions.lisp) to homework problems
 * Reference books:  
@@ -98,9 +98,7 @@ Tuesday, 14:40-17:30
 ### Communication
 
 * Regularly check this page for assignments, readings, notes, etc.
-* `odtuclass` will be used **only** for announcing grades.
-* Follow and use the [newsgroup](https://groups.google.com/forum/#!forum/metu-cogs-502-symbols-and-programming) course related announcements, questions, comments etc. 
-* [Assignment Submission Portal](http://lfcs.ii.metu.edu.tr/experiments/subs502.html)
+* Follow and contribute to `odtuclass` for announcements and discussion.
 
 ### Requirements
 
