@@ -707,16 +707,16 @@
 ;;
 ;; Question 
 ;;
-;;  Define a procedure REMOVE3 that takes an element and a list; and returns a
-;;  list where all the occurrences of the element that are preceded by the symbol X
-;;  are removed from the list. You need to store the element seen in the previous
-;;  iterationin a variable; therefore you can check whether it is X.
+;;  Define a procedure REMAFTER that takes an element, a list and a
+;;  pivot element; and returns a list where all the occurrences of the
+;;  element that are preceded by the pivot element are removed from
+;;  the list. 
 ;; 
 
-(defun remove3 (x lst &optional prev)
+(defun remafter (x lst pivot &optional prev)
   (cond ((endp lst) nil)
-        ((and (equal (car lst) x) (equal prev 'x)) (remove3 x (cdr lst) x))
-        (t (cons (car lst) (remove3 x (cdr lst) (car lst))))))
+        ((and (equal (car lst) x) (equal prev pivot)) (remafter x (cdr lst) pivot x))
+        (t (cons (car lst) (remafter x (cdr lst) pivot (car lst))))))
 
 ;;
 ;; Question 
@@ -2087,6 +2087,3 @@
         (+ counter 1)
         (+ term diff)
         (cons (list counter term) store))))
-
-
-
