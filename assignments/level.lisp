@@ -1,0 +1,10 @@
+(defun level (term lst)
+  (cond
+    ((endp lst) nil)
+    ((equal term (car lst)) 0)
+    ((listp (car lst))
+     (let ((try (level term (car lst))))
+       (if (null try)
+           (level term (cdr lst))
+           (+ 1 try))))
+    (t (level term (cdr lst)))))
