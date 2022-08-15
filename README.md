@@ -10,7 +10,7 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###  Tentative Weekly Schedule (Spring 2022)
+###  Weekly Schedule (Fall 2022)
 
 
 |Week| Date   | Content | Meeting | Assignment | Reading |
@@ -90,7 +90,6 @@ Tuesday, 14:40-17:30
 * [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
 * [Videos](http://lfcs.ii.metu.edu.tr/cr/cogs502/vid/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
-* [Sample solutions](code/sample-solutions.lisp) to homework problems
 * Reference books:  
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
