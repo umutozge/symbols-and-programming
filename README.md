@@ -1,7 +1,7 @@
 # COGS 502 - Symbols and Programming
 Informatics Institute, METU
 
-Tuesday, 14:40-17:30
+Monday, 08:40-11:30
 
 [Umut Özge](https://umutozge.github.io)  
 
@@ -10,30 +10,28 @@ Tuesday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###  Weekly Schedule (Fall 2022)
-
+###  Weekly Schedule (Fall 2022 -- Tentative)
 
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Mar 8 |First meetng |         |            |         |
-2    | Mar 15 |02-08 |[9:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Mar 22 |09-15 |[9:40]()| Exx 1.1-5, 2.1-5| Sec. 1, 2 |
-4    | Mar 29 |17-24 |[9:40]()| Exx 2.6-14 3.1-3 | Sec. 3 |
-5    | Apr 5|24-28 |[9:40]()|3.3-12  |  |
-6    | Apr 12| 30-36 |[9:40]()|4.1-6 |  Sec. 4|
-7    | Apr 19| 38-50 |[9:40]()|4.7-13, 4.18-21  | |
-8    | Apr 26| Midterm |[9:40]()|  | Sec. 4 | 
-\-    | May 3|Bayram || |  |
-9   | May 10|52-56 |[9:40]() | 4.63,65 6.1-3    | Sec. 5, 6 |
-10   | May 17|58-62 |[9:40]() | 6.4-6, 7.1-5 | Sec. 7 |
-11   | May 24|64-68 |[9:40]() | 7.6-13| Sec. 7 |
-12   | May 31|70-74 |[9:40]() |7.14, 4.24\*, 4.44\* | Sec. 7 |
-13   | Jun 7|76-78 (optional) |[9:40]() | 4.31\*, 4.32\*, 7.15\* | Sec. 8 (optional) |
-14   | Jun 14|	 |[9:40]()| | |
+1    | Oct 3  |First meetng |         |            |         |
+2    | Oct 10 |02-08 |[9:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Oct 17 |09-15 |[9:40]()| Exx 1.1-5, 2.1-5| Sec. 1, 2 |
+4    | Oct 24 |17-24 |[9:40]()| Exx 2.6-14 3.1-3 | Sec. 3 |
+5    | Oct 31|24-28 |[9:40]()|3.3-12  |  |
+6    | Nov 7| 30-36 |[9:40]()|4.1-6 |  Sec. 4|
+7    | Nov 14| 38-50 |[9:40]()|4.7-13, 4.18-21  | |
+8    | Nov 21| Midterm |[9:40]()|  | Sec. 4 | 
+9    | Nov 28| || |  |
+10   | Dec 5|52-56 |[9:40]() | 4.63,65 6.1-3    | Sec. 5, 6 |
+11   | Dec 12|58-62 |[9:40]() | 6.4-6, 7.1-5 | Sec. 7 |
+12   | Dec 19|64-68 |[9:40]() | 7.6-13| Sec. 7 |
+13   | Dec 26|70-74 |[9:40]() |7.14, 4.24, 4.44 | Sec. 7 |
+14   | Jan 2|76-78  |[9:40]() | 4.31, 4.32, 7.15 | Sec. 8 (optional) |
 
 
 
-### Online content (please download if your browser can't open the video)
+### Videos (please download if your browser can't open the video)
 
 |ID| Topic |
 :---|:--- |
@@ -87,7 +85,7 @@ Tuesday, 14:40-17:30
 
 ### Resources 
 
-* [Lecture notes](notes/cogs502-lecture-notes.pdf) (updated weekly).
+* [Lecture notes](notes/cogs502-lecture-notes.pdf)
 * [Videos](http://lfcs.ii.metu.edu.tr/cr/cogs502/vid/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
 * Reference books:  
@@ -97,24 +95,21 @@ Tuesday, 14:40-17:30
 
 ### Communication
 
-* Regularly check this page for assignments, readings, notes, etc.
 * Follow and contribute to `odtuclass` for announcements and discussion.
+* Drop us an email if you want to be a guest student in this course.
 
 ### Requirements
 
-* Weekly assignments (20%):
-	- not graded;
-	- submit by the deadline and get full credit for all the **attempted** questions.
-* Graded assignments (20%) 
+* Weekly assignments (40%):
 * Midterm exam (30%, in class)
 * Final exam (30%, in class)
 
-
 ### Attendance and late submission policies
 
-* Attendance is not required.
-* No credit for late submissions, except in case of a medical issue (attach your medical report).
-
+* Attendance is not graded or required.
+* If you think you can succeed in this course without help from us, you do not need to attend classes.
+* But if you think otherwise, you should come -- only attenders can get help outside of class hours (e.g.\ office hours, forum questions, etc.)
+* No late submissions, except in case of a medical issue proved by a medical report.
 
 ### Special assistance
 
