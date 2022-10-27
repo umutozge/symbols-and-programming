@@ -118,4 +118,4 @@ Monday, 08:40-11:30
 ### License
 The textual content of this course is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), and the accompanying source code is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php), unless otherwise stated.
 
-deneme
+dene
