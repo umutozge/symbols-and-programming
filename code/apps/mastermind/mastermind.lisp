@@ -16,13 +16,13 @@
 
 (defun _parse-num (word n store)
   (if (zerop n)
-    store
-    (_parse-num
-      word
-      (- n 1)
-      (cons
-        (digit-char-p (aref word (- n 1)))
-        store))))
+      store
+      (_parse-num
+        word
+        (- n 1)
+        (cons
+          (digit-char-p (aref word (- n 1)))
+          store))))
 
 (defun parse-num (num)
   "turn the given number to a list of digits"
@@ -57,14 +57,12 @@
 ;; Various I/O procedures
 ;;
 
-(defun pick-a-number (&optional (n 0))
+(defun pick-a-number ()
   "Picks a random number between 1000 and 9999"
-  (if (>= n 1000)
-    n
-    (pick-a-number (random 10000))))
+  (+ 1000 (random 9000)))
 
 (defun give-up ()
-  (format t "Coma again!"))
+  (format t "Come again!"))
 
 (defun get-guess ()
   (format t "Please enter your guess (q to give up): ")
@@ -91,14 +89,11 @@
 ;; Procdures for computing star and plus counts
 ;;
 
-(defun remove-once (x lst)
+(defun remove-once (elm lst)
   "Removes the first occurrence, if exists, of x from lst"
-  (if (endp lst)
-    nil
-    (if (equal (car lst) x)
-      (cdr lst)
-      (cons (car lst)
-            (remove-once x (cdr lst))))))
+  (cond ((endp lst) nil)
+        ((equal (car lst) elm) (cdr lst))
+        (t (cons (car lst) (remove-once elm (cdr lst))))))
 
 (defun count-pluses (target guess &optional (initial-length (length target))) 
   "Computes the plus count"
@@ -137,11 +132,10 @@
       (print-result (compute-match (parse-num target) (parse-num guess)))
       (proc-input target (get-guess)))))
 
-
 (defun start ()
   "Main procedure of MasterMind"
   (setf *trial-count* 0)
-  (setf *random-state* (make-random-state t))
-  (let ((target (pick-a-number)))
+  ;(setf *random-state* (make-random-state t))
+  (let ((target (print (pick-a-number))))
     (greet)
     (proc-input target (get-guess))))
