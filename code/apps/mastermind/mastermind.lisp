@@ -74,7 +74,7 @@
   (format t "~%***Welcome to MasterMind***~%~%"))
 
 (defun success ()
-  (format t "Well done! You did it in ~D trials!" *trial-count*))
+  (format t "Well done! You did it in ~D trial~A!" *trial-count* (if (= 1 *trial-count*) "" "s")))
 
 (defun print-result (lst)
   "Turns the star and plus count pair in lst to actual stars and pluses"
@@ -135,7 +135,9 @@
 (defun start ()
   "Main procedure of MasterMind"
   (setf *trial-count* 0)
-  ;(setf *random-state* (make-random-state t))
-  (let ((target (print (pick-a-number))))
+  (setf *random-state* (make-random-state t))
+  (let ((target (pick-a-number)))
     (greet)
-    (proc-input target (get-guess))))
+    (proc-input target (get-guess))
+    T
+    ))
