@@ -1,7 +1,7 @@
 # COGS 502 - Symbols and Programming
 Informatics Institute, METU
 
-Monday, 08:40-11:30
+Monday, 14:40-17:30
 
 [Umut Özge](https://umutozge.github.io)  
 
@@ -10,24 +10,24 @@ Monday, 08:40-11:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###  Weekly Schedule (Fall 2022 -- Tentative)
+###  Weekly Schedule (Spring 2023)
 
 |Week| Date   | Content | Meeting | Assignment | Reading |
 :--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Oct 3  |First meeting |         |            |         |
-2    | Oct 10 |02-08 |[9:15]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Oct 17 |09-15 |[9:15]()| Exx 1.1-4, 2.7| Sec. 1, 2 |
-4    | Oct 24 |17-24 |[9:15]()|2.9-13  | Sec. 3 |
-5    | Oct 31|24-28 |[9:15]()|3.1-5  | Sec. 3 |
-6    | Nov 7| 30-36 |[9:15]()|3.6-9 |  Sec. 4|
-7    | Nov 14|30-36 |[9:15]()|3.10-12 | |
-8    | Nov 21|36-42 |[9:15]()|4.1-7  | Sec. 4 |
-9    | Nov 28|Midterm |[9:15]()| |  |
-10   | Dec 5| 44-50 |[9:15]() | 4.11,14,20,21,25   | |
-11   | Dec 12|52-56 |[9:15]() | 4.26-28, 4.32-34   | |
-12   | Dec 19||[9:15]() |    | |
-13   | Dec 26|58-64|[9:15]() |6.1-6 | |
-14   | Jan 2 |66-74 |[9:15]()|7.1-9 | |
+1    | Mar 6  |First meeting |         |            |         |
+2    | Mar 13 |02-08 |[14:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Mar 20 |09-15 |[14:40]()| ||
+4    | Mar 27 |17-24 |[14:40]()|| |
+5    | Apr 3|24-28 |[14:40]()|| |
+6    | Apr 10| 30-36 |[14:40]()|||
+7    | Apr 17|30-36 |[14:40]()|| |
+8    | Apr 24|36-42 |[14:40]()|||
+9    | May 1|Holiday |[14:40]()| |  |
+10   | May 8| 44-50 |[14:40]() || |
+11   | May 15|52-56 |[14:40]() || |
+12   | May 22||[14:40]() |    | |
+13   | May 29|58-64|[14:40]() || |
+14   | Jun 5 |66-74 |[14:40]()|| |
 
 
 
@@ -100,13 +100,12 @@ Monday, 08:40-11:30
 
 ### Requirements
 
-* Weekly assignments (40%):
+* Weekly assignments (30%):
 * Midterm exam (30%, in class)
-* Final exam (30%, in class)
+* Final exam (40%, in class)
 
 ### Attendance and late submission policies
 
-* Attendance is not graded or required.
 * If you think you can succeed in this course without help from us, you do not need to attend classes.
 * But if you think otherwise, you should come -- only attenders can get help outside of class hours (e.g.\ office hours, forum questions, etc.)
 * No late submissions, except in case of a medical issue proved by a medical report.
