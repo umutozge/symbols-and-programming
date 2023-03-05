@@ -16,18 +16,18 @@ Monday, 14:40-17:30
 :--- |:-------|:--------|:--------|:-----------|:--------|
 1    | Mar 6  |First meeting |         |            |         |
 2    | Mar 13 |02-08 |[14:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Mar 20 |09-15 |[14:40]()| ||
-4    | Mar 27 |17-24 |[14:40]()|| |
-5    | Apr 3|24-28 |[14:40]()|| |
-6    | Apr 10| 30-36 |[14:40]()|||
-7    | Apr 17|30-36 |[14:40]()|| |
-8    | Apr 24|36-42 |[14:40]()|||
+3    | Mar 20 ||[14:40]()| ||
+4    | Mar 27 ||[14:40]()|| |
+5    | Apr 3||[14:40]()|| |
+6    | Apr 10||[14:40]()|||
+7    | Apr 17||[14:40]()|| |
+8    | Apr 24||[14:40]()|||
 9    | May 1|Holiday |[14:40]()| |  |
-10   | May 8| 44-50 |[14:40]() || |
-11   | May 15|52-56 |[14:40]() || |
+10   | May 8||[14:40]() || |
+11   | May 15||[14:40]() || |
 12   | May 22||[14:40]() |    | |
-13   | May 29|58-64|[14:40]() || |
-14   | Jun 5 |66-74 |[14:40]()|| |
+13   | May 29||[14:40]() || |
+14   | Jun 5 ||[14:40]()|| |
 
 
 
@@ -100,14 +100,16 @@ Monday, 14:40-17:30
 
 ### Requirements
 
-* Weekly assignments (30%):
+* Weekly assignments (30%)
 * Midterm exam (30%, in class)
 * Final exam (40%, in class)
+* Short quizzes (up to 10 pts bonus credit, in class)
+
 
 ### Attendance and late submission policies
 
-* If you think you can succeed in this course without help from us, you do not need to attend classes.
-* But if you think otherwise, you should come -- only attenders can get help outside of class hours (e.g.\ office hours, forum questions, etc.)
+* If you think you can succeed in this course without help from us, you do not need to attend the classes, in which case you miss quiz bonuses.
+* But if you think otherwise, you should come -- only attenders can get help outside of class hours (e.g. office hours, forum questions, etc.)
 * No late submissions, except in case of a medical issue proved by a medical report.
 
 ### Special assistance
