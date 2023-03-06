@@ -88,6 +88,7 @@ Monday, 14:40-17:30
 * [Lecture notes](notes/cogs502-lecture-notes.pdf)
 * [Videos](http://lfcs.ii.metu.edu.tr/cr/cogs502/vid/)
 * [Question-Answer Sheet](notes/question-answer-sheet.md).
+* [Setup Instructions for Programming Environment](notes/programming-environment.md)
 * Reference books:  
 	Graham, P. (1996). ANSI Common Lisp. Prentice Hall Inc., NJ.  
 	Touretzky, D. S. (1990). COMMON LISP: A Gentle Introduction to Functional Programming. Benjamin/Cummings Publisihing Co., CA.  
