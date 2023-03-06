@@ -249,3 +249,6 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+# MacOS
+.DS_Store
