@@ -1,0 +1,44 @@
+
+\RequirePackage{umut}
+\RequirePackage{usynsem}
+
+\newcommand{\anaph}[1]{\ensuremath{\underline{{#1}}}}
+%\newcommand{\cond}[1]{\ensuremath{\sysm{#1}}}
+
+\newcommand{\udrsoffset}{~ \vspace{-2ex}}
+
+%\udrs is adapted from sdrt.sty 
+
+\newcommand{\udrs}[3][none]
+{\ifthenelse{\equal{#1}{none}}{\ensuremath
+    {\hspace{2ex}
+    \begin{array}{|c|}
+    \hline
+    ~ \vspace{-2.5ex}\\
+    #2\\
+    ~ \vspace{-2.5ex} \\
+    \hline
+    \udrsoffset \\
+    #3\hspace{5pt}\\
+    \hline
+    \end{array}
+    }
+}
+{\ensuremath
+    {#1~~ \hspace{-.5ex}
+    \begin{array}{|c|}
+    \hline
+    ~ \vspace{-2.5ex}\\
+    #2\\
+    ~ \vspace{-2.5ex} \\
+    \hline
+    \udrsoffset \\
+    #3\hspace{5pt}\\
+    \hline
+    \end{array}
+    }}
+}
+\newcommand{\ccon}[3]
+{
+  \mbox{{#1}\hspace{-1.3ex}{\large $#3$}\hspace{-2.3ex}{#2}}
+}

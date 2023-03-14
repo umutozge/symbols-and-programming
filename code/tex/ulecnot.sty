@@ -1,0 +1,84 @@
+%% Lecture Notes style
+%% Umut Ozge---tumuum@gmail.com
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ulecnot}
+
+\RequirePackage{umut}
+\RequirePackage{utheorem}
+
+\RequirePackage{color}
+\RequirePackage{mathptmx}
+\RequirePackage{amsthm}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage[style=0]{mdframed}
+\RequirePackage{fancyvrb}
+\RequirePackage{sectsty}
+\RequirePackage{ifthen}
+\RequirePackage{verbatim}
+\RequirePackage{etoolbox}
+
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true,citecolor=cyan,linkcolor=magenta,anchorcolor=blue,urlcolor=red,filecolor=magenta,pdfborderstyle={/S/U/W 1}}
+
+
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+
+
+\newbool{hide}
+\setbool{hide}{false}
+
+\DeclareOption{hide}{\setbool{hide}{true}}
+\DeclareOption{nohide}{}%for backward compatibility 
+
+
+\newbool{twocol}
+\setbool{twocol}{false}
+\DeclareOption{twocolumn}{\setbool{twocol}{true}}
+
+
+% \DeclareOption{hide}{\definecolor{hide}{rgb}{1,1,1}}
+% \DeclareOption{nohide}{\definecolor{hide}{rgb}{0,0,0}}
+\ProcessOptions
+
+\ifbool{twocol}{%
+\RequirePackage[twocolumn,landscape,a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+}
+{%
+\RequirePackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+}
+
+% \newcommand{\hide}[1]{{\color{hide}#1}}
+
+\newenvironment{hide}{}{}
+
+\ifbool{hide}{\AtBeginEnvironment{hide}{\comment}%
+\AtEndEnvironment{hide}{\endcomment}}{}
+
+\newcommand{\hitem}[1]{\item[]{\bf #1}}
+
+
+\newenvironment{usolution}{
+\begin{ucodeframe}
+{\bf Solution:}\\
+}
+{
+\end{ucodeframe}
+}
+
+\newcommand{\secsep}{\noindent\hrulefill}
+
+% \begin{mdframed}
+% \footnotesize
+% \hspace{1em}
+% \end{mdframed}
+
+% \theoremstyle{definition}
+% \newtheorem{example}{Example}
+% \newtheorem{exercise}{Exercise}
+% \newtheorem{definition}{Definition}
+% \newtheorem{theorem}{Theorem}
+

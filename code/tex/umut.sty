@@ -1,0 +1,172 @@
+
+%% Umut Ozge's latex commands and abbreviations
+%%
+
+\RequirePackage{xspace}
+\RequirePackage{cgmacros2e}
+%\RequirePackage{linguex}
+% 	\renewcommand{\refdash}{}
+%\RequirePackage{lingmacros}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{stmaryrd}
+		\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CCG derivations, I use cgmacros2e of Cem Bozsahin
+% the following are needed for his package.
+
+\newcommand{\mc}[2]                     % centered multicolumn, 
+  {\multicolumn{#1}{c}{#2}}             % #1 = no. of columns, #2 = body.
+\newcommand{\mcl}[2]                    % left adjusted multicolumn, 
+  {\multicolumn{#1}{l}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\mcr}[2]                    % right adjusted multicolumn, 
+  {\multicolumn{#1}{r}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\cggloss}[1]
+  {\\[1.5ex] \mc{#1}}
+
+%this is from cgmodalities.sty, for the sf and bold combinator
+%font
+\DeclareMathAlphabet{\mathcf}{OT1}{cmss}{bx}{n}
+
+% in place of mathcal, nice E
+
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}%
+              {<-> s * [1.2] pzcmi7t}{}
+\DeclareMathAlphabet{\mathscr}{OT1}{pzc}%
+                                 {m}{it}
+
+\DeclareMathAlphabet{\mathmd}{OT1}{pzc}%
+                                 {m}{it}
+
+%General
+\newcommand{\uterm}[1]{\textbf{#1}}
+
+%beamer related stuff
+
+\newcommand{\presmode}[1]{\mode<presentation>{#1}}
+\newcommand{\artmode}[1]{\mode<article>{#1}}
+
+
+%hylo
+
+\newcommand{\pf}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\link}[1]{\ensuremath{\langle \mbox{\sc #1} \rangle}}
+\newcommand{\smref}[2]{\ensuremath{\downarrow_{#1}\hspace{-.2em}#2}}
+\newcommand{\smat}[2]{\ensuremath{@_{#1}#2}}
+
+
+%formal language theory
+
+\newcommand{\sigmastar}{\ensuremath{\Sigma^*}}
+\newcommand{\setabs}[2]{\ensuremath{\{#1\ |\ #2\}}}
+
+
+%commenting
+\newcommand{\viscom}[1]{$\boldsymbol{\gg}${\small\sl #1}$\boldsymbol{\ll}$}
+%end commenting
+
+%var
+
+\newcommand{\sitc}[1]{\ensuremath{s_{#1}'}}
+\newcommand{\sitv}[1]{\ensuremath{s_{#1}}}
+
+\newcommand{\ezimeti}[1]{\begin{itemize}{\normalsize #1 }\end{itemize}}
+\newcommand{\ezi}[1]{\begin{itemize}{\normalsize #1 }\end{itemize}}
+\newcommand{\etaremune}[1]{\begin{enumerate}{\normalsize #1 }\end{enumerate}}
+
+\newcommand{\ungra}{{*}}
+\newcommand{\unpra}{\#}
+
+\newcommand{\versus}{vs.\xspace}
+\newcommand{\vizavi}{vis-\`a-vis\xspace}
+
+\newcommand{\forind}{\hspace*{5 mm}} %indentation in multiline formulas
+
+\newcommand{\dash}{\mbox{-}}
+\newcommand{\env}[1]{^{\{#1\}}}
+
+
+\newcommand{\sm}[2]{\ensuremath{\langle #1,#2\rangle}}
+\newcommand{\strpos}{$\ldots$}
+\newcommand{\foc}[1]{\textsc{#1}}
+\newcommand{\theme}[1]{(#1)$_{Theme}$}
+\newcommand{\rheme}[1]{(#1)$_{Rheme}$}
+\newcommand{\konp}[1]{\ensuremath{*(#1)}}
+\newcommand{\konn}[1]{{*}#1}
+\newcommand{\kon}[1]{\textit{#1}}
+\newcommand{\hlex}[1]{\textbf{#1}}%highlighting in examples.
+
+\newcommand{\rise}{LH\%}
+\newcommand{\fall}{LL\%}
+
+\newcommand{\gap}[1]{\_\_$_{#1}$}
+
+\newcommand{\binfeat}[1]{$[\pm\mathrm{#1}]$}
+
+\newcommand{\syft}[1]{\ensuremath{_{\ctft{#1}}}}%subscripted features
+\newcommand{\ctft}[1]{\ensuremath{[\mathrm{#1}]}}%citing features
+\newcommand{\indx}[1]{\ensuremath{_{#1}}}
+\newcommand{\ind}[1]{$_{#1}$}
+
+\newcommand{\clab}[2]{ $[$#1$]_{#2}$} 
+\newcommand{\clabb}[2]{ $[_{#2}$#1$]$} 
+
+\newcommand{\xref}[1]{(\ref{#1})}
+\newcommand{\xxref}[2]{(\ref{#1}#2)}
+\newcommand{\cttr}[1]{\textbf{#1}}
+
+%% abbreviations for theory/account names.
+\newcommand{\ccg}{{CCG}\xspace}
+\newcommand{\ccgo}{{C}ombinatory {C}ategorial {G}rammar}
+\newcommand{\gsf}{{GSF}\xspace}
+\newcommand{\gst}{{GST}\xspace}
+\newcommand{\gsto}{generalized {S}kolem term\xspace}
+\newcommand{\gsfo}{generalized {S}kolem function\xspace}
+\newcommand{\mmccg}{{$\mathcal{M}$-CCG}}
+\newcommand{\msccg}{{$\{\}$-CCG}}
+
+
+%% modifications and additions to lingmacros.sty
+
+\newcommand{\myenum}[1]{\enumsentence{#1}}
+\newcommand{\myeenum}[1]{\eenumsentence{#1}}
+
+\newcommand{\shortexng}[3]{\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#3}}
+\end{tabular}}
+
+\newcommand{\shortexdg}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\#4\\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#5}}
+\end{tabular}}
+
+\newcommand{\shortexdt}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#4}}
+\\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#5}}
+\end{tabular}}
+
+\newcommand{\shortexdgnt}[4]{\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 
+\end{tabular}}
+
+
+
+%% A fix for cgloss4e.sty from linguex package doc:
+
+\makeatletter
+\def\@listi{\leftmargin\leftmargini
+    \parsep 5\p@ \@plus2.5\p@ \@minus\p@
+	    \topsep 10\p@ \@plus4\p@   \@minus6\p@
+		    \itemsep5\p@ \@plus2.5\p@ \@minus\p@}
+			\let\@listI\@listi
+			\@listi
+\makeatother
+
+
+
+\newcommand{\nosp}{}

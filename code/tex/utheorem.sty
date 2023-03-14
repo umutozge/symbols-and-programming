@@ -1,0 +1,25 @@
+\RequirePackage{amsthm}
+
+\newtheoremstyle{umut}%
+{5pt} 		% Space above
+{5pt} 		% Space below
+{\rm} 		% Body font
+{}	% Indent amount
+{\bf} 		% Theorem head font
+{}			% Punct. after theorem head
+{\newline} 	% Space after theorem head
+{} 			% Theorem head spec.
+
+
+\theoremstyle{umut}
+\newtheorem{uclaim}{Claim}[section]
+\newtheorem{utheorem}[uclaim]{Theorem}
+\newtheorem{uproblem}[uclaim]{Problem}
+\newtheorem{uquestion}[uclaim]{Question}
+\newtheorem{uobservation}[uclaim]{Observation}
+\newtheorem{udefinition}[uclaim]{Definition}
+\newtheorem{uchallenge}[uclaim]{Challenge}
+\newtheorem{uexercise}[uclaim]{Exercise}
+\newtheorem{uexample}[uclaim]{Example}
+\newtheorem{ucode}[uclaim]{Code}
+\newtheorem{ualgorithm}[uclaim]{Algorithm}

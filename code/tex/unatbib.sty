@@ -1,0 +1,31 @@
+
+% interface to natbib citation package
+
+\RequirePackage{ifthen}
+\RequirePackage{natbib}
+
+
+
+
+
+\newcommand{\ctnm}[2][]{%
+	\ifthenelse{\equal{#1}{}}
+		{\citet{#2}}
+		{\ctau{#2}~(\ctyr{#2}:#1)}}
+\newcommand{\cttx}[2][]{%
+	\ifthenelse{\equal{#1}{}}
+		{\citealt{#2}}
+		{\ctau{#2}~\ctyr{#2}:#1}}
+\newcommand{\ctnmp}[2][]{%
+	\ifthenelse{\equal{#1}{}}
+		{\citealp{#2}}
+		{\ctau{#2},~\ctyr{#2}:#1}}
+\newcommand{\cttxp}[2][]{%
+	\ifthenelse{\equal{#1}{}}
+		{(\cttx{#2})}
+		{(\ctau{#2}~\ctyr{#2}:#1)}}
+\newcommand{\ctau}{\citeauthor}
+\newcommand{\ctyr}{\citeyear}
+\newcommand{\ctnms}[1]{\citeauthor{#1}'s~(\citeyear{#1})}
+\newcommand{\ctnmss}[1]{\citeauthor{#1}'~(\citeyear{#1})}
+\newcommand{\cttxs}[1]{\citeauthor{#1}'~\citeyear{#1}}

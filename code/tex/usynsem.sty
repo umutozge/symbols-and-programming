@@ -1,0 +1,144 @@
+%semantics
+
+\newcommand{\sysm}[1]{\ensuremath{\mathit{#1}}}
+
+% lambda
+\newcommand{\lam}[1]{\lambda{}#1}
+\newcommand{\lm}{\lambda}
+
+% set comprehension 
+\newcommand{\setcomp}[2]{\ensuremath{\{#1\,|\,#2\}}}
+
+%%types
+\newcommand{\tcon}[2]{\ensuremath{#1_{\scriptscriptstyle#2}}'}% typed non-logical constant
+\newcommand{\smtyp}[2]{\ensuremath{\langle #1,#2\rangle}}
+\newcommand{\Tet}{\smtyp{e}{t}}
+\newcommand{\Teet}{\smtyp{e}{\Tet}}
+\newcommand{\Tett}{\smtyp{\Tet}{t}}
+\newcommand{\Tst}{\smtyp{s}{t}}
+\newcommand{\Test}{\smtyp{e}{\Tst}}
+
+%%model theory
+\newcommand{\mtob}[1]{\ensuremath{\mathscr{#1}}} %MT object
+\newcommand{\mtst}[1]{\ensuremath{\mathrm{#1}}}% set constants
+\newcommand{\means}[2]{\sysm{\boldsymbol{\Vert}\text{#1}\boldsymbol{\Vert} \,\, = \,\, #2}}
+\newcommand{\meanst}[3]{\sysm{\boldsymbol{\Vert}\text{#1}\boldsymbol{\Vert} \,\, = \,\, #2}\hfill \sysm{#3}}
+\newcommand{\meanss}[2]{\ensuremath{\boldsymbol{\Vert}\text{#1}\boldsymbol{\Vert}_{\mathcal{M},g}}}
+\newcommand{\interp}[1]{\ensuremath{\boldsymbol{\Vert}\text{#1}\boldsymbol{\Vert}}}
+\newcommand{\interpp}[1]{\ensuremath{\boldsymbol{\Vert}\text{#1}\boldsymbol{\Vert}_{\mathcal{M},g}}}
+\newcommand{\smtx}{\ensuremath{\mathrm{:}}}% colon operator
+\newcommand{\nlcs}[1]{\ensuremath{\mathit{#1^\prime}}}% non-logical constant
+\newcommand{\lgcs}[1]{\ensuremath{\mathbf{#1}}}% logical constant
+\newcommand{\cnct}{\ensuremath{\mspace{1mu}}}% space for concatenation
+\newcommand{\prfr}[1]{\ensuremath{\lgcs{pro}_{#1}}\xspace}% pro form 
+\newcommand{\prtr}[2]{\ensuremath{(\nlcs{pro}_{#2}\cnct{#1})}\xspace}% pro term 
+\newcommand{\anfr}[1]{\ensuremath{(\cnct{\lgcs{ana}\,}{#1})}}% ana term
+\newcommand{\idfr}[1]{\ensuremath{\lgcs{idx}_{#1}}\xspace}% indexical
+\newcommand{\idtr}[2]{\ensuremath{(\lgcs{idx}_{#2}\cnct{#1})}\xspace}% indexical 
+\newcommand{\cond}{\rightarrow}% conditional
+\newcommand{\imp}{\rightarrow}% conditional
+\newcommand{\then}{\rightarrow}% conditional
+\newcommand{\bicond}{\leftrightarrow}% biconditional
+\newcommand{\sk}[2]{\sysm{sk^{#2}_{#1}}}% generalized Skolem term
+\newcommand{\skk}[3]{\sysm{sk^{#2}_{#3\text{:}#1}}}% generalized Skolem term with index
+\newcommand{\asex}[3]{\sysm{#1_{[#3/#2]}}}
+\newcommand{\fnex}[3]{\sysm{#1_{[#2\mapsto#3]}}}
+\newcommand{\vlfn}[2]{\sysm{V_{\mathcal{M},#1}(#2)}}
+\newcommand{\crbr}[1]{\{#1\}}% curly brace
+\newcommand{\cntx}{\rule{5mm}{.1mm}}
+\newcommand{\subs}[3]{\ensuremath{{#1}_{[#2\!/\!#3]}}}
+\newcommand{\breduce}{\ensuremath{\quad \cond_\beta}\quad}% beta reduce
+
+\newcommand{\pbrac}[2]{\ensuremath{[_{\text{#1}}\text{ #2}]}}
+
+
+\newcommand{\lexsign}[3]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$:=$&
+\sysm{\begin{array}[t]{c} #2 \end{array}}
+&:&
+\sysm{\begin{array}[t]{r} #3 \end{array}} 
+\end{tabular}
+}
+
+\newcommand{\lexsignt}[4]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$:=$&
+\sysm{\begin{array}[t]{c} #2 \end{array}}
+&:&
+\sysm{\begin{array}[t]{r} #3 \end{array}} 
+&::&
+\sysm{\begin{array}[t]{r} #4 \end{array}} 
+\end{tabular}
+}
+
+\newcommand{\lexsignc}[2]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$:=$&
+$\begin{array}[t]{c} #2 \end{array}$
+\end{tabular}
+}
+
+\newcommand{\compsign}[3]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$=$&
+$\begin{array}[t]{c} #2 \end{array}$
+&:&
+$\begin{array}[t]{l} #3 \end{array}$ 
+\end{tabular}
+}
+
+\newcommand{\compsignt}[4]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$=$&
+\sysm{\begin{array}[t]{c} #2 \end{array}}
+&:&
+\sysm{\begin{array}[t]{r} #3 \end{array}} 
+&::&
+\sysm{\begin{array}[t]{r} #4 \end{array}} 
+\end{tabular}
+}
+
+\newcommand{\compsignc}[2]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{#1}\end{tabular}
+&$=$&
+$\begin{array}[t]{c} #2 \end{array}$
+\end{tabular}
+}
+
+\newcommand{\lexrulU}[2]{$
+\begin{array}[t]{c@{\quad\Rightarrow_{_{LEX}\quad}}c}
+#1 & #2\\
+\end{array}$
+}
+
+\newcommand{\lexrul}[3]{$
+\begin{array}[t]{ll@{$\hspace{1em}$\Rightarrow_{LEX}$\hspace{1em}$}l}
+#1 & #2 & #3\\
+\end{array}$
+}
+
+\newcommand{\combrul}[4]{$
+\begin{array}[t]{ll@{$\hspace{1em}$\Rightarrow$\hspace{1em}$}l}
+{#1} & #2 & #3\\
+\end{array}$\hfill $(#4)$
+}
+
+\newcommand{\combrulU}[3]{$
+\begin{array}[t]{l@{$\hspace{1em}$\Rightarrow$\hspace{1em}$}l}
+#1 & #2 \\
+\end{array}$\hfill $(#3)$
+}
+

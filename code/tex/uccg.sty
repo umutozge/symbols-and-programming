@@ -1,0 +1,105 @@
+%% CCG derivations, to be used with Cem Bozsahin's cgmacros.sty
+
+\renewcommand{\cgres}[2]{
+	\multicolumn{#1}{c}{
+		$
+		\begin{array}[t]{c}
+			#2
+		\end{array}	
+		$
+	}
+}
+
+\newcommand{\Evq}{quan}
+\newcommand{\cortex}[6]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 \\  #5\\ 
+\multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#6}}
+\end{tabular}}
+
+\newcommand{\cortexnt}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 \\  #5  
+\end{tabular}}
+%% various
+
+
+%ccg
+
+% combinators:
+
+\newcommand{\tcomb}{\ensuremath{\mathbf{T}}}
+\newcommand{\bcomb}{\ensuremath{\mathbf{B}}}
+\newcommand{\scomb}{\ensuremath{\mathbf{S}}}
+\newcommand{\xtcomb}{\ensuremath{\mathbf{T_{\hspace{-.3em}\times}}}}
+\newcommand{\xbcomb}{\ensuremath{\mathbf{B_{\hspace{-.3em}\times}}}}
+\newcommand{\xscomb}{\ensuremath{\mathbf{S_{\hspace{-.3em}\times}}}}
+\newcommand{\ccomb}{\ensuremath{\mathbf{C}}}
+
+\newcommand{\cat}[2]{\ensuremath{\mathit{#1}\ \mathrm{:}\ #2}}
+\newcommand{\catt}[3]{\hspace{#1}\ensuremath{#2\ \mathrm{:}\ #3}\hspace{#1}}
+%first arg is a stretch length
+
+%\newcommand{\sys}[1]{\ensuremath{#1}}
+%\newcommand{\sysm}[1]{\ensuremath{\mathit{#1}}}
+%\newcommand{\sysmm}[1]{`\ensuremath{\mathit{#1}}'}
+
+\newcommand{\cats}[1]{\ensuremath{\mathit{#1}}}
+\newcommand{\catss}[2]{\hspace{#1}\ensuremath{\mathit{#2}}\hspace{#1}}
+\newcommand{\catS}[1]{\ensuremath{\mathrm{:}\ #1}}
+
+\newcommand{\pair}{\ensuremath{\ \mathrm{:}\ }}
+
+\newcommand{\altset}[1]{
+\(
+\left\{
+\begin{array}{l}
+#1
+\end{array}
+\right\} \) 
+} 
+\newcommand{\themeS}[1]{\ensuremath{\theta'(#1)}}
+\newcommand{\rhemeS}[1]{\ensuremath{\rho'(#1)}}
+
+% combinators 
+\newcommand{\combz}{\ensuremath{\combf{Z}}}      % Combinator Z in any environment
+
+%rule diacritics 
+
+\newcommand{\cgfp}{\ensuremath{>\combc}}  % >C
+\newcommand{\cgbp}{\ensuremath{<\combc}}  % <C
+
+
+\newcommand{\cgfz}{\ensuremath{>\combz}}  % >Z
+\newcommand{\cgbz}{\ensuremath{<\combz}}  % >Z
+\newcommand{\cgfxz}{\ensuremath{>\combz_\times}}  % >Zx
+\newcommand{\cgbxz}{\ensuremath{<\combz_\times}}  % <Zx
+
+\newcommand{\cgfs}{\ensuremath{>\combs}}  % >S
+\newcommand{\cgbs}{\ensuremath{<\combs}}  % <S
+\newcommand{\cgfxs}{\ensuremath{>\combs_\times}}  % >Sx
+\newcommand{\cgbxs}{\ensuremath{<\combs_\times}}  % <Sx
+
+
+%rule definitions
+
+\newcommand{\prcgfz}{
+\combrule{\cgfz}{\cat{X\fs Z \fs Y}{f}}{\cat{Y\fs Z}{g}}{\cat{X \fs Z}{\lambda x.f(gx)x}}
+}
+\newcommand{\prcgbz}{
+\combrule{\cgbz}{\cat{Y\bs Z}{g}}{\cat{X\bs Z \bs Y}{f}}{\cat{X \bs Z}{\lambda x.f(gx)x}}
+}
+
+%category abbrv. 
+
+\newcommand{\liftf}[2]{\cats{#2\fs (#2\bs #1)}}
+\newcommand{\liftb}[2]{\cats{#2\bs (#2\fs #1)}}
+
+%modalities 
+%adds new instances to Cem Bozsahin's encoding (cgmodalities.sty)
+
+\newcommand{\per}	 %forward star slash, math environment only
+{\us\,\makebox[.05em][r]{\raisebox{-3pt}{\tiny$\otimes$}}}
+
+
+%to be used in dervs. 

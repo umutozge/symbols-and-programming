@@ -1,0 +1,85 @@
+\RequirePackage{xcolor}
+
+\definecolor{myellow}{HTML}{D97904}
+\definecolor{mlblue}{HTML}{0177BF}
+\definecolor{mblue}{HTML}{5977BF}
+
+\setbeamercolor{title}{fg=mblue}
+\setbeamercolor{frametitle}{fg=mblue}
+\setbeamercolor{framesubtitle}{fg=mblue}
+\setbeamercolor{itemize item}{fg=mblue}
+\setbeamercolor{description item}{fg=mblue}
+\setbeamercolor{enumerate item}{fg=mblue}
+\setbeamercolor{itemize subitem}{fg=mblue}
+\setbeamercolor{itemize subsubitem}{fg=mblue}
+
+ \setbeamercolor{myblue}{fg=blue!70!black,bg=white}
+ \setbeamercolor{mygreen}{fg=green!50!black,bg=white}
+ \setbeamercolor{myred}{fg=red!80!black,bg=white}
+ \setbeamercolor{mylblue}{fg=mylblue}
+
+\newcommand{\colg}[1]{{\usebeamercolor[fg]{mygreen}#1}}
+\newcommand{\colb}[1]{{\usebeamercolor[fg]{myblue}#1}}
+\newcommand{\collb}[1]{{\usebeamercolor[fg]{mylblue}#1}}
+\newcommand{\colr}[1]{{\usebeamercolor[fg]{myred}#1}}
+
+%\setbeamercovered{transparent}
+
+\usetheme{default}
+\setbeamersize{text margin left=.5cm}
+\setbeamersize{text margin right=.5cm}
+
+%\usefonttheme{professionalfonts}
+\usefonttheme{serif}
+%\usepackage{inconsolata}
+%\usepackage{palatino}
+\usepackage{times}
+ 
+
+\setbeamertemplate{footline}{\begin{center}{\footnotesize\insertframenumber/\inserttotalframenumber}\end{center}}
+%\setbeamertemplate{frametitle}[default][center]
+\setbeamerfont{footline}{size=\footnotesize}
+% \setbeamerfont{footline}{series=\bfseries}
+
+%\setbeamerfont{framesubtitle}{size=\normalsize}
+
+\setbeamerfont{quote}{shape=\upshape,family=\rmfamily}
+
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\fixitem}[2]{\item\parbox[t]{#1cm}{#2}} 
+\newcommand{\fixenum}[2]{\myenum{{\parbox[t]{#1cm}{#2}}}}
+\newcommand{\defskip}{\vspace{.2cm}}
+\newcommand{\gskip}{\hspace{.4cm}}
+
+\def\newblock{} %this is needed to fix the bibliography
+
+\newcommand{\mitem}{\item\setlength{\itemsep}{20pt}}
+
+\newcommand{\wraptheorem}[2]{
+\fbox{
+\begin{minipage}{#1\textwidth}
+#2
+\end{minipage}
+}}
+
+% Corrections to beamerbaseverbatim.sty :
+\def\beamer <at> verbatimreadframe{%
+  \begingroup%
+  \let\do\beamer <at> makeinnocent\dospecials%
+  \count@=127%
+  \@whilenum\count@<255 \do{%
+    \advance\count@ by 1%
+    \catcode\count@=11%
+  }%
+  \beamer <at> makeinnocent\^^L% and whatever other special cases
+  % Add tabulations too. I guess that all the ASCII and other ISO-8859-15
+  % code should be added :-/
+  \beamer <at> makeinnocent\^^I% and whatever other special cases
+  %\beamer <at> makeinnocent\«% and whatever other special cases
+  %\beamer <at> makeinnocent\»% and whatever other special cases
+  \endlinechar`\^^M \catcode`\^^M=12%
+  \@ifnextchar\bgroup{\afterassignment\beamer <at> specialprocessframefirstline\let\beamer <at> temp=}{\beamer <at> processframefirstline}}%
