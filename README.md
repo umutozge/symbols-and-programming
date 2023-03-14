@@ -3,6 +3,7 @@ Informatics Institute, METU
 
 Monday, 14:40-17:30
 
+
 [Umut Özge](https://umutozge.github.io)  
 
 [Alaz Aydın](mailto:alazaydin@gmail.com) (TA)  
