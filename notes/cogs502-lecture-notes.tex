@@ -16,7 +16,7 @@
 
 \usepackage{fancyvrb}
 \usepackage{float}
-\floatstyle{boxed} 
+\floatstyle{boxed}
 \restylefloat{figure}
 
 \pagestyle{fancy}
@@ -39,12 +39,12 @@
 \item
 {\bf Computers and computation.}
 %\footnote{The narrative of this section is inspired by \citet{abelsonetal96} Section 1.}
- Computers, like the mindbrain, have internal states, which are, in the standard case, patterns of voltages over a huge number of interconnected transistors. A computational process is a certain sequence (or evolution) of such states.\footnote{In parallel processes, the sequence consists of several threads in parallel.} Not every sequence of states is a computational process, but every computational process is some such sequence. What distinguishes a computational process from a random sequence of states is that in the former there are ``meaningful'' relations between some states in the sequence. 
+ Computers, like the mindbrain, have internal states, which are, in the standard case, patterns of voltages over a huge number of interconnected transistors. A computational process is a certain sequence (or evolution) of such states.\footnote{In parallel processes, the sequence consists of several threads in parallel.} Not every sequence of states is a computational process, but every computational process is some such sequence. What distinguishes a computational process from a random sequence of states is that in the former there are ``meaningful'' relations between some states in the sequence.
 
 \item
 {\bf Programs.} A computer program is a body of expressions (also called `code') that manipulates the states -- and thereby the behavior -- of a computer. Programs are written in programming languages. Our choice of programming language is \uterm{Common Lisp}. We will use the expression `\Verb+LISP+' to refer to it.\footnote{Lisp is a family of languages -- or dialects if you like. When you consult the web for this course, keep in mind that the particular dialect we will use is Common Lisp.}
 
-\item {\bf \Verb+SBCL+.} During the term, we will write programs, many of them. For our purposes, the computer that we manipulate via our programs is a machine that is capable of translating the code written in \Verb+LISP+ into instructions that are executable by the physical computers sitting on our desks or laps. The machine is called \Verb+SBCL+ (an acronym for \href{http://www.sbcl.org/}{Steel Bank Common Lisp}). It is not a physical machine; it is an abstract machine, which itself is actually a program. Computer science, like mathematics, thrives on abstractions; if you are new to these subjects, it will take some time to get used to this.%\footnote{\href{https://en.wikipedia.org/wiki/John_von_Neumann}{John von Neumann}: `` In mathematics you don't understand things. You just get used to them.''}
+\item {\bf \Verb+SBCL+.} During the term, we will write programs, many of them. For our purposes, the computer that we manipulate via our programs is a machine that is capable of translating the code written in \Verb+LISP+ into instructions that are executable by the physical computers. The machine is called \Verb+SBCL+ (an acronym for \href{http://www.sbcl.org/}{Steel Bank Common Lisp}). It is not a physical machine; it is an abstract machine, which itself is actually a program. Computer science, like mathematics, thrives on abstractions; if you are new to these subjects, it will take some time to get used to this.%\footnote{\href{https://en.wikipedia.org/wiki/John_von_Neumann}{John von Neumann}: `` In mathematics you don't understand things. You just get used to them.''}
 
 \item {\bf Top-level.} Let us start interacting with the computer. First we need to turn it on by typing `\Verb+rlwrap sbcl+' in the command-line, without the quotes. If you see a \Verb+*+, everything is in order; you are at the \uterm{top-level}. Why we call it such will be clarified in a minute.
 
@@ -55,12 +55,12 @@
 \begin{lispcode}
 * 17
 17
-* 
+*
 \end{lispcode}
 
 What's going on here is simply this: You put the number 17 on the workspace (line 1). \Verb+SBCL+ works on this number -- actually it automatically works on whatever you put on the workspace. As there is nothing to work on a single number, the result of the work is the number itself. \Verb+SBCL+ displays this result to you (line 2). Finally it clears the workspace (line 3).
 
-\item {\bf Procedure calls.} If you want more interesting action on the workspace, you need to occupy \Verb+SBCL+ with a \uterm{procedure call} -- something to really work on. Here is an extremely simple one: 
+\item {\bf Procedure calls.} If you want more interesting action on the workspace, you need to occupy \Verb+SBCL+ with a \uterm{procedure call} -- something to really work on. Here is an extremely simple one:
 
 \begin{lispcode}
 * (+ 17 3)
@@ -72,21 +72,21 @@ What's going on here is simply this: You put the number 17 on the workspace (lin
 
 You put the simple combination \Verb-(+ 17 3)- on the workspace, \Verb+SBCL+ works on it, computes the result, displays it to you, and finally clears the workspace.
 
-\item {\bf Prefix notation.} In \Verb+LISP+ you always put the operators before their operands. This allows you to increase the number of operands without repeating the operator: 
+\item {\bf Prefix notation.} In \Verb+LISP+ you always put the operators before their operands. This allows you to increase the number of operands without repeating the operator:
 
 \begin{lispcode}
 * (+ 17 3 42 8)
 70
 \end{lispcode}
 
-\item {\bf Evaluation.} For \Verb+SBCL+, to work on something put on the workspace is to \uterm{evaluate} it; it computes the \uterm{value} of the expression.    
+\item {\bf Evaluation.} For \Verb+SBCL+, to work on something put on the workspace is to \uterm{evaluate} it; it computes the \uterm{value} of the expression.
 
 \begin{uenumi}
 \item Numbers evaluate to themselves -- \Verb+SBCL+ gives back exactly what it takes;
 \item Applications (=procedure calls) evaluate to the result of applying the procedure to its arguments.
 \end{uenumi}
 
-\item {\bf REPL.} The other name of the top-level is REPL -- Read-Evaluate-Print Loop. It should be obvious why.   
+\item {\bf REPL.} The other name of the top-level is REPL -- Read-Evaluate-Print Loop. It should be obvious why.
 
 \item {\bf Complex applications.} Applications can have other applications as their operands:
 \label{complex-app}
@@ -97,7 +97,7 @@ You put the simple combination \Verb-(+ 17 3)- on the workspace, \Verb+SBCL+ wor
 
 There is no theoretical limit to the complexity of an application.
 
-\item {\bf The Great Rule of Evaluation.} 
+\item {\bf The Great Rule of Evaluation.}
 \label{great-rule}
 \begin{uenumi}
 \item Evaluate the operator to get the procedure;
@@ -107,15 +107,15 @@ There is no theoretical limit to the complexity of an application.
 
 \item Looking at \ref{great-rule}, you may wonder how does \Verb+SBCL+ evaluate an operator like \Verb-+-, and what is the value obtained.
 
-The operator \Verb-+- is a \uterm{symbol}. It is the symbol that names the addition operation (or procedure). The procedure itself is stored somewhere in our computer. Evaluating an operator symbol is to look-up and fetch the procedure stored under the name of that symbol. When \Verb+SBCL+ finds the application \Verb-(+ 17 (* 3 4))- on the workspace, it runs the Great Rule of Evaluation on this application. It first evaluates the \Verb-+- symbol to get the addition procedure, then evaluates \Verb+17+ to \Verb+17+, then evaluates the application \Verb+(* 3 4)+. In order to perform this last step, it has to run the Great Rule again, this time on this smaller application -- get the procedure stored under the name of \Verb+*+, evaluate \Verb+3+ to \Verb+3+, \Verb+4+ to \Verb+4+, apply the procedure to the arguments to get \Verb+12+. Now this twelve becomes the second argument of the procedure that was fetched as the value of \Verb-+-. Finally applying the addition procedure to \Verb+17+ and \Verb+12+ gives the value \Verb+29+, which gets printed to the screen by the top-level. 
+The operator \Verb-+- is a \uterm{symbol}. It is the symbol that names the addition operation (or procedure). The procedure itself is stored somewhere in our computer. Evaluating an operator symbol is to look-up and fetch the procedure stored under the name of that symbol. When \Verb+SBCL+ finds the application \Verb-(+ 17 (* 3 4))- on the workspace, it runs the Great Rule of Evaluation on this application. It first evaluates the \Verb-+- symbol to get the addition procedure, then evaluates \Verb+17+ to \Verb+17+, then evaluates the application \Verb+(* 3 4)+. In order to perform this last step, it has to run the Great Rule again, this time on this smaller application -- get the procedure stored under the name of \Verb+*+, evaluate \Verb+3+ to \Verb+3+, \Verb+4+ to \Verb+4+, apply the procedure to the arguments to get \Verb+12+. Now this twelve becomes the second argument of the procedure that was fetched as the value of \Verb-+-. Finally applying the addition procedure to \Verb+17+ and \Verb+12+ gives the value \Verb+29+, which gets printed to the screen by the top-level.
 
 \item {\bf Environment.} We said above that our computer has two components: workspace and environment. We saw a little about the workspace, now it's time to talk about the environment. The environment is a collection of storage locations called \uterm{variables} -- you can think of them as pigeonhole mail boxes you find in the hall of apartments or the secretarial offices of academic departments. All sorts of things can be stored in variables -- numbers and procedures are the examples we encountered so far. You can also think of the environment as a sort of dictionary that contains all the words known to the computer at that point.
 
 Besides the objects stored in them, some variables may also have names. For instance, the variable that hosts the addition procedure has the name \Verb-+-. When \Verb+SBCL+ evaluates the symbol \Verb-+- it consults the environment and finds the box that is named \Verb-+- and brings a copy\footnote{This, like almost all the things we deal with at the moment, is a metaphor, which will be very useful when we study recursion.} of the procedure stored in that box to the workspace, so that it can add the arguments.\footnote{Of course, the truth about the environment is also more complicated than we assume at this stage. We will gradually learn more about it.}
 
-Ask \Verb+SBCL+ about \Verb+(sqrt 9)+ or \Verb+(max 8 21 13)+; you'll get what you expected, because \Verb+SBCL+ has variables named \Verb+sqrt+ and \Verb+max+ in its environment by default -- it ``knows'' the meaning of these symbols. 
+Ask \Verb+SBCL+ about \Verb+(sqrt 9)+ or \Verb+(max 8 21 13)+; you'll get what you expected, because \Verb+SBCL+ has variables named \Verb+sqrt+ and \Verb+max+ in its environment by default -- it ``knows'' the meaning of these symbols.
 
-\item {\bf Manipulating the environment.} You can ask \Verb+SBCL+ to name a variable in the environment by:  
+\item {\bf Manipulating the environment.} You can ask \Verb+SBCL+ to name a variable in the environment by:
 
 \begin{lispcode}
 (defvar area)
@@ -130,7 +130,7 @@ This is the simplest way you can manipulate the current environment. You tell \V
 Now you both named a variable and stored a number in it. You can recall that number by simply asking \Verb+SBCL+ to evaluate the symbol \Verb+radius+, by entering it to the top-level.
 
 \item {\bf Special forms.}
-There are two important things about \Verb+DEFVAR+ -- actually also about all similar creatures: One, a \Verb+DEFVAR+ form is not an application. If it were, you would get an error as \Verb+SBCL+ would try to evaluate \Verb+RADIUS+, which, at that time, has no value to return. \Verb+DEFVAR+ is an instance of what is called a \uterm{special form}. What makes special forms special is the fact that they do not follow the Great Rule of Evaluation. Every special form has its own ways; and therefore you have to learn them case-by-case. 
+There are two important things about \Verb+DEFVAR+ -- actually also about all similar creatures: One, a \Verb+DEFVAR+ form is not an application. If it were, you would get an error as \Verb+SBCL+ would try to evaluate \Verb+RADIUS+, which, at that time, has no value to return. \Verb+DEFVAR+ is an instance of what is called a \uterm{special form}. What makes special forms special is the fact that they do not follow the Great Rule of Evaluation. Every special form has its own ways; and therefore you have to learn them case-by-case.
 
 The second important thing about \Verb+DEFVAR+ is the fact that it always \emph{evaluates} its second operand and stores the \emph{value} obtained in a variable that is named by the first operand. For instance, the following move has an identical effect as the above in terms of environment manipulation:
 
@@ -138,7 +138,7 @@ The second important thing about \Verb+DEFVAR+ is the fact that it always \emph{
 (defvar radius (sqrt 169))
 \end{lispcode}
 
-since \Verb+DEFVAR+ evaluates the application \Verb+(SQRT 169)+ to \Verb+13+ and stores this value, rather than the application itself, in the variable named \Verb+RADIUS+. 
+since \Verb+DEFVAR+ evaluates the application \Verb+(SQRT 169)+ to \Verb+13+ and stores this value, rather than the application itself, in the variable named \Verb+RADIUS+.
 
 \item {\bf \Verb+SETF+.} \Verb+DEFVAR+ is a one-shot tool. You define a variable with it, either storing an initial value in it or not. If you want to manipulate the value stored in the variable afterwards, you need \Verb+SETF+. For instance,
 
@@ -146,19 +146,28 @@ since \Verb+DEFVAR+ evaluates the application \Verb+(SQRT 169)+ to \Verb+13+ and
 (setf area (* pi (* radius radius)))
 \end{lispcode}
 
-does this for the variable named by the symbol \Verb+AREA+. \Verb+SETF+ also is a special form. It first evaluates its second operand and puts the value obtained into the variable named by the symbol it received as its first operand.  
+does this for the variable named by the symbol \Verb+AREA+. \Verb+SETF+ also is a special form. It first evaluates its second operand and puts the value obtained into the variable named by the symbol it received as its first operand.
 
 \item {\bf Side-effects versus Values.} Now we come to perhaps the most vital distinction in programming, that between \uterm{side-effects} and (return) \uterm{values}. It is a fairly simple distinction, but if you do not understand this distinction absolutely clearly and internalize it, you will find programming very hard and confusing. This is especially so for programming languages like \Verb+LISP+.
 
 Apparently \Verb+DEFVAR+ and \Verb+SETF+ are quite similar special forms in terms of what they are doing. You might have, however, noticed that they diverge in what they return as values: \Verb+DEFVAR+ returns a symbol -- namely the one you used to name the variable, while \Verb+SETF+ returns the value it obtained after evaluating its second operand. How do we know? We know because when we enter them to the top-level, that's what we get in return; remember that the top-level -- or \Verb+REPL+ -- reads, evaluates and prints. These behaviors are hard-wired into these special forms. That's what I meant when I said you have to learn them case-by-case.
 
-Now let us further sharpen our terminology. We have seen two types of expressions so far: 1.\ applications like \Verb=(+ 3 (/ 8 2))= and 2.\ special forms like \Verb+(DEFVAR X 8)+. Looking at expressions, it is impossible to tell whether they are applications or special forms -- what about \Verb+(CONS C (* 8 7))+ for instance -- you simply need to know their meaning. Let us abstract above the level of meaning and call applications and special forms collectively as \uterm{forms}.\footnote{Another common name is ``S-expression''.} There is a crucial behavior that unites forms in \Verb+LISP+. Let us put this in bold face:
+Now let us further sharpen our terminology. We have seen two types of
+expressions so far: (i) applications like \Verb=(+ 3 (/ 8 2))= and
+(ii) special forms like \Verb+(DEFVAR X 8)+. Looking at expressions,
+it is impossible to tell whether they are applications or special
+forms -- what about \Verb+(CONS 5 (* 8 7))+ for instance -- you simply
+need to know their meaning. Let us abstract above the level of meaning
+and call applications and special forms collectively as
+\uterm{forms}.\footnote{Another common name is ``S-expression''.}
+There is a crucial behavior that unites forms in \Verb+LISP+. Let us
+put this in bold face:
 
 {\bf Every form in \Verb+LISP+ has (=evaluates to) a value.}
 
 Besides the values they return, \Verb+DEFVAR+ and \Verb+SETF+ manipulate the environment. These are simple examples of \uterm{side-effects.} Applications usually only return values; whereas special forms may have side-effects in additon to returning a value. Whenever you encounter a new form in \Verb+LISP+, first thing is to get clear about whether it's a special form or an application, so that you can learn what will be its return value and side-effects, if there is any.
 
-\item Let us see what we had so far: 
+\item Let us see what we had so far:
 
 \begin{lispcode}
 (defvar radius 13)
@@ -174,27 +183,6 @@ At this point, it is also important to notice the difference between the occurre
 
 Let us leave \Verb+SBCL+ by typing \Verb+(exit)+ or pressing \Verb+Ctrl-D+; and restart it by typing \Verb+rlwrap sbcl+. If you try to get the value of the symbol \Verb+RADIUS+, you will discover that it's gone. The environment manipulated by \Verb+DEFVAR+ gets erased when the machine is shut down. 
 
-\item {\bf Environment manipulation by \Verb+LET+.} \Verb+SBCL+ comes with a built-in environment. This can be thought as a global environment that is available for all the computations that would be performed in \Verb+SBCL+. Certain constructs in \Verb+LISP+ create a local environment that is temporarily available, where the span of the environment is expicitely stated by the programmer. \Verb+LET+ is one such construct.  
-
-\begin{ucodeframe}
-\begin{Verbatim}
-(let ((<variable_1> <expr_1>)
-      (<variable_2> <expr_2>)
-	  .  
-	  .
-	  .
-      (<variable_n> <expr_n>))
-      <body>
-     )
-\end{Verbatim}
-\end{ucodeframe}
-
-Here is the simple area example put in \Verb+LET+ form:
-
-
-\begin{lispcode}
-(let ((radius 13)) (* pi (* radius radius)))
-\end{lispcode}
 
 \item {\bf Abstraction with \Verb+DEFUN+.} The symbols like \Verb+radius+ and \Verb+area+ above are names of \uterm{variables}. You can think of variables as stores that you can put things inside and recall these things by using the names of these stores. We could have computed the number we computed above without the help of the variable we named as \Verb+radius+:
 
@@ -205,7 +193,7 @@ Here is the simple area example put in \Verb+LET+ form:
 
 The only advantage the previous version has over this one is that we would be able to reach the value of the radius if we wanted to -- it was stored in the variable named \Verb+radius+; with the second version, the value \Verb+13+ is not stored anywhere. 
 
-The real importance of using named variables, however, comes from the fact that, besides variables, you can also give names to \uterm{procedures}. (You can think of variables as nouns and procedures as verbs of the programming language). For instance, the way take the square of a number appears too clumsy, let us define a more concise way of doing it: 
+The real importance of using named variables, however, comes from the fact that, besides variables, you can also give names to \uterm{procedures}. (You can think of variables as nouns and procedures as verbs of the programming language). For instance, the way we take the square of a number appears too clumsy, let us define a more concise way of doing it: 
 
 \begin{lispcode}
 (defun square (x) (* x x))
@@ -221,7 +209,7 @@ Using names to refer to variables and procedures are fundamental abstractions in
 
 \Verb+(defun <procedure-name> (<parameters>) <body>)+
 
-\item The procedure name and the names of parameters are totally upto whoever defines the procedure. Therefore the following definitions are as good as the one given above
+\item The procedure name and the names of parameters are totally up to whoever defines the procedure. Therefore the following definitions are as good as the one given above
 
 \begin{lispcode}
 (defun sqr (x) (* x x))
@@ -245,6 +233,26 @@ Using names to refer to variables and procedures are fundamental abstractions in
 is an ordinary application, which is evaluated in accord with the Great Rule of Evaluation. First the symbol \Verb+SQUARE+ is evaluated to give the program that takes squares, than the only operand is evaluated to give the argument \Verb+3+; then the procedure is applied to the argument to give the result \Verb+9+.
 \end{uenumi}
 
+\item {\bf Environment manipulation by \Verb+LET+.} \Verb+SBCL+ comes with a built-in environment. This can be thought as a global environment that is available for all the computations that would be performed in \Verb+SBCL+. Certain constructs in \Verb+LISP+ create a local environment that is temporarily available, where the span of the environment is explicitly stated by the programmer. \Verb+LET+ is one such construct.
+
+\begin{ucodeframe}
+\begin{Verbatim}
+(let ((<variable_1> <expr_1>)
+      (<variable_2> <expr_2>)
+	  .  
+	  .
+	  .
+      (<variable_n> <expr_n>))
+      <body>
+     )
+\end{Verbatim}
+\end{ucodeframe}
+
+Here is the simple area example put in \Verb+LET+ form:
+
+\begin{lispcode}
+(let ((radius 13)) (* pi (* radius radius)))
+\end{lispcode}
 \item {\bf If/when you get confused about \Verb+DEFUN+.} There is an alternative way of thinking about \Verb+DEFUN+'ed procedures. Assume we defined a squaring procedure named \Verb+SQUARE+ as above. Now, \Verb+SBCL+ knows about the definition. When we put \Verb+(square (- 4 1))+ on the top-level and therefore on the workspace, you can think what \Verb+SBCL+ does as follows: It checks whether a procedure named \Verb+SQUARE+ is in the environment. Then if it finds it, fetches the \emph{body} of the definition to the workspace, wraps it around a \Verb+LET+, declaring the parameters via this \Verb+LET+ by copying the operands \emph{without evaluating them}. According to this model, \Verb+SBCL+ translates \Verb+(square (- 4 1))+ to,
 
 \begin{lispcode}
@@ -313,45 +321,61 @@ We will call such collections of code \uterm{programs}.
 
 \noindent\hrulefill
 
+% \begin{uexercise}
+% For this course you need to learn to use a terminal (=command-line). You can launch a terminal by clicking the terminal icon -- the thing that looks like a screen.
+% First, complete the tutorials One and Two \href{http://www.ee.surrey.ac.uk/Teaching/Unix/}{here}.
+% Then, create a folder named \Verb+lisp+, change to it and invoke your terminal application to edit a program file by typing \Verb+subl test.lisp+. Type the following code into your file and save it. Then open another terminal, change to the same directory and start \Verb+SBCL+ by \Verb+rlwrap sbcl+. Now you can load your program file by typing \Verb+(load "test.lisp")+. Finally, change the name of the file of your program and reload it. 
+% 
+% \begin{lispcode}
+% ; This is my first program
+% 
+% (defvar radius 8)
+% (defvar area)
+% (setf area (* pi (* radius radius)))
+% \end{lispcode}
+% 
+% \qed
+% \end{uexercise}
+
+
+% \begin{uexercise}
+% What would be the values stored in the variables named by \Verb+X+, \Verb+Y+ and \Verb+Z+ after entering the following forms to the top-level -- first answer, then check with the top-level. 
+%
+% \begin{lispcode}
+% (defvar x 8)
+% (defvar y)
+% (defvar z)
+%
+% (setf y (setf z (* x 2)))
+% \end{lispcode}
+%
+% \qed
+% \end{uexercise}
+
 \begin{uexercise}
-For this course you need to learn to use a terminal (=command-line). You can launch a terminal by clicking the terminal icon -- the thing that looks like a screen.
-First, complete the tutorials One and Two \href{http://www.ee.surrey.ac.uk/Teaching/Unix/}{here}.
-Then, create a folder named \Verb+lisp+, change to it and invoke your terminal application to edit a program file by typing \Verb+subl test.lisp+. Type the following code into your file and save it. Then open another terminal, change to the same directory and start \Verb+SBCL+ by \Verb+rlwrap sbcl+. Now you can load your program file by typing \Verb+(load "test.lisp")+. Finally, change the name of the file of your program and reload it. 
-
-\begin{lispcode}
-; This is my first program
-
-(defvar radius 8)
-(defvar area)
-(setf area (* pi (* radius radius)))
-\end{lispcode}
+\label{exaverage}
+Define a procedure that takes two numbers and returns their average.
 
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Write the following operation in \Verb+LISP+ -- you can assume \Verb+(POWER A B)+ is an application that raises \Verb+A+ to the power \Verb+B+.
+Define a procedure that takes two numbers and returns the number
+obtained by dividing their product by their average. For the
+inputs 3 and 4, your program must return 12/3.5. In your solution, use
+the procedure you defined for Exercise~\ref{exaverage}.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a function that takes three arguments $x$, $y$ and $n$, and returns the result of
+the following function: 
+
 $$ \frac{x^n}{7 - y/2} \times \frac{y^{2/3} + 17}{4} $$
 
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-What would be the values stored in the variables named by \Verb+X+, \Verb+Y+ and \Verb+Z+ after entering the following forms to the top-level -- first answer, then check with the top-level. 
-
-\begin{lispcode}
-(defvar x 8)
-(defvar y)
-(defvar z)
-
-(setf y (setf z (* x 2)))
-\end{lispcode}
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a procedure that takes two numbers and returns their average.
+Exponentiation can be performed by the built-in \Verb+EXPT+. For instance $2^3$
+can be computed by \Verb+(EXPT 2 3)+.
 
 \qed
 \end{uexercise}
@@ -361,22 +385,8 @@ In order to convert a temperature in Fahrenheit into Celsius, you need to subtra
 \qed
 \end{uexercise}
 
-% \begin{uexercise}\label{exabs}
-% Define a procedure that computes the absolute value of the difference between two numbers. Define two versions: one using  \Verb+-+, \Verb+MIN+ and \Verb+MAX+; and another using \Verb+-+ and \Verb+ABS+, where the latter is the \Verb+LISP+ implementation of the absolute value function mathematically defined as:  
-% 
-% 
-% \begin{align*}
-% Abs(x) =  
-% \begin{cases}
-% x, & \text{if } x\geq 0;\\
-% -x, & \text{otherwise.}
-% \end{cases}
-% \end{align*}
-% 
-% \qed
-% \end{uexercise}
-% 
-% \noindent \hrulefill
+
+\noindent\hrulefill
 
 \newpage
 
@@ -427,7 +437,7 @@ In order to convert a temperature in Fahrenheit into Celsius, you need to subtra
 
 \begin{lispcode}
 (defun change (n)
-  (if (integerp n) 
+  (if (integerp n)
     (if (evenp n)
       (/ n 2)
       (+ (* 3 n) 1))
@@ -555,7 +565,7 @@ Define a function that takes two arguments and returns the greater of the two.\f
 \end{uexercise}
 
 \begin{uexercise}
-Define a function that takes three arguments and returns the greatest of the three.  Use the predicate \Verb+>=+ for comparison and return a symbol that indicates error, in case any of the arguments is not a number.
+Define a procedure that takes three arguments and returns the greatest of the three.  Use the predicate \Verb+>=+ for comparison and return a symbol that indicates error, in case any of the arguments is not a number.
 
 \qed
 \end{uexercise}
@@ -578,11 +588,6 @@ Define a procedure that takes three numbers and gives back the sum of the square
 Solve Ex.\ \ref{seclarge} using \Verb+COND+.
 \qed
 \end{uexercise}
-
-
-
-
-
 
 \begin{uexercise}
 Define a procedure named \Verb+halver+ that halves a given number until the result becomes less than 1 and returns that result -- solve the problem by making your procedure call itself. Here is an example interaction with such a procedure:
@@ -608,9 +613,6 @@ Define a procedure named \Verb+halver+ that halves a given number until the resu
 \qed
 \end{uexercise}
 
-
-
-
 \begin{uexercise}
 
 Rewrite \Verb+(AND X Y Z W)+ by using cond \Verb+COND+.\footnote{\cttx[ex.\ 4.19]{touretzky90}.}
@@ -623,7 +625,6 @@ Write \Verb+COND+ statements equivalent to: \Verb+(NOT U)+ and \Verb+(OR X Y Z)+
 
 \qed
 \end{uexercise}
-
 
 \begin{uexercise}
 Write the final version of the \Verb+CHANGE-COND+ program using only \Verb+AND+ and \Verb+OR+, no \Verb+IF+, no \Verb+COND+. 
@@ -648,9 +649,7 @@ Define a better procedure which avoids this failure.\footnote{\cttx{touretzky90}
 
 \newpage
 
-
 \section{Repetition}
-
 
 \begin{uenum}
 \item Computation frequently involves repeating a task with different inputs and conditions. As the number of repetitions depend on the input, one needs a mechanism that repeats the task until certain conditions are fulfilled. When designing a repetition you need to decide on roughly three things: 1.\ when to stop; 2.\ what to do/return when stopped; 3.\ how to continue.
@@ -741,6 +740,27 @@ Define a procedure that computes the factorial of a given integer.
 \end{uexercise}
 
 \begin{uexercise}
+Define a recursive procedure that computes the sum of the squares of the first $n$ non-negative integers. For instance the sum you need to compute for the input 10 is:
+
+$$
+1^2 + 2^2 + 3^2 + \ldots + 10^2 = 385
+$$
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The way to toss a fair coin in \Verb+LISP+ is to do \Verb+(random 2)+, which would evaluate to \Verb+0+ or \Verb+1+ with a fifty-fifty chance.
+
+\Verb+PRINT+ is a special form. It evaluates its first argument, returns the value computed, and, as a side-effect, prints the computed value on the screen.
+
+Define a recursive procedure \Verb+TOSS+ that takes a non-negative integer $n$, tosses a coin $n$ number of times, printing the result (0 or 1) on the screen in each toss. (Hint: \Verb+AND+ is useful when you want to evaluate two forms in succession.)
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\label{collatzdef}
 
 Collatz' Conjecture says that starting with any positive integer, by running the function \Verb+C+ defined below, you will eventually reach number 1.
 
@@ -760,7 +780,7 @@ Define a procedure \Verb+COLL+ that implements the function $C$. Before running 
 
 
 \begin{uexercise}
-Define a procedure that takes two integers, say $x$ and $y$, and returns the sum of all the integers in the range including and between $x$ and $y$. Define a recursive procedure, do not use a direct formula.
+Define a recursive procedure that takes two integers, say $x$ and $y$, and returns the sum of all the integers in the range including and between $x$ and $y$. Do not use a formula that directly computes the result.
 
 \qed
 \end{uexercise}
@@ -813,6 +833,37 @@ In order to find the square root of $x$,
 \end{enumerate}
 
 Write a program that computes the square root of a given number by this method. Divide your program into procedure definitions. You need to use \Verb+1.0+ as the initial guess, otherwise \Verb+LISP+ will generate fractions rather than floating point numbers. 
+
+\end{uexercise}
+
+\begin{uexercise}
+
+{\bf Sum of a geometric progression.} A geometric progression is defined by two numbers, the initial term $a$ and a common ratio $r$:  
+
+	$$
+	a, ar, ar^2, ar^3\ldots	
+		$$	
+
+		For instance with $a=7$ and $r=2$, you'll have: 
+	$$
+		7, 14, 56, 112,\ldots 	
+		$$	
+	
+		The sum of the first $n$ terms of a geometric progression with the initial term $a$ and the common ratio $r$ is:
+
+
+$$
+		\sum_{j=0}^{n} ar^i = a + ar + ar^2 + \ldots + ar^n
+		$$
+
+
+Define a recursive procedure that returns the sum of a geometric progression with $n$ terms and the initial term $a$ and the common ratio $r$.
+
+\end{uexercise}
+
+\begin{uexercise}
+\Verb+(RANDOM N)+ returns a random number between and including $0$ and $n-1$. Define a procedure that takes two arguments $n$ and $r$, and prints $r$ random numbers between and including $0$ and $n$. You will need to use \Verb+PRINT+; you can discover how it works by trying it at \Verb+REPL+.
+
 
 \end{uexercise}
 
@@ -942,7 +993,6 @@ You can reach the components of a cons by the built-ins \Verb+CAR+ and \Verb+CDR
 (cdr '(a b c))
 \end{lispcode}
 
-%(list (quote a) (quote b) (quote c))))
 \end{uenumi}
 
 \item {\bf Quoting symbols:} Preventing evaluation by quoting applies to symbols as well. This enables one to use symbols as data; a quoted symbol evaluates to the symbol itself.
@@ -1031,6 +1081,7 @@ Give the sequences of car's and cdr's needed to get \Verb+x+ in the following ex
 \item \Verb+(((a (b (x) d))))+
 
 \end{itemize}
+
 \qed
 \end{uexercise}
 
@@ -1102,6 +1153,21 @@ Write down what the following expressions evaluate to; work them out before tryi
 \qed
 \end{uexercise}
 
+\begin{uexercise}[*]
+
+The Collatz sequence (see Exercise~\ref{collatzdef}) of a positive integer is the sequence
+starting with the number itself and ending with 1, where the numbers
+in-between are the results of Collatz steps. For instance the Collatz
+sequence of 3 is 3 10 5 16 8 4 2 1.
+
+Given a non-negative integer, compute the count of even and odd
+numbers in its Collatz sequence. Return the result as a
+list of two numbers, the first  is the even count and the
+second is the odd count. The solution for 3 will be (5 3).
+\qed
+\end{uexercise}
+
+
 \noindent\hrulefill
 
 \subsection{Procedures on lists}
@@ -1152,18 +1218,6 @@ and now with an accumulator:
 \noindent\hrulefill
 
 \begin{uexercise}
-Define a procedure that takes a list and an object, and returns a list where the object is added to the end of the list.
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Using \Verb+CAR+ and \Verb+CDR+, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
 Define a procedure named \Verb+INSERT-2ND+, which takes a list and an object, and gives back a list where the element is inserted after the first element of the given list. Assume that the input list will have at least one element. Here is a sample interaction:
 
 \begin{lispcode}
@@ -1180,17 +1234,34 @@ Define a procedure named \Verb+INSERT-2ND+, which takes a list and an object, an
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure named \Verb+REPLACE-2ND+, which is like \Verb+INSERT-2ND+, but \emph{replaces} the element at the 2nd position. Assume that the input list will always have at least two elements.
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
 
 Define a procedure \Verb+SWAP+, that takes a two element list and switches the order of the elements. You are allowed to use only \Verb+CAR+, \Verb+CDR+, \Verb+CONS+ and \Verb+NIL+ as built-ins.
 \qed
 \end{uexercise}
 
+\begin{uexercise}
+Define a procedure that takes a list and an object, and returns a list where the object is added to the end of the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define your own procedure \Verb+APPEND2+ that appends two list arguments into a third list. You are not allowed to use \Verb+APPEND+, \Verb+LIST+ and \Verb+REVERSE+ -- use just \Verb+CONS+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Using \Verb+CAR+ and \Verb+CDR+, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure named \Verb+REPLACE-2ND+, which is like \Verb+INSERT-2ND+, but \emph{replaces} the element at the 2nd position. Assume that the input list will always have at least two elements.
+
+\qed
+\end{uexercise}
 
 \begin{uexercise}
 Define a procedure \Verb+AFTER-FIRST+ that takes two lists and inserts all the elements in the second list after the first element of the first list. Given \Verb+(A D E)+ and \Verb+(B C)+, it should return \Verb+(A B C D E)+.
@@ -1226,51 +1297,28 @@ Write two versions of \Verb+WRAP-2+:
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-Define a function \Verb+dewrap-2+ that takes a two element list and removes the outer parentheses of the lists, \emph{if there are any}. You are free to use \Verb+LIST+ or \Verb+CONS+ in constructing your resulting lists.
 
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-\Verb+APPEND+ may be used to concatenate zero or more lists together; try and see how it works. Write a function \Verb+AFTER-FIRST+ that takes two lists and inserts all the elements in the second list after the first element of the first list. Given \Verb+'(A D E)+ and \Verb+'(B C)+, it should return \Verb+(A B C D E)+.
- 
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-The built-in \Verb+MEMBER+ takes and object and a list and checks whether the  object appears in the list or not; discover how it works. Using \Verb+MEMBER+, define  a function \Verb+MY-MEMBER+ that behaves as follows: 
-
-{\small
-\begin{Verbatim}
-* (my-member 'b '(a b c))
-
-(B IS A MEMBER OF (A B C))
-* (my-member 'z '(a b c))
-
-(Z IS NOT A MEMBER OF (A B C))
-* 
-\end{Verbatim}
-}
-
-\qed
-\end{uexercise}
-
+% \begin{uexercise}
+% The built-in \Verb+MEMBER+ takes and object and a list and checks whether the  object appears in the list or not; discover how it works. Using \Verb+MEMBER+, define  a function \Verb+MY-MEMBER+ that behaves as follows: 
+% 
+% {\small
+% \begin{Verbatim}
+% * (my-member 'b '(a b c))
+% 
+% (B IS A MEMBER OF (A B C))
+% * (my-member 'z '(a b c))
+% 
+% (Z IS NOT A MEMBER OF (A B C))
+% * 
+% \end{Verbatim}
+% }
+% 
+% \qed
+% \end{uexercise}
 
 \begin{uexercise}
-A given set $A$ is a {\bf subset} of another set $B$ if and only if all the members of $A$ are also a member of $B$. Two sets are {\bf equivalent}, if and only if they are subsets of each other. For this problem you will represent sets via lists.
-
-\begin{enumerate}
-\item Define a procedure \Verb+SUBSETP+ that takes two list arguments and decides whether the first is a subset of the second.
-\item Define a procedure \Verb+EQUIP+ that takes two list arguments and decides whether the two are equivalent.
-\item Define a procedure \Verb+IDENP+ that takes two list arguments and decides whether the two have the same elements in the same order -- do not directly compare the lists with \Verb+EQUALP+, you are required to do a element by element comparison.
-\end{enumerate}
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Assume you have data that pairs employees' last names with their monthly salaries. Define a procedure that takes as input employee dat and (ii) a threshold salary (an integer), and returns in a list the last names of all the employees that earn above the threshold salary. Define two versions, one with, and one without an accumulator.
+Assume you have data that pairs employees' last names with their
+monthly salaries. E.g.\ \Verb+((SMITH 3000) (JOHNS 2700) (CURRY 4200))+ Define a procedure that takes as input employee data and a threshold salary (an integer), and returns in a list the last names of all the employees that earn above the threshold salary. Define two versions, one with, and one without an accumulator.
 
 \qed
 \end{uexercise}
@@ -1297,24 +1345,105 @@ NIL
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure that computes the sum of a list of numbers; with and without an accumulator.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a procedure \Verb+LISTPRO+ that returns the product of all the numbers in a list; allow for non-numbers in the list, ignore them when you come across during your iteration. Write a version with and a version without an accumulator.
+Define a procedure that computes the sum of a list of numbers; with
+and without an accumulator. Consider that there might be non-number
+elements in a list, which you should ignore in your summation.
 
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure that returns the largest number in a list of numbers.
+Define a procedure that returns the largest number in a list of numbers. Do not use the built-in \Verb+MAX+.
 
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+SPLIT+ that takes an integer $n$ and a list, and returns a list of two lists such that the first has the first $n$ elements of the input list, and the second has the rest of the elements of the input list. 
+Define a procedure that takes a list of integers and returns the \emph{second} largest integer in the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure that takes a list of integers and an integer $n$, and returns the $n$th largest integer in the list.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+\label{exlast}
+Define a procedure that gives the last element of a list or gives NIL if the list is empty. Name your procedure  \Verb+LASTT+ in order not to clash with  \Verb+LISP+'s built-in \Verb+LAST+. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+MULTI-MEMBER+ that checks if its first argument occurs more than once in the second.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Define a recursive member procedure that checks whether a given item is found in the given list. The item is not required to be a top-most element. Some sample interactions are as follows:
+
+\begin{Verbatim}
+* (rec-mem 'a '(b a c))
+t
+* (rec-mem 'a '(b (z a k) c))
+t
+* (rec-mem 'a '(b (z (a x) k) c))
+t
+\end{Verbatim}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+
+Define a procedure \Verb+LEVEL+, that takes an element \Verb+X+ and a
+list \Verb+LST+, and returns the level of depth that \Verb+X+ is found
+in \Verb+LST+. If \Verb+X+ is not a member, your procedure will return
+\Verb+NIL+. Top level counts as 0, every level of nesting adds 1 to
+the depth. Sample interaction:
+
+\begin{Verbatim}
+* (level 'a '(b a c))
+0
+* (level 'a '(b (z a k) c))
+1
+* (level 'a '(b (z (a x) k) c))
+2
+\end{Verbatim}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+
+Given a possibly nested list of symbols one and only one of which will
+be the symbol \Verb+X+, compute the steps of \Verb+CAR+s and
+\Verb+CDR+s required to get \Verb+X+ from the list.  For instance, the
+input \Verb+((a (z x d)) (c s d))+ must yield the result \Verb+(CAR CDR CAR CDR CAR)+.  
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+NESTEDP+ that takes a list and returns \Verb+T+ if at least one of its elements is a list, and returns \Verb+NIL+ otherwise.\footnote{Graham 1996, p.\ 30 ex.\ 7.}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Define a recursive function \Verb+FLATTEN+, which takes a possibly nested list and returns a version where all nesting is eliminated. E.g.\ \Verb+((1 (2) 3) 4 (((5) 6) 7))+ should be returned as \Verb+(1 2 3 4 5 6 7)+. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a procedure \Verb+SPLIT+ that takes an integer $n$ and a list, and returns a list of two lists such that the first has the first $n$ elements of the input list, and the second has the rest of the elements of the input list. Do NOT use \Verb+LENGTH+.
 
 \qed
 \end{uexercise}
@@ -1326,13 +1455,113 @@ Define a procedure \Verb+SPLIT-TWO+ that splits a list of numbers into two equal
 \end{uexercise}
 
 \begin{uexercise}
-\label{exlast}
-Define a procedure that gives the last element of a list or gives NIL if the list is empty. Name your procedure  \Verb+LASTT+ in order not to clash with  \Verb+LISP+'s built-in \Verb+LAST+. 
+\label{halve}
+
+Define a procedure \Verb+HALVE+ that splits a list into two. If the
+length is odd, let one of the halves be one item longer than the
+other. (You can use length, if you like.)  For instance, \Verb+(split '(a b c d e f g h i j k l))+
+must give \Verb+((A B C D E F) (G H I J K L))+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+Write a program named \Verb+RANGE+, that takes a non-negative integer
+\Verb+N+ as argument and returns a list of non-negative integers that
+are less than \Verb+N+ in increasing order.  Here is a sample
+interaction with the first four non-negative integers, your solution
+must work for all non-negative integers: 
+
+\begin{lispcode}
+CL-USER> (range 0)
+NIL
+CL-USER> (range 1)
+(0)
+CL-USER> (range 2)
+(0 1)
+CL-USER> (range 3)
+(0 1 2)
+\end{lispcode}
+
+\begin{itemize}
+\item[a.] Solve the problem without using an accumulator;
+\item[b.] Solve the problem using an accumulator.
+\end{itemize}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+Write a program that takes a sequence, a start index, an end index
+and returns the sub-sequence from start to (and including) end.
+Indices start from 0.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+Write a program that takes two parameters \Verb+count+ and \Verb+max+,
+and returns a list of \Verb+count+ random integers, all less than
+\Verb+max+.
+
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+NESTEDP+ that takes a list and returns \Verb+T+ if at least one of its elements is a list, and returns \Verb+NIL+ otherwise.\footnote{Graham 1996, p.\ 30 ex.\ 7.}
+\label{reverse}
+The built-in \Verb+REVERSE+ reverses a list. Define your own version of reverse.
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+In Ex \ref{reverse} you defined a list reversing procedure. Now alter that definition so that it  not only reverses the order of the top-level elements in the list but also reverses any members which are themselves lists.
+
+{\small
+\begin{Verbatim}
+* (reverse0 '(a (b c (x d)) k))
+(K ((D X) C B) A)
+\end{Verbatim}
+}
+\qed
+\end{uexercise}
+
+% \begin{uexercise}
+% Define a predicate that tells whether its argument is a dotted list or not.
+% \qed
+% \end{uexercise}
+
+\begin{uexercise}
+
+Define a procedure \Verb+HOW-MANY?+ that counts the top-level occurrences of an item in a list.
+
+\begin{Verbatim}
+(how-many? 'a '(a b r a c a d a b r a))
+5
+\end{Verbatim}
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+Define a recursive procedure \Verb+D-HOW-MANY?+ that counts all – not only top-level – occurrences of an item in a list.\\ For instance \Verb+(D-HOW-MANY? 'A '((A B) (C (A X)) A))+ should return 3. 
+\qed
+\end{uexercise}
+
+
+\begin{uexercise}
+Define a three argument procedure \Verb+REMOVE-NTH+, which removes every $n$th occurrence of an item from a list.
+\qed
+\end{uexercise}
+
+
+\begin{uexercise}
+A given set $A$ is a {\bf subset} of another set $B$ if and only if all the members of $A$ are also a member of $B$. Two sets are {\bf equivalent}, if and only if they are subsets of each other. For this problem you will represent sets via lists.
+
+\begin{enumerate}
+\item Define a procedure \Verb+SUBSETP+ that takes two list arguments and decides whether the first is a subset of the second.
+\item Define a procedure \Verb+EQUIP+ that takes two list arguments and decides whether the two are equivalent.
+\item Define a procedure \Verb+IDENP+ that takes two list arguments and decides whether the two have the same elements in the same order -- do not directly compare the lists with \Verb+EQUALP+, you are required to do a element by element comparison.
+\end{enumerate}
 
 \qed
 \end{uexercise}
@@ -1343,17 +1572,37 @@ Define a procedure \Verb+REMOVE2+ that takes an element and a list; and returns 
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-Define a procedure \Verb+REMOVE3+  that takes an element and a list; and returns a list where all the occurrences of the element that are preceded by the symbol \Verb+X+ are removed from the list. You need to store the element seen in the previous iteration in a variable; therefore you can check whether it is \Verb+X+. 
+\begin{uexercise}[*]
+ Given a sequence of 0s and 1s, return the number of 0s that
+are preceded by a 0. Here is a sample interaction:
+
+\begin{lispcode}
+CL-USER> (zeros '(0))
+0
+CL-USER> (zeros '(0 0))
+1
+CL-USER> (zeros '(1 0 1))
+0
+CL-USER> (zeros '(1 0 0 0 1 0))
+2
+\end{lispcode}
 
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+TYPES+ that takes a list and prints out the type of the elements encountered. It's enough that it can tell between number, list and symbol; so use \Verb+NUMBERP+, \Verb+LISTP+ and \Verb+SYMBOLP+. In case you cannot match to any of these, print \Verb+UNKNOWN-TYPE+.  Put a string in your list for testing, it answers \Verb+NIL+ to all these predicates. Use \Verb+DOLIST+ and \Verb+COND+ in your solution. 
+Define a procedure \Verb+REMAFTER+  that takes an element, a list and
+a pivot element; and returns a list where all the occurrences of the
+element that are preceded by the pivot element are removed from the list.
 
 \qed
 \end{uexercise}
+
+% \begin{uexercise}
+% Define a procedure \Verb+TYPES+ that takes a list and prints out the type of the elements encountered. It's enough that it can tell between number, list and symbol; so use \Verb+NUMBERP+, \Verb+LISTP+ and \Verb+SYMBOLP+. In case you cannot match to any of these, print \Verb+UNKNOWN-TYPE+.  Put a string in your list for testing, it answers \Verb+NIL+ to all these predicates.
+% 
+% \qed
+% \end{uexercise}
 
 \begin{uexercise}
 The mean of $n$ numbers is computed by dividing their sum by $n$. A running mean is a mean that gets updated as we encounter more numbers. Observe the following input-output sequences:
@@ -1364,6 +1613,46 @@ The mean of $n$ numbers is computed by dividing their sum by $n$. A running mean
 \end{Verbatim}
 
 The first element 3 is the mean of the list \Verb+(3)+, the second element 4 is the mean of \Verb+(3 5)+, and so on. Implement \Verb+RUN-MEAN+ by using \Verb+DOTIMES+ and \Verb+NTH+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+		\label{chaindef}
+
+A chain in a sequence of numbers is such that each number in the chain is either equal to or greater than the one before it. For instance, 2 5 9 12 17 21 is a chain, but not 2 5 9 17 12 21, because the 17 12 sub-sequence breaks the chain. Define a recursive procedure that finds and returns the longest chain in a sequence of numbers. If there are more than one sequences with the highest length, return the one you encountered first. Here are some sample interactions:
+
+\begin{Verbatim}
+* (longest-chain '(14 3 8 27 25 12 19 3 1))
+(3 8 27)
+* (longest-chain '(14 3 8 27 25 12 19 34 42 1))
+(12 19 34 42)
+* (longest-chain '(14 3 8 27 25 12 19 34 1))
+(3 8 27)
+\end{Verbatim}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+
+A maximal chain $m$ in a sequence of integers $I$ is a chain defined
+in the sense of Exercise~\ref{chaindef}, such that there is no chain
+$k$ in $I$ such that $m$ is a subsequence of $k$. 
+
+Define a procedure which takes a sequence of integers and returns the
+maximal chain with the largest sum. If you detect maximal chains with
+equal sums, return the one you encountered first.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+
+Define a procedure which takes a sequence of integers and returns the
+chain  -- not necessarily maximal -- with the largest sum. If you
+detect maximal chains with equal sums, return the one you encountered
+first.
 
 \qed
 \end{uexercise}
@@ -1382,7 +1671,7 @@ See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an 
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+SEARCH-POS+ that takes a list as search item, another list as a search list and returns the list of positions that the search item is found in the search list. As usual, positioning starts with 0. Use \Verb+DOTIMES+. A sample interaction:
+Define a procedure \Verb+SEARCH-POS+ that takes a list as search item, another list as a search list and returns the list of positions that the search item is found in the search list. Positioning starts with 0. A sample interaction:
 
 {\small
 \begin{Verbatim}
@@ -1397,7 +1686,7 @@ Define a procedure \Verb+SEARCH-POS+ that takes a list as search item, another l
 \end{uexercise}
 
 \begin{uexercise}
-Define a procedure \Verb+LAST2+ that takes a list and returns the last element of the list. Of course, don't use \Verb+LAST+. One way could be to keep a counter as we did in class, so that you can compare this to the length of the list to recognize whether you are close enough to the end of the list.
+Define a procedure \Verb+LAST2+ that takes a list and returns the last element of the list. Of course, don't use \Verb+LAST+. One way could be to keep a counter, so that you can compare this to the length of the list to recognize whether you are close enough to the end of the list.
 
 \qed
 \end{uexercise}
@@ -1418,70 +1707,6 @@ Define your own version of \Verb+NTH+ (don't use \Verb+NTHCDR+).
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-Define a procedure \Verb+MULTI-MEMBER+ that checks if its first argument occurs more than once in the second.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define your own procedure \Verb+APPEND2+ that appends two list arguments into a third list. You are not allowed to use \Verb+APPEND+, \Verb+LIST+ and \Verb+REVERSE+ -- use just \Verb+CONS+.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-
-Define a procedure \Verb+HOW-MANY?+ that counts the top-level occurrences of an item in a list.
-
-\begin{Verbatim}
-(how-many? 'a '(a b r a c a d a b r a))
-5
-\end{Verbatim}
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-\label{reverse}
-The built-in \Verb+REVERSE+ reverses a list. Define your own version of reverse.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a predicate that tells whether its argument is a dotted list or not.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a recursive procedure \Verb+D-HOW-MANY?+ that counts all – not only top-level – occurrences of an item in a list.\\ For instance \Verb+(D-HOW-MANY? 'A '((A B) (C (A X)) A))+ should return 3. 
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-
-In Ex \ref{reverse} you defined a list reversing procedure. Now alter that definition so that it  not only reverses the order of the top-level elements in the list but also reverses any members which are themselves lists.
-
-{\small
-\begin{Verbatim}
-* (reverse0 '(a (b c (x d)) k))
-(K ((D X) C B) A)
-\end{Verbatim}
-}
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a three argument procedure \Verb+REMOVE-NTH+, which removes every $n$th occurrence of an item from a list.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a procedure that takes a list of integers and returns the \emph{second} largest integer in the list.
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a procedure that takes a list of integers and an integer $n$, and returns the $n$th largest integer in the list.
-\qed
-\end{uexercise}
 
 \begin{uexercise}
 \label{uniq}
@@ -1518,11 +1743,6 @@ Define a function \Verb+ROTATE-LEFT+ that takes a list and moves the first eleme
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-
-Define a recursive function \Verb+FLATTEN+, which takes a possibly nested list and returns a version where all nesting is eliminated. E.g.\ \Verb+((1 (2) 3) 4 (((5) 6) 7))+ should be returned as \Verb+(1 2 3 4 5 6 7)+. 
-\qed
-\end{uexercise}
 
 \begin{uexercise}
 
@@ -1531,6 +1751,12 @@ Define a recursive  procedure \Verb+SUBSTITUTE+, with 3 arguments, say \Verb+old
 \qed
 \end{uexercise}
 
+\begin{uexercise}
+
+Define a procedure \Verb+MATCHES+ that takes two lists, a pattern and a text, and returns the count of the occurrences of the pattern in the text. You need to be careful about overlapping matches. For instance, \Verb+(A C A)+ has 3 occurrences in \Verb+(A C A C A T G C A C A T G C)+. You are not allowed to use procedures like \Verb+SUBSEQ+ to take portions of the text for comparison; your solution must go through the text element by element.
+
+\qed
+\end{uexercise}
 
 \begin{uexercise}
 Define a procedure \Verb+SHUFFLE+ that takes a list and returns a random permutation of the list. A random permutation of a list is one of all the possible orderings of the elements of the list. You can follow any strategy you like -- recursive or iterative.
@@ -1562,28 +1788,76 @@ Define a procedure that groups the elements in a list putting consecutive occurr
 \qed
 \end{uexercise}
 
-\begin{uexercise}
 
-Define a recursive procedure that splits a list into two ``halves''. If the length is odd, let one of the halves be one item longer than the other. You can use length, if you like.
-For instance, \Verb+(split '(a b c d e f g h i j k l))+ should give \Verb+((A B C D E F) (G H I J K L))+.
+\begin{uexercise}
+Define a version of Exercise~\ref{halve} without using \Verb+LENGTH+ -- here we go again!
 
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-Define a version of the previous procedure without using \Verb+LENGTH+ -- here we go again!
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
+\begin{uexercise}[*]
 Define a recursive procedure \Verb+SUMMARIZE+, that takes a list and returns a list of pairs whose car is an element in the list and cadr is the number of times the element occurs in the list; \Verb+(summarize '(a b r a c a d a b r a))+ should give \Verb+((a 5) (b 2) (r 2) (c 1) (d 1))+.
 
 \qed
 \end{uexercise}
 
 \begin{uexercise}
-Implement bubble sort.
+
+A growing difference sequence is a recursive sequence where each non-initial term in the sequence is greater than the one before it by a difference that steadily grows with the terms. For instance 1, 4, 8, 13, 26,\ldots is such a sequence where the second term is obtained by adding 3 to the first, third term is obtained by adding 4 to the second, fourth term is obtained by adding 5 to the third, and so on. In tabular form:
+
+\begin{tabular}{|c|c|c|}
+\hline 
+index & term & difference \\
+\hline
+1 & 1 & 3 \\
+\hline
+2 & 4 & 4 \\
+\hline
+3 & 8 & 5 \\ 
+\hline
+4 & 13 & 6 \\
+\hline
+5 & 19 & 7 \\
+\hline
+6 & 26 & 8 \\
+\hline
+7 & 34 & 9 \\
+\hline
+$\vdots$ & $\vdots$ & $\vdots$
+\end{tabular}
+
+Our sequences will always start with 1. How the difference starts and grows may change from sequence to sequence. For instance the difference in the following sequence starts with 2 and grows as the square of the previous difference.
+
+\begin{tabular}{|c|c|c|}
+\hline 
+index & term & difference \\
+\hline
+1 & 1 & 2 \\
+\hline
+2 & 3 & 4 \\
+\hline
+3 & 7 & 16 \\ 
+\hline
+4 & 23 & 256 \\
+\hline
+5 & 279 & 65536 \\
+\hline
+$\vdots$ & $\vdots$ & $\vdots$
+\end{tabular}
+
+Define a procedure \Verb+GDS+ that generates a growing difference sequence where the length of the sequence, the initial value of the difference and how difference grows will be given as parameters. An example output for the first 7 terms in the first example above would be \Verb+((1 1) (2 4) (3 8) (4 13) (5 19) (6 26) (7 34))+.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+As you have observed, the recursive solution to the computation of $n$th Fibonacci number is quite inefficient, as you compute the same Fibonacci numbers multiple times. Such algorithms can be made efficient by using a technique called \emph{memoization}. The basic idea in memoization is to store the result of some computations in a table, so that when the function is called with some arguments already seen, the result is looked up from the table instead of executing the function again.
+
+Your task in this exercise is to make the recursive Fibonacci solution by using memoization. You are required the results computed so far in a \emph{hash table}. Hash tables are dictionaries that keep \emph{key},\emph{value} pairs. In your case the keys will be integers and the value corresponding to a certain key $n$ will be the $nth$ Fibonacci number. In order to learn how hash tables are constructed and managed, please refer to the relevant chapter of one of the books listed on the course website.
+
+You will change your recursive Fibonacci solution in such a way that when called with a certain integer, you will first check whether you have computed this Fibonacci number before by looking at your table, and enter into recursion only in case you do not have the number in the table.
+
+Your procedure will be used exactly as the original one, namely it should be a single argument procedure that takes an integer and return the corresponding Fibonacci number. 
 
 \qed
 \end{uexercise}
@@ -1599,6 +1873,14 @@ Define a procedure that takes a list and turns it into a binary search tree. A b
 
 \qed
 \end{uexercise}
+
+\begin{uexercise}[*]
+Write a program that computes the subsequence with the largest sum in
+a sequence of integers.
+
+\qed
+\end{uexercise}
+
 
 \noindent\hrulefill
 \newpage
@@ -1829,7 +2111,7 @@ and you can call the function in two ways, both are fine:
 \end{Verbatim}
 \end{ucodeframe}
 
-\item {\bf \Verb+APPLY+.} Another higher order procedure similar to \Verb+FUNCALL+ is \Verb+APPLY+. The only difference is that \Verb+APPLY+ takes the arguments in a list, rather than one by one.\footnote{Actually, \Verb+APPLY+ requires only the final argument to be a list, e.g.\ \Verb=(APPLY #'+ 1 2 '(3 5))= would return \Verb+11+ as expected.}
+\item {\bf \Verb+APPLY+.} Another higher order procedure similar to \Verb+FUNCALL+ is \Verb+APPLY+. The only difference is that \Verb+APPLY+ takes the arguments in a list, rather than one by one.\footnote{Actually, \Verb+APPLY+ requires only the final argument to be a list, e.g.\ \Verb=(APPLY #'+ 1 2 '(3 5))= would return \Verb+11+ as expected -- \LaTeX puts the second hash sign in this footnote, please ignore.}
 
 
 \begin{lispcode}
@@ -2282,7 +2564,34 @@ Define a procedure \Verb+APPLIER+ that takes a procedure \Verb+proc+, an input \
 
 \begin{uexercise}
 
-Write a function \Verb+REPLACE-IF+, which takes three arguments: a list \Verb+LST+, an item \Verb+ITEM+ and a function \Verb+TEST+, and replaces every element of \Verb+LST+ that passes the \Verb+TEST+ with \Verb+ITEM+. You may find using keyword arguments useful (see the lecture notes). Make use of \Verb+MAPCAR+, \Verb+LAMBDA+ and \Verb+FUNCALL+ in your solution.   
+Define a procedure MOST, which takes a list and a procedure argument, and returns the element in the list that gives the highest score when provided as an argument to the given procedure packed in a list with its score. To get full credit, solve the task WITHOUT using recursion or iteration, you can use MAPCAR, REDUCE and LAMBDA besides other built-ins you would need.
+
+\begin{lispcode}
+* (most '(0.3 0.5 0.2) :proc #'(lambda (x) (* 2 (log x))))
+(0.5 -1.3862944)
+\end{lispcode}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+The built-in FIND-IF returns the first element in its second argument that returns T for its first argument:
+
+\begin{lispcode}
+* (find-if #'(lambda (x) (> x 3)) '(1 3 9 0 4))
+9
+\end{lispcode}
+
+Define your own version of FIND-IF, which returns the index together with the element. Remember
+that indexing starts with 0. For instance your procedure should return (2 9) for the above invocation,
+where 2 is the index of 9. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
+
+Define a procedure \Verb+REPLACE-IF+, which takes three arguments: a list \Verb+LST+, an item \Verb+ITEM+ and a function \Verb+TEST+, and replaces every element of \Verb+LST+ that passes the \Verb+TEST+ with \Verb+ITEM+. You may find using keyword arguments useful (see the lecture notes). Make use of \Verb+MAPCAR+, \Verb+LAMBDA+ and \Verb+FUNCALL+ in your solution.   
 \qed
 \end{uexercise}
 
@@ -2326,6 +2635,13 @@ Study the following procedure and indicate what the parameters \Verb+n+, \Verb+f
 Find the numbers in a given range that have the same Collatz length using the techniques of this section.
 \qed
 \end{uexercise}
+
+\begin{uexercise}[*]
+Write a program that takes as input a set of numbers and sorts the numbers with respect to their Collatz lengths in descending order. You can use the built-in sort procedure of \Verb+LISP+, please consult the reference books listed on the web-site on how to use the built-in sort.
+
+\qed
+\end{uexercise}
+
 
 \noindent \hrulefill
 \newpage
@@ -2408,8 +2724,7 @@ Find the numbers in a given range that have the same Collatz length using the te
 % \end{uenum}
 % %\end{comment}%end
 
-
-\section{Iteration}
+\section{Iteration by looping}
 
 \begin{uenum}
 \item Computing frequently involves repeating an action, each time with different inputs and/or conditions. There are mainly three perspectives on how to do this: (i) iterative, (ii) recursive, (iii) applicative. Which perspective is best mainly depends on the task at hand.
