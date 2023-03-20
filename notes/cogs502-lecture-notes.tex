@@ -253,7 +253,7 @@ Here is the simple area example put in \Verb+LET+ form:
 \begin{lispcode}
 (let ((radius 13)) (* pi (* radius radius)))
 \end{lispcode}
-\item {\bf If/when you get confused about \Verb+DEFUN+.} There is an alternative way of thinking about \Verb+DEFUN+'ed procedures. Assume we defined a squaring procedure named \Verb+SQUARE+ as above. Now, \Verb+SBCL+ knows about the definition. When we put \Verb+(square (- 4 1))+ on the top-level and therefore on the workspace, you can think what \Verb+SBCL+ does as follows: It checks whether a procedure named \Verb+SQUARE+ is in the environment. Then if it finds it, fetches the \emph{body} of the definition to the workspace, wraps it around a \Verb+LET+, declaring the parameters via this \Verb+LET+ by copying the operands \emph{without evaluating them}. According to this model, \Verb+SBCL+ translates \Verb+(square (- 4 1))+ to,
+\item {\bf If/when you get confused about \Verb+DEFUN+.} There is an alternative way of thinking about \Verb+DEFUN+'ed procedures. Assume we defined a squaring procedure named \Verb+SQUARE+ as above. Now, \Verb+SBCL+ knows about the definition. When we put \Verb+(square (- 4 1))+ on the top-level and therefore on the workspace, you can think what \Verb+SBCL+ does as follows: It checks whether a procedure named \Verb+SQUARE+ is in the environment. Then if it finds it, fetches the \emph{body} of the definition to the workspace, wraps it inside a \Verb+LET+, declaring the parameters via this \Verb+LET+ by copying the operands \emph{without evaluating them}. According to this model, \Verb+SBCL+ translates \Verb+(square (- 4 1))+ to,
 
 \begin{lispcode}
 (let ((x (- 4 1))) (* x x))
@@ -432,7 +432,7 @@ In order to convert a temperature in Fahrenheit into Celsius, you need to subtra
 \end{lispcode}
 
 \begin{uenumi}
-\item Our procedure is meant to operate on integers, as the concepts evenness and oddness apply to integers. If you try your procedure with a floating point number (``float'' for short) like \Verb+3.8+, you will get an error. Try it, see the error, and return to the top-level by \Verb+Ctrl-D+ or \Verb+0+.    
+\item Our procedure is meant to operate on integers, as the concepts evenness and oddness apply to integers. If you try your procedure with a floating point number (``float'' for short) like \Verb+3.8+, you will get an error. Try it, see the error, and return to the top-level by \Verb+Ctrl-D+ or entering the number corresponding to \Verb+ABORT+.    
 \item Let us improve our procedure a little. Our plan is to first check whether the input is an integer, if not, round it to the nearest integer, and then do what we want. 
 
 \begin{lispcode}
@@ -466,6 +466,17 @@ Now our procedure can handle floats by rounding them to the nearest integers -- 
 
 Now, things look tidier. Notice that we defined \Verb+CHANGE+ before \Verb+CHANGER+. This is not absolutely necessary. Why we did it this way is to avoid a \uterm{warning} from \Verb+SBCL+, which processes procedure definitions in order, and it would get puzzled if the order was reversed, as, when processing the definition of \Verb+CHANGER+ it would bump into a procedure name, \Verb+CHANGE+, which it doesn't know at that moment. Such warnings are safe to ignore. But if you don't want to see them, define your procedures in the ``correct'' order. You can also silence the warnings of \Verb+SBCL+ if you want to, but this is not advised, as some warnings are useful in correcting some errors in your program.
 
+\item We can shorten this code further. An important feature of \Verb+LISP+ is that it works with return values. Every form returns a value. In this example we need to send a number to the procedure \Verb+CHANGE+. We first check the number for integerhood and call \Verb+CHANGE+ accordingly. We can also make the decision at the argument position of \Verb+CHANGE+. Here is the revised version for \Verb+CHANGER+:
+
+\begin{lispcode}
+(defun changer (n)
+  (change (if (integerp n)
+              n
+              (round n)))
+\end{lispcode}
+
+It is very important for the rest of your adventure that you understand (and like) this transformation.
+
 
 \item We still have a problem. We have been assuming that if something is not an integer, it must be a float. Of course this is not true; try to call the procedure with something that is not an integer \emph{and} not a float, say \Verb+(CHANGER T)+, using the built-in symbol \Verb+T+ that stands for truth.
 
@@ -479,10 +490,10 @@ Now, things look tidier. Notice that we defined \Verb+CHANGE+ before \Verb+CHANG
 
 (defun changer (n)
   (if (numberp n)
-    (if (integerp n)
-      (change n)
-      (change (round n)))
-    nil))
+      (change (if (integerp n)
+                  n
+                  (round n)))
+      nil))
 \end{lispcode}
 
 Now we have a definition for \Verb+CHANGER+ that works for any sort of input whatsoever; when provided a non-number input, it simply returns \Verb+NIL+.  Note that the failure expression of the inner \Verb+IF+ is \Verb+NIL+, this is perfectly OK, since \Verb+NIL+ and \Verb+T+, like numbers, evaluate to themselves.
@@ -492,7 +503,7 @@ Now we have a definition for \Verb+CHANGER+ that works for any sort of input wha
 
 \item {\bf Negation.} In constructing your tests, there will be times you would like to have the opposite of the outcome of the test. For instance assume you want to see whether something is \emph{not} a number. In such a case the test to use is simply \Verb+(not (numberp n))+. This will return \Verb+T+ if \Verb+n+ is not a number, and \Verb+NIL+, if it is. In other words, \Verb+NOT+ forms are single operand applications.
 
-\item {\bf Multi-way decisions.} \Verb+IF+ is perfect for decisions involving a limited number of options. When things get more complicated, heavily nested \Verb+IF+ forms become impossible to read. The special form \Verb+COND+ is used in such cases. Its syntax may appear a little complicated in comparison to \Verb+IF+, but one gets used to it after a few times.
+\item {\bf Multi-way decisions.} \Verb+IF+ is perfect for decisions involving a limited number of options. When things get more complicated, heavily nested \Verb+IF+ forms become harder to read. The special form \Verb+COND+ is used in such cases. Its syntax may appear a little complicated in comparison to \Verb+IF+, but one gets used to it after a few shots.
 
 Assume a variant of the changer task: We halve an even number, we do what we did with odd numbers this time with numbers divisible by 3, and we leave the number as it is otherwise. This problem is a little more complex than the original. The reason is that, in the original, once we see that a number is not even, then, as we are sure that it is odd, we were able to apply the ``three times $n$ plus one'' procedure; but now, non-evenness does not guarantee the applicability of ``three times $n$ plus one''. If you want to stick with \Verb+IF+, you will need to nest another \Verb+IF+ at the failure slot of the evenness test. The task can be handled without nesting \Verb+IF+s as follows:
 
@@ -516,17 +527,14 @@ Assume a variant of the changer task: We halve an even number, we do what we did
 
 \item A \Verb+COND+ clause that only has a test, returns the value of the test, if it succeeds. Therefore, you can have the final clause of the above program simply as \Verb+(n)+. It is, however, advisable to avoid such shortcuts, they may impair the readability of your program. 
 
-\item Everything that can be done by \Verb+COND+ can also be done by \Verb+IF+ and \Verb+PROGN+ (which you haven't seen yet), but \Verb+COND+ makes life easier for complex decisions.  
+\item Everything doable by \Verb+COND+ is also doable by \Verb+IF+ and \Verb+PROGN+ (which you haven't seen yet), but \Verb+COND+ makes life easier for complex decisions.  
 
-\item \Verb+AND+ and \Verb+OR+ form sequences of expressions with special evaluation algorithms:
+\item \Verb+AND+ and \Verb+OR+ head sequences of expressions with special evaluation algorithms:
 \begin{uenumi}
 \item \Verb+AND+: Evaluate the expressions from left to right until you reach either the end or an expression that evaluates to \Verb+NIL+; return the value of the last expression.
 \item \Verb+OR+: Evaluate the expressions from left to right until you reach either the end or an expression that evaluates to something other than \Verb+NIL+; return the value of the last expression.
-
-% \item Let's write a function \Verb+HOWCOMPUTE+ taking 3 numbers, telling the basic arithmetic operation that is used to compute the third number from the first two -- it should say so if it cannot find it \cttxp[ex.\ 4.13]{touretzky90}. 
-
-
 \end{uenumi}
+
 \end{uenum}
 
 
@@ -534,7 +542,7 @@ Assume a variant of the changer task: We halve an even number, we do what we did
 
 \begin{uexercise}
 \label{diff}
-Define a procedure that takes 2 numbers and returns -1 if their difference is negative, 0 if they are equal, and 1 if their difference is positive. You do not need to check for numberhood, assume that the user will always give numbers as input. You are allowed to compute the difference of the input numbers \emph{only once}; and remember that \Verb+SETF+ and \Verb+DEFVAR+ are forbidden.
+Define a procedure that takes 2 numbers and returns -1 if their difference is negative, 0 if they are equal, and 1 if their difference is positive. You do not need to check for numberhood, assume that the user will always give numbers as input. You are allowed to compute the difference of the input numbers \emph{only once}; and \Verb+SETF+ and \Verb+DEFVAR+ are forbidden.
 
 \qed
 \end{uexercise}
