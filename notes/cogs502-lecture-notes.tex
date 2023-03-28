@@ -795,7 +795,7 @@ Define a recursive procedure that takes two integers, say $x$ and $y$, and retur
 
 \begin{uexercise}
 
-Define a factorial procedure that uses an accumulator.
+Define a tail-recursive factorial procedure.
 
 \qed
 \end{uexercise}
@@ -873,6 +873,39 @@ Define a recursive procedure that returns the sum of a geometric progression wit
 \Verb+(RANDOM N)+ returns a random number between and including $0$ and $n-1$. Define a procedure that takes two arguments $n$ and $r$, and prints $r$ random numbers between and including $0$ and $n$. You will need to use \Verb+PRINT+; you can discover how it works by trying it at \Verb+REPL+.
 
 
+\end{uexercise}
+
+\begin{uexercise}
+You can find at \Verb+code/var/primep.lisp+ on our Github site a program that
+checks wether a given integer is prime or not.\footnote{Prime numbers are those
+that can be divided without remainder only by 1 and themselves.} Define a
+procedure that takes an integer, changes it by Collatz' function until it
+reaches a prime number. Return the prime number that is reached.
+
+You can use the \Verb+PRIMEP+ predicate in your program by loading the program
+it is defined in (the \Verb+primep.lisp+ must be in the same folder as your own
+program):
+
+\begin{lispcode}
+(load "primep.lisp")
+\end{lispcode}
+
+Your program has to behave as follows:
+\begin{lispcode}
+
+CL-USER> (foo 18)
+
+9 
+28 
+14 
+7 
+T
+CL-USER> (foo 17)
+T
+CL-USER> 
+
+\end{lispcode}
+      
 \end{uexercise}
 
 \noindent\hrulefill
