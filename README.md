@@ -102,10 +102,8 @@ Monday, 14:40-17:30
 
 ### Requirements
 
-* Weekly assignments (30%)
-* Midterm exam (30%, in class)
-* Final exam (40%, in class)
-* Short quizzes (up to 10 pts bonus credit, in class)
+* Weekly assignments (50%)
+* Final exam (50%, in class)
 
 
 ### Attendance and late submission policies
