@@ -905,7 +905,42 @@ T
 CL-USER> 
 
 \end{lispcode}
-      
+\end{uexercise}
+
+\begin{uexercise}
+Your task is to write a program that takes a positive ($n > 0$) integer as an
+input and reduce it to 1 by using the Collatz' function. While doing this, you
+are required to report any prime number you encounter along the way, except the
+final 1. Besides reporting the primes, your program should also report \emph{and
+return} the sum of these primes, again except the final 1.
+
+You need to write two versions: one, call it \Verb+KOO+, where you accumulate
+the sum as you go along and return it when you reach 1; the other, call it \Verb+FOO+, where you do not
+accumulate the answer as you go along.
+
+Here is a sample interaction for both versions: 
+
+\begin{lispcode}
+CL-USER> (foo 17)
+Found a prime: 17
+Found a prime: 13
+Found a prime: 5
+Found a prime: 2
+The sum of primes is: 37
+37
+CL-USER>  
+\end{lispcode}
+
+You need to use \Verb+FORMAT+ to print to screen. Check Section~\ref{sec:user},
+item 1, on how. Note that \Verb+FORMAT+ returns \Verb+NIL+ as a return value
+(when its first argument is \Verb+T+), so putting it in an \Verb+OR+ as a first
+element will guaranteed that what is next in the \Verb+OR+ will be evaluated.
+
+Finally, use an optional argument in the \Verb+KOO+ version for your
+accumulator.
+
+\end{itemize}
+
 \end{uexercise}
 
 \noindent\hrulefill
@@ -3311,8 +3346,37 @@ See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an 
 % 
 
 \section{User interaction}
+\label{sec:user}
 
 \begin{uenum}
+
+\item {\bf \Verb+FORMAT+} for formatted output to screen, to a file, or a
+	string. The power of it comes from its ability to receive values and
+	insert them to slots marked as \Verb+~A+ in its string argument:  
+	  
+
+\begin{lispcode}
+(let ((x 8) (y 9))
+    (format t "An example of how FORMAT works:~%")
+    (format t "~A plus ~A makes ~A~%" x y (+ x y))
+    (format t "And I love ~A" (+ x y)))
+\end{lispcode}
+will produce the following at the top-level:
+
+\begin{lispcode}
+An example of how FORMAT works:
+8 plus 9 makes 17
+And I love 17
+NIL
+\end{lispcode}
+
+\begin{uenumi}
+\item The second element, \Verb+T+, specifies the stream where the output will be sent. \Verb+T+ means standard output, the screen by default.
+\item The third element is a string -- enclosed by double quotes -- that will be the output.
+\item The string element has \uterm{format directives}, character sequences starting with \Verb+~+. The two we will use here are \Verb+~A+ and \Verb+~%+.
+The first is a place holder that will be replaced by the value obtained by evaluating the expression following the string element. You can have as many such directives as you like, as long as you have an equal number of expressions following the string element. The other directive, \Verb+~%+ stands for a newline.
+\end{uenumi}
+
 \item Here is a basic user interface:
 
 \begin{lispcode}
@@ -3326,15 +3390,8 @@ See the \Verb+PAIRLISTS+ in lecture notes. Define a procedure that ``pairs'' an 
 		(basic-ui)))))
 \end{lispcode}
 
-\item Two things are new here: \Verb+FORMAT+ and \Verb+PROGN+. 
-\item Think of \Verb+PROGN+ exactly as the cdr of a \Verb+COND+ clause whose car is \Verb+T+. All the elements in a \Verb+PROGN+ list are evaluated one-by-one, and the final value is returned as the value of \Verb+PROGN+.
-\item \Verb+FORMAT+ is much more complicated.
-\begin{uenumi}
-\item The second element, \Verb+T+, specifies the stream where the output will be sent. \Verb+T+ means standard output, the screen by default.
-\item The third element is a string -- enclosed by double quotes -- that will be the output.
-\item The string element has \uterm{format directives}, character sequences starting with \Verb+~+. The two we will use here are \Verb+~A+ and \Verb+~%+.
-The first is a place holder that will be replaced by the value obtained by evaluating the expression following the string element. You can have as many such directives as you like, as long as you have an equal number of expressions following the string element. The other directive, \Verb+~%+ stands for a newline.
-\end{uenumi}
+\item . 
+\item \Verb+PROGN+ is new here. Think of \Verb+PROGN+ exactly as the cdr of a \Verb+COND+ clause whose car is \Verb+T+. All the elements in a \Verb+PROGN+ list are evaluated one-by-one, and the final value is returned as the value of \Verb+PROGN+.
 
 \end{uenum}
 
