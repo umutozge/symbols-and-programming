@@ -878,7 +878,7 @@ Define a recursive procedure that returns the sum of a geometric progression wit
 \begin{uexercise}
 You can find at \Verb+code/var/primep.lisp+ on our Github site a program that
 checks wether a given integer is prime or not.\footnote{Prime numbers are those
-that can be divided without remainder only by 1 and themselves.} Define a
+integers greater than 1 that are divisible only by 1 and themselves.} Define a
 procedure that takes an integer, changes it by Collatz' function until it
 reaches a prime number. Return the prime number that is reached.
 
@@ -910,9 +910,9 @@ CL-USER>
 \begin{uexercise}
 Your task is to write a program that takes a positive ($n > 0$) integer as an
 input and reduce it to 1 by using the Collatz' function. While doing this, you
-are required to report any prime number you encounter along the way, except the
-final 1. Besides reporting the primes, your program should also report \emph{and
-return} the sum of these primes, again except the final 1.
+are required to report any prime number you encounter along the way. Besides
+reporting the primes, your program should also report \emph{and return} the sum
+of these primes.
 
 You need to write two versions: one, call it \Verb+KOO+, where you accumulate
 the sum as you go along and return it when you reach 1; the other, call it \Verb+FOO+, where you do not
@@ -934,7 +934,7 @@ CL-USER>
 You need to use \Verb+FORMAT+ to print to screen. Check Section~\ref{sec:user},
 item 1, on how. Note that \Verb+FORMAT+ returns \Verb+NIL+ as a return value
 (when its first argument is \Verb+T+), so putting it in an \Verb+OR+ as a first
-element will guaranteed that what is next in the \Verb+OR+ will be evaluated.
+element will guarantee that what is next in the \Verb+OR+ will be evaluated.
 
 Finally, use an optional argument in the \Verb+KOO+ version for your
 accumulator.
@@ -1118,25 +1118,33 @@ Finally, the built-in \Verb+NTH+ takes a non-negative integer and a list, and gi
 \begin{uexercise}
 
 Construct the lists formed by the below expressions, using only \Verb+CONS+, elements, and \Verb+NIL+ -- do not forget the quotes where needed.
-
-\item \Verb+(list 'a 'b 'c)+ 
-\item \Verb+(list 'a 'b NIL)+ 
-
+\begin{enumerate}
+	\item[]
+\begin{itemize}
+	\item[(a)] \Verb+(list 'a 'b 'c)+ 
+	\item[(b)] \Verb+(list 'a 'b NIL)+ 
+\end{itemize}
+\end{enumerate}
 \qed
 \end{uexercise}
 
 \begin{uexercise}
 
-Construct the lists below by using only \Verb+CONS+, elements, and \Verb+NIL+ -- do not forget the quotes where needed.
+Write forms consisting only of \Verb+CONS+, \Verb+NIL+, \Verb+'+,
+\Verb{A}, \Verb{B}, \Verb{C}, \Verb{D}, which evaluate to the lists below.
 
-\item \Verb+(a b x d)+
+\begin{enumerate}
+	\item[]
+\begin{itemize}
+	\item[(a)] \Verb+(A B C D)+
 
-\item \Verb+(a (b (x d)))+
+	\item[(b)] \Verb+(A (B (C D)))+
 
-\item \Verb+(a (b (d) x))+
+	\item[(c)] \Verb+(A (B (C) D))+
 
-\item \Verb+(((a (b (x) d))))+
-
+	\item[(d)] \Verb+(((A (B (C) D))))+
+\end{itemize}
+\end{enumerate}
 \qed
 \end{uexercise}
 
@@ -1310,6 +1318,12 @@ Define a procedure named \Verb+INSERT-2ND+, which takes a list and an object, an
 \end{uexercise}
 
 \begin{uexercise}
+Define a procedure named \Verb+REPLACE-2ND+, which is like \Verb+INSERT-2ND+, but \emph{replaces} the element at the 2nd position. Assume that the input list will always have at least two elements.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 
 Define a procedure \Verb+SWAP+, that takes a two element list and switches the order of the elements. You are allowed to use only \Verb+CAR+, \Verb+CDR+, \Verb+CONS+ and \Verb+NIL+ as built-ins.
 \qed
@@ -1329,12 +1343,6 @@ Define your own procedure \Verb+APPEND2+ that appends two list arguments into a 
 
 \begin{uexercise}
 Using \Verb+CAR+ and \Verb+CDR+, define a procedure to return the fourth element of a list.\footnote{Graham (1996), p.\ 29, ex.\ 3.} 
-
-\qed
-\end{uexercise}
-
-\begin{uexercise}
-Define a procedure named \Verb+REPLACE-2ND+, which is like \Verb+INSERT-2ND+, but \emph{replaces} the element at the 2nd position. Assume that the input list will always have at least two elements.
 
 \qed
 \end{uexercise}
