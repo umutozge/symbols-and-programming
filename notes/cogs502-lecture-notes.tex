@@ -1505,6 +1505,29 @@ the depth. Sample interaction:
 
 \begin{uexercise}[*]
 
+Define a procedure that converts a binary number (given as a list of 0s and 1s)
+to decimal, without checking the length of the input. 
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+Define a procedure \Verb+ENUMERATE+ that enumerates a list of items. Numeration
+starts with 0. Define two versions, one with, and one without an accumulator.
+
+\begin{lispcode}
+CL-USER> (enumerate '(A B C))
+((0 A) (1 B) (2 C))
+CL-USER> (enumerate NIL)
+NIL
+CL-USER> 
+\end{lispcode}
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+
 Given a possibly nested list of symbols one and only one of which will
 be the symbol \Verb+X+, compute the steps of \Verb+CAR+s and
 \Verb+CDR+s required to get \Verb+X+ from the list.  For instance, the
@@ -1640,13 +1663,14 @@ Define a three argument procedure \Verb+REMOVE-NTH+, which removes every $n$th o
 
 \begin{uexercise}
 A given set $A$ is a {\bf subset} of another set $B$ if and only if all the members of $A$ are also a member of $B$. Two sets are {\bf equivalent}, if and only if they are subsets of each other. For this problem you will represent sets via lists.
-
+\begin{enumerate}
+	\item[]
 \begin{enumerate}
 \item Define a procedure \Verb+SUBSETP+ that takes two list arguments and decides whether the first is a subset of the second.
 \item Define a procedure \Verb+EQUIP+ that takes two list arguments and decides whether the two are equivalent.
 \item Define a procedure \Verb+IDENP+ that takes two list arguments and decides whether the two have the same elements in the same order -- do not directly compare the lists with \Verb+EQUALP+, you are required to do a element by element comparison.
 \end{enumerate}
-
+\end{enumerate}
 \qed
 \end{uexercise}
 
