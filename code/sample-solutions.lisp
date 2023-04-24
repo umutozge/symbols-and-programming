@@ -1154,6 +1154,30 @@
              (append backup (list (car lst)))))))
 
 
+;; here is a version that uses a final reverse (and is therefore more
+;; efficient), uses LABELS for helper procedures, and has keyword
+;; arguments 
+
+(defun remlast (lst elm &key (backup nil) (guess nil))
+  (labels ((headp (elm lst)
+             "checks whether the CAR of lst is elm"
+             (eql (car lst) elm))
+           (transhead (lstA lstB)
+             "conses lstA's CAR to lstB and returns the result"
+             (cons (car lstA) lstB)))
+    (cond ((endp lst) (reverse guess))
+          ((headp elm lst)
+            (remlast
+              (cdr lst)
+              elm
+              :backup (transhead lst backup)
+              :guess backup))
+          (t (remlast
+               (cdr lst)
+               elm
+               :backup (transhead lst backup)
+               :guess  (transhead lst guess))))))
+
 ;;
 ;; Question
 ;;
