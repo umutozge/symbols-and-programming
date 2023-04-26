@@ -1564,10 +1564,15 @@ Define a procedure \Verb+SPLIT-TWO+ that splits a list of numbers into two equal
 \begin{uexercise}
 \label{halve}
 
-Define a procedure \Verb+HALVE+ that splits a list into two. If the
+Define a procedure \Verb+SPLIT+ that splits a list into two. If the
 length is odd, let one of the halves be one item longer than the
-other. (You can use length, if you like.)  For instance, \Verb+(split '(a b c d e f g h i j k l))+
-must give \Verb+((A B C D E F) (G H I J K L))+.
+other. (You can use length, if you like.)
+
+\begin{lispcode}
+CL-USER> (split '(a b c d e f g h i j k l))
+((A B C D E F) (G H I J K L))
+CL-USER>
+\end{lispcode}
 
 \qed
 \end{uexercise}
@@ -1590,11 +1595,13 @@ CL-USER> (range 3)
 (0 1 2)
 \end{lispcode}
 
-\begin{itemize}
-\item[a.] Solve the problem without using an accumulator;
-\item[b.] Solve the problem using an accumulator.
-\end{itemize}
-
+\begin{enumerate}
+\item[]
+	\begin{enumerate}
+	\item Solve the problem without using an accumulator;
+	\item Solve the problem using an accumulator.
+	\end{enumerate}
+\end{enumerate}
 \qed
 \end{uexercise}
 
@@ -1836,6 +1843,11 @@ Solve Ex \ref{uniq} by keeping the last occurrence rather than the first.
 
 \begin{uexercise}
 Define a procedure \Verb+REMLAST+ which removes the last occurrence of an item from a list. Do not use \Verb+MEMBER+ or \Verb+REVERSE+.
+\qed
+\end{uexercise}
+
+\begin{uexercise}[*]
+Define a procedure \Verb+FINDLAST+ which returns the index of the last occurrence of an item in a list. Do not use \Verb+MEMBER+ or \Verb+REVERSE+.
 \qed
 \end{uexercise}
 
