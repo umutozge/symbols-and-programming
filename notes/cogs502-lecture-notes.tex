@@ -2315,6 +2315,17 @@ Define a procedure that takes a list of one argument numerical procedures (defin
 \qed
 \end{uexercise}
 
+\begin{uexercise}[*]
+
+Take a list and a procedure as input and return the list of indices of all the
+elements that the procedure returns a non-nil value. 
+
+\begin{lispcode}
+CL-USER> (foo '(0 1 1 0 0 1 0) #'zerop)
+(0 3 4 6)
+\end{lispcode}
+
+
 \noindent\hrulefill
 
 \newpage
