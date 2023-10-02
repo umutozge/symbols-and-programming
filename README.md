@@ -11,25 +11,24 @@ Monday, 14:40-17:30
 
 **Catalog Description:** Fundamentals of symbolic computation; fundamental computer programming concepts and skills; iteration; recursion; applicative and functional programming; basic data structures; Common LISP
 
-###  Weekly Schedule (Spring 2023)
+###  Weekly Schedule (Fall 2023)
 
-|Week| Date   | Content | Meeting | Assignment | Reading |
-:--- |:-------|:--------|:--------|:-----------|:--------|
-1    | Mar 6  |First meeting |         |            |         |
-2    | Mar 13 |02-08 |[14:40]()| `emacs` with `SLIME`| Sec. 1 upto item 21 |
-3    | Mar 20 |09-15|[14:40]()|Exx. 1.1-3 | Sec. 1 and 2 |
-4    | Mar 27 |17-23|[14:40]()|Exx. 2.4, 2.9, 2.13|Sec. 3|
-5    | Apr 3  |24-26|[14:40]()|Exx. 3.13| |
-6    | Apr 10|28|[14:40]()|Exx. 3.14||
-7    | Apr 17|30-36|[14:40]()|Exx. 4.2 (update notes!)|Sec. 4 |
-8    | Apr 24|38-42|[14:40]()|Exx. 4.27 (update notes!)||
-9    | May 1|Holiday |[14:40]()|Exx. 4.26, 4.44 |  |
-10   | May 8|44-52|[14:40]()| Exx. 4.28, 4.59| |
-11   | May 15|54-58|[14:40]() | Exx. 4.49, 4.70||
-12   | May 22|60-62|[14:40]() | Exx. 6.7  | |
-13   | May 29|64-72|[14:40]() |Exx. 7.15 | |
-14   | Jun 5 |74-78|[14:40]()| Exx. 8.10, 8.11, 8.12 | |
-
+|Week| Date   | Content | Assignment | Reading |
+:--- |:-------|:--------|:-----------|:--------|
+1    | Oct 2  |First meeting |         |            |         |
+2    | Oct 9 |02-08 | `emacs` with `SLIME`| Sec. 1 upto item 21 |
+3    | Oct 16 |09-15|Exx. 1.1-3 | Sec. 1 and 2 |
+4    | Oct 23 |17-23|Exx. 2.4, 2.9, 2.13|Sec. 3|
+5    | Oct 30  |24-26|Exx. 3.13| |
+6    | Nov 6|28|Exx. 3.14||
+7    | Nov 13|30-36|Exx. 4.2 (update notes!)|Sec. 4 |
+8    | Nov 20|38-42|Exx. 4.27 (update notes!)||
+9    | Nov 27|44-52 |Exx. 4.26, 4.44 |  |
+10   | Dec 4|54-58| Exx. 4.28, 4.59| |
+11   | Dec 11|60-62| Exx. 4.49, 4.70||
+12   | Dec 18|64-72| Exx. 6.7  | |
+13   | Dec 25|74-78|Exx. 7.15 | |
+14   | Jan 1 |Holiday| Exx. 8.10, 8.11, 8.12 | |
 
 
 ### Videos (please download if your browser can't open the video)
@@ -88,7 +87,7 @@ Monday, 14:40-17:30
 
 * [Lecture notes](notes/cogs502-lecture-notes.pdf)
 * [Videos](http://lfcs.ii.metu.edu.tr/cr/cogs502/vid/)
-* [Question-Answer Sheet](notes/question-answer-sheet.md).
+* [Question-Answer Sheet](notes/question-answer-sheet.md)
 * [Setup Instructions for Programming Environment](notes/programming-environment.md)
 * [Sample solutions](code/sample-solutions.lisp)
 * Reference books:  
@@ -103,15 +102,14 @@ Monday, 14:40-17:30
 
 ### Requirements
 
-* Weekly assignments (50%)
-* Final exam (50%, in class)
+* Short quizes (30%, in class)
+* Weekly assignments (30%, "at home")
+* Final exam (40%, in class)
 
 
 ### Attendance and late submission policies
 
-* If you think you can succeed in this course without help from us, you do not need to attend the classes, in which case you miss quiz bonuses.
-* But if you think otherwise, you should come -- only attenders can get help outside of class hours (e.g. office hours, forum questions, etc.)
-* No late submissions, except in case of a medical issue proved by a medical report.
+* No late submissions, except in case of a medical issue proved by a medical report. The report must include the day before the submission deadline. The new deadline will be 2 + the day your report says you can start working, 23:59.
 
 ### Special assistance
 
