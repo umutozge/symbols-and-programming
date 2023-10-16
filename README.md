@@ -18,7 +18,7 @@ Monday, 14:40-17:30
 1    | Oct 2  |First meeting |         |            |         |
 2    | Oct 9 |02-08 | `emacs` with `SLIME`| Sec. 1 upto item 21 |
 3    | Oct 16 |09-15|Exx. 1.1-3 | Sec. 1 and 2 |
-4    | Oct 23 |17-23|Exx. 2.4, 2.9, 2.13|Sec. 3|
+4    | Oct 23 |17-23||Sec. 3|
 5    | Oct 30  |24-26|Exx. 3.13| |
 6    | Nov 6|28|Exx. 3.14||
 7    | Nov 13|30-36|Exx. 4.2 (update notes!)|Sec. 4 |
