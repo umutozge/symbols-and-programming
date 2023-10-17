@@ -42,7 +42,11 @@
  Computers, like the mindbrain, have internal states, which are, in the standard case, patterns of voltages over a huge number of interconnected transistors. A computational process is a certain sequence (or evolution) of such states.\footnote{In parallel processes, the sequence consists of several threads in parallel.} Not every sequence of states is a computational process, but every computational process is some such sequence. What distinguishes a computational process from a random sequence of states is that in the former there are ``meaningful'' relations between some states in the sequence.
 
 \item
-{\bf Programs.} A computer program is a body of expressions (also called `code') that manipulates the states -- and thereby the behavior -- of a computer. Programs are written in programming languages. Our choice of programming language is \uterm{Common Lisp}. We will use the expression `\Verb+LISP+' to refer to it.\footnote{Lisp is a family of languages -- or dialects if you like. When you consult the web for this course, keep in mind that the particular dialect we will use is Common Lisp.}
+{\bf Programs.} A computer program is a body of expressions (also
+called `code') that manipulates the states -- and thereby the behavior
+-- of a computer. Programs are written in programming languages. Our
+choice of programming language is \uterm{Common Lisp}. We will use the
+expression `\code{LISP}' to refer to it.\footnote{Lisp is a family of languages -- or dialects if you like. When you consult the web for this course, keep in mind that the particular dialect we will use is Common Lisp.}
 
 \item {\bf \Verb+SBCL+.} During the term, we will write programs, many of them. For our purposes, the computer that we manipulate via our programs is a machine that is capable of translating the code written in \Verb+LISP+ into instructions that are executable by the physical computers. The machine is called \Verb+SBCL+ (an acronym for \href{http://www.sbcl.org/}{Steel Bank Common Lisp}). It is not a physical machine; it is an abstract machine, which itself is actually a program. Computer science, like mathematics, thrives on abstractions; if you are new to these subjects, it will take some time to get used to this.%\footnote{\href{https://en.wikipedia.org/wiki/John_von_Neumann}{John von Neumann}: `` In mathematics you don't understand things. You just get used to them.''}
 
@@ -537,12 +541,20 @@ Assume a variant of the changer task: We halve an even number, we do what we did
 
 \end{uenum}
 
-
 \noindent\hrulefill
 
 \begin{uexercise}
+Define a procedure named \code{ASCENDINGP} that takes three numbers as
+input and returns \code{T} if the numbers are in ascending order, and
+\code{NIL} otherwise. Equality means ascension, therefore
+\code{(ASCENDINGP 3 4 4)} must return \code{T}.
+
+\qed
+\end{uexercise}
+
+\begin{uexercise}
 \label{diff}
-Define a procedure that takes 2 numbers and returns -1 if their difference is negative, 0 if they are equal, and 1 if their difference is positive. You do not need to check for numberhood, assume that the user will always give numbers as input. You are allowed to compute the difference of the input numbers \emph{only once}; and \Verb+SETF+ and \Verb+DEFVAR+ are forbidden.
+Define a procedure that takes two numbers and returns -1 if their difference is negative, 0 if they are equal, and 1 if their difference is positive. You do not need to check for numberhood, assume that the user will always give numbers as input. You are allowed to compute the difference of the input numbers \emph{only once}; and \Verb+SETF+ and \Verb+DEFVAR+ are forbidden.
 
 \qed
 \end{uexercise}
@@ -918,7 +930,7 @@ You need to write two versions: one, call it \Verb+KOO+, where you accumulate
 the sum as you go along and return it when you reach 1; the other, call it \Verb+FOO+, where you do not
 accumulate the answer as you go along.
 
-Here is a sample interaction for both versions: 
+Here is a sample interaction for both versions:
 
 \begin{lispcode}
 CL-USER> (foo 17)
@@ -928,7 +940,7 @@ Found a prime: 5
 Found a prime: 2
 The sum of primes is: 37
 37
-CL-USER>  
+CL-USER>
 \end{lispcode}
 
 You need to use \Verb+FORMAT+ to print to screen. Check Section~\ref{sec:user},
@@ -939,7 +951,6 @@ element will guarantee that what is next in the \Verb+OR+ will be evaluated.
 Finally, use an optional argument in the \Verb+KOO+ version for your
 accumulator.
 
-\end{itemize}
 
 \end{uexercise}
 
@@ -2328,6 +2339,7 @@ CL-USER> (foo '(0 1 1 0 0 1 0) #'zerop)
 (0 3 4 6)
 \end{lispcode}
 
+\end{uexercise}
 
 \noindent\hrulefill
 
@@ -2609,23 +2621,23 @@ Now we can have
 	(ranger :start 1 :end 1000000))
 \end{lispcode}
 
-\item Let us find the number with the maximum Collatz length. \Verb+MAXX+ on its own is not helpful here; it justs finds the maximum number in a list of numbers. What we need is a way to find the pair(s) with the maximum second element. One way is to write a function similar to \Verb+MAXX+. Let us do this. But let us do this in a way that will have a general use. We will parametrize \Verb+MAXX+ in such a way that, the caller/user of the function will decide where \Verb+MAXX+ should look for items to compare. In the above version it looks at top most elements, by checking the \Verb+CAR+ of the list in every recursion. Here is our new, more ``customizable'' \Verb+MAXX+. 
+\item Let us find the number with the maximum Collatz length. \Verb+MAXX+ on its own is not helpful here; it justs finds the maximum number in a list of numbers. What we need is a way to find the pair(s) with the maximum second element. One way is to write a function similar to \Verb+MAXX+. Let us do this. But let us do this in a way that will have a general use. We will parametrize \Verb+MAXX+ in such a way that, the caller/user of the function will decide where \Verb+MAXX+ should look for items to compare. In the above version it looks at top most elements, by checking the \Verb+CAR+ of the list in every recursion. Here is our new, more ``customizable'' \Verb+MAXX+.
 
 \begin{lispcode}
-(defun maxx (lst &key 
-				 (max nil)
-				 (hook #'(lambda (x) x)))
+(defun maxx (lst &key
+                 (max nil)
+                 (hook #'(lambda (x) x)))
   (cond ((endp lst) max)
-		((null max) (maxx (cdr lst)
-		                  :max (car lst)
-						  :hook hook))
-		(t (maxx 
-			 (cdr lst)
-			 :max (if (> (funcall hook (car lst)) 
-						 (funcall hook max))
-					(car lst)
-					max)
-			 :hook hook))))
+        ((null max) (maxx (cdr lst)
+                          :max (car lst)
+                          :hook hook))
+        (t (maxx
+             (cdr lst)
+             :max (if (> (funcall hook (car lst))
+                         (funcall hook max))
+                      (car lst)
+                      max)
+             :hook hook))))
 \end{lispcode}
 
 \item With our new \Verb+MAXX+ in our hands we can now find the number with the largest Collatz length in a given range, say 1000.

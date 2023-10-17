@@ -11,6 +11,8 @@
 \RequirePackage{mdframed}
 \RequirePackage{xcolor}
 \definecolor{silver}{rgb}{0.95,0.95,0.95}
+\definecolor{lkeyword}{rgb}{0.72,0.25,0.12}
+\definecolor{dkgreen}{rgb}{0,0.5,0}
 %\definecolor{cbg}{RGB}{240,230,140}
 \definecolor{cbg}{RGB}{253,253,253}
 %\definecolor{cbg}{RGB}{255,255,255}
@@ -20,17 +22,35 @@
 %\newcommand{\inlisp}[1]{\inputminted[xleftmargin=1em,linenos,numbersep=8pt,tabsize=2,obeytabs]{lisp}{#1}}
 \newcommand{\inlisp}[1]{\inputminted[xleftmargin=1em,tabsize=2,obeytabs]{lisp}{#1}}
 
+\newcommand{\code}[1]{\Verb|#1|}
 
-\newenvironment{lispcode}
-{%
-\VerbatimEnvironment
-\begin{ucodeframe}
-\begin{minted}[tabsize=4,obeytabs,linenos]{lisp}%
+
+\usepackage{listings}
+
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1,firstnumber=1,
+  numbersep=5pt,language=Lisp,
+basicstyle=\normalsize, 
+showstringspaces=false,
+keywordstyle=\color{lkeyword},
+commentstyle=\color{dkgreen}
+breaklines=true,
+frame=single
 }
-{%
-\end{minted}%
-\end{ucodeframe}%
-}
+
+\lstnewenvironment{lispcode}[1][]
+{\sffamily \lstset{#1}}{}
+
+
+% \newenvironment{lispcode}
+% {%
+% \VerbatimEnvironment
+% \begin{ucodeframe}
+% \begin{minted}[tabsize=4,obeytabs,linenos]{lisp}%
+% }
+% {%
+% \end{minted}%
+% \end{ucodeframe}%
+% }
 
 \newenvironment{ucodeframe}
 {%
