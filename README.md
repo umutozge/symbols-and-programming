@@ -19,7 +19,7 @@ Monday, 14:40-17:30
 2    | Oct 9 |02-08 | `emacs` with `SLIME`| Sec. 1 upto item 21 |
 3    | Oct 16 |09-15|Exx. 1.1-3 | Sec. 1 and 2 |
 4    | Oct 23 |17-23|Exx. 2.1-2|Sec. 3|
-5    | Oct 30  |24-26|| |
+5    | Oct 30  |24-26|Ex. 3.1|Sec. 3|
 6    | Nov 6|28|||
 7    | Nov 13|30-36||Sec. 4 |
 8    | Nov 20|38-42|||
