@@ -828,7 +828,7 @@ Define a tail-recursive factorial procedure.
 
 \begin{uexercise}
 Define a two operand procedure that raises its first operand to the power of the second. You are allowed to use multiplication and subtraction. Define two versions, with and without an accumulator. You can check the behavior of your procedure by comparing it with \Verb+LISP+'s \Verb+EXPT+, which does the same thing. 
- 
+
 \qed
 \end{uexercise}
 
@@ -868,6 +868,7 @@ In order to find the square root of $x$,
 
 Write a program that computes the square root of a given number by this method. Divide your program into procedure definitions. You need to use \Verb+1.0+ as the initial guess, otherwise \Verb+LISP+ will generate fractions rather than floating point numbers. 
 
+\qed
 \end{uexercise}
 
 \begin{uexercise}
@@ -893,12 +894,13 @@ $$
 
 Define a recursive procedure that returns the sum of a geometric progression with $n$ terms and the initial term $a$ and the common ratio $r$.
 
+\qed
 \end{uexercise}
 
 \begin{uexercise}
 \Verb+(RANDOM N)+ returns a random number between and including $0$ and $n-1$. Define a procedure that takes two arguments $n$ and $r$, and prints $r$ random numbers between and including $0$ and $n$. You will need to use \Verb+PRINT+; you can discover how it works by trying it at \Verb+REPL+.
 
-
+\qed
 \end{uexercise}
 
 \begin{uexercise}
@@ -942,9 +944,7 @@ of these primes.
 
 You need to write two versions: one, call it \Verb+KOO+, where you accumulate
 the sum as you go along and return it when you reach 1; the other, call it \Verb+FOO+, where you do not
-accumulate the answer as you go along.
-
-Here is a sample interaction for both versions:
+accumulate the answer as you go along. Both versions would behave like:
 
 \begin{lispcode}
 CL-USER> (foo 17)
@@ -954,7 +954,6 @@ Found a prime: 5
 Found a prime: 2
 The sum of primes is: 37
 37
-CL-USER>
 \end{lispcode}
 
 You need to use \Verb+FORMAT+ to print to screen. Check Section~\ref{sec:user},
@@ -965,9 +964,30 @@ element will guarantee that what is next in the \Verb+OR+ will be evaluated.
 Finally, use an optional argument in the \Verb+KOO+ version for your
 accumulator.
 
-
+\qed
 \end{uexercise}
 
+\begin{uexercise}[*]
+
+Define a procedure that takes a positive integer ($n>0$), reduces it
+to 1 by Collatz' algorithm, printing in each step, the difference
+between the current number and the one computed before it. A sample
+interaction would look like:
+
+\begin{lispcode}
+CL-USER> (collatz-diff 3)
+0
+7
+-5
+11
+-8
+-4
+-2
+T
+\end{lispcode}
+
+\qed
+\end{uexercise}
 \noindent\hrulefill
 
 \newpage
