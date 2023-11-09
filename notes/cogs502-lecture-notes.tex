@@ -197,7 +197,7 @@ Let us leave \Verb+SBCL+ by typing \Verb+(exit)+ or pressing \Verb+Ctrl-D+; and 
 
 The only advantage the previous version has over this one is that we would be able to reach the value of the radius if we wanted to -- it was stored in the variable named \Verb+radius+; with the second version, the value \Verb+13+ is not stored anywhere. 
 
-The real importance of using named variables, however, comes from the fact that, besides variables, you can also give names to \uterm{procedures}. (You can think of variables as nouns and procedures as verbs of the programming language). For instance, the way we take the square of a number appears too clumsy, let us define a more concise way of doing it: 
+The real importance of using named variables, however, comes from the fact that, besides variables, you can also give names to \uterm{procedures}. (You can think of variables as nouns and procedures as verbs of the programming language). For instance, the way we take the square of a number appears too clumsy, let us define a more concise way of doing it:
 
 \begin{lispcode}
 (defun square (x) (* x x))
@@ -243,7 +243,7 @@ is an ordinary application, which is evaluated in accord with the Great Rule of 
 \begin{Verbatim}
 (let ((<variable_1> <expr_1>)
       (<variable_2> <expr_2>)
-	  .  
+	  .
 	  .
 	  .
       (<variable_n> <expr_n>))
@@ -1307,7 +1307,7 @@ second is the odd count. The solution for 3 will be (5 3).
 
 \begin{lispcode}
 (defun memberp (item lst)
-  (cond ((endp lst) nil) ; test if lst is empty or not
+  (cond ((endp lst) nil) @;@ test if lst is empty
         ((equal item (car lst)) t)
         (t (memberp item (cdr lst)))))
 \end{lispcode}
@@ -1397,53 +1397,13 @@ Define a procedure \Verb+AFTER-FIRST+ that takes two lists and inserts all the e
 \qed
 \end{uexercise}
 
-\begin{uexercise}
-The procedure \Verb+WRAP-2+ takes a two element list, and wraps each element inside a list: 
-
-\begin{lispcode}
-* (wrap-2 '(a (b)))
-
-((A) ((B)))
-* (wrap-2 '(a b))
-
-((A) (B))
-* (wrap-2 (wrap-2 '(a b)))
-
-(((A)) ((B)))
-* (wrap-2 (wrap-2 (wrap-2 '(a b))))
-
-((((A))) (((B))))
-* 
-\end{lispcode}
-
-Write two versions of \Verb+WRAP-2+:
-
-\begin{enumerate}
-\item one using \Verb+LIST+, \Verb+CAR+ and \Verb+CADR+
-\item the other using \Verb+CONS+, \Verb+CAR+ and \Verb+CADR+
-\end{enumerate}
-
+\begin{uexercise}[*]
+Define a procedure \Verb+AFTER-NTH+ that takes two lists and an index.
+It inserts all the elements in the second list after the given index
+of the first list. Indices start with 0. Given \Verb+(A D E)+,
+\Verb+(B C)+,  and \code{1}, it should return \Verb+(A D B C E)+.
 \qed
 \end{uexercise}
-
-
-% \begin{uexercise}
-% The built-in \Verb+MEMBER+ takes and object and a list and checks whether the  object appears in the list or not; discover how it works. Using \Verb+MEMBER+, define  a function \Verb+MY-MEMBER+ that behaves as follows: 
-% 
-% {\small
-% \begin{Verbatim}
-% * (my-member 'b '(a b c))
-% 
-% (B IS A MEMBER OF (A B C))
-% * (my-member 'z '(a b c))
-% 
-% (Z IS NOT A MEMBER OF (A B C))
-% * 
-% \end{Verbatim}
-% }
-% 
-% \qed
-% \end{uexercise}
 
 \begin{uexercise}
 Assume you have data that pairs employees' last names with their
