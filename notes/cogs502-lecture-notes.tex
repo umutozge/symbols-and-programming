@@ -2149,7 +2149,7 @@ K
 \item Here is a definition that attempts to achieve this:
 
 \begin{lispcode}
-(defun mapp (func lst) ;; WRONG!
+(defun mapp (func lst) @;;@ WRONG!
   (if (endp lst)
 	nil
 	(cons (func (car lst))
@@ -2233,7 +2233,7 @@ we get \Verb+(1 2 6 24)+.
 
 {\small
 \begin{lispcode}
-(defun mapp (func lst) ; STILL WRONG!
+(defun mapp (func lst) @;;@ STILL WRONG!
   (if (endp lst)
 	nil
 	(cons (funcall (function func) (car lst))
