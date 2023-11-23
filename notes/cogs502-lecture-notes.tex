@@ -1701,6 +1701,24 @@ CL-USER> (implode '(a a b c c c d))
 \qed
 \end{uexercise}
 
+\begin{uexercise}[*]
+
+	Define a procedure \code{EXPLODE} that realizes the inverse of
+	the relation realized by \code{IMPLODE}. Assume that the input
+	will always be a list where each symbol is immediately
+	followed by a number that gives its count in the output.
+
+\begin{lispcode}
+CL-USER> (explode '(a 3 b 2 c 1 d 3))
+(A A A B B C D D D)
+CL-USER> (explode (implode '(a a a b b c d d d)))
+(A A A B B C D D D)
+CL-USER> (implode (explode '(a 3 b 2 c 1 d 3)))
+(A 3 B 2 C 1 D 3)
+\end{lispcode}
+
+\qed
+\end{uexercise}
 
 \begin{uexercise}[*]
 \label{exprecbyzero}
@@ -1924,12 +1942,6 @@ Define a procedure that groups the elements in a list putting consecutive occurr
 \qed
 \end{uexercise}
 
-
-\begin{uexercise}
-Define a version of Exercise~\ref{halve} without using \Verb+LENGTH+ -- here we go again!
-
-\qed
-\end{uexercise}
 
 \begin{uexercise}[*]
 Define a recursive procedure \Verb+SUMMARIZE+, that takes a list and returns a list of pairs whose car is an element in the list and cadr is the number of times the element occurs in the list; \Verb+(summarize '(a b r a c a d a b r a))+ should give \Verb+((a 5) (b 2) (r 2) (c 1) (d 1))+.
