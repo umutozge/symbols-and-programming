@@ -2555,11 +2555,11 @@ In our running example, you will need to call this procedure with\\ \Verb+(mapca
 
 \begin{lispcode}
 (defun collatz-generate (n)
-  (if (= n 1) 
+  (if (= n 1)
 	'(1)
 	(cons n (collatz-generate (if (evenp n)
-								(/ n 2)
-								(+ (* n 3) 1))))))
+				      (/ n 2)
+				      (+ (* n 3) 1))))))
 \end{lispcode}
 
 \begin{uenumi}
@@ -2592,7 +2592,7 @@ this range function generates a range including its start and end points. Keywor
 \item Check the maximum Collatz length in this range:
 
 \begin{lispcode}
-(apply #'max 
+(apply #'max
 	(mapcar #'collatz-length (ranger :start 1 :end 1000000)))
 \end{lispcode}
 
@@ -2601,10 +2601,10 @@ this range function generates a range including its start and end points. Keywor
 \begin{lispcode}
 (defun maxx (lst &optional (max nil))
   (cond ((endp lst) max)
-		((null max) (maxx (cdr lst) (car lst)))
-		(t (maxx (cdr lst) (if (> (car lst) max)
-							 (car lst)
-							 max)))))
+	((null max) (maxx (cdr lst) (car lst)))
+	(t (maxx (cdr lst) (if (> (car lst) max)
+			       (car lst)
+			       max)))))
 \end{lispcode}
 
 \item Now we can check the maximum Collatz length in a range of one million:
@@ -2635,10 +2635,10 @@ Now we can have
 
 \begin{lispcode}
 (mapcar #'(lambda (range) 
-			(maxx (mapcar #'collatz-length 
-						  (ranger :start 1 :end range)))) 
-		(mapcar #'(lambda (x) 
-					(expt 10 x)) '(1 2 3 4 5 6)))
+            (maxx (mapcar #'collatz-length 
+                          (ranger :start 1 :end range)))) 
+        (mapcar #'(lambda (x) 
+                    (expt 10 x)) '(1 2 3 4 5 6)))
 \end{lispcode}
 
 
@@ -2672,8 +2672,8 @@ Now we can have
 
 \begin{lispcode}
 (maxx (mapcar #'(lambda (x) 
-				  (list x (collatz-length x))) 
-			  (ranger :start 1 :end 1000)) :hook #'cadr)
+                  (list x (collatz-length x))) 
+              (ranger :start 1 :end 1000)) :hook #'cadr)
 \end{lispcode}
 
 \end{uenumi}
