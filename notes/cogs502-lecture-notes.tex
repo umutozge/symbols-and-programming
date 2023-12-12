@@ -3529,21 +3529,21 @@ The first is a place holder that will be replaced by the value obtained by evalu
 \begin{lispcode}
 (defun file-to-lists (path)
   (labels ((text-to-list (text)
-						 (read-from-string 
-						   (concatenate 'string "(" text ")")))
-		   (read-lines (str &optional acc)
-					   (let ((line (read-line str nil 'eof)))
-						 (if (equal line 'eof)
-						   acc
-						   (read-lines 
-							 str 
-							 (append
-							   acc
-							   (list (text-to-list line))))))))
-	(with-open-file (input-stream 
-					  (make-pathname :name path)
-					  :direction :input)
-	  (read-lines input-stream))))
+             (read-from-string 
+               (concatenate 'string "(" text ")")))
+           (read-lines (str &optional acc)
+             (let ((line (read-line str nil 'eof)))
+               (if (equal line 'eof)
+                   acc
+                   (read-lines 
+                     str 
+                     (append
+                       acc
+                       (list (text-to-list line))))))))
+    (with-open-file (input-stream 
+                      (make-pathname :name path)
+                      :direction :input)
+      (read-lines input-stream))))
 \end{lispcode}
 }
 \end{uenum}
