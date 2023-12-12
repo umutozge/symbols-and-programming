@@ -26,7 +26,7 @@ Monday, 14:40-17:30
 9    | Nov 27|52-56|Ex. 4.41, 4.57| Sec. 5 and 6 |
 10   | Dec 4||| |
 11   | Dec 11|60-68 |7.15  | Sec. 7 |
-12   | Dec 18||| |
+12   | Dec 18|70-74|see `odtuclass forum`| |
 13   | Dec 25||| |
 14   | Jan 1 |Holiday| Exx. 8.10, 8.11, 8.12 | |
 
