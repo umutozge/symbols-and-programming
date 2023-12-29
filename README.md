@@ -28,7 +28,7 @@ Monday, 14:40-17:30
 11   | Dec 11|60-68 |7.15  | Sec. 7 |
 12   | Dec 18|70-74|see `odtuclass forum`| |
 13   | Dec 25||| |
-14   | Jan 1 |Holiday| | |
+14   | Jan 1 |Holiday|see `odtuclass forum` (assignment due 12 Jan) | |
 
 
 ### Videos (please download if your browser can't open the video)
