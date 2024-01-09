@@ -2155,3 +2155,32 @@
         (+ counter 1)
         (+ term diff)
         (cons (list counter term) store))))
+
+
+
+;; Define a procedure named 'get-column'that will take a dataframe like we have
+;; stored in *dataframe*, a column name (as a quoted symbol) and returns the 
+;; column as a list. For test.tsv, your procedure should behave as:
+;; (get-column *dataframe* 'b) -> (2 5 8)
+
+;; Your second task is to define a procedure named 'get-row' that will again 
+;; take a dataframe, and, this time, a row index (starting from 0) and will
+;; return that row. Again for test.tsv
+;; (get-row *dataframe* 1) -> (4 5 6)
+
+(defun col-name-id (lst cn &optional (cid 0))
+  (if lst
+      (if (equal (car lst) cn)
+          cid
+          (col-name-id (cdr lst) cn (+ cid 1)))))
+
+(defun get-row (lst i)
+  (if lst
+      (if (equal i 0)
+          (car lst)
+          (get-row (cdr lst) (- i 1)))))
+
+(defun get-col (lst cn)
+  (let ((data-lst (cdr lst))
+        (col-id (col-name-id (car lst) cn)))
+    (mapcar #'(lambda (x) (get-row x col-id)) data-lst)))
