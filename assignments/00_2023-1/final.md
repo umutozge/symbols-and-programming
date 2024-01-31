@@ -28,9 +28,9 @@ Y Z A B C D E F G E H)
 What should be the procedure in the following expression to get the
 given result:
 
-::: lispcode
+```common-lisp
 (reduce \<PROCEDURE\> '(a b c) :initial-value nil) =\> ((A) (B) (C))
-:::
+```
 
 For a given non-negative integer, the Fibonnacci function is defined as:
 
@@ -44,9 +44,9 @@ Fib(n -1) + Fib(n-2), & \text{otherwise}\\
 
 It is straightforward to express this definition as a `LISP` procedure:
 
-::: lispcode
+```common-lisp
 (defun fibo (n) (if (\<= n 1) 1 (+ (fibo (- n 1)) (fibo (- n 2)))))
-:::
+```
 
 But, as we saw in class, this procedure is highly inefficient since it
 computes the same value multiple times -- it is impractical to compute
